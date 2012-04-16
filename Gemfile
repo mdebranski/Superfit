@@ -6,7 +6,6 @@ gem 'foreman'
 gem 'haml'
 gem 'jquery-rails'
 gem 'pg'
-gem 'sqlite3'
 gem 'twitter-bootstrap-rails'
 gem 'unicorn'
 
