@@ -1,0 +1,12 @@
+.bundle
+.DS_Store
+.idea
+.powenv
+bin
+config/environments/development.yml
+coverage
+db/*.sqlite3
+log
+public/assets
+public/uploads
+tmp
