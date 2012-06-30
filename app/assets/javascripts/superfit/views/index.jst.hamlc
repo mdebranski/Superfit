@@ -1,0 +1,50 @@
+%div(id="home" data-role="page")
+  %div(data-role="header")
+    %h1 Superfit - June 28, 2012
+
+  %div(data-role="content")
+    %ul(data-role="listview" data-inset="true")
+      %li
+        %a(href="#enterWOD") Enter WOD
+      %li
+        %a(href="#home") Enter Food
+
+%div(id="enterWOD" data-role="page")
+  %div(data-role="header")
+    %a(href="#home" data-icon="arrow-l" data-rel="back") Back
+    %h1 WOD
+
+  %div(data-role="content")
+    %p Search By
+    %ul(data-role="listview" data-inset="true")
+      %li
+        %a(href="#namedWOD") Named WOD
+      %li
+        %a(href="#strength") Strength
+      %li
+        %a(href="#custom") Custom
+      %li
+        %a(href="#mainSite") Main Site
+
+%div(id="namedWOD" data-role="page")
+  %div(data-role="header")
+    %a(href="#enterWOD" data-icon="arrow-l" data-rel="back") Back
+    %h1 Named WOD
+
+  %div(data-role="content")
+    %a(href="#searchWODs" data-role="button") Search Named WODs
+    %ul(data-role="listview" data-inset="true")
+      - for category in Category.all()
+        %li
+          %a(href="#categories/#{category.id}")= category.name
+
+%div(id="searchWODs" data-role="page")
+  %div(data-role="header")
+    %a(href="#namedWOD" data-icon="arrow-l" data-rel="back") Back
+    %h1 Search WODs
+
+  %div(data-role="content")
+    %ul(data-role="listview" data-inset="true" data-filter="true")
+      - for wod in Wod.all()
+        %li
+          %a(href="#wods/#{wod.id}")= wod.name

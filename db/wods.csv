@@ -1,0 +1,485 @@
+type,category,name,workout_female,workout_male,scoring_method,scoring_notes,workout_notes
+Benchmark,Girl,Angie,"100 Pull-ups
+100 Push-ups
+100 Sit-ups
+100 Squats","100 Pull-ups
+100 Push-ups
+100 Sit-ups
+100 Squats",For Time,Complete all reps of each exercise before moving to the next.,
+Benchmark,Girl,Barbara,"20 Pull-ups
+30 Push-ups
+40 Sit-ups
+50 Squats","20 Pull-ups
+30 Push-ups
+40 Sit-ups
+50 Squats",For Time,5 rounds for time,
+Benchmark,Girl,Chelsea,"5 Pull-ups
+10 Push-ups
+15 Squats","5 Pull-ups
+10 Push-ups
+15 Squats",Pass/Fail,Each min on the min for 30 min,
+Benchmark,Girl,Cindy,"5 Pull-ups
+10 Push-ups
+15 Squats","5 Pull-ups
+10 Push-ups
+15 Squats",AMRAP  (rounds),AMRAP 20 min,
+Benchmark,Girl,Diane,"Deadlift 155 lbs
+Handstand push-ups","Deadlift 225 lbs
+Handstand push-ups",For Time,21-15-9 reps for time,
+Benchmark,Girl,Elizabeth,"Clean 95 lbs
+Ring Dips","Clean 135 lbs
+Ring Dips",For Time,21-15-9 reps for time,
+Benchmark,Girl,Fran,"Thruster 65 lbs
+Pull-ups","Thruster 95 lbs
+Pull-ups",For Time,21-15-9 reps for time,
+Benchmark,Girl,Grace,"
+30 Reps For Time
+Clean and Jerk 95 lbs","
+30 Reps For Time
+Clean and Jerk 135 lbs",For Time,21-15-9 rep for time,
+Benchmark,Girl,Helen,"400 meter run
+35lb Kettlebell swing x 21
+Pull-ups 12 reps","400 meter run
+52lb pood Kettlebell swing x 21
+Pull-ups 12 reps",For Time,3 rounds for time,
+Benchmark,Girl,Isabel,Snatch 95 pounds,Snatch 135 pounds,For Time,30 reps for time,
+Benchmark,Girl,Jackie,"1000 meter row
+Thruster 35 lbs (50 reps)
+Pull-ups (30 reps)","1000 meter row
+Thruster 45 lbs (50 reps)
+Pull-ups (30 reps)",For time,For time,
+Benchmark,Girl,Karen,14lb Wall-ball 150 shots,20lb Wall-ball 150 shots,For time,For time,
+Benchmark,Girl,"Linda 
+(aka ""3 bars of death"")","Deadlift 1 1/2 BW
+Bench BW
+Clean 3/4 BW","Deadlift 1 1/2 BW
+Bench BW
+Clean 3/4 BW",For time,"10/9/8/7/6/5/4/3/2/1 rep
+rounds for time",
+Benchmark,Girl,Mary,"5 Handstand push-ups
+10 1-legged squats
+15 Pull-ups","5 Handstand push-ups
+10 1-legged squats
+15 Pull-ups",AMRAP  (rounds),AMRAP 20 min,
+Benchmark,Girl,Nancy,"400 meter run
+Overhead squat 65 lbs x 15","400 meter run
+Overhead squat 95 lbs x 15",For time,5 rounds for time,
+Benchmark,New Girl,Annie,"Double-unders
+Sit-ups","Double-unders
+Sit-ups",For time,50-40-30-20-10 (reps) for time,
+Benchmark,New Girl,Eva,"Run 800 meters
+2 pood KB swing, 30 reps
+30 pullups","Run 800 meters
+2 pood KB swing, 30 reps
+30 pullups",For time,5 rounds for time.,
+Benchmark,New Girl,Kelly,"Run 400 meters
+30 box jump, 20 inch box
+30 Wall ball shots, 14 lb","Run 400 meters
+30 box jump, 24 inch box
+30 Wall ball shots, 20 pound ball",For time,5 rounds for time.,
+Benchmark,New Girl,Lynne,"Bodyweight bench press (e.g., same amount on bar as you weigh)
+pullups","Bodyweight bench press (e.g., same amount on bar as you weigh)
+pullups",Max Reps,5 rounds for max reps. (no time component).,
+Benchmark,New Girl,Nicole,"Run 400 meters
+Max rep Pull-ups","Run 400 meters
+Max rep Pull-ups",AMRAP  (rounds),"AMRAP 20 min.
+Note number of pull-ups completed for each round.",
+Benchmark,Hero,Abbate,,"Run 1 mile
+155 pound Clean and jerk, 21 reps
+Run 800 meters
+155 pound Clean and jerk, 21 reps
+Run 1 Mile",For time,For time,"U.S. Marine Corps Sergeant Matthew T. Abbate, 26, of Honolulu, Hawaii, assigned to the 3rd Battalion, 5th Marine Regiment, 1st Marine Division, I Marine Expeditionary Force, based out of Camp Pendleton, California, was killed on December 2, 2010, while conducting combat operations in Helmand province, Afghanistan. He is survived by his wife Stacie Rigall, son Carson, mother Karen Binion, father Salvatore Abbate, and siblings Dominica Abbate, Elliot Abbate, Valerie Binion, and Kelly Binion."
+Benchmark,Hero,Adam Brown,,"295 pound Deadlift, 24 reps
+24 Box jumps, 24 inch box
+24 Wallball shots, 20 pound ball
+195 pound Bench press, 24 reps
+24 Box jumps, 24 inch box
+24 Wallball shots, 20 pound ball
+145 pound Clean, 24 reps",For time,2 rounds for time,"Navy Chief Special Warfare Operator (SEAL) Adam Lee Brown, 36, of Hot Springs, Arkansas, was killed on March 17th, 2010 in Komar Province, Afghanistan, in a battle against heavily armed militants. He is survived by his wife, Kelley, two children, Nathan and Savannah, and by his parents."
+Benchmark,Hero,Arnie,,"With a single 2 pood kettlebell:
+21 Turkish get-ups, Right arm
+50 Swings
+21 Overhead squats, Left arm
+50 Swings
+21 Overhead squats, Right arm
+50 Swings
+21 Turkish get-ups, Left arm",For time,For time,"Los Angeles County Fire Fighter Specialist Arnaldo “Arnie” Quinones, 34, was killed in the line of duty on Sunday, August 30, 2009 during the Station Fire. His emergency response vehicle went over the side of the road and fell 800 feet into a steep canyon during fire suppression activities protecting Camp 16 outside the City of Palmdale, CA. He is survived by his wife Lori and daughter Sophia Grace, born three weeks after his death."
+Benchmark,Hero,Badger,,"
+95 pound Squat clean, 30 reps
+30 Pull-ups
+Run 800 meters",For time,3 rounds for time,"In honor of Navy Chief Petty Officer Mark Carter, 27, of Virginia Beach, VA who was killed in Iraq 11 December 2007."
+Benchmark,Hero,Blake,,"
+100 foot Walking lunge with 45lb plate held overhead
+30 Box jump, 24 inch box
+20 Wallball shots, 20 pound ball
+10 Handstand push-ups",For time,4 rounds for time,"U.S. Navy Senior Chief Cryptologic Technician David Blake McLendon, 30, of Thomasville, Georgia, assigned to Naval Special Warfare Group 2 Support Activity in Norfolk, Virginia, was killed September 21, 2010, in a helicopter crash during combat operations in the Zabul province of Afghanistan. McLendon is survived by his wife Kate McLendon, his parents David and Mary-Ann McLendon, his brother Chris McLendon, and his sister Kelly Lockman."
+Benchmark,Hero,Bradley,"Sprint 100 meters
+10 Pull-ups
+Sprint 100 meters
+10 Burpees
+Rest 30 seconds","Sprint 100 meters
+10 Pull-ups
+Sprint 100 meters
+10 Burpees
+Rest 30 seconds",For time,10 rounds for time,"U.S. Air Force Senior Airman Bradley R. Smith, 24, of Troy, Illinois, assigned to the 10th Air Support Operations Squadron, based in Fort Riley, Kansas, was killed on January 3, 2010, by an improvised explosive device in Zhari district, Kandahar Province, Afghanistan. He is survived by his wife Tiffany, daughter Chloe, parents Gary and Paula, and brother Ryan."
+Benchmark,Hero,Bradshaw,,"3 Handstand push-ups
+225 pound Deadlift, 6 reps
+12 Pull-ups
+24 Double-unders",For time,10 rounds for time,"U.S. Army First Lieutenant Brian Bradshaw, 24, of Steilacoom, Washington, assigned to the 1st Battalion, 501st Parachute Infantry Regiment, 4th Airborne Brigade Combat Team, 25th Infantry Division, based in Fort Richardson, Alaska, died in Kheyl, Afghanistan, on June 25th, 2009, from wounds suffered when insurgents detonated a roadside bomb near his vehicle. He is survived by his parents, Paul and Mary, and brother Robert"
+Benchmark,Hero,Brenton,"
+Bear Crawl 100ft
+Standing Broad Jumps 100ft
+*Every 5 jumps, drop and do 3 burpees*","
+Bear Crawl 100ft
+Standing Broad Jumps 100ft
+*Every 5 jumps, drop and do 3 burpees*",For time,5 rounds for time,
+Benchmark,Hero,Bulger,,"
+Run 150 meters
+7 Chest to bar pull-ups
+135 pound Front squat, 7 reps
+7 Handstand push-ups",For time,10 rounds for time,"Canadian Forces Corporal Nicholas Bulger, 30, of Peterborough, Ontario, assigned to the 3rd Battalion of Princess Patricia’s Canadian Light Infantry, based out of Edmonton, Alberta, died July 3, 2009 while on patrol in the Zhari district of Afghanistan when an improvised explosive device exploded near his vehicle. Cpl. Bulger is survived by his wife Rebeka, and daughters Brookelynn and Elizabeth."
+Benchmark,Hero,Bull,,"
+200 Double-unders
+135 pound Overhead squat, 50 reps
+50 Pull-ups
+Run 1 mile",For time,2 rounds for time,"U.S. Marine Corps Captain Brandon “Bull” Barrett, 27, of Marion, Indiana, assigned to the 1st Battalion, 6th Marine Regiment, 2nd Marine Division, II Marine Expeditionary Force, based out of Camp Lejeune, North Carolina, was killed on May 5, 2010, while supporting combat operations in Helmand Province, Afghanistan. He is survived by his parents Cindy and Brett Barrett, his sisters Ashley and Taylor Barrett, his brother Brock Barrett, and his grandmother Carmen Johnson."
+Benchmark,Hero,Carse,,"95 pound Squat clean
+Double-under
+185 pound Deadlift
+24″ Box jump
+Begin each round with a 50 meter Bear crawl.",For time,21-18-15-12-9-6-3 (reps) for time,"U.S. Army Corporal Nathan B. Carse, 32, of Harrod, Ohio, assigned to the 2nd Engineer Battalion, 176th Engineer Brigade, based out of White Sands Missile Range, New Mexico, died in Kandahar, Afghanistan, on February 8, 2011, from wounds suffered when insurgents attacked his unit using an improvised explosive device. He is survived by his mother Janis and sisters Megan Brown and Kristin Purdy."
+Benchmark,Hero,Coe,,"
+95 pound Thruster, 10 reps
+10 Ring push-ups",For time,10 rounds for time,"Army Sgt. Keith Adam Coe, 30, of Auburndale, Fla., assigned to the 1st Battalion, 37th Field Artillery Regiment, 3rd Stryker Brigade Combat Team, 2nd Infantry Division, Joint Base Lewis-McChord, Wash., died April 27th, 2010, in Khalis, Iraq, of wounds sustained when enemy forces attacked his unit with an explosive device. He is survived by his wife Katrina Coe, two sons, Killian and Keith Jr., and daughter, Klover."
+Benchmark,Hero,Collin,,"
+Carry 50 pound sandbag 400 meters
+115 pound Push press, 12 reps
+12 Box jumps, 24 inch box
+95 pound Sumo deadlift high-pull, 12 reps",For time,6 rounds for time,"Navy Special Warfare Operator Chief Collin Trent Thomas, 33, of Morehead, Kentucky, assigned to a Navy SEAL team based out of Little Creek, Virginia, was fatally shot on August 18, 2010, during combat operations in Eastern Afghanistan. He is survived by his fiance Sarah Saunders, his parents Clay and Jean Thomas, and his sister Meghan Edwards."
+Benchmark,Hero,Culbreth,"
+1 Double under
+1 Thruster @ 45lbs
+2 Double unders
+2 Thrusters @ 45lbs
+Continue adding 1 double under and 1 thruster every round until you reach 20 of each movement.
+At the end of round 5 do 5 burpees.
+At the end of round 10 do 10 burpees.
+At the end of round 15 do 15 burpees.
+At the end of round 20 do 20 burpees.","
+1 Double under
+1 Thruster @ 65lbs
+2 Double unders
+2 Thrusters @ 65lbs
+Continue adding 1 double under and 1 thruster every round until you reach 20 of each movement.
+At the end of round 5 do 5 burpees.
+At the end of round 10 do 10 burpees.
+At the end of round 15 do 15 burpees.
+At the end of round 20 do 20 burpees.",For time,For time,
+Benchmark,Hero,Dae Han,,"Run 800 meters with a 45 pound barbell
+15 foot Rope climb, 3 ascents
+135 pound Thruster, 12 reps",For time,3 rounds for time,"U.S. Army Sergeant First Class Dae Han Park, 36, of Watertown, Connecticut, assigned to the 3rd Battalion, 1st Special Forces Group (Airborne), based out of Joint Base Lewis-McChord, Washington, died on March 12, 2011 in Wardak province, Afghanistan, from wounds suffered when enemy forces attacked his unit with an improvised explosive device. He is survived by his wife, Mi Kyong, daughters Niya and Sadie, parents Joseph and Bonnie, and siblings Katie and Saejin."
+Benchmark,Hero,Daniel,,"50 Pull-ups
+400 meter run
+95 pound Thruster, 21 reps
+800 meter run
+95 pound Thruster, 21 reps
+400 meter run
+50 Pull-ups",For time,For time,"Dedicated to Army Sgt 1st Class Daniel Crabtree who was killed in Al Kut, Iraq on Thursday June 8th 2006."
+Benchmark,Hero,Danny,,"24"" box jump, 30 reps
+115 pound push press, 20 reps
+30 pull-ups",AMRAP  (rounds),AMRAP 20 mins,"Oakland SWAT Sergeant Daniel Sakai, age 35, was killed on March 21, 2009 in the line of duty along with fellow officers Sergeant Ervin Romans, Sergeant Mark Dunakin, and Officer John Hege. Daniel is survived by wife Jenni and daughter Jojiye."
+Benchmark,Hero,Del,,"25 Burpees
+Run 400 meters with a 20 pound medicine ball
+25 Weighted pull-ups with a 20 pound dumbbell
+Run 400 meters with a 20 pound medicine ball
+25 Handstand push-ups
+Run 400 meters with a 20 pound medicine ball
+25 Chest-to-bar pull-ups
+Run 400 meters with a 20 pound medicine ball
+25 Burpees",For time,For time,"U.S. Army First Lieutenant Dimitri Del Castillo, 24, of Tampa, Florida, assigned to the 2nd Battalion, 35th Infantry Regiment, 3rd Brigade Combat Team, 25th Infantry Division, based in Schofield Barracks, Hawaii, died on June 25, 2011, in Kunar province, Afghanistan, from wounds suffered when enemy forces attacked his unit with small arms fire. He is survived by his wife Katie, his parents Mr. and Mrs. Carlos E. Del Castillo, his brother Carlos Andres and sister Anna."
+Benchmark,Hero,Desforges,,"225 pound Deadlift, 12 reps
+20 Pull-ups
+135 pound Clean and jerk, 12 reps
+20 Knees to elbows",For time,5 rounds for time,"U.S. Marine Corps Sergeant Joshua Desforges, 23, of Ludlow, Massachusetts, assigned to 1st Battalion, 6th Marine Regiment, 2nd Marine Division, II Marine Expeditionary Force, based in Camp Lejeune, North Carolina, was killed on May 12, 2010, while supporting combat operations in Helmand province, Afghanistan. He is survived by his parents David and Arlene, and his loving sister Janelle"
+Benchmark,Hero,DT,,"155 pound Deadlift, 12 reps
+155 pound Hang power clean, 9 reps
+155 pound Push jerk, 6 reps",For time,5 rounds for time,"In honor of USAF SSgt Timothy P. Davis, 28, who was killed on Feburary, 20 2009 supporting operations in OEF when his vehicle was struck by an IED. Timothy is survived by his wife Megan and one-year old son T.J."
+Benchmark,Hero,Erin,,"5 rounds for time
+40 pound Dumbbells split clean, 15 reps
+21 Pull-ups",For time,5 rounds for time,"Canadian Army Master Corporal Erin Doyle, 32, was killed in a firefight August 11th, 2008 in the Panjwaii District, Kandahar Province, Afghanistan. He is survived by his wife Nicole and his daughter Zarine.
+
+"
+Benchmark,Hero,Forrest,"20 L-pull-ups
+30 Toes to bar
+40 Burpees
+Run 800 meters","20 L-pull-ups
+30 Toes to bar
+40 Burpees
+Run 800 meters",For time,3 rounds for time,"U.S. Drug Enforcement Administration Special Agent Forrest Nelson Leamon, 37, assigned to the Foreign-deployed Advisory and Support Team (FAST) Echo was killed October 26th, 2009, while on a counternarcotics mission in Western Afghanistan when the helicopter he was in crashed. He is survived by his wife Ana, his son Luke, his parents, Sue and Richard Leamon, and his sister Heather."
+Benchmark,Hero,Garrett,"75 Squats
+25 Ring handstand push-ups
+25 L-pull-ups","75 Squats
+25 Ring handstand push-ups
+25 L-pull-ups",For time,3 rounds for time,"Marine Capt. Garrett T. “Tubes” Lawton, 31, of Charleston, West Virginia was killed by an IED strike in Herat Province, Afghanistan on August 4, 2008. He is survived by his wife, Trisha, and two sons, Ryan, 6, and Caden, 4."
+Benchmark,Hero,Gator,"185 pound Front squat, 5 reps
+26 Ring push-ups","185 pound Front squat, 5 reps
+26 Ring push-ups",For time,8 rounds for time,"U.S. Army Specialist Christopher “Gator” Gathercole, 21, of Santa Rosa, California, assigned to 2nd Battalion, 75th Ranger Regiment, based in Fort Lewis, Washington, was killed by enemy fire on May 26, 2008, in Ghazni, Afghanistan. He is survived by his brother Edward, sisters Jennifer Daly and Sarah Ferrell, father Edward Gathercole, and mother Catherine Haines."
+Benchmark,Hero,Griff,"Run 800 meters
+Run 400 meters backwards
+Run 800 meters
+Run 400 meters backwards","Run 800 meters
+Run 400 meters backwards
+Run 800 meters
+Run 400 meters backwards",For time,For time,"In honor of USAF SSgt Travis L. Griffin, 28, who was killed April 3, 2008 in the Rasheed district of Baghdad by an IED strike to his vehicle. Travis is survived by his son Elijah."
+Benchmark,Hero,Hammer,,"135 pound Power clean, 5 reps
+135 pound Front squat, 10 reps
+135 pound Jerk, 5 reps
+20 Pull-ups
+Rest 90 seconds",For time,5 rounds for time,"U.S. Army First Sergeant Michael “Hammer” Bordelon, 37, of Morgan City, Louisiana, assigned to the 1st Battalion, 24th Infantry Regiment, 1st Brigade, 25th Infantry Division (Stryker Brigade Combat Team), based out of Fort Lewis, Washington, died on May 10, 2005, from injuries sustained when a car bomb exploded near him in Mosul, Iraq on April 23, 2005.  He is survived by his wife Mila; children Mike Jr., Jacob, and Johanna; mother Dolores; and sister Doreen Scioneaux."
+Benchmark,Hero,Hansen,,"30 reps, 2 pood Kettlebell swing
+30 Burpees
+30 Glute-ham sit-ups",For time,5 rounds for time,"Marine Staff Sgt Daniel Hansen died February 14th in Farah Providence, Afghanistan when an IED he was working on detonated. Daniel is survived by his mother Sheryll, his father Delbert, his younger sister Katie, and his twin brother Matthew (also a Marine)"
+Benchmark,Hero,Helton,,"
+Run 800 meters
+30 reps, 50 pound dumbbell squat cleans
+30 Burpees",For time,3 rounds for time,
+Benchmark,Hero,Hidalgo,,"Run 2 miles
+Rest 2 minutes
+135 pound Squat clean, 20 reps
+20 Box jump, 24″ box
+20 Walking lunge steps with 45lb plate held overhead
+20 Box jump, 24″ box
+135 pound Squat clean, 20 reps
+Rest 2 minutes
+Run 2 miles
+
+If you’ve got a twenty pound vest or body armor, wear it.",For time,For time,"U.S. Army First Lieutenant Daren M. Hidalgo, 24, of Waukesha, Wisconsin, assigned to 3rd Squadron, 2nd Stryker Cavalry Regiment, based in Vilseck, Germany, died on February 20, 2011, in Kandahar province, Afghanistan, from wounds suffered when insurgents attacked his unit with an improvised explosive device. Two weeks prior to his death, he was hit by an earlier improvised explosive device. Despite his injuries, he stayed in country and on patrols rather than return home. He is survived by his father Jorge, mother Andrea, brothers Miles and Jared, and sister Carmen."
+Benchmark,Hero,Holbrook,,"10 rounds, each for time of:
+115 pound Thruster, 5 reps
+10 Pull-ups
+100 meter Sprint
+Rest 1 minute",For time,10 rounds for time,"U.S. Army Captain Jason Holbrook, 28, of Burnet, Texas, assigned to 1st Battalion, 3rd Special Forces Group (Airborne), based out of Fort Bragg, North Carolina, was killed on July 29th, 2010 in Tsagay, Afghanistan when insurgents attacked his vehicle with an improvised explosive device. He is survived by his wife Heather Holbrook and his parents Joan and James Holbrook."
+Benchmark,Hero,Jack,,"115 pound Push press, 10 reps
+10 KB Swings, 1.5 pood
+10 Box jumps, 24 inch box",AMRAP  (rounds),AMRAP 20 mins,"Army Staff Sgt. Jack M. Martin III, 26, of Bethany, Oklahoma, assigned to the 3rd Battalion, 1st Special Forces Group, Fort Lewis, Wash., died September 29th, 2009, in Jolo Island, Philippines, from the detonation of an improvised explosive device. Martin in survived by his wife Ashley Martin, his parents Jack and Cheryl Martin, and siblings Abe, Mandi, Amber and Abi."
+Benchmark,Hero,Jason,,"100 Squats
+5 Muscle-ups
+75 Squats
+10 Muscle-ups
+50 Squats
+15 Muscle-ups
+25 Squats
+20 Muscle-ups",For time,For time,"S01 (SEAL) Jason Dale Lewis was killed by an IED while conducting combat operations in Southern Baghdad July 6, 2007. We name this workout “Jason” in honor of his life, family, and courage."
+Benchmark,Hero,Jerry,"Run 1 mile
+Row 2K
+Run 1 mile","Run 1 mile
+Row 2K
+Run 1 mile",For time,For time,"Sgt Major Jerry Dwayne Patton, 40, died on 15 October 2008 during High Altitude High Opening (HAHO) training while assigned to Army USSOCOM preparing for deployment to Afghanistan. Jerry is survived by his wife Molly and his sons Chad, Cody, Chase and Connor."
+Benchmark,Hero,John Rankel,,"225 pound Deadlift, 6 reps
+7 Burpee pull-ups
+10 Kettlebell swings, 2 pood
+Run 200 meters",AMRAP  (rounds),AMRAP 20 mins,
+Benchmark,Hero,Johnson,,"245 pound Deadlift, 9 reps
+8 Muscle-ups
+155 pound Squat clean, 9 reps",AMRAP  (rounds),AMRAP 20 mins,"1st Lt. Michael E. Johnson, 25, of the U.S. Marine Corps 7th Communications Battalion, 3rd Marine Headquarters Group, III Marine Expeditionary Force, headquartered in Okinawa, Japan, died September 8, 2009 while supporting combat operations in Kunar province, Afghanistan. He is survived by his wife Durinda Johnson."
+Benchmark,Hero,Josh,,"95 pound Overhead squat, 21 reps
+42 Pull-ups
+95 pound Overhead squat, 15 reps
+30 Pull-ups
+95 pound Overhead squat, 9 reps
+18 Pull-ups",For time,For time,"SSG Joshua Hager, United States Army, was killed Thursday February 22 2007 in Ar Ramadi, Iraq."
+Benchmark,Hero,Joshie,,"
+40 pound Dumbbell snatch, 21 reps, right arm
+21 L Pull-ups
+40 pound Dumbbell snatch, 21 reps, left arm
+21 L Pull-ups
+*The snatches are full squat snatches*",For time,3 rounds for time,"In honor of Army Staff Sergeant Joshua Whitaker, 23, of Long Beach, CA who was killed in Afghanistan May 15th, 2007"
+Benchmark,Hero,JT,,"
+Handstand push-ups
+Ring dips
+Push-ups",For time,21-15-9 (reps) for time,"In honor of Petty Officer 1st Class Jeff Taylor, 30, of Little Creek, VA, who was killed in Afghanistan June 2005"
+Benchmark,Hero,Ledesma,,"5 Parallette handstand push-ups
+10 Toes through rings
+20 pound Medicine ball cleans, 15 reps",AMRAP  (rounds),AMRAP 20 mins,"Narcotics Detective and Special AssignmeNarcotics Detective and Special Assignment Unit Operator Carlos Ledesma, 34, of the Chandler Police Department, Chandler, Arizona, was shot and killed by drug dealers on July 28, 2010, during an undercover operation in Phoenix, Arizona. He is survived by his wife Sherry and sons Luciano and Elijo.nt Unit Operator Carlos Ledesma, 34, of the Chandler Police Department, Chandler, Arizona, was shot and killed by drug dealers on July 28, 2010, during an undercover operation in Phoenix, Arizona. He is survived by his wife Sherry and sons Luciano and Elijo."
+Benchmark,Hero,Luce,,"Wearing a 20 pound vest:
+Run 1K
+10 Muscle-ups
+100 Squats",For time,3 rounds for time,"Captain Ronald G. Luce, 27, of the U.S. Army Company C, 2nd Battalion, 20th Special Forces Group, headquartered at Jackson, Miss., died August 2, 2009 in Qole Gerdsar, Afghanistan, after his vehicle was struck by a command wire improvised explosive device. He is survived by by his wife Kendahl Shoemaker and 5 year old daughter Carrie, and parents Ronald and Katherine Luce."
+Benchmark,Hero,McCluskey,,"9 Muscle-ups
+15 Burpee pull-ups
+21 Pull-ups
+Run 800 meters If you’ve got a twenty pound vest or body armor, wear it.",For time,3 rounds for time,"U.S. Army Sergeant Jason “Mick” McCluskey, 26, of McAlester, Oklahoma, assigned to the 27th Engineer Battalion, 20th Engineer Brigade, XVIII Airborne Corps, based out of Fort Bragg, North Carolina, was killed on November 4, 2010, when insurgents attacked his unit with small arms fire in Zarghun Shahr, Mohammad Agha district, Afghanistan. He is survived by his son Landen, and his mother Delores Olivares."
+Benchmark,Hero,McGhee,,"275 pound Deadlift, 5 reps
+13 Push-ups
+9 Box jumps, 24 inch box",AMRAP  (rounds),AMRAP 30 mins:,"Corporal Ryan C. McGhee, 21, was killed in action on May 13, 2009 by small arms fire during combat in central Iraq. He served with 3rd Battalion, 75th Ranger Regiment of Fort Benning, Ga. This was his fourth deployment, his first to Iraq. Ryan was engaged to Ashleigh Mitchell of Fredericksburg, VA. He is survived by his father Steven McGhee of Myrtle Beach S.C., his mother Sherrie Battle McGhee, and his brother Zachary."
+Benchmark,Hero,Meadows,"20 Muscle-ups
+25 Lowers from an inverted hang on the rings, slowly, with straight body and arms
+30 Ring handstand push-ups
+35 Ring rows
+40 Ring push-ups
+
+","20 Muscle-ups
+25 Lowers from an inverted hang on the rings, slowly, with straight body and arms
+30 Ring handstand push-ups
+35 Ring rows
+40 Ring push-ups
+
+",For time,For time,"U.S. Marine Corps Captain Joshua S. Meadows, 30, of Bastrop, Texas, assigned to 1st Marine Special Operations Battalion, Marine Corps Forces Special Operations Command, based in Camp Pendleton, California, was killed by enemy fire on September 5, 2009 in Farah Province, Afghanistan. He is survived by his wife Angela, daughter Olivia, mother Jan, and sister Erin."
+Benchmark,Hero,Michael,"Run 800 meters
+50 back extensions
+50 situps","Run 800 meters
+50 back extensions
+50 situps",For time,3 rounds for time,"In honor of Navy Lieutenant Michael McGreevy, 30, of Portville, NY, who was killed in Afghanistan June 28 2005."
+Benchmark,Hero,Moore,,"5 ft Rope Climb, 1 ascent
+Run 400 meters
+Max rep Handstand push-up
+
+Score number of handstand push-ups completed for each round.",AMRAP  (rounds),AMRAP 20 mins,"Officer David S. Moore, 29, of the Indianapolis Metropolitan Police Department, died on January 26, 2011 from gunshot wounds suffered on January 23, 2011 when he stopped a stolen vehicle and the driver opened fire at him. He is survived by his mother Jo Ann, father Spencer, and sister Carol Bongfeldt."
+Benchmark,Hero,Moon,,"40 pound dumbbell Hang split snatch, 10 reps Right arm
+15 ft Rope Climb, 1 ascent
+40 pound dumbbell Hang split snatch, 10 reps Left arm
+15 ft Rope Climb, 1 ascent
+
+Alternate feet in the split snatch sets",For time,7 rounds for time,"U.S. Army Specialist Christopher Moon, 20, of Tucson, Arizona, assigned to 2nd Battalion, 508th Parachute Infantry Regiment, 4th Brigade Combat Team, 82nd Airborne Division, based out of Fort Bragg, North Carolina, died on July 13, 2010, from injuries sustained on July 6, 2010 in Arghandab, Afghanistan when insurgents attacked his vehicle with an improvised explosive device. He is survived by his parents Marsha and Brian and sister Sunday."
+Benchmark,Hero,Morrison,,"Wall ball shots, 20 pound ball
+Box jump, 24 inch box
+Kettlebell swings, 1.5 pood",For time,50-40-30-20 and 10 rep rounds of:,"U.S. Army Specialist Scott Morrison, 23, of Blue Ash, Ohio, assigned to 584th Mobility Augmentation Company, 20th Engineer Battalion, 36th Engineer Brigade, based out of Fort Hood, Texas, died on September 26, 2010, from injuries suffered on September 25 when insurgents in Kandahar, Afghanistan attacked his vehicle with an improvised explosive device. He is survived by his father Donald, mother Susan, brother Gary, and sister Katie."
+Benchmark,Hero,Mr. Joshua,,"Run 400 meters
+30 Glute-ham sit-ups
+250 pound Deadlift, 15 reps",For time,5 rounds for time,"SO1 Joshua Thomas Harris, 36, drowned during combat operations, August 30th 2008 in Afghanistan. He is survived by his parents Dr. Sam and Evelyn Harris, his brother Ranchor and twin sister Kiki."
+Benchmark,Hero,Murphy,"""1 mile run
+100 pullups
+200 pushups
+300 squats
+1 mile run
+""","1 mile run
+100 pullups
+200 pushups
+300 squats
+1 mile run
+",For time,"For time. Partition the pull-ups, push-ups, and squats as needed. Start and finish with a mile run. If you’ve got a twenty pound vest or body armor, wear it.","In memory of Navy Lieutenant Michael Murphy, 29, of Patchogue, N.Y., who was killed in Afghanistan June 28th, 2005. This workout was one of Mike’s favorites and he’d named it ‘Body Armor.’ From here on it will be referred to as ‘Murph’ in honor of the focused warrior and great American who wanted nothing more in life than to serve this great country and the beautiful people who make it what it is."
+Benchmark,Hero,Nate,,"2 Muscle-ups
+4 Handstand Push-ups
+8 2-Pood Kettlebell swings",AMRAP  (rounds),AMRAP 20 mins,"In honor of Chief Petty Officer Nate Hardy, who was killed Sunday February 4th during combat operations in Iraq. Nate is survived by his wife, Mindi, and his infant son Parker"
+Benchmark,Hero,Nutts,,"10 Handstand push-ups
+250 pound Deadlift, 15 reps
+25 Box jumps, 30 inch box
+50 Pull-ups
+100 Wallball shots, 20 pounds, 10'
+200 Double-unders
+Run 400 meters with a 45lb plate",For time,For time,"Lieutenant Andrew Richard Nuttall, 30, from the 1st Battalion Princess Patricia’s Canadian Light Infantry (1 PPCLI), based in Edmonton, Alberta, serving as a member of the 1 PPCLI Battle Group was killed by an improvised explosive device that detonated during a joint foot patrol near the village of Nakhonay in Panjwaii District, about 25 km southwest of Kandahar City on December 23, 2009. He is survived by his parents, Richard and Ethel Jane Nuttall."
+Benchmark,Hero,Paul,,"50 Double unders
+35 Knees to elbows
+185 pound Overhead walk, 20 yards",For time,5 rounds for time,"Pittsburgh Police Officer Paul John Rizzo Domenic Sciullo II, 36, was shot and killed in the line of duty while responding to a domestic disturbance call on April 4, 2009. He was engaged to be married with Lisa Esposito."
+Benchmark,Hero,Rahoi,,"24 inch Box Jump, 12 reps
+95 pound Thruster, 6 reps
+6 Bar-facing burpees",AMRAP  (rounds),AMRAP 12 mins,"U.S. FBI Supervisory Special Agent Gregory J. Rahoi, 38, of Brookfield, Wisconsin, assigned to the Hostage Rescue Team, based in Quantico, Virginia, was killed on December 6, 2006, during a live-fire tactical training exercise at Fort A.P. Hill, near Bowling Green, Virginia. He is survived by his parents, Natalie and Richard, sister Teri, and fiancee Paula Paulk."
+Benchmark,Hero,Randy,,"75 lb. Power Snatch, 75 reps",For time,For time,"In honor of Randy Simmons, 51, a 27 year LAPD veteran and SWAT
+
+team member who was killed February 6 in the line of duty. Our
+
+thoughts and prayers go out to Officer Simmons’ wife and two children.
+
+"
+Benchmark,Hero,Rankel,,"225 pound Deadlift, 6 reps
+7 Burpee pull-ups
+10 Kettlebell swings, 2 pood
+Run 200 meters
+
+",AMRAP  (rounds),AMRAP 20 mins,"U.S. Marine Corps Sergeant John Rankel, 23, of Speedway, Indiana, assigned to 3rd Battalion, 1st Marine Regiment, 1st Marine Division, 1 Marine Expeditionary Force, based out of Camp Pendleton, California, was killed on June 7, 2010, while supporting combat operations in Helmand Province, Afghanistan. He is survived by mother and stepfather Don and Trisha Stockhoff; father and stepmother, Kevin and Kim Rankel; and brothers Nathan Stockhoff and Tyler Rankel."
+Benchmark,Hero,Ricky,,"10 Pull-ups
+75 pound dumbbell Deadlift, 5 reps
+135 pound Push-press, 8 reps",AMRAP  (rounds),AMRAP 20 mins,"U.S. Army Sergeant William “Ricky” Rudd, 27, of Madisonville, Kentucky, assigned to the 3rd Battalion, 75th Ranger Regiment, based in Fort Benning, Georgia, died on October 5, 2008, from wounds suffered from enemy small arms fire while on a combat patrol in Mosul, Iraq. He is survived by his father William, stepmother Barbara Rudd, step brother Josh, mother Pamela Lam, and sister Elizabeth."
+Benchmark,Hero,RJ,,"Run 800 meters
+15 ft Rope Climb, 5 ascents
+50 Push-ups",For time,5 rounds for time,"Veteran LAPD officer and United States Marine Corps Reservist Sergeant Major Robert J Cottle, 45, was killed by an improvised explosive device while on patrol in Southern Afghanistan on Wednesday, March 24, 2010. RJ joined the Marines at age 18, and the LAPD in 1990. His various LAPD assignments included Hollywood Vice, Southeast Area, LAPD Dive Team and, most recently, SWAT. He is survived by his wife Emily and 9 month old daughter Kaila. The LAPD established a trust fund for them."
+Benchmark,Hero,Roy,,"225 pound Deadlift, 15 reps
+20 Box jumps, 24 inch box
+25 Pull-ups",For time,5 rounds for time,"Marine Corps Sgt. Michael C. Roy, 25, of North Fort Myers, Fla., assigned to the 3rd Marine Special Operations Battalion, Marine Special Operations Advisor Group, Marine Corps Forces Special Operations Command at Camp Lejeune, was killed in action on July 8th, 2009 in Nimroz Province, Afghanistan, while supporting combat operations. He is survived by his wife Amy and three children, Michael, Landon and Olivia."
+Benchmark,Hero,Ryan,,"7 Muscle-ups
+21 Burpees
+*Each burpee terminates with a jump one foot above max standing reach.*",For time,5 rounds for time,"Maplewood, Missouri Firefighter, Ryan Hummert, 22, was killed by sniper fire July 21st 2008 when he stepped off his fire truck responding to a call. He is survived by his parents Andrew and Jackie Hummert."
+Benchmark,Hero,Santiago,,"35 pound Dumbbell hang squat clean, 18 reps
+18 Pull-ups
+135 pound Power clean, 10 reps
+10 Handstand push-ups",For time,7 rounds for time,"U.S. Army Sergeant Anibal Santiago, 37, of Belvidere, Illinois, assigned to the 3rd Battalion, 75th Ranger Regiment, stationed in Fort Benning, Georgia, died on July, 18, 2010, in Bagram, Afghanistan. He is survived by his wife, Mandy, sons Hannibal, Desmond, and Darian, and parents Anibal and Maria."
+Benchmark,Hero,Santora,,"155 pound Squat cleans, 1 minute
+20′ Shuttle sprints (20′ forward + 20′ backwards = 1 rep), 1 minute
+245 pound Deadlifts, 1 minute
+Burpees, 1 minute
+155 pound Jerks, 1 minute
+Rest 1 minute",For time,3 rounds for time,"U.S. Army Sergeant Jason A. Santora, of Farmingville, New York, assigned to the 3rd Battalion, 75th Ranger Regiment, based out of Fort Benning, Georgia, died in Logar province, Afghanistan on April 23, 2010, from wounds sustained during a firefight with insurgents. He is survived by his parents Gary and Theresa, and sister Gina.
+
+"
+Benchmark,Hero,Severin,,"50 Strict Pull-ups
+100 Push-ups, release hands from floor at the bottom
+Run 5K
+If you've got a twenty pound vest or body armor, wear it.",For time,For time,"U.S. Army Sergeant First Class Severin W. Summers III, 43, of Bentonia, Mississippi, assigned to the 2nd Battalion, 20th Special Forces Group (Airborne), headquartered at Jackson, Mississippi, died August 2, 2009 in Qole Gerdsar, Afghanistan, after his vehicle was struck by a command wire improvised explosive device. Summers is survived by his wife Tammy Fraser and his daughters Jessica, Shelby & Sarah."
+Benchmark,Hero,Small,"Row 1000 meters
+50 Burpees
+50 Box jumps, 20″ box
+Run 800 meters","Row 1000 meters
+50 Burpees
+50 Box jumps, 24″ box
+Run 800 meters",For time,3 rounds for time,"U.S. Army Staff Sergeant Marc Small, 29, of Collegeville, Pennsylvania, assigned to 1st Battalion, 3rd Special Forces Group (Airborne), based in Fort Bragg, North Carolina, died on February 12, 2009, from wounds sustained when insurgents attacked his unit with a rocket-propelled grenade launcher and small arms fire in Faramuz, Afghanistan. He is survived by his father and stepmother, Murray and Karen, mother and stepfather, Mary and Peter MacFarland, and fiancee Amanda Charney."
+Benchmark,Hero,Stephen,,"GHD sit-up
+Back extension
+Knees to elbow
+95 pound Stiff legged deadlift",For time,30-25-20-15-10-5(reps) for time,"Third Battalion, Princess Patricia’s Canadian Light Infantry member Corporal Stephen Bouzane, 26, was killed by an IED strike June 20th, 2007 in the Panjwaii district in Afghanistan. He is survived by his parents Fred and Moureen Bouzane and his sister Kelly."
+Benchmark,Hero,The Seven,,"7 Handstand push-ups
+135 pound Thruster, 7 reps
+7 Knees to elbows
+245 pound Deadlift, 7 reps
+7 Burpees
+7 Kettlebell swings, 2 pood
+7 Pull-ups",For time,7 rounds for time,"A suicide bomber killed seven CIA officers and one Jordanian officer at a remote base in southeastern Afghanistan on December 30, 2009 after posing as a potential informant reporting on Al Qaeda. Seven new stars will be etched onto the memorial wall at the CIA where every star represents grieving friends, family and colleagues dedicated to fight against the enemy, forever in their name."
+Benchmark,Hero,Thompson,,"15 ft Rope Climb, 1 ascent
+95 pound Back squat, 29 reps
+135 pound barbells Farmer carry, 10 meters
+
+Begin the rope climbs seated on the floor. ",For time,10 rounds for time,"U.S. Army Captain David J. Thompson, 39, of Hooker, Oklahoma, commander of Operational Detachment Alpha 3334, Company C, 3rd Battalion, 3rd Special Forces Group (Airborne), based in Fort Bragg, North Carolina, was killed on January 29, 2010, while supporting combat operations in the Wardak Province of Afghanistan. Thompson is survived by his wife, Emily, their two daughters, Isabelle and Abigail, his parents, Charles and Freida, and his sister Alisha Mueller."
+Benchmark,Hero,Tommy V,,"115 pound Thruster, 21 reps
+15 ft Rope Climb, 12 ascents
+115 pound Thruster, 15 reps
+15 ft Rope Climb, 9 ascents
+115 pound Thruster, 9 reps
+15 ft Rope Climb, 6 ascents",For time,,"In honor of Senior Chief Petty Officer Thomas J. Valentine, 37, of Ham Lake, Minnesota, died in an training accident in Arizona, on Feb. 13 2008."
+Benchmark,Hero,Tyler,,"7 Muscle-ups 
+21 reps 95 pound Sumo-deadlift high-pull",For time,5 rounds for time,"1LT Tyler E. Parten, 24, of Arkansas, died Sept. 10 in Konar province, Afghanistan, of wounds sustained when insurgents attacked his unit using rocket-propelled grenades and small arms fire. He was assigned to the 3rd Squadron, 61st Cavalry Regiment, 4th Brigade Combat Team, 4th Infantry Division, Fort Carson, CO."
+Benchmark,Hero,War Frank,,"25 Muscle-ups
+100 Squats
+35 GHD situps",For time,3 rounds for time,"Captain Warren A. Frank, 26, of Cincinnati, Ohio, died November 25, 2008 while supporting combat operations in Ninewa province, Iraq. He was assigned to the 5th Air Naval Gunfire Liaision Company, III Marine Expeditionary Force, Okinawa, Japan. He is survived by his wife, Allison, and daughters Sophia Lynn and Isabella Grace."
+Benchmark,Hero,Weaver,"10 L-pull-ups
+15 Push-ups
+15 Chest to bar Pull-ups
+15 Push-ups
+20 Pull-ups
+15 Push-ups","10 L-pull-ups
+15 Push-ups
+15 Chest to bar Pull-ups
+15 Push-ups
+20 Pull-ups
+15 Push-ups",For time,4 rounds for time,"U.S. Army First Lieutenant Todd W. Weaver, 26, of Hampton, Virginia, assigned to the 1st Battalion, 320th Field Artillery Regiment, 2nd Brigade Combat Team, 101st Airborne Division (Air Assault), based out of Fort Campbell, Kentucky, died on September 9, 2010, of wounds suffered when insurgents attacked his unit with a roadside bomb in Kandahar, Afghanistan. He is survived by his wife Emma, daughter Kiley, parents Don and Jeanne, and siblings Glenn, Adrianna, and Christina."
+Benchmark,Hero,White,,"15′ Rope climb, 3 ascents
+10 Toes to bar
+21 Walking lunge steps with 45lb plate held overhead
+Run 400 meters
+
+",For time,5 rounds for time,"U.S. Army First Lieutenant Ashley White, 24, of Alliance, Ohio, assigned to the 230th Brigade Support Battalion, 30th Heavy Brigade Combat Team, North Carolina National Guard, based in Goldsboro, North Carolina, died on October 22, 2011 in Kandahar province, Afghanistan, from wounds suffered when insurgents attacked her unit with an improvised explosive device. She is survived by her husband Captain Jason Stumpf, her parents Robert and Deborah, brother Josh, and sister Brittney."
+Benchmark,Hero,Whitten,,"22 Kettlebell swings, 2 pood
+22 Box jump, 24 inch box
+Run 400 meters
+22 Burpees
+22 Wall ball shots, 20 pound ball",For time,5 rounds for time,"Army Captain Dan Whitten, 28, of Grimes, Iowa, assigned to the 1st Battalion, 508th Parachute Infantry Regiment, 4th Brigade Combat Team, 82nd Airborne Division, based out of Fort Bragg, North Carolina, died February 2, 2010, when enemy forces in Zabul, Afghanistan, attacked his vehicle with an improvised explosive device. Whitten is survived by his wife, Starr Whitten, his mother, Jill Whitten, his father, Dan Whitten, and his sister, U.S. Army Captain Sarah Whitten."
+Benchmark,Hero,Wilmot,"50 Squats
+25 Ring dips","50 Squats
+25 Ring dips",For time,6 rounds for time,"Canadian Forces Private Colin Wilmot, 24, of Fredericton, New Brunswick, assigned to the Second Battalion, Princess Patricia’s Canadian Light Infantry (2 PPCLI) Battle Group, based out of Edmonton, Alberta, died on July 6, 2008 from wounds suffered when an explosive device detonated near him in the Panjwali District of Afghanistan."
+Benchmark,Hero,Wittman,,"1.5 pood Kettlebell swing, 15 reps
+95 pound Power clean, 15 reps
+15 Box jumps, 24"" box",For time,5 rounds for time,"U.S. Army Sergeant Jeremiah Wittman, 26, of Darby, Montana, assigned to the 1st Battalion, 12th Infantry Regiment, 4th Brigade Combat Team, 4th Infantry Division, based out of Fort Carson, Colorado, was killed on February 13, 2010, when insurgents attacked his unit with a roadside bomb in Zhari province, Afghanistan. He is survived by his daughters Miah and Ariauna, wife Karyn, siblings Robert H., Charity, Jenell, and Natasha, father Robert, and mother Cynthia Church."
+Benchmark,Hero,Wood,,"Run 400 meters
+10 Burpee box jumps, 24″ box
+95 pound Sumo-deadlift high-pull, 10 reps
+95 pound Thruster, 10 reps
+
+Rest 1 minute",For time,5 rounds for time,"Australian Army Sergeant Brett Wood, 32, of Ferntree Gully, Victoria, assigned to the 2nd Commando Regiment, based in Sydney, New South Wales, died on May 23, 2011, in Helmand province, Afghanistan, after insurgents attacked him with an improvised explosive device. He is survived by his wife Elvi, his mother Allison, and his father David. Donations can be made in his name to the Commando Welfare Trust."

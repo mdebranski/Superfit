@@ -4,8 +4,10 @@ gem 'rails', '3.2.3'
 
 gem 'foreman'
 gem 'haml'
+gem 'haml_coffee_assets'
 gem 'jquery-rails'
 gem 'pg'
+gem 'sequel'
 gem 'twitter-bootstrap-rails'
 gem 'unicorn'
 
