@@ -11,7 +11,7 @@
 #= require_tree ./superfit/views
 
 $(document).bind "mobileinit", () ->
-#  $.mobile.ajaxEnabled = false;
+  $.mobile.ajaxEnabled = false;
 #  $.mobile.linkBindingEnabled = false;
 #  $.mobile.hashListeningEnabled = false;
 #  $.mobile.pushStateEnabled = false;
@@ -30,7 +30,5 @@ class AppInit
           document.location.hash = "#home"
 
       $.mobile.initializePage()
-
-      new NoClickDelay($('body'))
 
 $ -> new AppInit()
