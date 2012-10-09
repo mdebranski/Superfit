@@ -1,5 +1,7 @@
 #= require jquery.min
 #= require underscore-min
+#= require jqtouch.min
+#= require jqtouch-jquery.min
 #= require spine/spine
 #= require spine/manager
 #= require spine/ajax
@@ -10,25 +12,19 @@
 #= require_tree ./superfit/controllers
 #= require_tree ./superfit/views
 
-$(document).bind "mobileinit", () ->
-  $.mobile.ajaxEnabled = false;
-#  $.mobile.linkBindingEnabled = false;
-#  $.mobile.hashListeningEnabled = false;
-#  $.mobile.pushStateEnabled = false;
-
-  $.mobile.defaultPageTransition = 'slide'
-  $.mobile.autoInitializePage = false
-
 class AppInit
   constructor: ->
     $.get("/models").success (data) ->
       Wod.refresh(data.wods)
       Category.refresh(data.categories)
-      new Index(el: $('body'))
+      new Superfit(el: $('body'))
 
-      if (document.location.hash == "")
-          document.location.hash = "#home"
-
-      $.mobile.initializePage()
+      jQT = new $.jQTouch
+          icon: 'jqtouch.png',
+          icon4: 'jqtouch4.png',
+          addGlossToIcon: false,
+          startupScreen: 'jqt_startup.png',
+          statusBar: 'black-translucent',
+          preloadImages: []
 
 $ -> new AppInit()

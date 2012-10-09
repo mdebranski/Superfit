@@ -1,15 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  def index
-
-  end
-
-  def mobile
-    render layout: nil
-  end
-
-  def jqm
+  def superfit
     @wods = Wod.all.sort_by(&:name)
     @categories = @wods.map(&:category).uniq.sort
     render layout: nil
