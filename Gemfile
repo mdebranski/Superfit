@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 
 gem 'foreman'
+gem 'eco'
 gem 'haml'
 gem 'haml_coffee_assets'
 gem 'jquery-rails'
