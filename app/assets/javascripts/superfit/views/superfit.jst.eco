@@ -1,0 +1,18 @@
+<div class='current' id='home'>
+    <div class='toolbar'>
+
+            <div class="tabs">
+                <ul class="rounded">
+                    <li>Day</li>
+                    <li class="inactive">Week</li>
+                </ul>
+            </div>
+
+    </div>
+    <ul class='rounded'>
+        <li class='arrow'><a href='#todo'>TODO</a></li>
+        <!-- Add other menu items here -->
+    </ul>
+
+</div>
+        <!-- Add other pages below -->
