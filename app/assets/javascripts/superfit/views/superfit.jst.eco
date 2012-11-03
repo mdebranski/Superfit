@@ -1,18 +1,132 @@
 <div class='current' id='home'>
+    <!-- STANDARD HEADER -->
     <div class='toolbar'>
-
+            <div class="pulldown">
+               Navigation Pulldown
+            </div>
             <div class="tabs">
-                <ul class="rounded">
-                    <li>Day</li>
+                <ul>
+                    <li class="first">Day</li>
                     <li class="inactive">Week</li>
                 </ul>
             </div>
 
     </div>
-    <ul class='rounded'>
-        <li class='arrow'><a href='#todo'>TODO</a></li>
-        <!-- Add other menu items here -->
-    </ul>
+    <!-- STANDARD HEADER -->
+    <!-- MAIN -->
+    <div class="notepaper">
+        <div class="pages">
+            <div class="note-title">
+                <h2>Today</h2>
 
+            </div>
+            <ul class="wod-activity">
+
+                <li>
+                    <h5>WOD Activity</h5>
+                </li>
+                <li>
+                    <p class="icon sprite-sf strength"></p>
+                        <div class="label-score">
+                            <p>Front Squat</p>
+                            <p>145lb</p>
+                        </div>
+                    <p class="sprite-sf arrow"></p>
+                </li>
+                <li>
+                    <p class="icon sprite-sf benchmark"></p>
+                    <div class="label-score">
+                        <p>Other Label</p>
+                        <p>4:30</p>
+                    </div>
+                    <p class="sprite-sf arrow"></p>
+                </li>
+                <li>
+                    <p class="icon sprite-sf custom"></p>
+                    <div class="label-score">
+                        <p>Fran</p>
+                        <p>4:20</p>
+                    </div>
+                    <p class="sprite-sf arrow"></p>
+                </li>
+                <li>
+                    <p><a href="#add-wod">Add Another WOD +</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Notepaper -->
+    <div class="goal-progress">
+        <h5>Recent Goal Progress</h5>
+        <ul>
+            <li>
+                <div class="goal-data">
+                    <p>25 Max UB Pushup <br><span>Last Changed: 5 days ago</span></p>
+                    <p>20%<br><span>Complete</span>
+                </div>
+                <p class="sprite-sf reverse-arrow"></p>
+            </li>
+            <li>
+                <div class="goal-data">
+                    <p>25 Max UB Pushup <br><span>Last Changed: 5 days ago</span></p>
+                    <p>20%<br><span>Complete</span>
+                </div>
+                <p class="sprite-sf reverse-arrow"></p>
+            </li>
+
+        </ul>
+    </div>
+    <!-- END MAIN -->
 </div>
-        <!-- Add other pages below -->
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\   NEW PAGE - ADD WOD
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
+<div id="add-wod">
+
+    <!-- STANDARD HEADER -->
+    <div class='toolbar'>
+        <div id="back">
+            <a class="back" href="#" style="">Home</a>
+        </div>
+        <h1>Select Type</h1>
+    </div>
+    <!-- STANDARD HEADER -->
+    <!-- MAIN  -->
+    <div class="cement-page">
+        <div class="search-wods">
+            <form id="search" action="">
+                <ul>
+                    <li><input type="text" name="search-text" placeholder="Search" id="search-text" /></li>
+                </ul>
+            </form>
+        </div>
+        <div class="stage browse-wods">
+           <ul>
+               <li>
+                   <p class="icon sprite-sf benchmark"></p>
+                   <p class="label">Benchmarks</p>
+                   <p class="sprite-sf small-arrow"></p>
+               </li>
+               <li>
+                   <p class="icon sprite-sf strength"></p>
+                   <p class="label">Strength</p>
+                   <p class="sprite-sf small-arrow"></p>
+               </li>
+               <li>
+                   <p class="icon sprite-sf custom"></p>
+                   <p class="label">Custom</p>
+                   <p class="sprite-sf small-arrow"></p>
+               </li>
+               <li>
+                   <p class="icon sprite-sf mainsite"></p>
+                   <p class="label">Main Site</p>
+                   <p class="sprite-sf small-arrow"></p>
+               </li>
+           </ul>
+        </div>
+
+    </div>
+<!-- END MAIN -->
+</div>
