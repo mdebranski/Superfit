@@ -1528,7 +1528,7 @@ body {
 #jqt ul, #jqt ul.individual li {
   background-color: #555658;
   color: #d5d6d7;
-  text-shadow: #3c3d3e 0 -1px 0;
+  /* text-shadow: #3c3d3e 0 -1px 0; */
   border: 1px solid #2f3031;
   font: bold 18px "Helvetica Neue", Helvetica;
 }
@@ -1557,7 +1557,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-transform: translateZ(0);
   color: white;
-  text-shadow: #3c3d3e 0 -1px 0;
+  /*text-shadow: #3c3d3e 0 -1px 0;  */
 }
 /* line 265, ../scss/include/_skeleton.scss */
 #jqt ul li a.active {
@@ -1566,7 +1566,7 @@ body {
   -webkit-box-shadow: #5cc801 0 1px 0px inset;
   box-shadow: #5cc801 0 1px 0px inset;
   color: white;
-  text-shadow: #3c8101 0 -1px 0;
+  /*text-shadow: #3c8101 0 -1px 0; */
 }
 /* line 270, ../scss/include/_skeleton.scss */
 #jqt ul li a.active small {
@@ -1609,12 +1609,12 @@ body {
 /* line 311, ../scss/include/_skeleton.scss */
 #jqt ul li ::-webkit-input-placeholder {
   color: #949698;
-  text-shadow: #3c3d3e 0 -1px 0;
+  /* text-shadow: #3c3d3e 0 -1px 0; */
 }
 /* line 322, ../scss/include/_skeleton.scss */
 #jqt ul li input[type="text"], #jqt ul li input[type="password"], #jqt ul li input[type="tel"], #jqt ul li input[type="number"], #jqt ul li input[type="search"], #jqt ul li input[type="email"], #jqt ul li input[type="url"], #jqt ul li textarea, #jqt ul li select {
   color: white;
-  text-shadow: #3c3d3e 0 -1px 0;
+  /* text-shadow: #3c3d3e 0 -1px 0; */
   background: transparent url("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
   border: 0;
   font: normal 17px "Helvetica Neue", Helvetica;

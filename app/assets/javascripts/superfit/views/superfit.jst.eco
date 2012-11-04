@@ -17,11 +17,12 @@
     <div class="notepaper">
         <div class="pages">
             <div class="note-title">
+                <a href="#">&#60 Prev Day</a>
                 <h2>Today</h2>
+                <a href="#">Next Day &#62;</a>
 
             </div>
             <ul class="wod-activity">
-
                 <li>
                     <h5>WOD Activity</h5>
                 </li>
@@ -98,7 +99,7 @@
         <div class="search-wods">
             <form id="search" action="">
                 <ul>
-                    <li><input type="text" name="search-text" placeholder="Search" id="search-text" /></li>
+                    <li><input type="text" name="search-text" placeholder="Search All" id="search-text" /></li>
                 </ul>
             </form>
         </div>
