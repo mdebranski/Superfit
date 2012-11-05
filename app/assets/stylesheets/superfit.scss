@@ -14,12 +14,14 @@ $stageshadow:0px 1px 3px rgba(0, 0, 0, 0.46);
 $stagebkg:#ffffff;
 $contentpad:0 10px;
 $insetshadow:inset 0px 2px 2px 0px rgba(0, 0, 0, .45);
+$standardfont: "Helvetica Neue", Helvetica;
+$standardfontsize: 16px;
 
 
 body {background:none}
 #jqt > * {
 
-
+  font-family: $standardfont;
   background:#cecece url(image_path('tile-cement.png'))  repeat;
   color: #ddd;
 
@@ -54,8 +56,8 @@ body {background:none}
 
   }
   .icon.strength {width:29px; height:28px; background-position: -29px -70px; }
-  .icon.benchmark {width:29px; height:28px; background-position: -29px -113px;}
-  .icon.custom {width:29px; height:28px; background-position: -29px -152px;}
+  .icon.custom {width:29px; height:28px; background-position: -29px -113px;}
+  .icon.benchmark {width:29px; height:28px; background-position: -29px -152px;}
   .icon.mainsite {width:29px; height:28px; background-position: -29px -199px;}
   .arrow  { width:25px;  height:16px; background-position: -90px -25px;}
   .reverse-arrow  { width:25px;  height:16px; background-position: -90px -60px;}
@@ -200,7 +202,7 @@ body {background:none}
           margin:0;
           padding:$contentpad;
           line-height: 54px;
-          font-size: 16px;
+          font-size: $standardfontsize;
 
           a {color:$lightgrey}
 
@@ -284,6 +286,8 @@ body {background:none}
       @include border-radius($radius);
       box-shadow:$stageshadow;
 
+      h2 {}
+
       ul {
         margin:$contentpad;
 
@@ -318,6 +322,9 @@ body {background:none}
         }
 
       }
+      .create-custom {
+
+      }
 
     } // end stage
     .search-wods{
@@ -332,6 +339,10 @@ body {background:none}
 
           input{
             text-shadow: none;
+            border:0;
+            font-size: $standardfontsize;
+            color:$darkgrey;
+            font-family: $standardfont;
           }
 
         }

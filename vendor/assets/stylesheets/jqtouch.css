@@ -1552,46 +1552,46 @@ body {
   white-space: nowrap;
   overflow: hidden;
   display: block;
-  padding: 10px;
+  /* padding: 10px;
   margin: -10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-transform: translateZ(0);
   color: white;
-  /*text-shadow: #3c3d3e 0 -1px 0;  */
+  text-shadow: #3c3d3e 0 -1px 0;  */
 }
 /* line 265, ../scss/include/_skeleton.scss */
 #jqt ul li a.active {
   background-image: none;
-  background-color: #53b401;
-  -webkit-box-shadow: #5cc801 0 1px 0px inset;
-  box-shadow: #5cc801 0 1px 0px inset;
-  color: white;
-  /*text-shadow: #3c8101 0 -1px 0; */
+   /* background-color: #53b401;
+   -webkit-box-shadow: #5cc801 0 1px 0px inset;
+   box-shadow: #5cc801 0 1px 0px inset;
+   color: white;     */
+   /*text-shadow: #3c8101 0 -1px 0; */
 }
 /* line 270, ../scss/include/_skeleton.scss */
 #jqt ul li a.active small {
-  color: #a0fe50;
-  text-shadow: black 0 -1px 0;
-}
+    /* color: #a0fe50;
+    text-shadow: black 0 -1px 0;
+}                               */
 /* line 271, ../scss/include/_skeleton.scss */
 #jqt ul li a.active small.counter {
   background-color: #306801;
 }
 /* line 280, ../scss/include/_skeleton.scss */
 #jqt ul li small {
-  color: #53b401;
-  font: 16px "Helvetica Neue", Helvetica;
-  text-align: right;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  width: 23%;
-  position: relative;
-  z-index: 20;
-  float: right;
-  line-height: 16px;
-  padding: 2px 8px 4px 8px;
+    /* color: #53b401;  */
+    font: 16px "Helvetica Neue", Helvetica;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 23%;
+    position: relative;
+    z-index: 20;
+    float: right;
+    line-height: 16px;
+    padding: 2px 8px 4px 8px;
 }
 /* line 295, ../scss/include/_skeleton.scss */
 #jqt ul li small.counter {
@@ -1920,8 +1920,8 @@ body {
 }
 /* line 33, ../scss/jqtouch.scss */
 #jqt ul li a {
-  color: white;
-  text-shadow: #3c3d3e 0 -1px 0;
+  /* color: white;
+  text-shadow: #3c3d3e 0 -1px 0;   */
 }
 /* line 37, ../scss/jqtouch.scss */
 #jqt ul li .toggle input[type="checkbox"] {

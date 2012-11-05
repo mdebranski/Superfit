@@ -116,9 +116,11 @@
                    <p class="sprite-sf small-arrow"></p>
                </li>
                <li>
-                   <p class="icon sprite-sf custom"></p>
-                   <p class="label">Custom</p>
-                   <p class="sprite-sf small-arrow"></p>
+                   <a href="#custom-wod-step1">
+                       <p class="icon sprite-sf custom"></p>
+                       <p class="label">Custom</p>
+                       <p class="sprite-sf small-arrow"></p>
+                   </a>
                </li>
                <li>
                    <p class="icon sprite-sf mainsite"></p>
@@ -130,4 +132,53 @@
 
     </div>
 <!-- END MAIN -->
+</div>
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\   NEW PAGE - Create CUSTOM WOD
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
+<div id="custom-wod-step1">
+
+<!-- STANDARD HEADER -->
+<div class='toolbar'>
+    <div id="back">
+        <a class="back" href="#" style="">Home</a>
+    </div>
+    <h1>Enter Details</h1>
+</div>
+<!-- STANDARD HEADER -->
+<!-- MAIN  -->
+    <div class="cement-page">
+        <div class="stage">
+            <h2><span class="icon sprite-sf custom"></span>What did you do?</h2>
+
+            <form id="create-custom-wod" action="">
+            <ol>
+                <li>
+                    <p>Name Your WOD </p>
+                        <ul>
+                            <li><input type="text" name="custom-wod-label" placeholder="Today's Date" id="custom-wod-label" /></li>
+                        </ul>
+                </li>
+                <li>
+                    <p>How was the WOD scored?  </p>
+                    <input type="radio" name="group1" value="Time">Time
+                    <input type="radio" name="group1" value="Load">Load
+                    <input type="radio" name="group1" value="Rounds">Rounds
+                    <input type="radio" name="group1" value="Reps">Reps
+                </li>
+                <li>
+                    <p>Enter WOD Details </p>
+                    <p>You can type in the workout details or you can
+                        take a photo of the whiteboard</p>
+                    <button>Type It In</button>
+                    <button>Take a Photo</button>
+
+                </li>
+            </ol>
+            </form>
+        </div>
+    </div>
 </div>
