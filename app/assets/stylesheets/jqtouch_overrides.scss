@@ -1,0 +1,72 @@
+$radius: 2px;
+$radiusleft: 0px 2px 2px 2px;
+$radiusright: 0px 2px 2px 0px;
+$radiusbottom: 0px 0px 2px 2px;
+$darkgrey:#474747;
+$mediumgrey:#646464;
+$lightgrey:#858585;
+$notepapercolor:#fcfadd;
+$stageshadow:0px 1px 3px rgba(0, 0, 0, 0.46);
+$stagebkg:#ffffff;
+$contentpad:0 10px;
+$insetshadow:inset 0px 2px 2px 0px rgba(0, 0, 0, .45);
+$standardfont: "Helvetica Neue", Helvetica;
+$standardfontsize: 16px;
+
+#jqt > * {
+
+  h2 {
+    text-shadow: none;
+    margin:0;
+  }
+  ul{
+    background-color:transparent;
+    background-image:none;
+    border:0;
+    margin:0;
+
+    li {
+      background-color:transparent;
+      background-image:none;
+      text-shadow: none;
+      border:0;
+      padding: 0;
+
+      a {
+        text-shadow: none;
+        padding: 0px;
+        margin: 0px;
+        -webkit-tap-highlight-color: none;
+        -webkit-transform: translateZ(0);
+        color:$mediumgrey;
+        text-shadow: 0;
+      }
+    }
+  }
+
+  input{
+    text-shadow: none;
+    border:0;
+    font-size: $standardfontsize;
+    color:$darkgrey;
+    font-family: $standardfont;
+    background: transparent;
+  }
+
+  a {text-decoration: none;}
+
+  ul, ul.individual li {
+    text-shadow: 0;
+  }
+
+  ul li a.active {
+    background-image: none;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0;
+    box-shadow: none;
+    color: $lightgrey;
+    text-shadow: none;
+    border:0;
+  }
+
+}

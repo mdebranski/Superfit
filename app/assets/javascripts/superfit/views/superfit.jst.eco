@@ -151,25 +151,26 @@
 <!-- STANDARD HEADER -->
 <!-- MAIN  -->
     <div class="cement-page">
-        <div class="stage">
+        <div class="stage add-wod">
             <h2><span class="icon sprite-sf custom"></span>What did you do?</h2>
 
             <form id="create-custom-wod" action="">
             <ol>
-                <li>
+                <li class="name-wod">
                     <p>Name Your WOD </p>
-                        <ul>
-                            <li><input type="text" name="custom-wod-label" placeholder="Today's Date" id="custom-wod-label" /></li>
-                        </ul>
+                    <ul>
+                       <li class="grey-input"><input type="text" name="custom-wod-label" placeholder="Today's Date" id="custom-wod-label" /></li>
+                    </ul>
                 </li>
-                <li>
+                <li class="score-wod">
                     <p>How was the WOD scored?  </p>
-                    <input type="radio" name="group1" value="Time">Time
-                    <input type="radio" name="group1" value="Load">Load
-                    <input type="radio" name="group1" value="Rounds">Rounds
-                    <input type="radio" name="group1" value="Reps">Reps
+                    <p class="radio"><input type="radio" name="group1" value="Time"> Time   </p>
+                    <p class="radio"><input type="radio" name="group1" value="Load"> Load </p>
+                    <p class="radio"><input type="radio" name="group1" value="Rounds"> Rounds </p>
+                    <p class="radio last"><input type="radio" name="group1" value="Reps"> Reps  </p>
+
                 </li>
-                <li>
+                <li class="wod-details">
                     <p>Enter WOD Details </p>
                     <p>You can type in the workout details or you can
                         take a photo of the whiteboard</p>
