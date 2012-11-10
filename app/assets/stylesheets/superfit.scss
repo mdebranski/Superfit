@@ -1,5 +1,6 @@
 //= require jqtouch
 //= require jqtouch_overrides
+//= require superfit_common
 @import 'compass/css3';
 
 $radius: 2px;
@@ -18,6 +19,8 @@ $standardfont: "Helvetica Neue", Helvetica;
 $standardfontsize: 16px;
 $paragraphtext: 12px;
 $standardlineheight: 45px;
+$woddetailsyellow:#fffae8;
+$stageintmargin:20px;
 
 @mixin fl($width) { display: block; float: left; width: $width }
 @mixin fr($width) { display: block; float: right; width: $width }
@@ -26,40 +29,12 @@ $standardlineheight: 45px;
 body {background:none}
 #jqt > * {
 
-  font-family: $standardfont;
-  background:#cecece url(image_path('tile-cement.png'))  repeat;
-  color: #ddd;
 
-  h5 {font-size:18px; color:$darkgrey}
-  a {text-shadow: 0; color:$mediumgrey}
 
-  ul{
-    li {
-      color:$mediumgrey;
-      font-size: 14px;
-    }
-  }
-
-  .sprite-sf{
-    display:block;
-    line-height:0 !important;
-    text-indent:-9999px;
-    font-size:0 !important;
-    background:url(image_path('sprite-superfit.png')) no-repeat 0 0;
-  }
-  .icon {
-    width:29px; height:28px;
-    &.strength { background-position: -29px -70px; }
-    &.custom {background-position: -29px -113px;}
-    &.benchmark {background-position: -29px -152px;}
-    &.mainsite {background-position: -29px -199px;}
-  }
-  .arrow  { width:25px;  height:16px; background-position: -90px -25px;}
-  .reverse-arrow  { width:25px;  height:16px; background-position: -90px -60px;}
-  .small-arrow  { width:25px;  height:16px; background-position: -90px -93px;}
 
 
   .ui-header .ui-title { margin-left: 5%; margin-right: 5%; }
+  ///////////  begin toolbar / header
 
   .toolbar {
     @include box-sizing(border-box);
@@ -121,7 +96,34 @@ body {background:none}
 
       } // end ul
     }   // end .tabs
-  } // end .toolbar
+  }
+  //////////// end toolbar  / header
+
+  //////////// begin universal elements
+
+  .sprite-sf{
+    display:block;
+    line-height:0 !important;
+    text-indent:-9999px;
+    font-size:0 !important;
+    background:url(image_path('sprite-superfit.png')) no-repeat 0 0;
+  }
+  .icon {
+    width:29px; height:28px;
+    &.strength { background-position: -29px -70px; }
+    &.custom {background-position: -29px -113px;}
+    &.benchmark {background-position: -29px -152px;}
+    &.mainsite {background-position: -29px -199px;}
+  }
+
+  .arrow  { width:25px;  height:16px; background-position: -90px -25px;}
+  .reverse-arrow  { width:25px;  height:16px; background-position: -90px -60px;}
+  .small-arrow  { width:25px;  height:16px; background-position: -90px -93px;}
+  .write-icon {width:48px;  height:35px; background-position: -208px -18px;}
+  .photo-icon {width:48px;  height:35px; background-position: -143px -18px; }
+
+  //////////// end universal elements
+
   .notepaper {
     position:relative;
     width:95%;
@@ -164,6 +166,7 @@ body {background:none}
       .note-title {
         width:95%;
         margin: auto;
+
         a {
           @include fl(15%);
           margin: auto;
@@ -193,7 +196,6 @@ body {background:none}
           font-size: $standardfontsize;
 
           a {color:$lightgrey}
-
 
         }
         li:first-of-type {}
@@ -235,7 +237,7 @@ body {background:none}
     width:95%;
     margin:18px auto 18px auto;
 
-    h5 {
+    h3 {
       margin-left:20px;
       line-height: 54px;
     }
@@ -289,9 +291,27 @@ body {background:none}
           margin-left:10px;
         }
       }
+      h4 {
+        background: #f7f7f7;
+        color:$mediumgrey;
+        line-height:45px;
+        margin:4px;
+        position: relative;
+        top:4px;
+        padding-left:10px
 
+      }
+
+      .stage-content { margin:$stageintmargin;}
       .grey-input {
         background-color:#f2f2f2;
+        @include border-radius($radius);
+        line-height: $standardlineheight;
+        @include box-shadow($insetshadow);
+        padding: $contentpad;
+      }
+      .blue-input {
+        background-color:#eefcff;
         @include border-radius($radius);
         line-height: $standardlineheight;
         @include box-shadow($insetshadow);
@@ -331,60 +351,145 @@ body {background:none}
 
       }
       &.add-wod{
+
+
+        hr {
+          clear:both;
+          background:transparent;
+          border:0;
+          border-bottom:1px solid #cccccc;
+          height:18px;
+          margin:0;
+        }
         ol {
-          margin-top:18px;
-
           li{
-            font-size: $paragraphtext;
-            color:$mediumgrey;
-            font-weight: bold;
-            line-height: 36px;
-            margin-left:30px;
-            margin-bottom: 18px;
-            clear:both;
-
-          p {line-height: 18px; }
-
-          button {
-            height:63px;
-            text-transform:uppercase;
-            color:$darkgrey;
-            font-family: $standardfont;
-            font-size:11px;
-            text-align: center;
-            width: 45%;
-            margin:18px 10px 18px 0px;
-            font-weight:bold;
-            @include border-radius($radius);
-
-          }
-          &.score-wod{
-
-          }
-            .radio {
-              float:left;
-              width:40%;
-              display:inline;
-              line-height: 27px;
+              font-size: $paragraphtext;
+              color:$mediumgrey;
+              font-weight: bold;
+              line-height: 36px;
+              clear:both;
+              list-style-position:inside;
+              margin-top:9px;
               overflow: hidden;
 
-              &.last {margin-bottom: 18px;}
-            }
+           h5 {margin-bottom:0px}
+          }
+        }
+        .wod-details{
+          background:$woddetailsyellow;
+          border:1px solid #ebebeb;
+          padding:10px 15px;
 
-            ul{
-              margin:0;
-              li {
-                height: 45px;
+          p {color:$mediumgrey; font-size: 11px; line-height: 16.5px;}
+
+          .score {
+            font-size:38px;
+            font-weight:bold;
+            text-align: center;
+            padding:10px;
+
+            span {font-weight:12px}
+          }
+          h5 {text-align: center;}
+
+        }
+        .record-workout {
+          background: -webkit-linear-gradient(90deg, rgb(196, 42, 23) 23%, rgb(209, 57, 39) 63%);
+          border:1px solid #ab2407;
+          color:#672722;
+          margin-top:9px;
+        }
+        .create-custom-wod{
+
+          ol {
+            li{
+
+              p {line-height: 18px; font-weight:normal }
+
+              button {
+                height:63px;
+                color:$darkgrey;
+                width: 45%;
+                margin:18px 10px 18px 0px;
                 padding:0;
-                margin:0 20px 0 0;
-                border: 0;
+              }
 
+              .radio {
+                float:left;
+                width:40%;
+                display:inline;
+                line-height: 36px;
+                overflow: hidden;
+
+                &.last {margin-bottom: 0px;}
+              }
+
+              ul{
+                margin:0;
+                li {
+                  height: 45px;
+                  padding:0;
+                  margin:0;
+                  border: 0;
+
+                  input {width:95%}
+                }
               }
             }
           }
+        }// end Create Custom Wod
+        .add-custom-wod-score {
+
+          .wod-score {
+            .grey-input { @include fl(63%);}
+            .level { @include fl(28%); line-height: 18px; position:relative; left:20px; top:0px;}
+          }
+          textarea, input[type=text] {width:95%}
+          input[type=checkbox] { margin:0px; padding:0; margin-right:4px; height: 18px; margin-bottom:9px}
+          label{  margin-right: 10px; line-height: 18px;position:relative; top:-4px;}
+        }
+
+        .complete-step {
+          margin: 0 auto 18px auto;
+
+          button {
+            width:80%;
+            margin-left:7%;
+            margin:18px 0 18px 10%;
+          }
+        } //end Add Custom WOD SCORE
+        .review-details {
+
+          button{
+            width:70%;
+            margin-left:15%;
+            margin-top:18px;
+
+            &.dark-grey{
+              margin-top:9px;
+              margin-bottom:18px;
+            }
+          }
+
+        } // end review details
+
+      }// end add wod
+      &.wod-history {
+
+        .stats {
+          background:$woddetailsyellow;
+          border:1px solid #ebebeb;
+          padding:10px 15px;
+        }
+        .historical-list{
+          p {
+            font-size:$paragraphtext;
+
+            &.date {float:left; width:50%;}
+            &.score {float:right; }
+          }
         }
       }
-
 
     } // end stage
     .search-wods{
