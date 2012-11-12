@@ -14,4 +14,12 @@ class Wod extends Spine.Model
   @extend Spine.Events
   @extend Spine.Log
 
+  @byType: (type) ->
+    _.select @all(), (wod) ->
+      wod.type.toLowerCase() == type.toLowerCase()
+
+  @byCategory: (category) ->
+    _.select @all(), (wod) ->
+      wod.category.toLowerCase() == category.toLowerCase()
+
 window.Wod = Wod

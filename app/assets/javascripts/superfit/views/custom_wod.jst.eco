@@ -1,0 +1,49 @@
+<div id="create-custom-wod">
+
+    <div class='toolbar'>
+        <div>
+            <a class="back" href="#" style="">Back</a>
+        </div>
+        <h1>Enter Details</h1>
+    </div>
+
+    <div class="cement-page">
+        <div class="stage add-wod">
+            <h2><span class="icon sprite-sf custom"></span>What did you do?</h2>
+            <div class="stage-content create-custom-wod">
+                <form>
+                <ol>
+                    <li class="name-wod">
+                        <h5>Name Your WOD </h5å>
+                        <ul>
+                           <li class="grey-input"><input type="text" name="custom-wod-label" placeholder="Today's Date" id="custom-wod-label" /></li>
+                        </ul>
+                    </li>
+
+                    <li class="score-wod">
+
+                        <h5>How was the WOD scored?  </h5>
+                        <p class="radio"><input type="radio" name="group1" value="Time"> Time   </p>
+                        <p class="radio"><input type="radio" name="group2" value="Load"> Load </p>
+                        <p class="radio"><input type="radio" name="group3" value="Rounds"> Rounds </p>
+                        <p class="radio"><input type="radio" name="group4" value="Reps"> Reps  </p>
+
+                    </li>
+
+                    <li class="enter-wod-details">
+
+                        <h5>Enter WOD Details </h5>
+                        <p>You can type in the workout details or you can
+                            take a photo of the whiteboard</p>
+                        <button><span class="sprite-sf write-icon"></span>Type It In</button>
+                        <button><span class="sprite-sf photo-icon"></span>Take a Photo</button>
+
+                    </li>
+                </ol>
+                    <hr>
+                <div class="complete-step"><button>Next: Enter Your Score</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

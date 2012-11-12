@@ -1,0 +1,55 @@
+<div id="add-wod">
+
+    <div class='toolbar'>
+        <div id="back">
+            <a class="back" href="#" style="">Home</a>
+        </div>
+        <h1>Select Type</h1>
+    </div>
+
+    <div class="cement-page scroll">
+        <div class="search-wods">
+            <form id="search" action="">
+                <ul>
+                    <li><input type="search" name="search-text" placeholder="Search All" id="search-text" /></li>
+                </ul>
+            </form>
+        </div>
+        <div class="stage browse-wods">
+            <h3 id="no-matches">No WODs match your search.</h3>
+            <ul id="wods">
+              <% for wod in Wod.all(): %>
+                <li data-id="<%= wod.id %>">
+                  <p class="icon sprite-sf benchmark"></p>
+                  <p class="label"><a href="#wods/#{wod.id}"><%= wod.name %></a></p>
+                  <p class="sprite-sf small-arrow"></p>
+                </li>
+              <% end %>
+            </ul>
+           <ul class="wods-browse">
+               <li id="nav-benchmark">
+                   <p class="icon sprite-sf benchmark"></p>
+                   <p class="label">Benchmarks</p>
+                   <p class="sprite-sf small-arrow"></p>
+               </li>
+               <li>
+                   <p class="icon sprite-sf strength"></p>
+                   <p class="label">Strength</p>
+                   <p class="sprite-sf small-arrow"></p>
+               </li>
+               <li>
+                   <a href="#create-custom-wod">
+                       <p class="icon sprite-sf custom"></p>
+                       <p class="label">Custom</p>
+                       <p class="sprite-sf small-arrow"></p>
+                   </a>
+               </li>
+               <li>
+                   <p class="icon sprite-sf mainsite"></p>
+                   <p class="label">Main Site</p>
+                   <p class="sprite-sf small-arrow"></p>
+               </li>
+           </ul>
+        </div>
+    </div>
+</div>

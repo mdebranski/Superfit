@@ -2,6 +2,7 @@
 #= require underscore-min
 #= require jqtouch.min
 #= require jqtouch-jquery.min
+#= require moment.min
 #= require spine/spine
 #= require spine/manager
 #= require spine/ajax
@@ -19,7 +20,7 @@ class AppInit
       Category.refresh(data.categories)
       new Superfit(el: $('body'))
 
-      jQT = new $.jQTouch
+      window.jQT = new $.jQTouch
           icon: 'jqtouch.png',
           icon4: 'jqtouch4.png',
           addGlossToIcon: false,

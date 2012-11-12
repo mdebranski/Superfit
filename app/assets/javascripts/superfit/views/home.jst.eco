@@ -1,0 +1,80 @@
+<div class='current' id='home'>
+
+    <div class='toolbar'>
+            <div class="pulldown">
+               Navigation Pulldown
+            </div>
+            <div class="tabs">
+                <ul>
+                    <li class="first">Day</li>
+                    <li class="inactive">Week</li>
+                </ul>
+            </div>
+
+    </div>
+
+    <div class="notepaper">
+        <div class="pages">
+            <div class="note-title">
+                <a href="#">&#60 Prev Day</a>
+                <h2>Today</h2>
+                <a href="#">Next Day &#62;</a>
+
+            </div>
+            <ul class="wod-activity">
+                <li>
+                    <h3>WOD Activity</h3>
+                </li>
+                <li>
+                    <p class="icon sprite-sf strength"></p>
+                        <div class="label-score">
+                            <p>Front Squat</p>
+                            <p>145lb</p>
+                        </div>
+                    <p class="sprite-sf arrow"></p>
+                </li>
+                <li>
+                    <p class="icon sprite-sf benchmark"></p>
+                    <div class="label-score">
+                        <p>Other Label</p>
+                        <p>4:30</p>
+                    </div>
+                    <p class="sprite-sf arrow"></p>
+                </li>
+                <li>
+                    <p class="icon sprite-sf custom"></p>
+                    <div class="label-score">
+                        <p>Fran</p>
+                        <p>4:20</p>
+                    </div>
+                    <p class="sprite-sf arrow"></p>
+                </li>
+                <li>
+                    <p><a href="#add-wod">Add Another WOD +</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Notepaper -->
+    <div class="goal-progress">
+        <h3>Recent Goal Progress</h3>
+        <ul>
+            <li>
+                <div class="goal-data">
+                    <p>25 Max UB Pushup <br><span>Last Changed: 5 days ago</span></p>
+                    <p>20%<br><span>Complete</span>
+                </div>
+                <p class="sprite-sf reverse-arrow"></p>
+            </li>
+            <li>
+                <div class="goal-data">
+                    <p>25 Max UB Pushup <br><span>Last Changed: 5 days ago</span></p>
+                    <p>20%<br><span>Complete</span>
+                </div>
+                <p class="sprite-sf reverse-arrow"></p>
+            </li>
+
+        </ul>
+    </div>
+    <!-- END MAIN -->
+</div>
