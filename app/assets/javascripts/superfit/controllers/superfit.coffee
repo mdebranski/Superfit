@@ -13,8 +13,8 @@ class Superfit extends Spine.Controller
 
   events:
     'keyup input#search-text': 'search'
-    'click input#search-text': 'search'
-    'click #wods li': 'selectWod'
+    'tap input#search-text': 'search'
+    'tap #wods li': 'selectWod'
 
   constructor: ->
     super
