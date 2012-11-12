@@ -57,7 +57,7 @@
     </div>
     <!-- End Notepaper -->
     <div class="goal-progress">
-        <h3>Recent Goal Progress</h3>
+        <h3><a href="#add-wod">Recent Goal Progress</a></h3>
         <ul>
             <li>
                 <div class="goal-data">
