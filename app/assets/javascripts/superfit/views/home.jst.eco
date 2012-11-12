@@ -50,7 +50,7 @@
                     <p class="sprite-sf arrow"></p>
                 </li>
                 <li>
-                  <a href="/#add-wod">Add Another WOD +</a>
+                  <a href="#add-wod">Add Another WOD +</a>
                 </li>
             </ul>
         </div>
