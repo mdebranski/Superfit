@@ -8,7 +8,7 @@ $radiusbottom: 0px 0px 2px 2px;
 $darkgrey:#474747;
 $mediumgrey:#646464;
 $lightgrey:#858585;
-$notepapercolor:#ffffff;  //yellow: #fcfadd
+$notepapercolor:#fcfadd;
 $stageshadow:0px 1px 3px rgba(0, 0, 0, 0.46);
 $stagebkg:#ffffff;
 $contentpad:0 10px;
@@ -20,7 +20,7 @@ $standardfontsize: 16px;
 #jqt > * {
 
   font-family: $standardfont;
-  background:#cecece url(image_path('tile-bedgegrunge.png'))  repeat;
+  background:#cecece url(image_path('tile-cement.png'))  repeat;
   color: #ddd;
 
   h3 {font-size:18px; color:$darkgrey}
