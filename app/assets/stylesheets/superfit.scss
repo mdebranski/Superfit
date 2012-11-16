@@ -40,7 +40,7 @@ body {background:none}
     @include box-sizing(border-box);
     border-bottom: 1px solid #000;
     padding: 0px 6px 6px 6px;
-    background: #ffffff url(image_path('tile-leather.png')) repeat-x 0 0;
+    background: #000000 url(image_path('tile-leather.png')) repeat-x 0 0;
     position: relative;
     background-size:97px 44px;
 
@@ -71,7 +71,7 @@ body {background:none}
        li {
           float: left;
           font-size: 9px;
-          line-height: 9px;
+          line-height: 8px;
           color: white;
           text-transform: uppercase;
           padding: 0;
@@ -83,10 +83,11 @@ body {background:none}
           @include background(linear-gradient(top, rgba(0,0,0,0.2) 45%,rgba(68,68,68,0.2) 100%));
 
           &.inactive {
-            background:rgba(161,161,161,0.1) 35%,rgba(161,161,161,0.0) 100%));
+            background:rgba(161,161,161,0.05);
             //@include background(linear-gradient(top, rgba(161,161,161,0.1) 35%,rgba(161,161,161,0.0) 100%));
             color:rgba(255,255,255,0.4);
             :hover {@include background(linear-gradient(top, rgba(0,0,0,0.2) 45%,rgba(68,68,68,0.2) 100%));}
+            border-left:0px;
           }
 
         }

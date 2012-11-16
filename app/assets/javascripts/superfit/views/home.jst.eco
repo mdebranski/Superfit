@@ -16,9 +16,9 @@
     <div class="notepaper">
         <div class="pages">
             <div class="note-title">
-                <a href="#">&#60 Prev Day</a>
+                <a href="#">&#60 Prev</a>
                 <h2>Today</h2>
-                <a href="#">Next Day &#62;</a>
+                <a href="#">Next &#62;</a>
 
             </div>
             <ul class="wod-activity">
