@@ -20,14 +20,14 @@ $standardfontsize: 16px;
 #jqt > * {
 
   font-family: $standardfont;
-  background:#cecece url(image_path('tile-cement.png'))  repeat;
+  background:#cecece url(image_path('tile-grunge.png'))  repeat;
   color: #ddd;
 
   h3 {font-size:18px; color:$darkgrey}
   h4 {font-size:14px; color:$darkgrey}
   h5 {font-size:13px; color:$darkgrey; line-height: 18px; margin: 9px 0;}
 
-  a {text-shadow: 0; color:$mediumgrey}
+  a {text-shadow: 0; color:$mediumgrey; background:transparent;}
 
   ul{
     li {
