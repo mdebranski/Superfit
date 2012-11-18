@@ -26,12 +26,14 @@
                     <h3>WOD Activity</h3>
                 </li>
                 <li>
-                    <p class="icon sprite-sf strength"></p>
+                    <a href="#add-strength-wod-step1">
+                        <p class="icon sprite-sf strength"></p>
                         <div class="label-score">
                             <p>Front Squat</p>
                             <p>145lb</p>
                         </div>
-                    <p class="sprite-sf arrow"></p>
+                        <p class="sprite-sf arrow"></p>
+                    </a>
                 </li>
                 <li>
                     <p class="icon sprite-sf benchmark"></p>

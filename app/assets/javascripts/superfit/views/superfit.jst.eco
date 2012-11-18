@@ -3,5 +3,8 @@
   <%- JST['superfit/views/add_wod']() %>
   <%- JST['superfit/views/custom_wod']() %>
   <%- JST['superfit/views/new_wod']() %>
+  <%- JST['superfit/views/add_strength_wod_step1']() %>
+  <%- JST['superfit/views/add_strength_wod_step2']() %>
   <%- JST['superfit/views/review_wod']() %>
 </div>
+

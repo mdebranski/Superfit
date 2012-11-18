@@ -9,11 +9,11 @@
 
     <div class="cement-page">
         <div class="stage add-wod">
-            <h2 class="wod-name"></h2>
+            <h2 class="wod-name">[icon + header]</h2>
             <div class="stage-content add-custom-wod-score">
                 <form>
                     <div class="wod-details">
-                        <p></p>
+                        <p>[content]</p>
                     </div>
                     <ol>
                     <li class="wod-score">

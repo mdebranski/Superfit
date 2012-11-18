@@ -32,6 +32,30 @@ $standardfontsize: 16px;
       border:0;
       padding: 0;
 
+      input[type="text"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="number"],
+      input[type="search"],
+      input[type="email"],
+      input[type="url"],
+      textarea,
+      select
+        {
+        color: $darkgrey;
+        text-shadow: none;
+        background: none;
+        border: 0;
+        font: normal 18px "Helvetica Neue", Helvetica;
+        padding: 0;
+        display: inline-block;
+        margin-left: 0px;
+        padding-left: 5%;
+        width: 95%;
+        -webkit-appearance: textarea;
+      }
+
+
       a {
         text-shadow: none;
         padding: 0px;
@@ -45,13 +69,14 @@ $standardfontsize: 16px;
   }
 
   input{
-    text-shadow: none;
+    text-shadow: 0;
     border:0;
     font-size: $standardfontsize;
     color:$darkgrey;
     font-family: $standardfont;
     background: transparent;
   }
+
 
   a {text-decoration: none;}
 
@@ -68,5 +93,7 @@ $standardfontsize: 16px;
     text-shadow: none;
     border:0;
   }
+
+
 
 }

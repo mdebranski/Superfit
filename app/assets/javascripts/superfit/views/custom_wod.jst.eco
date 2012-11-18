@@ -14,7 +14,7 @@
                 <form>
                 <ol>
                     <li class="name-wod">
-                        <h5>Name Your WOD </h5å>
+                        <h5>Name Your WOD </h5>
                         <ul>
                            <li class="grey-input"><input type="text" name="custom-wod-label" placeholder="Today's Date" id="custom-wod-label" /></li>
                         </ul>

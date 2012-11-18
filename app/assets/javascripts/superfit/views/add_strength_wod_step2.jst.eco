@@ -1,0 +1,50 @@
+<div id="add-strength-wod-step2">
+
+    <div class='toolbar'>
+        <div>
+            <a class="back" href="#" style="">Back</a>
+        </div>
+        <h1>Front Squat</h1>
+    </div>
+
+    <div class="cement-page">
+        <div class="stage add-wod">
+            <h2 class="wod-name"><span class="icon sprite-sf strength"></span> Enter Weight</h2>
+            <div class="stage-content add-custom-wod-score">
+                <form>
+                    <ul>
+                    <li>
+                        <h5>Set 1 </h5>
+                        <div class="grey-input">
+                            <input type="number" name="custom-wod-label" placeholder="" />
+                            <!--<input id="spinner" />    -->
+
+                        </div>
+
+                    </li>
+                        <li>
+                            <h5>Set 2 </h5>
+                            <div class="grey-input">
+                                <input type="number" name="custom-wod-label" placeholder="" />
+                                <!--<input id="spinner" />    -->
+
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <h5>Set 3 </h5>
+                            <div class="grey-input">
+                                <input type="number" name="custom-wod-label" placeholder="" />
+                                <!--<input id="spinner" />    -->
+
+                            </div>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="complete-step"><button class="record-workout">Record Workout</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
