@@ -21,11 +21,11 @@ class AppInit
       new Superfit(el: $('body'))
 
       window.jQT = new $.jQTouch
-          icon: 'jqtouch.png',
-          icon4: 'jqtouch4.png',
-          addGlossToIcon: false,
-          startupScreen: 'jqt_startup.png',
-          statusBar: 'black-translucent',
-          preloadImages: []
+        icon: 'jqtouch.png'
+        icon4: 'jqtouch4.png'
+        addGlossToIcon: false
+        startupScreen: 'jqt_startup.png'
+        statusBar: 'black-translucent'
+        preloadImages: []
 
 $ -> new AppInit()

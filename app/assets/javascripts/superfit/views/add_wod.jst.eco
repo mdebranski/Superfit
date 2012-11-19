@@ -21,7 +21,7 @@
               <% for wod in Wod.all(): %>
                 <li data-id="<%= wod.id %>">
                   <p class="icon sprite-sf benchmark"></p>
-                  <p class="label"><a href="#wods/#{wod.id}"><%= wod.name %></a></p>
+                  <p class="label"><a href="#new-wod"><%= wod.name %></a></p>
                   <p class="sprite-sf small-arrow"></p>
                 </li>
               <% end %>
