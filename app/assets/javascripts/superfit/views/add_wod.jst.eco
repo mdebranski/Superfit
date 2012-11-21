@@ -38,7 +38,7 @@
                    <p class="sprite-sf small-arrow"></p>
                </li>
                <li>
-                   <a href="#create-custom-wod">
+                   <a href="#add-custom-wod">
                        <p class="icon sprite-sf custom"></p>
                        <p class="label">Custom</p>
                        <p class="sprite-sf small-arrow"></p>
