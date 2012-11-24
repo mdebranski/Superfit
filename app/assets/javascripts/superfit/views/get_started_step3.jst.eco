@@ -30,6 +30,8 @@
             <a href="#home"><button class="dark-grey">Jump To My Dashboard</button> </a>
 
         </div>
+        <hr>
+        <p class="skip"><strong>SKIP: Select Your Gym</strong> & Jump to My Dashboard</p>
 
     </div>
 </div>

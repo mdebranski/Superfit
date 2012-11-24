@@ -142,11 +142,29 @@ body {background:none}
       border:1px solid $darkgrey;
       color:#222222;
     }
+    &.red{
+      background: -webkit-linear-gradient(90deg, rgb(196, 42, 23) 6%, rgb(209, 57, 39) 30%);
+      border:1px solid #ab2407;
+      color:#672722;
+    }
   }
 
 
 
   //////////// end universal elements
+
+  .landing {
+    background:#000000 url(image_path('bkg-landing.png')) no-repeat 0 0;
+    height: 960px;
+
+    button {
+      width:70%; margin-left:17%;
+
+      &.get-started {margin-top:300px; margin-bottom: 36px;}
+    }
+
+
+  }
 
   .notepaper {
     position:relative;
@@ -589,6 +607,18 @@ body {background:none}
 
 
       }
+      .skip {margin-top:9px}
+      .create-account {
+        &.step-3 {
+          ul li.form { margin-bottom:4px;}
+
+          hr {margin:18px 0}
+          p {line-height: 18px;}
+
+          .stage {margin:18px 0}
+        }
+
+      }
     }
 
     .form {
@@ -606,16 +636,7 @@ body {background:none}
         text-shadow:none;
       }
     }
-    .create-account {
-      &.step-3 {
-        ul li.form { margin-bottom:4px;}
 
-        hr {margin:18px 0}
-        p {line-height: 18px;}
-
-        .stage {margin:18px 0}
-      }
-    }
 
   }//end Cement
 

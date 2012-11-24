@@ -1,4 +1,5 @@
 <div id="jqt">
+  <%- JST['superfit/views/landing']() %>
   <%- JST['superfit/views/home']() %>
   <%- JST['superfit/views/add_wod']() %>
   <%- JST['superfit/views/custom_wod']() %>

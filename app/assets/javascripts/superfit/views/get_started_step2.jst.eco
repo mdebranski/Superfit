@@ -19,6 +19,8 @@
                 </ul>
             </form>
         </div>
+        <hr>
+        <p class="skip"><strong>SKIP: CREATE PROFILE</strong> & Jump to My Dashboard</p>
 
     </div>
 </div>

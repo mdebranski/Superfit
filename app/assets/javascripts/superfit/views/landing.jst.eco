@@ -1,0 +1,7 @@
+<div id="landing">
+
+    <div class="landing">
+            <a href="#get-started-step1"><button class="get-started">Get Started</button> </a>
+            <a href="#login"><button class="red">Login</button> </a>
+    </div>
+</div>
