@@ -1,7 +1,7 @@
 
 @import 'compass/css3';
 
-$radius: 2px;
+$radius: 3px;
 $radiusleft: 0px 2px 2px 2px;
 $radiusright: 0px 2px 2px 0px;
 $radiusbottom: 0px 0px 2px 2px;
@@ -62,6 +62,7 @@ $standardfontsize: 16px;
     box-shadow:  0px 1px 2px rgba(0, 0, 0, 0.20);
     padding:12px 20px;
     margin:9px 0 9px 0;
+    text-shadow: rgba(0,0,0,0.05) 0px 0, rgba(0,0,0,0.05) 0 -1px, rgba(255,255,255,0.1) 0 1px, rgba(0,0,0,0.05) 0px -1px;
     span {margin:5px auto }
 
 
@@ -69,15 +70,17 @@ $standardfontsize: 16px;
   button:active {
     background: #e5e5e5;
     @include box-shadow($insetshadow);
+    text-shadow: rgba(0,0,0,0.05) 0px 0, rgba(0,0,0,0.05) 0 -1px, rgba(255,255,255,0.1) 0 1px, rgba(0,0,0,0.05) 0px -1px;
 
   }
 
   form {
-    input[type=text], input[type=number]{
+    input[type=text], input[type=number], input[type=password]{
       font-weight: bold;
       padding-left:0px;
       line-height: 45px;
       height:45px;
+      font-size: 12px;
     }
     input[type=radio] {
       background: #e5e5e5;

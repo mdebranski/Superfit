@@ -1,0 +1,24 @@
+<div id="get-started-step2">
+
+    <div class="cement-page scroll orientation">
+        <div class="title">
+            <p class="steps">Getting Started - Step 2 of 4</p>
+            <h1>Create Profile</h1>
+            <hr />
+            <p>Just the basics for now:</p>
+        </div>
+        <div class="create-account">
+            <form id="account" action="">
+                <ul>
+                    <li class="form">
+                        <input type="text" name="full-name" placeholder="Your Full Name" id="full-name" />
+                        <input class="divider" type="text" name="zipcode" placeholder="Zip Code" id="zip-code" />
+                    </li>
+                    <li class="toggle-wrapper"><p>Facebook Sharing</p><span class="toggle"><input type="checkbox"></span></li>
+                    <a href="#get-started-step3"><li><button class="dark-grey">Next Step: Select Your Gym</button></li> </a>
+                </ul>
+            </form>
+        </div>
+
+    </div>
+</div>

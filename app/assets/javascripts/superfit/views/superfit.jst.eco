@@ -6,5 +6,9 @@
   <%- JST['superfit/views/add_strength_wod_step1']() %>
   <%- JST['superfit/views/add_strength_wod_step2']() %>
   <%- JST['superfit/views/review_wod']() %>
+  <%- JST['superfit/views/get_started_step1']() %>
+  <%- JST['superfit/views/get_started_step2']() %>
+  <%- JST['superfit/views/get_started_step3']() %>
+  <%- JST['superfit/views/get_started_step4']() %>
 </div>
 

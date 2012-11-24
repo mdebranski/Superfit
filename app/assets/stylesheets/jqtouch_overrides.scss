@@ -15,6 +15,12 @@ $standardfontsize: 16px;
 
 #jqt > * {
 
+  h1 {
+    text-shadow: none;
+    margin:0;
+    color:$darkgrey;
+  }
+
   h2 {
     text-shadow: none;
     margin:0;
@@ -24,6 +30,7 @@ $standardfontsize: 16px;
     background-image:none;
     border:0;
     margin:0;
+    text-shadow: none;
 
     li {
       background-color:transparent;
@@ -31,6 +38,9 @@ $standardfontsize: 16px;
       text-shadow: none;
       border:0;
       padding: 0;
+      text-shadow: none;
+
+      ::-webkit-input-placeholder {text-shadow: none; box-shadow: none;}
 
       input[type="text"],
       input[type="password"],
@@ -46,13 +56,15 @@ $standardfontsize: 16px;
         text-shadow: none;
         background: none;
         border: 0;
-        font: normal 18px "Helvetica Neue", Helvetica;
+        font: normal 14px "Helvetica Neue", Helvetica;
         padding: 0;
         display: inline-block;
         margin-left: 0px;
         padding-left: 5%;
         width: 95%;
-        -webkit-appearance: textarea;
+        -webkit-appearance: none;
+        box-shadow:none;
+        border-radius:0;
       }
 
 
@@ -78,6 +90,7 @@ $standardfontsize: 16px;
   }
 
 
+
   a {text-decoration: none;}
 
   ul, ul.individual li {
@@ -92,6 +105,11 @@ $standardfontsize: 16px;
     color: $lightgrey;
     text-shadow: none;
     border:0;
+  }
+
+  ul li .toggle input[type="checkbox"] {
+    background: white url(../img/jqt/on_off.png) 0 0 no-repeat;
+    background: url(image_path('on_off.png'))
   }
 
 

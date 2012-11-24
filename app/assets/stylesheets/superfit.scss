@@ -3,7 +3,7 @@
 //= require superfit_common
 @import 'compass/css3';
 
-$radius: 2px;
+$radius: 3px;
 $radiusleft: 0px 2px 2px 2px;
 $radiusright: 0px 2px 2px 0px;
 $radiusbottom: 0px 0px 2px 2px;
@@ -108,7 +108,7 @@ body {background:none}
     line-height:0 !important;
     text-indent:-9999px;
     font-size:0 !important;
-    background:url(image_path('sprite-superfit.png')) no-repeat 0 0;
+    background:transparent url(image_path('sprite-superfit.png')) no-repeat 0 0;
   }
   .icon {
     width:29px; height:28px;
@@ -116,6 +116,8 @@ body {background:none}
     &.custom {background-position: -29px -113px;}
     &.benchmark {background-position: -29px -152px;}
     &.mainsite {background-position: -29px -199px;}
+    &.enclosed-check {background-position: -29px -302px; }
+    &.enclosed-check-complete {background-position: -29px -252px; }
   }
 
   .arrow  { width:25px;  height:16px; background-position: -90px -25px;}
@@ -123,6 +125,26 @@ body {background:none}
   .small-arrow  { width:25px;  height:16px; background-position: -90px -93px;}
   .write-icon {width:48px;  height:35px; background-position: -208px -18px;}
   .photo-icon {width:48px;  height:35px; background-position: -143px -18px; }
+
+  button   {
+    &.green {
+      background:#79971f;
+      border-color:#688218;
+      color:#3e4a21;
+    }
+    &.facebook {
+      background:#3d69a4;
+      border-color: #224a84;
+      color: #2a3b54;
+    }
+    &.dark-grey {
+      background:$mediumgrey;
+      border:1px solid $darkgrey;
+      color:#222222;
+    }
+  }
+
+
 
   //////////// end universal elements
 
@@ -525,7 +547,77 @@ body {background:none}
       display: none;
     }
 
-}//end JQT
+    &.orientation{
+
+      width:95%;
+      margin:18px auto;
 
 
-  }
+
+      .title {
+        hr {margin:9px 0}
+      }
+      p{
+        color:$darkgrey;
+        font-size:12px;
+
+        &.steps {
+          font-size:10px;
+          font-weight:normal;
+        }
+        &.help {font-weight: bold; font-size:10px;}
+
+      }
+
+      button {
+        width:100%;
+      }
+
+      .toggle-wrapper {
+        p{line-height: 18px; float:left; position:relative; left:5px; text-transform: uppercase; margin:18px 0}
+        .toggle {top:9px;}
+      }
+      .shared-line {
+
+         margin-left:2%;
+         padding: 18px 0;
+         overflow: hidden;
+         width:98%;
+
+         p {float:left; width:15%; text-align: center; font-weight: bold;}
+         hr {float:left; width: 40%; margin-top: 9px;}
+
+
+      }
+    }
+
+    .form {
+      line-height:$standardlineheight;
+      background: #ffffff;
+      @include border-radius($radius);
+      @include box-shadow($insetshadow);
+      overflow: hidden;
+      margin-bottom:18px;
+      text-shadow: 0;
+
+      .divider {
+        border-top:1px solid #cccccc;
+        box-shadow:none;
+        text-shadow:none;
+      }
+    }
+    .create-account {
+      &.step-3 {
+        ul li.form { margin-bottom:4px;}
+
+        hr {margin:18px 0}
+        p {line-height: 18px;}
+
+        .stage {margin:18px 0}
+      }
+    }
+
+  }//end Cement
+
+
+  }  //end JQT

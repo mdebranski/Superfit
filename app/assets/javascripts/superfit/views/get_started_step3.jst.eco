@@ -1,0 +1,35 @@
+<div id="get-started-step3">
+
+    <div class="cement-page scroll orientation">
+        <div class="title">
+            <p class="steps">Getting Started - Step 3 of 4</p>
+            <h1>Select Your Gym</h1>
+            <hr />
+            <p>Showing Results Based on Zip Code:</p>
+        </div>
+        <div class="create-account step-3">
+            <form id="zip" action="">
+                <ul>
+                    <li class="form">
+                        <input type="text" name="zipcode" placeholder="Zip Code" id="zip-code" />
+                    </li>
+                </ul>
+            </form>
+            <p class="help">Search for you gym by Zip Code, City/State & Name.</p>
+            <hr>
+            <p>Superfit found 15 gyms close to you! </p>
+            <div class="stage">
+                <ul>
+                    <li><p class="sprite-sf icon enclosed-check"></p> Your Gym Name</li>
+                    <li><p class="sprite-sf icon enclosed-check-complete"></p> Your Gym Name</li>
+                    <li><p class="sprite-sf icon enclosed-check"></p> Your Gym Name</li>
+                </ul>
+            </div>
+
+            <a href="#get-started-step4"><button class="green">Tour The App</button> </a>
+            <a href="#home"><button class="dark-grey">Jump To My Dashboard</button> </a>
+
+        </div>
+
+    </div>
+</div>
