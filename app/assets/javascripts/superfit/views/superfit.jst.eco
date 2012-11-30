@@ -11,5 +11,6 @@
   <%- JST['superfit/views/get_started_step2']() %>
   <%- JST['superfit/views/get_started_step3']() %>
   <%- JST['superfit/views/get_started_step4']() %>
+  <%- JST['superfit/views/login']() %>
 </div>
 

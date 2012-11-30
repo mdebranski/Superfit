@@ -42,7 +42,9 @@
                         </li>
                     </ul>
                     <hr>
+                    <a href="#review-wod">
                     <div class="complete-step"><button class="record-workout">Record Workout</button></div>
+                    </a>
                 </form>
             </div>
         </div>

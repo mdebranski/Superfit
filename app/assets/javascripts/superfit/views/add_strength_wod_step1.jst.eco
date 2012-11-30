@@ -24,7 +24,9 @@
                     </li>
                     </ul>
                     <hr>
+                    <a href="#add-strength-wod-step2">
                     <div class="complete-step"><button>Next: Enter Weight</button></div>
+                    </a>
                 </form>
             </div>
         </div>

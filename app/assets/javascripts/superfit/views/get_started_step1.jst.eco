@@ -5,9 +5,16 @@
             <p class="steps">Getting Started - Step 1 of 4</p>
             <h1>Create Account</h1>
             <hr />
-            <p>Create your account with Superfit:</p>
+            <button class="facebook">SIGN UP WITH FACEBOOK</button>
+        </div>
+        <div class="shared-line">
+            <hr />
+            <p>OR</p>
+            <hr />
         </div>
         <div class="create-account">
+
+            <p>Create your account with Superfit:</p>
             <form id="account" action="">
                 <ul>
                     <li class="form">
@@ -18,12 +25,6 @@
                 </ul>
             </form>
         </div>
-        <div class="shared-line">
-            <hr />
-            <p>OR</p>
-            <hr />
-        </div>
-        <button class="facebook">SIGN UP WITH FACEBOOK</button>
 
     </div>
 </div>

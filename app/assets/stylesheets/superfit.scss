@@ -153,17 +153,41 @@ body {background:none}
 
   //////////// end universal elements
 
-  .landing {
-    background:#000000 url(image_path('bkg-landing.png')) no-repeat 0 0;
-    height: 960px;
+  .leather{
+    background:#000000 url(image_path('tile-leather-bkg.png')) repeat 0 0;
 
-    button {
-      width:70%; margin-left:17%;
+    .leather-binding {
+      background:transparent url(image_path('tile-leather-binding.png')) repeat-y 0 0;
+      height: 960px;
 
-      &.get-started {margin-top:300px; margin-bottom: 36px;}
+      .branding-login {
+        background:transparent url(image_path('bkg-branding-login.png')) no-repeat 0 0;
+
+        .login {
+          position:relative;
+          top:160px;
+
+          p {font-weight:bold; font-size:12px; margin-top:18px; text-align: center; text-transform: uppercase;}
+
+          .login-form {width:80%; margin: auto;}
+        }
+        .grey-input {
+          background-color:#f2f2f2;
+          @include border-radius($radius);
+          line-height: $standardlineheight;
+          @include box-shadow($insetshadow);
+          //padding: $contentpad;
+        }
+      }
+
+      button {
+        width:70%; margin-left:17%;
+
+        &.get-started {margin-top:300px; margin-bottom: 36px;}
+      }
+
+
     }
-
-
   }
 
   .notepaper {
@@ -312,7 +336,7 @@ body {background:none}
   }// end notepaper
 
 // start cement pages
-  .cement-page {
+  .cement-page{
     width:96%;
     margin:18px auto 18px auto;
 
@@ -621,24 +645,25 @@ body {background:none}
       }
     }
 
-    .form {
-      line-height:$standardlineheight;
-      background: #ffffff;
-      @include border-radius($radius);
-      @include box-shadow($insetshadow);
-      overflow: hidden;
-      margin-bottom:18px;
-      text-shadow: 0;
 
-      .divider {
-        border-top:1px solid #cccccc;
-        box-shadow:none;
-        text-shadow:none;
-      }
-    }
 
 
   }//end Cement
 
+  .form {
+    line-height:$standardlineheight;
+    background: #ffffff;
+    @include border-radius($radius);
+    @include box-shadow($insetshadow);
+    overflow: hidden;
+    margin-bottom:18px;
+    text-shadow: 0;
+
+    .divider {
+      border-top:1px solid #cccccc;
+      box-shadow:none;
+      text-shadow:none;
+    }
+  }
 
   }  //end JQT

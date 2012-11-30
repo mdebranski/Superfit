@@ -19,7 +19,9 @@
                     </div>
 
                    <button>Edit Workout</button> <br>
-                   <button class="dark-grey">Go to Today</button>
+                    <a href="#home">
+                   <button class="dark-grey">Go To My Dashboard</button>
+                    </a>
             </div>
         </div>
 

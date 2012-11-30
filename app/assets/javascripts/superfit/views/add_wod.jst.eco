@@ -33,9 +33,11 @@
                    <p class="sprite-sf small-arrow"></p>
                </li>
                <li>
-                   <p class="icon sprite-sf strength"></p>
-                   <p class="label">Strength</p>
-                   <p class="sprite-sf small-arrow"></p>
+                   <a href="#add-strength-wod-step1">
+                       <p class="icon sprite-sf strength"></p>
+                       <p class="label">Strength</p>
+                       <p class="sprite-sf small-arrow"></p>
+                   </a>
                </li>
                <li>
                    <a href="#add-custom-wod">
