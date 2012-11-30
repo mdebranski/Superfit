@@ -1,4 +1,4 @@
-<div class='current' id='home'>
+<div class='current scroll' id='home'>
 
     <div class='toolbar'>
             <div class="pulldown">
@@ -13,7 +13,7 @@
 
     </div>
 
-    <div class="notepaper scroll">
+    <div class="notepaper">
         <div class="pages">
             <div class="note-title">
                 <a href="#">&#60 Prev</a>

@@ -26,8 +26,7 @@
                 </ul>
             </div>
 
-            <a href="#get-started-step4"><button class="green">Tour The App</button> </a>
-            <a href="#home"><button class="dark-grey">Jump To My Dashboard</button> </a>
+            <a href="#home"><button class="green">Save Gym & Go to Dashboard</button> </a>
 
         </div>
         <hr>
