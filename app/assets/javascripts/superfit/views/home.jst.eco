@@ -14,52 +14,57 @@
     </div>
 
     <div class="notepaper">
-        <div class="pages">
-            <div class="note-title">
-                <a href="#">&#60 Prev</a>
-                <h2>Today</h2>
-                <a href="#">Next &#62;</a>
+        <div class="stacked-wrapper">
+            <div class="stacked">
+                <div class="stacked-interior">
+                    <div class="note-title">
+                        <a href="#">&#60 Prev</a>
+                        <h2>Today</h2>
+                        <a href="#">Next &#62;</a>
+                    </div>
+                    <ul class="wod-activity">
+                        <li>
+                            <h3>WOD Activity</h3>
+                        </li>
+                        <li>
+                            <a href="#review-wod">
+                                <p class="icon sprite-sf strength"></p>
 
-            </div>
-            <ul class="wod-activity">
-                <li>
-                    <h3>WOD Activity</h3>
-                </li>
-                <li>
-                    <a href="#review-wod">
-                        <p class="icon sprite-sf strength"></p>
-                        <div class="label-score">
-                            <p>Front Squat</p>
-                            <p>145lb</p>
-                        </div>
-                        <p class="sprite-sf arrow"></p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#review-wod">
-                    <p class="icon sprite-sf benchmark"></p>
-                    <div class="label-score">
-                        <p>Other Label</p>
-                        <p>4:30</p>
-                    </div>
-                    <p class="sprite-sf arrow"></p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#review-wod">
-                    <p class="icon sprite-sf custom"></p>
-                    <div class="label-score">
-                        <p>Fran</p>
-                        <p>4:20</p>
-                    </div>
-                    <p class="sprite-sf arrow"></p>
-                </a>
-                </li>
-                <li>
-                  <a href="#add-wod">Add Another WOD +</a>
-                </li>
-            </ul>
-        </div>
+                                <div class="label-score">
+                                    <p>Front Squat</p>
+                                    <p>145lb</p>
+                                </div>
+                                <p class="sprite-sf arrow"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#review-wod">
+                                <p class="icon sprite-sf benchmark"></p>
+                                <div class="label-score">
+                                    <p>Other Label</p>
+                                    <p>4:30</p>
+                                </div>
+                                <p class="sprite-sf arrow"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#review-wod">
+                                <p class="icon sprite-sf custom"></p>
+                                <div class="label-score">
+                                    <p>Fran</p>
+                                    <p>4:20</p>
+                                </div>
+                                <p class="sprite-sf arrow"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#add-wod">Add Another WOD +</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--stacked-->
+
+        </div> <!--stacked wrapper-->
     </div>
     <!-- End Notepaper -->
     <div class="goal-progress">

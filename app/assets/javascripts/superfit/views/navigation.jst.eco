@@ -1,0 +1,19 @@
+<div class='current scroll' id='home'>
+
+    <div class='toolbar'>
+            <div class="pulldown">
+               Navigation Pulldown
+            </div>
+            <div class="tabs">
+                <ul>
+                    <li class="first">Day</li>
+                    <li class="inactive">Week</li>
+                </ul>
+            </div>
+
+    </div>
+
+    <div class="navigation">
+
+    </div>
+</div>

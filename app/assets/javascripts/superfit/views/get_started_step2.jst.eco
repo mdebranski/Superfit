@@ -14,7 +14,7 @@
                         <input type="text" name="full-name" placeholder="Your Full Name" id="full-name" />
                         <input class="divider" type="text" name="zipcode" placeholder="Zip Code" id="zip-code" />
                     </li>
-                    <li class="toggle-wrapper"><p>Facebook Sharing</p><span class="toggle"><input type="checkbox"></span></li>
+
                     <a href="#get-started-step3"><li><button class="dark-grey">Next Step: Select Your Gym</button></li> </a>
                 </ul>
             </form>

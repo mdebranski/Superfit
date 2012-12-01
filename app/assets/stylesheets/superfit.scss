@@ -195,40 +195,43 @@ body {background:none}
     width:95%;
     margin:0 auto;
 
-    .pages {
-      background:$notepapercolor;
-      position:relative;
-      margin: 0 0 0 0;
+    .stacked-wrapper{
+      background: $notepapercolor;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      z-index: 4;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.150);
       @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.20));
       @include border-radius ($radiusbottom);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.150);
-      z-index: 1;
+      overflow: hidden;
 
-      :before {
-        z-index: -1;
-        position: absolute;
-        top: 0px;
-        left: .35%;
-        content: '';
-        width: 96%;
-        height: 101%;
-        background-color: $notepapercolor;
+      .stacked {
+        background: $notepapercolor;
+        position: relative;
+        height: 100%;
+        width: 99%;
+        z-index: 4;
+        padding-bottom: 4px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.150);
+        @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.20));
         @include border-radius ($radiusbottom);
-      }
+        overflow: hidden;
+        left:.5%;
 
-      :after {
-        z-index: -2;
-        position: absolute;
-        top: 0px;
-        left: .45%;
-        content: '';
-        width: 92%;
-        height: 102%;
-        background-color: $notepapercolor;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.150);
-        @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.04));
-        @include border-radius ($radiusbottom);
+        .stacked-interior{
+          background: $notepapercolor;
+          position: relative;
+          height: 100%;
+          width: 98%;
+          z-index: 4;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.150);
+          @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.20));
+          @include border-radius ($radiusbottom);
+          overflow: hidden;
+          left:1%;
+        }
       }
 
       .note-title {
@@ -254,7 +257,7 @@ body {background:none}
       }
 
       ul{
-        margin:0 10px;
+        margin:0 10px 0 10px;
         border:0;
         li {
 
@@ -277,8 +280,7 @@ body {background:none}
         clear:both;
 
         .icon {
-          position:relative;
-          top:15px;
+          margin-top:15px;
           margin-right:10px;
           @include fl(11%);
         }
