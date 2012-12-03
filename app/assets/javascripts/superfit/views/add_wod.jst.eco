@@ -1,10 +1,12 @@
 <div id="add-wod">
 
-    <div class='toolbar'>
-        <div id="back">
-            <a class="back" href="#" style="">Home</a>
+    <div class="leather-interior">
+        <div class='toolbar'>
+                <div>
+                    <a class="back" href="#" style="">Back</a>
+                </div>
+                <h1>Select Type</h1>
         </div>
-        <h1>Select Type</h1>
     </div>
 
     <div class="cement-page scroll">

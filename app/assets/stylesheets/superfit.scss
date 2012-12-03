@@ -34,15 +34,42 @@ body {background:none}
 
 
   .ui-header .ui-title { margin-left: 5%; margin-right: 5%; }
-  ///////////  begin toolbar / header
+  ///////////  begin toolbar / header / main nav
 
+  .navigation-wrapper {
+    background: transparent url(image_path('tile-leather-mainnav.png')) repeat-x 0 214px;
+    vertical-align: bottom;
+  }
+  .navigation {
+    position:relative;
+    width:95%;
+    margin:0 auto;
+
+
+    ul{
+      margin-bottom: 18px;
+      li{
+        font-size:16px;
+        line-height: 36px;
+        border-bottom: 1px solid #040404;
+        border-top: 1px solid #323232;
+
+        &:first-of-type {border-top:none}
+        &:last-of-type {border-bottom:none}
+        p{
+          float:left ;
+          margin-right:20px;
+        }
+      }
+    }
+  }
   .toolbar {
     @include box-sizing(border-box);
     border-bottom: 1px solid #000;
     padding: 0px 6px 6px 6px;
-    background: #000000 url(image_path('tile-leather.png')) repeat-x 0 0;
+    background: transparent url(image_path('tile-leather-toolbar.png')) repeat-x 0 0;
     position: relative;
-    background-size:97px 44px;
+    background-size: 10px 44px;
 
     .pulldown {
       background:url(image_path('img-mainnav.png')) repeat-x;
@@ -118,6 +145,12 @@ body {background:none}
     &.mainsite {background-position: -29px -199px;}
     &.enclosed-check {background-position: -29px -302px; }
     &.enclosed-check-complete {background-position: -29px -252px; }
+    &.me {background-position: -202px -68px; }
+    &.home {background-position: -202px -101px; }
+    &.calendar {background-position: -202px -134px; }
+    &.goals {background-position: -202px -170px; }
+    &.records {background-position: -202px -204px; }
+    &.affiliate {background-position: -202px -239px; }
   }
 
   .arrow  { width:25px;  height:16px; background-position: -90px -25px;}
@@ -188,6 +221,10 @@ body {background:none}
 
 
     }
+  } //end leather larger "grain"
+
+  .leather-interior{
+    background:#000000 url(image_path('tile-leather-interior-bkg@2x.png')) repeat 0 0;
   }
 
   .notepaper {

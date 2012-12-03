@@ -1,10 +1,12 @@
 <div id="new-wod">
 
-    <div class='toolbar'>
-        <div>
-            <a class="back" href="#" style="">Back</a>
+    <div class="leather-interior">
+        <div class='toolbar'>
+            <div>
+                <a class="back" href="#" style="">Back</a>
+            </div>
+            <h1>Enter Score</h1>
         </div>
-        <h1>Enter Score</h1>
     </div>
 
     <div class="cement-page">
