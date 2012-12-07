@@ -151,6 +151,10 @@ body {background:none}
     &.goals {background-position: -202px -170px; }
     &.records {background-position: -202px -204px; }
     &.affiliate {background-position: -202px -239px; }
+    &.circle-arrow-forward {background-position: -89px -239px; }
+    &.circle-arrow-forward:active {background-position: -89px -278px; }
+    &.circle-arrow-back {background-position: -89px -159px; }
+    &.circle-arrow-back:active {background-position: -89px -198px; }
   }
 
   .arrow  { width:25px;  height:16px; background-position: -90px -25px;}
@@ -272,16 +276,19 @@ body {background:none}
       .note-title {
         width:95%;
         margin: auto;
+        overflow: hidden;
 
         a {
-          @include fl(15%);
+          float:left;
           margin: auto;
           text-transform: uppercase;
           font-size:9px;
           font-weight: bold;
-          line-height:72px;
+
+          p {margin-top:24px}
         }
-        h2 {@include fl(70%); margin: auto; line-height:72px;}
+        a.forward {float:right;}
+        h2 {@include fl(80%); margin: auto; line-height:72px; text-align: center;}
       }
 
       h2 {
@@ -604,6 +611,9 @@ body {background:none}
             &.score {float:right; }
           }
         }
+      }
+      &calendar {
+
       }
 
     } // end stage

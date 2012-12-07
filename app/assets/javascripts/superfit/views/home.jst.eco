@@ -21,9 +21,9 @@
             <div class="stacked">
                 <div class="stacked-interior">
                     <div class="note-title">
-                        <a href="#">&#60 Prev</a>
+                        <a href="#"><p class="icon sprite-sf circle-arrow-back"></p></a>
                         <h2>Today</h2>
-                        <a href="#">Next &#62;</a>
+                        <a href="#" class="forward"><p class="icon sprite-sf circle-arrow-forward"></p></a>
                     </div>
                     <ul class="wod-activity">
                         <li>

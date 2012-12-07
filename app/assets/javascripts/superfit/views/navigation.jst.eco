@@ -4,8 +4,8 @@
             <div class="navigation">
             <ul>
 
-                <li><p class="icon home sprite-sf"></p>Today   </li>
-                <li><p class="icon calendar sprite-sf"></p>Calendar </li>
+                <li><a href="#home"> <p class="icon home sprite-sf"></p>Today</a></li>
+                <li><a href="#calendar"><p class="icon calendar sprite-sf"></p>Calendar</a> </li>
                 <li><p class="icon goals sprite-sf"></p>Goals     </li>
                 <li><p class="icon records sprite-sf"></p>Records  </li>
                 <li><p class="icon me sprite-sf"></p> Me </li>
