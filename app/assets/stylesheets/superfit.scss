@@ -349,32 +349,37 @@ body {background:none}
       }
 
       &.weekly {
+        position: relative;
+        top:10px;
+        @include border-radius ($radius);
 
-        position:relative;
-        top:18px;
-        @include box-shadow(1px -2px 2px rgba(0, 0, 0, 0.20));
-        @include border-radius ($radiustop);
         border:0;
         ul{
-          margin:0 10px 0 10px;
+          margin:0 4px 0 4px;
           border:0;
 
           li {
-            float:left;
+            background: #f2f2f2;
             border-color:transparent;
             border-top:0px;
             color:$lightgrey;
-            margin:0;
+            @include border-radius ($radius);
+            margin:2px 0 2px 0;
             padding:$contentpad;
-            line-height: 45px;
+            line-height: 54px;
             font-size: $standardfontsize;
 
             a {color:$lightgrey}
 
+            p{
+              float:left;
+
+              span {font-size:30px;}
+            }
+
           }
           li:first-of-type {border:0;}
-          li:last-of-type {@include border-radius ($radius);}
-          li+li {
+          div {
             float:right; padding-top:12px;
 
             p {float:left; margin-right:5px; line-height: 27px;}

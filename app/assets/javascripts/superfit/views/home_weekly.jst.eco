@@ -19,91 +19,68 @@
 
     <!-- Notepaper -->
     <div class="notepaper">
-        <div class="stacked-wrapper weekly">
+        <div class="stacked-wrapper weekly mon">
             <ul>
-                <li>Monday</li>
                 <li>
-                    <p class="icon sprite-sf benchmark"></p>
-                    <p class="icon sprite-sf strength"></p>
+                    <p><span>10</span> Monday</p>
+                    <div>
+                        <p class="icon sprite-sf benchmark"></p>
+                        <p class="icon sprite-sf strength"></p>
+                    </div>
                 </li>
-            </ul>
-        </div>
-    </div>
-    <!-- End Notepaper -->
-    <!-- Notepaper -->
-    <div class="notepaper">
-        <div class="stacked-wrapper weekly">
-            <ul>
-                <li>Tuesday</li>
                 <li>
-                    <p class="icon sprite-sf benchmark"></p>
-                    <p class="icon sprite-sf custom"></p>
+                    <p><span>11</span> Tuesday</p>
+                    <div>
+                        <p class="icon sprite-sf benchmark"></p>
+                        <p class="icon sprite-sf strength"></p>
+                    </div>
                 </li>
-            </ul>
-        </div>
-    </div>
-    <!-- End Notepaper -->
-    <!-- Notepaper -->
-    <div class="notepaper">
-        <div class="stacked-wrapper weekly">
-            <ul>
-                <li>Wednesday</li>
-                <li>
-                    <p class="icon sprite-sf strength"></p>
-                    <p class="icon sprite-sf custom"></p>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- End Notepaper -->
-    <!-- Notepaper -->
-    <div class="notepaper">
-        <div class="stacked-wrapper weekly">
-            <ul>
-                <li>Thursday</li>
-                <li>
-                   <p>No Activity</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- End Notepaper -->
-    <!-- Notepaper -->
-    <div class="notepaper">
-        <div class="stacked-wrapper weekly">
-            <ul>
-                <li>Today</li>
-                <li>
-                    <p class="icon sprite-sf strength"></p>
-                    <p class="icon sprite-sf custom"></p>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- End Notepaper -->
-    <!-- Notepaper -->
-    <div class="notepaper">
-        <div class="stacked-wrapper weekly">
-            <ul class="future-date">
-                <li>Saturday</li>
-                <li>
 
+                <li>
+                    <p><span>12</span> Wednesday</p>
+                    <div>
+                        <p class="icon sprite-sf benchmark"></p>
+                        <p class="icon sprite-sf strength"></p>
+                    </div>
+                </li>
+
+                <li>
+                    <p><span>13</span> Thursday</p>
+                    <div>
+                        <p class="icon sprite-sf benchmark"></p>
+                        <p class="icon sprite-sf strength"></p>
+                    </div>
+                </li>
+
+                <li>
+                    <p><span>14</span> Friday</p>
+                    <div>
+                        <p class="icon sprite-sf benchmark"></p>
+                        <p class="icon sprite-sf strength"></p>
+                    </div>
+                </li>
+
+                <li>
+                    <p><span>15</span> Saturday</p>
+                    <div>
+                        <p class="icon sprite-sf benchmark"></p>
+                        <p class="icon sprite-sf strength"></p>
+                    </div>
+                </li>
+
+                <li>
+                    <p><span>16</span> Sunday</p>
+                    <div>
+                        <p class="icon sprite-sf benchmark"></p>
+                        <p class="icon sprite-sf strength"></p>
+                    </div>
                 </li>
             </ul>
+
         </div>
     </div>
     <!-- End Notepaper -->
-    <!-- Notepaper -->
-    <div class="notepaper">
-        <div class="stacked-wrapper weekly">
-            <ul class="future-date">
-                <li>Sunday</li>
-                <li>
 
-                </li>
-            </ul>
-        </div>
-    </div>
     <!-- End Notepaper -->
     <div class="goal-progress">
         <h3><a href="#add-wod">Recent Goal Progress</a></h3>
