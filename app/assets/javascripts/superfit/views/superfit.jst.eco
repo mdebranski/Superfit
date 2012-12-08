@@ -13,5 +13,6 @@
   <%- JST['superfit/views/get_started_step3']() %>
   <%- JST['superfit/views/login']() %>
   <%- JST['superfit/views/calendar']() %>
+  <%- JST['superfit/views/add_wod_noresults']() %>
 </div>
 
