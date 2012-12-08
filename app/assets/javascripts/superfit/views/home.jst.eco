@@ -1,20 +1,20 @@
-<div class='current scroll' id='home'>
+    <div class='current scroll' id='home'>
 
-    <div class="leather-interior">
-        <div class='toolbar'>
-            <a href="#navigation">
-                <div class="pulldown">
-                   Navigation Pulldown
+        <div class="leather-interior">
+            <div class='toolbar'>
+                <a href="#navigation">
+                    <div class="pulldown">
+                        Navigation Pulldown
+                    </div>
+                </a>
+                <div class="tabs">
+                    <ul>
+                        <li class="first">Day</li>
+                        <li class="inactive">Week</li>
+                    </ul>
                 </div>
-            </a>
-            <div class="tabs">
-                <ul>
-                    <li class="first">Day</li>
-                    <li class="inactive">Week</li>
-                </ul>
             </div>
         </div>
-    </div>
 
     <div class="notepaper">
         <div class="stacked-wrapper">

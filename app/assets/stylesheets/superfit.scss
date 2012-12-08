@@ -7,9 +7,11 @@ $radius: 3px;
 $radiusleft: 0px 2px 2px 2px;
 $radiusright: 0px 2px 2px 0px;
 $radiusbottom: 0px 0px 2px 2px;
+$radiustop: 2px 2px 2px 2px;
 $darkgrey:#474747;
 $mediumgrey:#646464;
 $lightgrey:#858585;
+$inactivegrey:#cccccc;
 $notepapercolor:#ffffff; //#fcfadd;
 $stageshadow:0px 1px 3px rgba(0, 0, 0, 0.46);
 $stagebkg:#ffffff;
@@ -344,6 +346,45 @@ body {background:none}
           // if done in % would have been a total width of 10%
         }
 
+      }
+
+      &.weekly {
+
+        position:relative;
+        top:18px;
+        @include box-shadow(1px -2px 2px rgba(0, 0, 0, 0.20));
+        @include border-radius ($radiustop);
+        border:0;
+        ul{
+          margin:0 10px 0 10px;
+          border:0;
+
+          li {
+            float:left;
+            border-color:transparent;
+            border-top:0px;
+            color:$lightgrey;
+            margin:0;
+            padding:$contentpad;
+            line-height: 45px;
+            font-size: $standardfontsize;
+
+            a {color:$lightgrey}
+
+          }
+          li:first-of-type {border:0;}
+          li:last-of-type {@include border-radius ($radius);}
+          li+li {
+            float:right; padding-top:12px;
+
+            p {float:left; margin-right:5px; line-height: 27px;}
+          }
+       &.future-date {
+          li {
+            color:$inactivegrey;
+          }
+       }
+       }
       }
 
     }

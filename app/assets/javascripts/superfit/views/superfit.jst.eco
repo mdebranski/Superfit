@@ -14,5 +14,6 @@
   <%- JST['superfit/views/login']() %>
   <%- JST['superfit/views/calendar']() %>
   <%- JST['superfit/views/add_wod_noresults']() %>
+  <%- JST['superfit/views/home_weekly']() %>
 </div>
 

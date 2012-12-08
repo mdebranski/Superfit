@@ -1,0 +1,129 @@
+<div class='scroll' id='home-weekly'>
+
+    <div class="leather-interior">
+        <div class='toolbar'>
+            <a href="#navigation">
+                <div class="pulldown">
+                   Navigation Pulldown
+                </div>
+            </a>
+            <div class="tabs">
+                <ul>
+                    <li class="first inactive">Day</li>
+                    <li>Week</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Notepaper -->
+    <div class="notepaper">
+        <div class="stacked-wrapper weekly">
+            <ul>
+                <li>Monday</li>
+                <li>
+                    <p class="icon sprite-sf benchmark"></p>
+                    <p class="icon sprite-sf strength"></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Notepaper -->
+    <!-- Notepaper -->
+    <div class="notepaper">
+        <div class="stacked-wrapper weekly">
+            <ul>
+                <li>Tuesday</li>
+                <li>
+                    <p class="icon sprite-sf benchmark"></p>
+                    <p class="icon sprite-sf custom"></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Notepaper -->
+    <!-- Notepaper -->
+    <div class="notepaper">
+        <div class="stacked-wrapper weekly">
+            <ul>
+                <li>Wednesday</li>
+                <li>
+                    <p class="icon sprite-sf strength"></p>
+                    <p class="icon sprite-sf custom"></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Notepaper -->
+    <!-- Notepaper -->
+    <div class="notepaper">
+        <div class="stacked-wrapper weekly">
+            <ul>
+                <li>Thursday</li>
+                <li>
+                   <p>No Activity</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Notepaper -->
+    <!-- Notepaper -->
+    <div class="notepaper">
+        <div class="stacked-wrapper weekly">
+            <ul>
+                <li>Today</li>
+                <li>
+                    <p class="icon sprite-sf strength"></p>
+                    <p class="icon sprite-sf custom"></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Notepaper -->
+    <!-- Notepaper -->
+    <div class="notepaper">
+        <div class="stacked-wrapper weekly">
+            <ul class="future-date">
+                <li>Saturday</li>
+                <li>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Notepaper -->
+    <!-- Notepaper -->
+    <div class="notepaper">
+        <div class="stacked-wrapper weekly">
+            <ul class="future-date">
+                <li>Sunday</li>
+                <li>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Notepaper -->
+    <div class="goal-progress">
+        <h3><a href="#add-wod">Recent Goal Progress</a></h3>
+        <ul>
+            <li>
+                <div class="goal-data">
+                    <p>25 Max UB Pushup <br><span>Last Changed: 5 days ago</span></p>
+                    <p>20%<br><span>Complete</span>
+                </div>
+                <p class="sprite-sf reverse-arrow"></p>
+            </li>
+            <li>
+                <div class="goal-data">
+                    <p>25 Max UB Pushup <br><span>Last Changed: 5 days ago</span></p>
+                    <p>20%<br><span>Complete</span>
+                </div>
+                <p class="sprite-sf reverse-arrow"></p>
+            </li>
+
+        </ul>
+    </div>
+    <!-- END MAIN -->
+</div>
