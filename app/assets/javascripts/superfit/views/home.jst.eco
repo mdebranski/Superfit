@@ -16,19 +16,22 @@
             </div>
         </div>
 
+        <div class="daily-navigation">
+            <a href="prev"></a>
+            <a href="next"></a>
+        </div>
     <div class="notepaper">
         <div class="stacked-wrapper">
-            <div class="stacked">
-                <div class="stacked-interior">
                     <div class="note-title">
-                        <a href="#"><p class="icon sprite-sf circle-arrow-back"></p></a>
-                        <h2>Today</h2>
-                        <a href="#" class="forward"><p class="icon sprite-sf circle-arrow-forward"></p></a>
+                        <div class="date">10</div>
+                        <h2>
+                            Monday <br>
+                            <span>December 2012</span>
+                        </h2>
+                        <div class="sprite-sf today-flag">.</div>
                     </div>
                     <ul class="wod-activity">
-                        <li>
-                            <h3>WOD Activity</h3>
-                        </li>
+
                         <li>
                             <a href="#review-wod">
                                 <p class="icon sprite-sf strength"></p>
@@ -64,31 +67,24 @@
                             <a href="#add-wod">Add Another WOD +</a>
                         </li>
                     </ul>
-                </div>
-            </div><!--stacked-->
+            <div class="goal-progress">
+                <h3><a href="#add-wod">Goal Progress</a></h3>
+                <ul>
+                    <li>
+                        <div class="goal-data">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="goal-data">
+                        </div>
 
+                    </li>
+
+                </ul>
+            </div>
         </div> <!--stacked wrapper-->
     </div>
     <!-- End Notepaper -->
-    <div class="goal-progress">
-        <h3><a href="#add-wod">Recent Goal Progress</a></h3>
-        <ul>
-            <li>
-                <div class="goal-data">
-                    <p>25 Max UB Pushup <br><span>Last Changed: 5 days ago</span></p>
-                    <p>20%<br><span>Complete</span>
-                </div>
-                <p class="sprite-sf reverse-arrow"></p>
-            </li>
-            <li>
-                <div class="goal-data">
-                    <p>25 Max UB Pushup <br><span>Last Changed: 5 days ago</span></p>
-                    <p>20%<br><span>Complete</span>
-                </div>
-                <p class="sprite-sf reverse-arrow"></p>
-            </li>
 
-        </ul>
-    </div>
     <!-- END MAIN -->
 </div>

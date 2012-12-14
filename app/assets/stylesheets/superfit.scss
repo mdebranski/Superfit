@@ -13,10 +13,11 @@ $mediumgrey:#646464;
 $lightgrey:#858585;
 $inactivegrey:#cccccc;
 $notepapercolor:#ffffff; //#fcfadd;
-$stageshadow:0px 1px 3px rgba(0, 0, 0, 0.46);
+$stageshadow:0px 1px 2px rgba(0, 0, 0, 0.35);
+$standardboxshadow: 0px 0px 2px rgba(0, 0, 0, 0.20);
 $stagebkg:#ffffff;
 $contentpad:0 10px;
-$insetshadow:inset 0px 2px 2px 0px rgba(0, 0, 0, .45);
+$insetshadow:inset 0px 1px 2px 0px rgba(0, 0, 0, .45);
 $standardfont: "Helvetica Neue", Helvetica;
 $standardfontsize: 16px;
 $paragraphtext: 12px;
@@ -86,8 +87,7 @@ body {background:none}
       ul {
        margin: 0 auto;
        position:relative;
-       top:6px;
-       border: 1px solid #222222;
+       top:5px;
        overflow: hidden;
        border:0;
        position: absolute;
@@ -95,7 +95,16 @@ body {background:none}
        left: 50%;
        line-height: 1em;
        margin: 1px 0 0 -75px;
-       @include box-shadow(rgba(white, 0.3) 0px 1px 1px);
+        text-shadow: black 0 -1px 0;
+        -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+        box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+        border: 1px solid black;
+        @include border-radius($radius);
+        background-image: none;
+        //background-color: #0a0a0a;
+        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2f3031), color-stop(50%, #161717), color-stop(51%, #0a0a0a), color-stop(100%, #000000));
+        background-image: -webkit-linear-gradient(top, #2f3031, #161717 50%, #0a0a0a 51%, #000000);
+        background-image: linear-gradient(top, #2f3031, #161717 50%, #0a0a0a 51%, #000000);
 
        li {
           float: left;
@@ -109,7 +118,6 @@ body {background:none}
           text-align: center;
           padding: 10px 10px;
           height:5px;
-          @include background(linear-gradient(top, rgba(0,0,0,0.2) 45%,rgba(68,68,68,0.2) 100%));
 
           &.inactive {
             background:rgba(161,161,161,0.05);
@@ -120,6 +128,14 @@ body {background:none}
           }
 
         }
+       li:active{
+         border-color: black;
+         background-image: none;
+         background-color: black;
+         background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262627), color-stop(50%, #0d0d0d), color-stop(51%, #000000), color-stop(100%, #000000));
+         background-image: -webkit-linear-gradient(top, #262627, #0d0d0d 50%, #000000 51%, #000000);
+         background-image: linear-gradient(top, #262627, #0d0d0d 50%, #000000 51%, #000000);
+       }
        li:first-of-type {@include border-radius($radiusleft); }
        li:last-of-type {
          @include border-radius($radiusright);
@@ -164,6 +180,7 @@ body {background:none}
   .small-arrow  { width:25px;  height:16px; background-position: -90px -93px;}
   .write-icon {width:48px;  height:35px; background-position: -208px -18px;}
   .photo-icon {width:48px;  height:35px; background-position: -143px -18px; }
+  .today-flag {width:24px;  height:24px; background-position: -28px -28px; position: relative;top: -14px;}
 
   button   {
     &.green {
@@ -235,6 +252,7 @@ body {background:none}
 
   .notepaper {
     position:relative;
+    top:18px;
     width:95%;
     margin:0 auto;
 
@@ -246,8 +264,8 @@ body {background:none}
       z-index: 4;
       padding-bottom: 5px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.150);
-      @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.20));
-      @include border-radius ($radiusbottom);
+      @include box-shadow(0px 0px 2px rgba(0, 0, 0, 0.20));
+      @include border-radius ($radius);
       overflow: hidden;
 
       .stacked {
@@ -258,8 +276,8 @@ body {background:none}
         z-index: 4;
         padding-bottom: 4px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.150);
-        @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.20));
-        @include border-radius ($radiusbottom);
+        @include box-shadow($standardboxshadow);
+        @include border-radius ($radius);
         overflow: hidden;
 
         .stacked-interior{
@@ -269,8 +287,8 @@ body {background:none}
           width: 100%;
           z-index: 4;
           border-bottom: 1px solid rgba(0, 0, 0, 0.150);
-          @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.20));
-          @include border-radius ($radiusbottom);
+          @include box-shadow($standardboxshadow);
+          @include border-radius ($radius);
           overflow: hidden;
         }
       }
@@ -279,6 +297,8 @@ body {background:none}
         width:95%;
         margin: auto;
         overflow: hidden;
+        padding:12px 0 9px 0;
+        border-bottom:1px solid #ffabab;
 
         a {
           float:left;
@@ -290,23 +310,34 @@ body {background:none}
           p {margin-top:24px}
         }
         a.forward {float:right;}
-        h2 {@include fl(80%); margin: auto; line-height:72px; text-align: center;}
+        h2 {
+          float:left;
+          margin: auto;
+          line-height:16px;
+          text-align: left;
+          position: relative;
+          top:15px;
+
+          span {font-size:12px; color:$lightgrey}
+        }
+        .date {color:#d72c15; @include fl(60px); font-size:48px; font-weight: bold;}
+        .today-flag {float:right; width:48px}
       }
 
       h2 {
-        font-size: 40px;
+        font-size: 24px;
         text-shadow: none;
         color:$darkgrey;
         text-align: center;
       }
 
-      ul{
-        margin:0 10px 0 10px;
+      ul.wod-activity{
+        margin:1px 10px 0 10px;
         border:0;
         li {
 
           border-color:transparent;
-          border-top:1px solid #bfd2e1;
+          border-bottom:1px solid #bfd2e1;
           color:$lightgrey;
           margin:0;
           padding:$contentpad;
@@ -316,11 +347,11 @@ body {background:none}
           a {color:$lightgrey}
 
         }
-        li:first-of-type {border:0; border-top:1px solid #bfd2e1;}
+        li:first-of-type {border-top:1px solid #ffabab;}
       } // end ul
 
       .wod-activity{
-
+        width: 95%;
         clear:both;
 
         .icon {
@@ -396,11 +427,14 @@ body {background:none}
   } // end notepaper
   .goal-progress{
     width:95%;
-    margin:18px auto 18px auto;
+
+    background: #f1f1f1;
+    margin:18px auto 5px auto;
 
     h3 {
       margin-left:20px;
       line-height: 54px;
+      font-size:14px;
     }
     ul{
       margin:0 10px;
