@@ -47,6 +47,11 @@
                        <p class="label">Custom</p>
                        <p class="sprite-sf small-arrow"></p>
                    </a>
+                   <li>
+                       <p class="icon sprite-sf mainsite"></p>
+                       <p class="label">My Gym</p>
+                       <p class="sprite-sf small-arrow"></p>
+                   </li>
                </li>
                <li>
                    <p class="icon sprite-sf mainsite"></p>
