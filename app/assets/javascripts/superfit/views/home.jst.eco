@@ -10,16 +10,13 @@
                 <div class="tabs">
                     <ul>
                         <li class="first">Day</li>
-                        <li class="inactive">Week</li>
+                        <a href="#home-weekly"> <li class="inactive">Week</li>  </a>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="daily-navigation">
-            <a href="prev"></a>
-            <a href="next"></a>
-        </div>
+
     <div class="notepaper">
         <div class="stacked-wrapper">
                     <div class="note-title">
@@ -28,7 +25,10 @@
                             Monday <br>
                             <span>December 2012</span>
                         </h2>
-                        <div class="sprite-sf today-flag">.</div>
+                        <div class="daily-navigation">
+                            <a href="prev"><span class="sprite-sf prev-day"></span> Prev</a>
+                            <a href="next"><span class="sprite-sf next-day"></span> Next</a>
+                        </div>
                     </div>
                     <ul class="wod-activity">
 

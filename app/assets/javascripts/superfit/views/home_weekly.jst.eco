@@ -9,7 +9,7 @@
             </a>
             <div class="tabs">
                 <ul>
-                    <li class="first inactive">Day</li>
+                    <a href="#home"> <li class="first inactive">Day</li>  </a>
                     <li>Week</li>
                 </ul>
             </div>
@@ -19,88 +19,70 @@
 
     <!-- Notepaper -->
     <div class="notepaper">
-        <div class="stacked-wrapper weekly mon">
-            <ul>
-                <li>
-                    <p><span>10</span> Mon</p>
-                    <div>
-                        <p class="icon sprite-sf benchmark"></p>
-                        <p class="icon sprite-sf strength"></p>
-                    </div>
-                </li>
-                <li>
-                    <p><span>11</span> Tue</p>
-                    <div>
-                        <p class="icon sprite-sf benchmark"></p>
-                        <p class="icon sprite-sf strength"></p>
-                    </div>
-                </li>
 
-                <li>
-                    <p><span>12</span> Wed</p>
-                    <div>
-                        <p class="icon sprite-sf benchmark"></p>
-                        <p class="icon sprite-sf strength"></p>
-                    </div>
-                </li>
+                <div class="stacked-wrapper weekly">
+                    <div class="note-title">
+                        <div class="date">10</div>
+                        <h2>
+                            Monday <br>
+                            <span>December 2012</span>
+                        </h2>
 
-                <li>
-                    <p><span>13</span> Thu</p>
-                    <div>
-                        <p class="icon sprite-sf benchmark"></p>
-                        <p class="icon sprite-sf strength"></p>
                     </div>
-                </li>
-
-                <li>
-                    <p><span>14</span> Fri</p>
                     <div>
-                        <p class="icon sprite-sf benchmark"></p>
-                        <p class="icon sprite-sf strength"></p>
+                        <!--p class="icon sprite-sf benchmark"></p-->
+                        <!--p class="icon sprite-sf strength2"></p-->
                     </div>
-                </li>
-
-                <li>
-                    <p><span>15</span> Sat</p>
+                    <ul class="wod-activity">
+                        <li>
+                            <a href="#review-wod">
+                                <div class="label-score">
+                                    <p>Front Squat</p>
+                                    <p>145lb</p>
+                                </div>
+                                <p class="sprite-sf small-arrow"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#review-wod">
+                                <div class="label-score">
+                                    <p>Front Squat</p>
+                                    <p>145lb</p>
+                                </div>
+                                <p class="sprite-sf small-arrow"></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="stacked-wrapper weekly">
+                    <div class="note-title">
+                        <div class="date">11</div>
+                        <h2>
+                            Tuesday <br>
+                            <span>December 2012</span>
+                        </h2>
+                    </div>
                     <div>
-                        <p class="icon sprite-sf benchmark"></p>
-                        <p class="icon sprite-sf strength"></p>
+                        <!--p class="icon sprite-sf benchmark"></p-->
+                        <!--p class="icon sprite-sf strength2"></p-->
                     </div>
-                </li>
+                    <ul class="wod-activity">
+                        <li>
+                            <a href="#review-wod">
+                                <div class="label-score">
+                                    <p>Rest Day</p>
+                                </div>
 
-                <li>
-                    <p><span>16</span> Sun</p>
-                    <div>
-                        <p class="icon sprite-sf benchmark"></p>
-                        <p class="icon sprite-sf strength"></p>
-                    </div>
-                </li>
-            </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-        </div>
-    </div>
+
+
+     </div>
+
     <!-- End Notepaper -->
 
-    <!-- End Notepaper -->
-    <div class="goal-progress">
-        <h3><a href="#add-wod">Recent Goal Progress</a></h3>
-        <ul>
-            <li>
-                <div class="goal-data">
-                    <p>25 Max UB Pushup <br><span>Last Changed: 5 days ago</span></p>
-                    <p>20%<br><span>Complete</span>
-                </div>
-                <p class="sprite-sf reverse-arrow"></p>
-            </li>
-            <li>
-                <div class="goal-data">
-                    <p>25 Max UB Pushup <br><span>Last Changed: 5 days ago</span></p>
-                    <p>20%<br><span>Complete</span>
-                </div>
-                <p class="sprite-sf reverse-arrow"></p>
-            </li>
-
-        </ul>
-    </div>
     <!-- END MAIN -->
 </div>
