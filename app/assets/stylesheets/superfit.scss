@@ -186,6 +186,7 @@ body {background:none}
   .next-day {width:40px;  height:21px; background-position: -85px -322px;}
   .prev-day.disabled {width:40px;  height:21px; background-position: -85px -374px;}
   .next-day.disabled {width:40px;  height:21px; background-position: -85px -404px;}
+  .inactive {color:$inactivegrey}
 
   button   {
     &.green {
@@ -303,7 +304,7 @@ body {background:none}
         margin: auto;
         overflow: hidden;
         padding:12px 0 9px 0;
-        border-bottom:1px solid #ffabab;
+        border-bottom:1px double #ffabab;
 
         a {
           float:left;
@@ -361,10 +362,9 @@ body {background:none}
           line-height: 54px;
           font-size: $standardfontsize;
 
-          a {color:$lightgrey}
+
 
         }
-        li:first-of-type {border-top:1px solid #ffabab;}
       } // end ul
 
       .wod-activity{
@@ -377,7 +377,7 @@ body {background:none}
           float:left;
         }
         .label-score {
-          @include fl(80%);
+          @include fl(74%);
           p {
             float:left;
             position: relative;

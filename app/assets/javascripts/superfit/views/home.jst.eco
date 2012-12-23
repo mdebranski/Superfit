@@ -64,7 +64,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#add-wod">Add Another WOD +</a>
+                            <a href="#add-wod" class="inactive">Add Another WOD +</a>
                         </li>
                     </ul>
             <div class="goal-progress">
