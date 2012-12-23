@@ -374,10 +374,10 @@ body {background:none}
         .icon {
           margin-top:15px;
           margin-right:10px;
-          @include fl(11%);
+          float:left;
         }
         .label-score {
-          @include fl(74%);
+          @include fl(80%);
           p {
             float:left;
             position: relative;
@@ -569,11 +569,11 @@ body {background:none}
             position:relative;
             top:15px;
             margin-right:10px;
-            @include fl(11%);
+            float:left;
           }
 
           p {float:left}
-          .label {width:74%}
+          .label {width:80%}
 
           .small-arrow  {
             float:right;
