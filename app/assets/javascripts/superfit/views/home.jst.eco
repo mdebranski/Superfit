@@ -67,17 +67,26 @@
                             <a href="#add-wod" class="inactive">Add Another WOD +</a>
                         </li>
                     </ul>
-            <div class="goal-progress">
-                <h3><a href="#add-wod">Goal Progress</a></h3>
-                <ul>
-                    <li>
-                        <div class="goal-data">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="goal-data">
-                        </div>
+            <div class="goal-teaser">
+                <div class="top">
+                    <p>Latest Goal Activity</p>
+                    <a href="#" class="reverse-arrow">See All ›</a>
+                </div>
+                <div class="chart">
 
+                </div>
+                <ul>
+                    <li class="goal-name">
+                        <p>Front Squat 185lb</p>
+                        <p class="label">GOAL NAME</p>
+                    </li>
+                    <li class="date-added">
+                        <p>Jun 23 12</p>
+                        <p class="label">DATE ADDED</p>
+                    </li>
+                    <li class="percent-complete">
+                        <p>37%</p>
+                        <p class="label">PROGRESS</p>
                     </li>
 
                 </ul>

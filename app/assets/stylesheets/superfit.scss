@@ -465,37 +465,62 @@ body {background:none}
 
     }
   } // end notepaper
-  .goal-progress{
+  .goal-teaser{
     width:95%;
 
+    @include border-radius ($radius);
+    overflow:hidden;
     background: #f1f1f1;
-    margin:18px auto 5px auto;
+    margin:18px auto 9px auto;
+    padding-bottom: 9px;
 
-    h3 {
-      margin-left:20px;
-      line-height: 54px;
-      font-size:14px;
+
+     .top {
+       font-size:12px;
+       color:$inactivegrey;
+       width:95%;
+       padding:9px 0;
+       margin:auto;
+       margin-bottom: 18px;
+       p {@include fl(74%); font-weight: bold;}
+       a {@include fr(20%); text-align:right; color:$inactivegrey; font-weight: bold;}
+
+     }
+
+    .chart {
+      background: transparent url(image_path('sample-chart.png')) no-repeat ;
+      height:100px;
+      width:90%;
+      margin:auto;
+
     }
+
     ul{
       margin:0 10px;
 
+      border-top:1px solid $inactivegrey;
       li {
-        padding:$contentpad;
-        height: 54px;
+        height: 27px;
         line-height: 18px;
 
-        .goal-data {@include fl(90%);}
-        .goal-data p {float:left;}
-        .goal-data p+p {float:right; text-align: center;}
+        margin-right:10px;
 
-        .reverse-arrow  {
-          float:right;
-          margin-top:5px;
-          border-bottom:0
-          // if done in % would have been a total width of 10%
+        p {font-size:12px;line-height: 14px; }
+        p.label {font-size:9px; color:$lightgrey}
+
+
+        &.goal-name {@include fl(38%); margin-top:9px}
+        &.date-added {
+          @include fl(22%);
+          border-right:1px solid $inactivegrey;
+          border-left:1px solid $inactivegrey;
+          padding:0 10px;
+          margin-top:9px
         }
-        span{font-size:10px; font-weight: normal;}
+        &.percent-complete {@include fl(20%);margin-top:9px}
       }
+
+
     }
   }// end notepaper
 
