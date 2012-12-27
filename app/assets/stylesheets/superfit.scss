@@ -865,3 +865,21 @@ body {background:none}
   }
 
   }  //end JQT
+
+
+//* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+  .sprite-sf{
+    display:block;
+    line-height:0 !important;
+    text-indent:-9999px;
+    font-size:0 !important;
+    background:transparent url(image_path('sprite-superfit@2x.png')) no-repeat 0 0;
+  }
+
+
+}
