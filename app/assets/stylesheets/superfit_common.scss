@@ -75,6 +75,8 @@ $standardfontsize: 16px;
 
   }
 
+  button + button {margin-top: 0 !important;}
+
   form {
     input[type=text], input[type=number], input[type=password]{
       font-weight: bold;

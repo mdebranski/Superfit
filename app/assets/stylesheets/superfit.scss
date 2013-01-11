@@ -74,6 +74,7 @@ body {background:none}
     position: relative;
     background-size: 10px 44px;
 
+    h1 {font-size: 16px; bottom:12px}
     .pulldown {
       background:url(image_path('img-mainnav.png')) repeat-x;
       width:33px;
@@ -156,7 +157,7 @@ body {background:none}
     background:transparent url(image_path('sprite-superfit.png')) no-repeat 0 0;
   }
 
-  .sprite-sf:active {opacity:0.4;}
+  .sprite-sf:active {opacity:0.5;}
   .icon {
     width:29px; height:28px;
     &.strength { background-position: -29px -70px; }
@@ -182,10 +183,10 @@ body {background:none}
   .small-arrow  { width:25px;  height:16px; background-position: -90px -93px;}
   .write-icon {width:48px;  height:35px; background-position: -208px -18px;}
   .photo-icon {width:48px;  height:35px; background-position: -143px -18px; }
-  .prev-day {width:40px;  height:21px; background-position: -85px -349px;}
-  .next-day {width:40px;  height:21px; background-position: -85px -322px;}
-  .prev-day.disabled {width:40px;  height:21px; background-position: -85px -374px;}
-  .next-day.disabled {width:40px;  height:21px; background-position: -85px -404px;}
+  .prev-day {width:40px;  height:21px; background-position: -85px -374px; opacity: .95;}
+  .next-day {width:40px;  height:21px; background-position: -85px -404px;opacity: .95;}
+  .prev-day:active {width:40px;  height:21px; background-position: -85px -349px; opacity: 1.0;}
+  .next-day:active  {width:40px;  height:21px; background-position: -85px -322px;opacity: 1.0}
   .inactive {color:$inactivegrey}
 
   button   {
@@ -200,8 +201,8 @@ body {background:none}
       color: #2a3b54;
     }
     &.dark-grey {
-      background:$mediumgrey;
-      border:1px solid $darkgrey;
+      background:#b3b3b3;
+      border:1px solid #979797;
       color:#222222;
     }
     &.red{
@@ -222,6 +223,10 @@ body {background:none}
       background:transparent url(image_path('tile-leather-binding.png')) repeat-y 0 0;
       height: 960px;
 
+      .branding-landing {
+        background:transparent url(image_path('bkg-landing.png')) no-repeat 0 0;
+
+      }
       .branding-login {
         background:transparent url(image_path('bkg-branding-login.png')) no-repeat 0 0;
 
@@ -245,7 +250,7 @@ body {background:none}
       button {
         width:70%; margin-left:17%;
 
-        &.get-started {margin-top:300px; margin-bottom: 36px;}
+        &.get-started {margin-top:250px; margin-bottom: 18px;}
       }
 
 
@@ -336,8 +341,8 @@ body {background:none}
           position:relative;
           top:10px;
 
-          a {width:40px; height: 40px; text-align: center; padding-top:2px;}
-          a:active {color:#cccccc;}
+          a {width:40px; height: 40px; text-align: center; padding-top:2px;opacity: .5;}
+          a:active {opacity:1.0;}
           a+a {border-left:1px solid #ebebeb; }
         }
       }

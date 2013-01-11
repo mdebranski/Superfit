@@ -20,10 +20,10 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices, odio sed venenatis interdum, odio sapien pretium libero, at ullamcorper lectus tellus non leo. </p>
                     </div>
 
-                   <button>Edit Workout</button> <br>
-                    <a href="#home">
-                   <button class="dark-grey">Go To My Dashboard</button>
-                    </a>
+                   <button>Edit Workout</button>
+
+                   <button class="green">Go To My Dashboard</button>
+
             </div>
         </div>
 

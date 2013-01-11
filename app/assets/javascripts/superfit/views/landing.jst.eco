@@ -2,7 +2,7 @@
      <div class="leather">
         <div class="leather-binding ">
             <div class="stitching">
-                <div class="branding">
+                <div class="branding-landing">
                     <a href="#get-started-step1"><button class="get-started">Get Started</button> </a>
                     <a href="#login"><button class="red">Login</button> </a>
                 </div>
