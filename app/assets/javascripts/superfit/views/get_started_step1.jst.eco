@@ -24,7 +24,7 @@
                         <input class="divider" type="password" name="password" placeholder="Password" id="password" />
                     </li>
 
-                    <li><a href="#" class="button green">Register Now</a>  </li>
+                    <li><a href="#get-started-step2" class="button green">Register Now</a>  </li>
                 </ul>
             </form>
         </div>

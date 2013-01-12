@@ -5,19 +5,19 @@
             <p class="steps">Getting Started - Step 3 of 3</p>
             <h1>Select Your Gym</h1>
             <hr />
-            <p>Showing Results Based on Zip Code:</p>
+            <p>Search for your Gym below:</p>
         </div>
         <div class="create-account step-3">
-            <form id="zip" action="">
+            <form id="searchgym" action="">
                 <ul>
                     <li class="form">
-                        <input type="text" name="zipcode" placeholder="Zip Code" id="zip-code" />
+                        <input type="text" name="search" placeholder="search" id="search" />
                     </li>
                 </ul>
             </form>
             <p class="help">Search for you gym by Zip Code, City/State & Name.</p>
             <hr>
-            <p>Superfit found 15 gyms close to you! </p>
+            <p class="skip">Don't work out at an affiliate?  <a href="#home">Skip this.</a> </p>
             <div class="stage">
                 <ul>
                     <li><p class="sprite-sf icon enclosed-check"></p> Your Gym Name</li>
@@ -29,8 +29,7 @@
             <a href="#home" class="button green">Save Gym & Go to Dashboard</a>
 
         </div>
-        <hr>
-        <p class="skip"><strong>SKIP: Select Your Gym</strong> & Jump to My Dashboard</p>
+
 
     </div>
 </div>
