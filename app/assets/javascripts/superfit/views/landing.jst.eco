@@ -3,8 +3,10 @@
         <div class="leather-binding ">
             <div class="stitching">
                 <div class="branding-landing">
-                    <a href="#get-started-step1"><button class="get-started">Get Started</button> </a>
-                    <a href="#login"><button class="red">Login</button> </a>
+                    <div class="get-started">
+                    <a href="#get-started-step1" class="button">Get Started  </a>   <br>
+                    <a href="#login" class="button red">Login   </a>
+                    </div>
                 </div>
             </div>
         </div>

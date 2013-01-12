@@ -13,6 +13,7 @@ $stageshadow:0px 1px 3px rgba(0, 0, 0, 0.46);
 $stagebkg:#ffffff;
 $contentpad:0 10px;
 $insetshadow:inset 0px 1px 1px 0px rgba(0, 0, 0, .45);
+$activebutton:inset 0px 1px 12px 0px rgba(0, 0, 0, .65);
 $standardfont: "Helvetica Neue", Helvetica;
 $standardfontsize: 16px;
 
@@ -22,6 +23,8 @@ $standardfontsize: 16px;
   font-family: $standardfont;
   background:#cecece url(image_path('tile-grunge.png'))  repeat;
   color: #ddd;
+
+  line-height:18px ;
 
   h3 {font-size:18px; color:$darkgrey}
   h4 {font-size:14px; color:$darkgrey}
@@ -40,6 +43,8 @@ $standardfontsize: 16px;
     background:transparent;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-transform: translateZ(0);
+
+    .button {display:block; width:100%}
   }
 
   ul{
@@ -49,7 +54,7 @@ $standardfontsize: 16px;
     }
   }
 
-  button {
+  button, .button {
     text-transform:uppercase;
     color:$darkgrey;
     font-family: $standardfont;
@@ -61,21 +66,24 @@ $standardfontsize: 16px;
     background: #f4f4f4;
     border:1px solid #cccccc;
     box-shadow:  0px 1px 0px rgba(0, 0, 0, 0.35);
-    padding:12px 20px;
+    padding:12px 0px;
     margin:9px 0 9px 0;
     text-shadow: rgba(0,0,0,0.05) 0px 0, rgba(0,0,0,0.05) 0 -1px, rgba(255,255,255,0.1) 0 1px, rgba(0,0,0,0.05) 0px -1px;
     span {margin:5px auto }
+    line-height: 18px;
+    height:18px;
+
 
 
   }
-  button:active {
+  button:active, .button:active {
     background: #e5e5e5;
-    @include box-shadow($insetshadow);
+    @include box-shadow($activebutton);
     text-shadow: rgba(0,0,0,0.05) 0px 0, rgba(0,0,0,0.05) 0 -1px, rgba(255,255,255,0.1) 0 1px, rgba(0,0,0,0.05) 0px -1px;
 
   }
 
-  button + button {margin-top: 0 !important;}
+  button + button, .button + .button {margin-top: 0 !important;}
 
   form {
     input[type=text], input[type=number], input[type=password]{

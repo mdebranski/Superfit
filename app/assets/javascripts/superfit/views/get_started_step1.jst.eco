@@ -5,7 +5,10 @@
             <p class="steps">Getting Started - Step 1 of 3</p>
             <h1>Create Account</h1>
             <hr />
-            <button class="facebook">SIGN UP WITH FACEBOOK</button>
+
+            <p>Sign in with Facebook to share your workouts and workout results! </p>
+            <a href="#" class="button facebook">SIGN UP WITH FACEBOOK</a>
+
         </div>
         <div class="shared-line">
             <hr />
@@ -13,7 +16,6 @@
             <hr />
         </div>
         <div class="create-account">
-
             <p>Create your account with Superfit:</p>
             <form id="account" action="">
                 <ul>
@@ -21,7 +23,8 @@
                         <input type="text" name="email-address" placeholder="Email Address" id="email-address" />
                         <input class="divider" type="password" name="password" placeholder="Password" id="password" />
                     </li>
-                    <a href="#get-started-step2"><li><button class="green">register now</button></li> </a>
+
+                    <li><a href="#" class="button green">Register Now</a>  </li>
                 </ul>
             </form>
         </div>

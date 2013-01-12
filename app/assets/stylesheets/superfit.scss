@@ -164,8 +164,8 @@ body {background:none}
     &.custom {background-position: -29px -113px;}
     &.benchmark {background-position: -29px -152px;}
     &.mainsite {background-position: -29px -199px;}
-    &.enclosed-check {background-position: -29px -302px; }
-    &.enclosed-check-complete {background-position: -29px -252px; }
+    &.enclosed-check {background-position: -29px -332px; }
+    &.enclosed-check-complete {background-position: -29px -286px; }
     &.me {background-position: -202px -68px; }
     &.home {background-position: -202px -101px; }
     &.calendar {background-position: -202px -134px; }
@@ -189,7 +189,7 @@ body {background:none}
   .next-day:active  {width:40px;  height:21px; background-position: -85px -322px;opacity: 1.0}
   .inactive {color:$inactivegrey}
 
-  button   {
+  button, .button   {
     &.green {
       background:#79971f;
       border-color:#688218;
@@ -247,11 +247,12 @@ body {background:none}
         }
       }
 
-      button {
-        width:70%; margin-left:17%;
+      button, .button {
+        width:70%; margin-left:17%; display:block;
 
-        &.get-started {margin-top:270px; margin-bottom: 18px;}
       }
+
+      .get-started {padding-top:270px; overflow: hidden;}
 
 
     }
@@ -814,8 +815,9 @@ body {background:none}
 
       }
 
-      button {
+      button, .button {
         width:100%;
+        display:block;
       }
 
       .toggle-wrapper {
@@ -834,7 +836,7 @@ body {background:none}
 
 
       }
-      .skip {margin-top:9px}
+      .skip {margin-top:9px; text-align:right}
       .create-account {
         &.step-3 {
           ul li.form { margin-bottom:4px;}

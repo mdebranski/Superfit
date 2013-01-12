@@ -2,25 +2,38 @@
 
     <div class="cement-page scroll orientation">
         <div class="title">
-            <p class="steps">Getting Started - Step 2 of 4</p>
-            <h1>Create Profile</h1>
+            <p class="steps">Getting Started - Step 2 of 3</p>
+            <h1>Create Account</h1>
             <hr />
-            <p>Just the basics for now:</p>
         </div>
         <div class="create-account">
+
+            <p>Select Account Type:<br><br></p>
+
+            <p><strong>SCALED - FREE</strong></p>
+            <p>Log your workouts, record your PRs with 30 days
+                of tracking on both! <br><br></p>
+            <p><strong>RX - (First 30 days free then $1.99/mo)</strong></p>
+            <p>Everything  you get in Scaled plus Goals, Photo
+                Capture for custom workouts and unlimited tracking
+                for all of your data. <br><br></p>
+            <p>You can change your subscription as any time.</p>
+
             <form id="account" action="">
                 <ul>
-                    <li class="form">
-                        <input type="text" name="full-name" placeholder="Your Full Name" id="full-name" />
-                        <input class="divider" type="text" name="zipcode" placeholder="Zip Code" id="zip-code" />
+                    <li>
+                        <input type="checkbox">Scaled
+                        <input type="checkbox">RX
                     </li>
-
-                    <a href="#get-started-step3"><li><button class="dark-grey">Next Step: Select Your Gym</button></li> </a>
                 </ul>
             </form>
+            <hr />
+            <a href="#get-started-step3" class="button">Next Step: Select Your Gym </a>
+
+
         </div>
         <hr>
-        <p class="skip"><strong>SKIP: CREATE PROFILE</strong> & Jump to My Dashboard</p>
+        <p class="skip"><strong>SKIP: CREATE ACCOUNT</strong>  <br>& Jump to My Dashboard</p>
 
     </div>
 </div>

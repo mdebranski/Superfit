@@ -2,7 +2,7 @@
 
     <div class="cement-page scroll orientation">
         <div class="title">
-            <p class="steps">Getting Started - Step 3 of 4</p>
+            <p class="steps">Getting Started - Step 3 of 3</p>
             <h1>Select Your Gym</h1>
             <hr />
             <p>Showing Results Based on Zip Code:</p>
@@ -26,7 +26,7 @@
                 </ul>
             </div>
 
-            <a href="#home"><button class="green">Save Gym & Go to Dashboard</button> </a>
+            <a href="#home" class="button green">Save Gym & Go to Dashboard</a>
 
         </div>
         <hr>
