@@ -3,37 +3,49 @@
     <div class="cement-page scroll orientation">
         <div class="title">
             <p class="steps">Getting Started - Step 2 of 3</p>
-            <h1>Create Account</h1>
+            <h1>Select Account</h1>
             <hr />
         </div>
         <div class="create-account">
 
-            <p>Select Account Type:<br><br></p>
+            <p>Which account works for you?<br></p>
 
-            <p><strong>SCALED - FREE</strong></p>
-            <p>Log your workouts, record your PRs with 30 days
-                of tracking on both! <br><br></p>
-            <p><strong>RX - (First 30 days free then $1.99/mo)</strong></p>
-            <p>Everything  you get in Scaled plus Goals, Photo
-                Capture for custom workouts and unlimited tracking
-                for all of your data. <br><br></p>
-            <p>You can change your subscription as any time.</p>
 
-            <form id="account" action="">
-                <ul>
-                    <li>
-                        <input type="checkbox">Scaled
-                        <input type="checkbox">RX
-                    </li>
-                </ul>
-            </form>
+            <a href="#">
+            <div class="account-type">
+                    <p><strong>SCALED - <span>ALWAYS FREE</span></strong></p>
+                    <p>
+                        Easily log your workouts, record your PRs,
+                        Benchmarks & more with 30 days of tracking on all.<br>
+
+                    </p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="account-type selected">
+                    <p><strong>RX - <span>30 DAY FREE TRIAL ($1.99/mo)</span></strong></p>
+                    <p>
+                        Everything  you get in Scaled plus Goals, Photo
+                        Capture for custom workouts and unlimited tracking
+                        for all of your data. <br>
+
+                    </p>
+                </div>
+            </a>
+
             <hr />
-            <a href="#get-started-step3" class="button">Next Step: Select Your Gym </a>
+
+            <!--IF a user selects RX - they will be taken to a payment screen
+            <a href="#get-started-step3" class="button green">Next Step: Payment </a>   </p-->
 
 
-        </div>
-        <hr>
-        <p class="skip"><strong>SKIP: CREATE ACCOUNT</strong>  <br>& Jump to My Dashboard</p>
+            <!--IF a user selects SCALED - they will be taken to select your gym-->
+                        <a href="#get-started-step3" class="button green">Next Step: Select Your Gym </a>
 
-    </div>
-</div>
+
+                    </div>
+                    <hr>
+                    <p class="skip"><strong>SKIP: CREATE ACCOUNT</strong>  <br>& Jump to My Dashboard</p>
+
+                </div>
+            </div>

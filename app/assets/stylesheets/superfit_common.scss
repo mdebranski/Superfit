@@ -24,7 +24,6 @@ $standardfontsize: 16px;
   background:#cecece url(image_path('tile-grunge.png'))  repeat;
   color: #ddd;
 
-  line-height:18px ;
 
   h3 {font-size:18px; color:$darkgrey}
   h4 {font-size:14px; color:$darkgrey}
@@ -36,6 +35,7 @@ $standardfontsize: 16px;
 
     span {font-weight:normal;color:$mediumgrey;}
   }
+
 
 
   a {
@@ -78,9 +78,10 @@ $standardfontsize: 16px;
   }
   button:active, .button:active {
     background: #e5e5e5;
+    color:$darkgrey;
     @include box-shadow($activebutton);
     text-shadow: rgba(0,0,0,0.05) 0px 0, rgba(0,0,0,0.05) 0 -1px, rgba(255,255,255,0.1) 0 1px, rgba(0,0,0,0.05) 0px -1px;
-
+    border:1px solid #cccccc;
   }
 
   button + button, .button + .button {margin-top: 0 !important;}

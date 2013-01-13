@@ -806,6 +806,7 @@ body {background:none}
       p{
         color:$darkgrey;
         font-size:12px;
+        line-height: 18px;
 
         &.steps {
           font-size:10px;
@@ -838,6 +839,47 @@ body {background:none}
       }
       .skip {margin-top:9px; text-align:right}
       .create-account {
+
+        .account-type{
+          border:2px dashed #959595;
+          padding:18px 15px 10px 15px;
+          background:rgba(203, 200, 193, 0.4);
+          margin:9px 0;
+          @include border-radius($radius);
+
+          strong {font-size:14px}
+          span {color:#6b861b; ;}
+
+
+          .button {
+            background:rgba(179, 177, 171, 0.5);
+            border:1px solid #a3a19d;
+            color:#5b5b58;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.35);
+          }
+
+
+          &.selected {
+            border:0px solid #6b861b;
+            background:rgba(0, 0, 0, 0.10);
+            //strong {font-weight: normal;}
+            @include box-shadow($insetshadow);
+
+            //p{color:#ffffff;}
+            span { }
+            .button {
+
+
+              background:rgba(107, 134, 27, 0.95);
+              border:2px solid rgba(0, 0, 0, 0.025);
+              color:#ffffff;
+              //font-weight: normal;
+              box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.35);
+            }
+
+          }
+        }
+
         &.step-3 {
           ul li.form { margin-bottom:4px;}
 
@@ -845,6 +887,7 @@ body {background:none}
           p {line-height: 18px;}
 
           .stage {margin:18px 0}
+
         }
 
       }
