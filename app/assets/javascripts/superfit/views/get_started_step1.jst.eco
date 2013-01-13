@@ -15,7 +15,7 @@
             <p>OR</p>
             <hr />
         </div>
-        <div class="create-account">
+        <div class="create-account register">
             <p>Create your account with Superfit:</p>
             <form id="register" action="">
                 <ul>
@@ -23,13 +23,10 @@
                         <input type="text" name="email-address" placeholder="Email Address" id="email-address" />
                         <input class="divider" type="password" name="password" placeholder="Password" id="password" />
                     </li>
-                    <li>
-                        <input type="checkbox">Male
-                        <input type="checkbox">Female
-                    </li>
-
-                    <li><a href="#get-started-step2" class="button green">Register Now</a>  </li>
+                    <li class="gender"><p class="sprite-sf icon enclosed-check"></p>  Male</li>
+                    <li class="gender"><p class="sprite-sf icon enclosed-check-complete"></p>  Female</li>
                 </ul>
+                <a href="#get-started-step2" class="button green">Register Now</a>
             </form>
         </div>
 

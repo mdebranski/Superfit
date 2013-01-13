@@ -8,12 +8,12 @@
         </div>
         <div class="create-account">
 
-            <p>Which account works for you?<br></p>
+            <p>Get started for Free with either our Scaled or RX versions!</p>
 
 
             <a href="#">
             <div class="account-type">
-                    <p><strong>SCALED - <span>ALWAYS FREE</span></strong></p>
+                    <h4>SCALED - <span>ALWAYS FREE</span></h4>
                     <p>
                         Easily log your workouts, record your PRs,
                         Benchmarks & more with 30 days of tracking on all.<br>
@@ -23,7 +23,8 @@
             </a>
             <a href="#">
                 <div class="account-type selected">
-                    <p><strong>RX - <span>30 DAY FREE TRIAL ($1.99/mo)</span></strong></p>
+
+                    <h4>RX - <span>30 DAY FREE TRIAL ($1.99/mo)</span></h4>
                     <p>
                         Everything  you get in Scaled plus Goals, Photo
                         Capture for custom workouts and unlimited tracking
@@ -45,7 +46,7 @@
 
                     </div>
                     <hr>
-                    <p class="skip"><strong>SKIP: CREATE ACCOUNT</strong>  <br>& Jump to My Dashboard</p>
+                    <p class="skip"><strong>SKIP: SELECT ACCOUNT</strong>  <br>& Jump to My Dashboard</p>
 
                 </div>
             </div>

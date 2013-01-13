@@ -11,7 +11,7 @@
             <form id="searchgym" action="">
                 <ul>
                     <li class="form">
-                        <input type="text" name="search" placeholder="search" id="search" />
+                        <input type="text" name="search" placeholder="Search" id="search" />
                     </li>
                 </ul>
             </form>
