@@ -38,10 +38,11 @@ body {background:none}
   #navigation {
     position: relative;
     height: 0;
+    opacity: 0;
     overflow: hidden;
-    @include transition(height 1s ease);
+    @include transition(opacity 1s ease, height 1s ease);
   }
-  #navigation.active { display: block; height: 280px; }
+  #navigation.active { display: block; opacity: 1; height: 280px; }
   .navigation-wrapper {
     vertical-align: bottom;
   }
