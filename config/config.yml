@@ -1,12 +1,7 @@
-defaults: &defaults
-
 development:
-  <<: *defaults
 
 test:
-  <<: *defaults
 
 production:
-  <<: *defaults
   fb_app_id: '143625345793530'
   fb_secret: 'a599fd7596b87c3b6fdb9240534a77e2'
