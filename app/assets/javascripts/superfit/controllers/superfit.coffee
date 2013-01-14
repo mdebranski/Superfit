@@ -20,6 +20,8 @@ class Superfit extends Spine.Controller
   constructor: ->
     super
     @render(user: User.first())
+
+    _.defer -> $.makeItRetina();
     @step1.on 'pageAnimationEnd', => @searchEl.focus()
     @step2.on 'pageAnimationEnd', => $('.wod-score input[name=custom-wod-label]').focus()
 
