@@ -93,7 +93,7 @@ gem install bundler
 bundle install
 ```
 
-## Create Facebook App
+### Create Facebook App
 To see your promotion on Facebook, you will need to setup a custom Facebook application that points to your local
 domain. To create a Facebook app:
 
@@ -101,9 +101,6 @@ domain. To create a Facebook app:
 2. Create a Facebook application. Set Name and Namespace to whatever you want.
 3. For the _App Domain_ enter *yourdomain*.
 4. Click on _Website_. For the "Site URL" enter http://*yourdomain*/.
-5. Click on _Page Tab_. Enter whatever you want for _Page Tab Name_.
-6. For _Page Tab URL_ enter http://*yourdomain*/apps/*appid*
-7. For _Secure Page Tab URL_ enter https://*yourdomain*/apps/*appid*
 8. Save your changes.
 
 **In the above *yourdomain* refers to the local domain you setup. *appid* refers to the app ID of the new app
