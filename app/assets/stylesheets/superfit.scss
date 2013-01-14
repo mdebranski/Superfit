@@ -797,9 +797,6 @@ body {background:none}
 
       width:95%;
       margin:18px auto;
-
-
-
       .title {
         hr {margin:9px 0}
       }
@@ -817,8 +814,10 @@ body {background:none}
       }
 
       button, .button {
-        width:100%;
+        width:99%;
         display:block;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .toggle-wrapper {
