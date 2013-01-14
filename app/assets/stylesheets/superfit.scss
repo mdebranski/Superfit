@@ -782,10 +782,11 @@ body {background:none}
     }
 
 
-    #no-matches, ul#wods {
+    ul#wods {
       display: none;
     }
     h3.no-matches {
+      display: none;
       color: rgba(0, 0, 0, 0.10);
       text-shadow: 0px -1px 0px #818181;
       font-size:24px;

@@ -6,7 +6,7 @@ class Superfit extends Spine.Controller
     'ul#wods': 'wods'
     'ul#wods li': 'wodItems'
     'ul.wods-browse': 'wodsBrowse'
-    '#no-matches': 'noMatches'
+    '.no-matches': 'noMatches'
     'input#search-text': 'searchEl'
     '#add-wod': 'step1'
     '#new-wod': 'step2'
