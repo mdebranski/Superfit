@@ -103,8 +103,7 @@ domain. To create a Facebook app:
 4. Click on _Website_. For the "Site URL" enter http://*yourdomain*/.
 8. Save your changes.
 
-**In the above *yourdomain* refers to the local domain you setup. *appid* refers to the app ID of the new app
-you just created (displayed at the top).**
+**In the above *yourdomain* refers to the local domain you setup.
 
 ### Setup developer-specific application config
 Make a copy of config/environments/copy.to.development.yml.
