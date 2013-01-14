@@ -40,8 +40,11 @@ class Superfit extends Spine.Controller
   pulldown: =>
     if @navigation.is('.active')
       @navigation.removeClass('active')
+      hide = => @navigation.hide()
+      _.delay hide, 1000
     else
       @navigation.prependTo('.current')
+      @navigation.show()
       _.defer => @navigation.addClass('active')
 
   search: (e) ->
