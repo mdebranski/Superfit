@@ -17,8 +17,6 @@ class Superfit extends Spine.Controller
     'tap input#search-text': 'search'
     'tap #wods li a': 'selectWod'
 
-  navShowing: false
-
   constructor: ->
     super
     @render(user: User.first())
@@ -31,7 +29,7 @@ class Superfit extends Spine.Controller
 
     @navigation = $('#navigation').detach()
     $('.pulldown').on 'tap', @pulldown
-    $('.page').on 'pageAnimationEnd', => @navShowing = false; @navigation.detach()
+    $('.page').on 'pageAnimationEnd', => @navigation.removeClass('active'); @navigation.detach()
 
   @login: ->
     onLogin = (response) =>
@@ -40,15 +38,11 @@ class Superfit extends Spine.Controller
     FB.login(onLogin)
 
   pulldown: =>
-    @log "Nav showing: #{@navShowing}"
-    if @navShowing
-      @navShowing = false
-      @navigation.animate {height: 0}, => @navigation.detach()
+    if @navigation.is('.active')
+      @navigation.removeClass('active')
     else
-      @navShowing = true
-      @navigation.css(height: 0)
       @navigation.prependTo('.current')
-      @navigation.animate(height: 280)
+      _.defer => @navigation.addClass('active')
 
   search: (e) ->
     value = $(e.target).val()
