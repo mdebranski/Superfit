@@ -19,7 +19,7 @@
             Records
           %li
             %p.icon.me.sprite-sf
-            Me
+            = @user.name
           %li
             %p.icon.affiliate.sprite-sf
             Affiliate Name
