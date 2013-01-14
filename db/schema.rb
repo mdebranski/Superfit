@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120629210839) do
+ActiveRecord::Schema.define(:version => 20121218025912) do
 
   create_table "exercises", :force => true do |t|
     t.string "name",     :null => false
@@ -37,12 +37,29 @@ ActiveRecord::Schema.define(:version => 20120629210839) do
   end
 
   create_table "users", :force => true do |t|
-    t.string "name",        :null => false
-    t.string "location"
-    t.string "gender"
-    t.string "picture"
-    t.string "facebook_id"
+    t.string   "name",                                   :null => false
+    t.string   "location"
+    t.string   "gender"
+    t.string   "picture"
+    t.string   "facebook_id"
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "provider"
+    t.string   "uid"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["provider"], :name => "index_users_on_provider"
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["uid"], :name => "index_users_on_uid"
 
   create_table "wods", :force => true do |t|
     t.string "name",           :null => false

@@ -1,0 +1,29 @@
+#navigation
+  .leather-interior
+    .navigation-wrapper
+      .navigation
+        %ul
+          %li
+            %a{href: "#home"}
+              %p.icon.home.sprite-sf
+              Today
+          %li
+            %a{href: "#calendar"}
+              %p.icon.calendar.sprite-sf
+              Calendar
+          %li
+            %p.icon.goals.sprite-sf
+            Goals
+          %li
+            %p.icon.records.sprite-sf
+            Records
+          %li
+            %p.icon.me.sprite-sf
+            Me
+          %li
+            %p.icon.affiliate.sprite-sf
+            Affiliate Name
+          %li
+            %a{href: "/users/sign_out", rel: "external"}
+              %p.icon.affiliate.sprite-sf
+              Sign out

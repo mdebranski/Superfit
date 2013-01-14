@@ -1,0 +1,16 @@
+#login.page
+  .leather
+    .leather-binding.scroll.orientation
+      .branding-login
+        .login
+          %a.button.facebook{href: '/users/auth/facebook', rel: 'external'}
+            SIGN IN WITH FACEBOOK
+          %p Or Login with your Superfit Account
+          .login-form
+            %form#login-form{action: '/users/sign_in' ,'data-remote': 'true', 'data-method': 'post', method: 'post'}
+              %ul
+                %li.form.grey-input
+                  %input#email-address{type: "text", name: "user[email]", placeholder: "Email Address"}
+                  %input#password.divider{type: "password", name: "user[password]", placeholder: "Password"}
+                %li
+                  %button#login-button login now

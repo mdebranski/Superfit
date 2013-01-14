@@ -1,12 +1,10 @@
-    <div class='current scroll' id='home'>
+    <div class='current scroll page' id='home'>
 
         <div class="leather-interior">
             <div class='toolbar'>
-                <a href="#navigation">
-                    <div class="pulldown">
-                        Navigation Pulldown
-                    </div>
-                </a>
+                <div class="pulldown">
+                    Navigation Pulldown
+                </div>
                 <div class="tabs">
                     <ul>
                         <li class="first">Day</li>

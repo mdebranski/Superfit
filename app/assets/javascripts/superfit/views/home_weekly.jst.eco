@@ -1,12 +1,10 @@
-<div id='home-weekly' class='scroll fade in'>
+<div id='home-weekly' class='scroll fade in page'>
 
     <div class="leather-interior">
         <div class='toolbar'>
-            <a href="#navigation">
-                <div class="pulldown">
-                   Navigation Pulldown
-                </div>
-            </a>
+            <div class="pulldown">
+               Navigation Pulldown
+            </div>
             <div class="tabs">
                 <ul>
                     <a href="#home"> <li class="first inactive">Day</li>  </a>

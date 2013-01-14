@@ -10,17 +10,45 @@ class Superfit extends Spine.Controller
     'input#search-text': 'searchEl'
     '#add-wod': 'step1'
     '#new-wod': 'step2'
+    '#login-form': 'loginForm'
 
   events:
     'keyup input#search-text': 'search'
     'tap input#search-text': 'search'
-    'tap #wods li': 'selectWod'
+    'tap #wods li a': 'selectWod'
+
+  navShowing: false
 
   constructor: ->
     super
-    @render()
-    @step1.on 'pageAnimationStart', => @searchEl.focus()
-    @step2.on 'pageAnimationStart', => $('.wod-score input[name=custom-wod-label]').focus()
+    @render(user: User.first())
+    @step1.on 'pageAnimationEnd', => @searchEl.focus()
+    @step2.on 'pageAnimationEnd', => $('.wod-score input[name=custom-wod-label]').focus()
+
+    @loginForm.on 'ajax:success', => console.log "SUCCESS"
+    @loginForm.on 'ajax:error', => console.log "ERROR"
+    @loginForm.on 'ajax:complete', => console.log "COM"
+
+    @navigation = $('#navigation').detach()
+    $('.pulldown').on 'tap', @pulldown
+    $('.page').on 'pageAnimationEnd', => @navShowing = false; @navigation.detach()
+
+  @login: ->
+    onLogin = (response) =>
+      if response.authResponse
+        $.get '/users/auth/facebook_access_token/callback', {access_token: response.authResponse.accessToken}, -> document.location.reload()
+    FB.login(onLogin)
+
+  pulldown: =>
+    @log "Nav showing: #{@navShowing}"
+    if @navShowing
+      @navShowing = false
+      @navigation.slideUp => @navigation.detach()
+    else
+      @navShowing = true
+      @navigation.css('display', 'none')
+      @navigation.prependTo('.current')
+      @navigation.slideDown()
 
   search: (e) ->
     value = $(e.target).val()
@@ -48,6 +76,7 @@ class Superfit extends Spine.Controller
     id = $(e.target).closest('li').data('id')
     wod = Wod.find(id)
     workout = wod.workout_male.replace(/\n/g, '<br/>')
+    console.log "HERE"
     @$('.wod-name', @step2).html("<span class='icon sprite-sf #{wod.type.toLowerCase()}'></span>#{wod.name}")
     @$('.wod-details p', @step2).html(workout)
     jQT.goTo('#new-wod', jQT.settings.defaultAnimation)

@@ -1,4 +1,4 @@
-<div id="get-started-step1">
+<div id="get-started-step1" class="page">
 
     <div class="cement-page scroll orientation">
         <div class="title">
@@ -7,8 +7,7 @@
             <hr />
 
             <p>Sign in with Facebook to share your workouts and workout results! </p>
-            <a href="#" class="button facebook">SIGN UP WITH FACEBOOK</a>
-
+            <a href="/users/auth/facebook" rel="external" class="button facebook">SIGN UP WITH FACEBOOK</a>
         </div>
         <div class="shared-line">
             <hr />

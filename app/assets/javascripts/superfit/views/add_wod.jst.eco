@@ -1,4 +1,4 @@
-<div id="add-wod">
+<div id="add-wod" class="page">
 
     <div class="leather-interior">
         <div class='toolbar'>
@@ -18,7 +18,7 @@
             </form>
         </div>
         <div class="stage browse-wods">
-            <h3 id="no-matches">No WODs match your search.</h3>
+            <h3 class="no-matches">No Workouts Matched Your Search.</h3>
             <ul id="wods">
               <% for wod in Wod.all(): %>
                 <li data-id="<%= wod.id %>">

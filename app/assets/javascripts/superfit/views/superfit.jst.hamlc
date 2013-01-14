@@ -1,0 +1,27 @@
+#jqt
+  - if @user
+    != JST['superfit/views/navigation']()
+    != JST['superfit/views/home']()
+    != JST['superfit/views/add_wod']()
+    != JST['superfit/views/custom_wod']()
+    != JST['superfit/views/new_wod']()
+    != JST['superfit/views/add_strength_wod_step1']()
+    != JST['superfit/views/add_strength_wod_step2']()
+    != JST['superfit/views/review_wod']()
+    != JST['superfit/views/calendar']()
+    != JST['superfit/views/home_weekly']()
+  - else
+    != JST['superfit/views/landing']()
+    != JST['superfit/views/login']()
+    != JST['superfit/views/get_started_step1']()
+    != JST['superfit/views/get_started_step2']()
+    != JST['superfit/views/get_started_step3']()
+
+#fb-root
+:javascript
+  (function(d){
+     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     d.getElementsByTagName('head')[0].appendChild(js);
+   }(document));
