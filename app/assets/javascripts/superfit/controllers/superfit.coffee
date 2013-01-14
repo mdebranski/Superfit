@@ -43,12 +43,12 @@ class Superfit extends Spine.Controller
     @log "Nav showing: #{@navShowing}"
     if @navShowing
       @navShowing = false
-      @navigation.slideUp => @navigation.detach()
+      @navigation.animate {height: 0}, => @navigation.detach()
     else
       @navShowing = true
-      @navigation.css('display', 'none')
+      @navigation.css(height: 0)
       @navigation.prependTo('.current')
-      @navigation.slideDown()
+      @navigation.animate(height: 280)
 
   search: (e) ->
     value = $(e.target).val()
