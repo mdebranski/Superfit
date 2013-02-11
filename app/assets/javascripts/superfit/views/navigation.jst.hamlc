@@ -6,7 +6,11 @@
           %li
             %a{href: "#home"}
               %p.icon.home.sprite-sf
-              Today
+              Dashboard
+          %li
+            %a{href: "/users/sign_out", rel: "external"}
+              %p.icon.affiliate.sprite-sf
+              Sign out
           %li
             %a{href: "#calendar"}
               %p.icon.calendar.sprite-sf
@@ -20,10 +24,3 @@
           %li
             %p.icon.me.sprite-sf
             = @user.name
-          %li
-            %p.icon.affiliate.sprite-sf
-            Affiliate Name
-          %li
-            %a{href: "/users/sign_out", rel: "external"}
-              %p.icon.affiliate.sprite-sf
-              Sign out

@@ -1,64 +1,80 @@
-<div id="add-wod" class="page">
-
-    <div class="leather-interior">
+<div class='page' id='add-wod'>
+    <div class="page-header">
         <div class='toolbar'>
-                <div>
-                    <a class="back" href="#" style="">Back</a>
-                </div>
-                <h1>Select Type</h1>
+            <div>
+                <a class="sprite-sf previous" href="#home" style="">Back</a>
+            </div>
+            <h1>Select WOD</h1>
         </div>
-    </div>
+    </div> <!-- end: page-header -->
 
-    <div class="cement-page scroll">
-        <div class="search-wods">
-            <form id="search" action="">
-                <ul>
-                    <li><input type="search" name="search-text" placeholder="Search All" id="search-text" /></li>
-                </ul>
-            </form>
-        </div>
-        <div class="stage browse-wods">
-            <h3 class="no-matches">No Workouts Matched Your Search.</h3>
-            <ul id="wods">
-              <% for wod in Wod.all(): %>
-                <li data-id="<%= wod.id %>">
-                  <p class="icon sprite-sf benchmark"></p>
-                  <p class="label"><a href="#new-wod"><%= wod.name %></a></p>
-                  <p class="sprite-sf small-arrow"></p>
-                </li>
-              <% end %>
-            </ul>
-           <ul class="wods-browse">
-               <li id="nav-benchmark">
-                   <p class="icon sprite-sf benchmark"></p>
-                   <p class="label">Benchmarks</p>
-                   <p class="sprite-sf small-arrow"></p>
-               </li>
-               <li>
-                   <a href="#add-strength-wod-step1">
-                       <p class="icon sprite-sf strength"></p>
-                       <p class="label">Strength</p>
-                       <p class="sprite-sf small-arrow"></p>
-                   </a>
-               </li>
-               <li>
-                   <a href="#add-custom-wod">
-                       <p class="icon sprite-sf custom"></p>
-                       <p class="label">Custom</p>
-                       <p class="sprite-sf small-arrow"></p>
-                   </a>
-                   <li>
-                       <p class="icon sprite-sf mainsite"></p>
-                       <p class="label">My Gym</p>
-                       <p class="sprite-sf small-arrow"></p>
-                   </li>
-               </li>
-               <li>
-                   <p class="icon sprite-sf mainsite"></p>
-                   <p class="label">Main Site</p>
-                   <p class="sprite-sf small-arrow"></p>
-               </li>
-           </ul>
+    <div class="content-main">
+        <div class="content-block">
+        <form>
+          <input type="text" name="search-text" placeholder="Search All" id="search-text" />
+        </form>
         </div>
     </div>
+    <div class="content-main">
+
+        <!-- HIDE FOR NOW
+        <ul id="wods">
+            <% for wod in Wod.all(): %>
+            <li data-id="<%= wod.id %>">
+                <p class="label"></p>
+                <div class="label">
+                    <div class="icon sprite-sf benchmark"></div>
+                    <p class="label"><a href="#new-wod"><%= wod.name %></a></p>
+                </div>
+                <p class="sprite-sf arrow"></p>
+            </li>
+            <% end %>
+        </ul>
+        -->
+
+        <ul>
+
+            <li>
+                <a href="#new-wod">
+                <div class="label">
+                    <div class="icon sprite-sf benchmark"></div>
+                    <p>Benchmark</p>
+                </div>
+                <p class="sprite-sf arrow"></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="label">
+                        <div class="icon sprite-sf strength"></div>
+                        <p>Strength</p>
+                    </div>
+                    <p class="sprite-sf arrow"></p>
+                </a>
+            </li>
+            <li>
+                <a href="#create-wod">
+                <div class="label">
+                    <div class="icon sprite-sf custom"></div>
+                    <p>Custom</p>
+                </div>
+                <p class="sprite-sf arrow"></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <div class="label">
+                    <div class="icon sprite-sf mainsite"></div>
+                    <p>Main Site</p>
+                </div>
+                <p class="sprite-sf arrow"></p>
+                </a>
+            </li>
+
+        </ul>
+
+    </div> <!-- end: content-header -->
+
+
+
 </div>

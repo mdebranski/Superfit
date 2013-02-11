@@ -1,96 +1,77 @@
     <div class='current scroll page' id='home'>
-        <div class="leather-interior">
+        <div class="page-header">
             <div class='toolbar'>
                 <div class="pulldown">
                     Navigation Pulldown
                 </div>
-                <div class="tabs">
-                    <ul>
-                        <li class="first">Day</li>
-                        <a href="#home-weekly"> <li class="inactive">Week</li>  </a>
-                    </ul>
-                </div>
+                <h1>Dashboard</h1>
             </div>
+        </div> <!-- end: page-header -->
+        <div class="page-navigation">Date</div>
+        <div class="content-main">
+            <ul>
+                <li class="title">
+                    <h2>Workout Activity</h2>
+                    <a href="#add-wod" class="sprite-sf add-one"></a>
+                </li>
+                <li>
+                    <a href="#review-wod">
+                        <div class="label">
+                            <div class="icon sprite-sf strength"></div>
+                            <p>Front Squat</p>
+                            <p>145lb</p>
+                        </div>
+                        <p class="sprite-sf arrow"></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#review-wod">
+                        <div class="label">
+                            <div class="icon sprite-sf benchmark"></div>
+                            <p>Other Label</p>
+                            <p>4:30</p>
+                        </div>
+                        <p class="sprite-sf arrow"></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#review-wod">
+                        <div class="label">
+                            <div class="icon sprite-sf custom"></div>
+                            <p>Fran</p>
+                            <p>4:20</p>
+                        </div>
+                        <p class="sprite-sf arrow"></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#add-wod" class="inactive">Add Another Workout +</a>
+                </li>
+            </ul>
+
+        </div> <!-- end: content-main top block -->
+
+        <div class="content-main">
+            <ul>
+                <li class="title">
+                    <h2>Latest Goal Activity</h2>
+                    <a href="#" class="sprite-sf add-one">add one</a>
+                </li>
+                <li><div class="chart"></div></li>
+                <li>
+                    <a href="#">
+                        <div class="label">
+                            <p>25 Unbroken Pullups</p>
+                            <p>35<sup>%</sup></p>
+                        </div>
+                        <p class="sprite-sf arrow"></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="inactive">Create A New Goal +</a>
+                </li>
+            </ul>
         </div>
 
 
-    <div class="notepaper">
-        <div class="stacked-wrapper">
-                    <div class="note-title">
-                        <div class="date">10</div>
-                        <h2>
-                            Monday <br>
-                            <span>December 2012</span>
-                        </h2>
-                        <div class="daily-navigation">
-                            <a href="prev"><span class="sprite-sf prev-day"></span> Prev</a>
-                            <a href="next"><span class="sprite-sf next-day"></span> Next</a>
-                        </div>
-                    </div>
-                    <ul class="wod-activity">
-
-                        <li>
-                            <a href="#review-wod">
-                                <p class="icon sprite-sf strength"></p>
-
-                                <div class="label-score">
-                                    <p>Front Squat</p>
-                                    <p>145lb</p>
-                                </div>
-                                <p class="sprite-sf arrow"></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#review-wod">
-                                <p class="icon sprite-sf benchmark"></p>
-                                <div class="label-score">
-                                    <p>Other Label</p>
-                                    <p>4:30</p>
-                                </div>
-                                <p class="sprite-sf arrow"></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#review-wod">
-                                <p class="icon sprite-sf custom"></p>
-                                <div class="label-score">
-                                    <p>Fran</p>
-                                    <p>4:20</p>
-                                </div>
-                                <p class="sprite-sf arrow"></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#add-wod" class="inactive">Add Another WOD +</a>
-                        </li>
-                    </ul>
-            <div class="goal-teaser">
-                <div class="top">
-                    <p>Latest Goal Activity</p>
-                    <a href="#" class="reverse-arrow">See All ›</a>
-                </div>
-                <div class="chart">
-
-                </div>
-                <ul>
-                    <li class="goal-name">
-                        <p>Front Squat 185lb</p>
-                        <p class="label">GOAL NAME</p>
-                    </li>
-                    <li class="date-added">
-                        <p>Jun 23 12</p>
-                        <p class="label">DATE ADDED</p>
-                    </li>
-                    <li class="percent-complete">
-                        <p>37%</p>
-                        <p class="label">PROGRESS</p>
-                    </li>
-
-                </ul>
-            </div>
-        </div> <!--stacked wrapper-->
-    </div>
-    <!-- End Notepaper -->
-
-    <!-- END MAIN -->
 </div>

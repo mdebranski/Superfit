@@ -1,0 +1,905 @@
+@import 'compass/css3';
+
+$radius: 3px;
+$radiusleft: 0px 2px 2px 2px;
+$radiusright: 0px 2px 2px 0px;
+$radiusbottom: 0px 0px 2px 2px;
+$radiustop: 2px 2px 2px 2px;
+$darkgrey:#474747;
+$mediumgrey:#646464;
+$lightgrey:#858585;
+$inactivegrey:#cccccc;
+$notepapercolor:#ffffff; //#fcfadd;
+$stageshadow:0px 1px 2px rgba(0, 0, 0, 0.35);
+$standardboxshadow: 0px 0px 2px rgba(0, 0, 0, 0.20);
+$stagebkg:#ffffff;
+$contentpad:0 10px;
+$insetshadow:inset 0px 1px 2px 0px rgba(0, 0, 0, .45);
+$standardfont: "Helvetica Neue", Helvetica;
+$standardfontsize: 16px;
+$paragraphtext: 12px;
+$standardlineheight: 45px;
+$woddetailsyellow:#fffae8;
+$stageintmargin:20px;
+
+@mixin fl($width) { display: block; float: left; width: $width }
+@mixin fr($width) { display: block; float: right; width: $width }
+
+
+body {background:none}
+#jqt > * {
+
+  .ui-header .ui-title { margin-left: 5%; margin-right: 5%; }
+  ///////////  begin toolbar / header / main nav
+
+  #navigation {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    @include transition(height 1s ease);
+  }
+  #navigation.active { display: block; height: 280px; }
+  .navigation-wrapper {
+    vertical-align: bottom;
+  }
+  .navigation {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+
+    ul{
+      margin-bottom: 18px;
+      li{
+        font-size:16px;
+        line-height: 36px;
+        border-bottom: 1px solid #040404;
+        border-top: 1px solid #323232;
+
+        &:first-of-type {border-top:none}
+        &:last-of-type {border-bottom:none}
+        p{
+          float:left ;
+          margin-right:20px;
+        }
+      }
+    }
+  }
+
+  .toolbar {
+    //@include box-sizing(border-box);
+   //border-bottom: 1px solid #000;
+    //padding: 0px 6px 6px 6px;
+    //background: transparent url(image_path('tile-leather-toolbar.png')) repeat-x 0 0;
+    //position: relative;
+    //background-size: 10px 44px;
+
+
+    //.pulldown {
+     // background:url(image_path('img-mainnav.png')) repeat-x;
+     // width:33px;
+     // height:40px;
+     // text-indent: -999px;
+     // float:left;
+     // position: relative;
+     // left:2%;
+    //}
+    .tabs {
+      ul {
+        margin: 0 auto;
+        position:relative;
+        top:5px;
+        overflow: hidden;
+        border:0;
+        position: absolute;
+        overflow: hidden;
+        left: 50%;
+        line-height: 1em;
+        margin: 1px 0 0 -75px;
+        text-shadow: black 0 -1px 0;
+        -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+        box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+        border: 1px solid black;
+        @include border-radius($radius);
+        background-image: none;
+        //background-color: #0a0a0a;
+        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2f3031), color-stop(50%, #161717), color-stop(51%, #0a0a0a), color-stop(100%, #000000));
+        background-image: -webkit-linear-gradient(top, #2f3031, #161717 50%, #0a0a0a 51%, #000000);
+        background-image: linear-gradient(top, #2f3031, #161717 50%, #0a0a0a 51%, #000000);
+
+        li {
+          float: left;
+          font-size: 9px;
+          line-height: 8px;
+          color: white;
+          text-transform: uppercase;
+          padding: 0;
+          border: 1px solid #222222;
+          min-width: 50px;
+          text-align: center;
+          padding: 10px 10px;
+          height:5px;
+
+          &.inactive {
+            background:rgba(161,161,161,0.05);
+            //@include background(linear-gradient(top, rgba(161,161,161,0.1) 35%,rgba(161,161,161,0.0) 100%));
+            color:rgba(255,255,255,0.4);
+            :hover {@include background(linear-gradient(top, rgba(0,0,0,0.2) 45%,rgba(68,68,68,0.2) 100%));}
+            border-left:0px;
+          }
+
+        }
+        li:active{
+          border-color: black;
+          background-image: none;
+          background-color: black;
+          background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262627), color-stop(50%, #0d0d0d), color-stop(51%, #000000), color-stop(100%, #000000));
+          background-image: -webkit-linear-gradient(top, #262627, #0d0d0d 50%, #000000 51%, #000000);
+          background-image: linear-gradient(top, #262627, #0d0d0d 50%, #000000 51%, #000000);
+        }
+        li:first-of-type {@include border-radius($radiusleft); }
+        li:last-of-type {
+          @include border-radius($radiusright);
+        }
+
+      } // end ul
+    }   // end .tabs
+  }
+  //////////// end toolbar  / header
+
+  //////////// begin universal elements
+
+
+
+  button, .button   {
+    &.green {
+      background:#79971f;
+      border-color:#688218;
+      color:#3e4a21;
+    }
+    &.facebook {
+      background:#3d69a4;
+      border-color: #224a84;
+      color: #2a3b54;
+    }
+    &.dark-grey {
+      background:#b3b3b3;
+      border:1px solid #979797;
+      color:#222222;
+    }
+    &.red{
+      background: -webkit-linear-gradient(90deg, rgb(196, 42, 23) 6%, rgb(209, 57, 39) 30%);
+      border:1px solid #ab2407;
+      color:#672722;
+    }
+  }
+
+
+
+  //////////// end universal elements
+
+  .leather{
+    background:#000000 url(image_path('tile-leather-bkg.png')) repeat 0 0;
+
+    .leather-binding {
+      background:transparent url(image_path('tile-leather-binding.png')) repeat-y 0 0;
+      height: 960px;
+
+      .branding-landing {
+        background:transparent url(image_path('bkg-landing.png')) no-repeat 0 0;
+
+      }
+      .branding-login {
+        background:transparent url(image_path('bkg-branding-login.png')) no-repeat 0 0;
+
+        .login {
+          position:relative;
+          top:160px;
+
+          p {font-weight:bold; font-size:12px; margin-top:18px; text-align: center; text-transform: uppercase;}
+
+          .login-form {width:80%; margin: auto;}
+        }
+        .grey-input {
+          background-color:#f2f2f2;
+          @include border-radius($radius);
+          line-height: $standardlineheight;
+          @include box-shadow($insetshadow);
+          //padding: $contentpad;
+        }
+      }
+
+      button, .button {
+        width:70%; margin-left:17%; display:block;
+
+      }
+
+      .get-started {padding-top:270px; overflow: hidden;}
+
+
+    }
+  } //end leather larger "grain"
+
+  .leather-interior{
+    background:#000000 url(image_path('tile-leather-interior-bkg@2x.png')) repeat 0 0;
+  }
+
+  .notepaper {
+    position:relative;
+    top:18px;
+    width:95%;
+    margin:0 auto;
+
+    .stacked-wrapper{
+      background: $notepapercolor;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      z-index: 4;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.150);
+      @include box-shadow(0px 0px 2px rgba(0, 0, 0, 0.20));
+      @include border-radius ($radius);
+      overflow: hidden;
+
+      //.stacked {
+       // background: $notepapercolor;
+        //position: relative;
+       // height: 100%;
+        //width: 100%;
+        //z-index: 4;
+       // padding-bottom: 4px;
+        //border-bottom: 1px solid rgba(0, 0, 0, 0.150);
+        //@include box-shadow($standardboxshadow);
+       // @include border-radius ($radius);
+        //overflow: hidden;
+
+        //.stacked-interior{
+         // background: $notepapercolor;
+          //position: relative;
+         // height: 100%;
+         // width: 100%;
+         // z-index: 4;
+         // border-bottom: 1px solid rgba(0, 0, 0, 0.150);
+         // @include box-shadow($standardboxshadow);
+         // @include border-radius ($radius);
+         // overflow: hidden;
+        //}
+      //}
+
+      .note-title {
+        //width:95%;
+        //margin: auto;
+        //overflow: hidden;
+        //padding:12px 0 9px 0;
+        //border-bottom:1px double #ffabab;
+
+        a {
+          float:left;
+          margin: auto;
+          text-transform: uppercase;
+          font-size:9px;
+          font-weight: bold;
+
+          p {margin-top:24px}
+        }
+        a.forward {float:right;}
+
+        h2 {
+          //float:left;
+          //margin: auto;
+         // line-height:16px;
+         // text-align: left;
+          //position: relative;
+         // top:15px;
+
+          span {font-size:12px; color:$lightgrey}
+        }
+        .date {color:#d72c15; @include fl(60px); font-size:48px; font-weight: bold;}
+
+        .daily-navigation {
+          border:1px solid #ebebeb;
+          @include border-radius ($radius);
+          float:right;
+          position:relative;
+          top:10px;
+
+          a {width:40px; height: 40px; text-align: center; padding-top:2px;opacity: .5;}
+          a:active {opacity:1.0;}
+          a+a {border-left:1px solid #ebebeb; }
+        }
+      }
+
+      h2 {
+        font-size: 24px;
+        text-shadow: none;
+        color:$darkgrey;
+        text-align: center;
+      }
+
+      ul.wod-activity{
+        margin:1px 10px 0 10px;
+        border:0;
+        li {
+
+          border-color:transparent;
+          border-bottom:1px solid #bfd2e1;
+          color:$lightgrey;
+          margin:0;
+          padding:$contentpad;
+          line-height: 54px;
+          font-size: $standardfontsize;
+
+
+
+        }
+      } // end ul
+
+      .wod-activity{
+        width: 95%;
+        clear:both;
+
+        .icon {
+          margin-top:15px;
+          margin-right:10px;
+          float:left;
+        }
+        .label-score {
+          @include fl(74%);
+          p {
+            float:left;
+            position: relative;
+          }
+          p+p {
+            float:right;
+            text-align: right;}
+        }
+        .arrow  {
+          float:right;
+          margin-top:20px;
+          margin-left:5px;
+          border-bottom:0
+          // if done in % would have been a total width of 10%
+        }
+
+      }
+
+      &.weekly {
+
+        position: relative;
+        @include border-radius ($radius);
+        border:0;
+        margin-bottom: 18px;
+
+        .date {
+          font-size: 38px;
+          width:48px;
+        }
+        .note-title{
+          padding:6px 0 6px 0;
+        }
+        h2 {
+          //font-size:$paragraphtext;
+          //span {font-size:$paragraphtext;}
+          //position: relative;
+          //top:9px;
+        }
+
+        ul{
+          margin:0 4px 0 8px;
+          border:0;
+          padding: 0;
+
+          li {
+            background: transparent;
+            border-color:transparent;
+            border-top:1px solid #cccccc;
+            color:$lightgrey;
+            @include border-radius ($radius);
+            margin:2px 0 2px 0;
+            padding:$contentpad;
+            margin-top:9px;
+            line-height: 21px;
+            font-size: $paragraphtext;
+
+            .small-arrow {
+
+              margin-top:4px;
+              margin-left:5px;
+              border-bottom:0
+            }
+            a {color:$lightgrey}
+
+            p{
+              float:left;
+
+              span {font-size:30px;}
+            }
+
+          }
+          li:first-of-type {border:0;}
+          div {
+            float:right;
+
+            p {float:left; margin-right:5px; line-height: 27px;}
+          }
+          &.future-date {
+            li {
+              color:$inactivegrey;
+            }
+          }
+        }
+      }
+
+    }
+  } // end notepaper
+  .goal-teaser{
+    width:95%;
+
+    @include border-radius ($radius);
+    overflow:hidden;
+    background: #f1f1f1;
+    margin:18px auto 9px auto;
+    padding-bottom: 9px;
+
+
+    .top {
+      font-size:12px;
+      color:$inactivegrey;
+      width:95%;
+      padding:9px 0;
+      margin:auto;
+      margin-bottom: 18px;
+      p {@include fl(74%); font-weight: bold;}
+      a {@include fr(20%); text-align:right; color:$inactivegrey; font-weight: bold;}
+
+    }
+
+
+
+    ul{
+      margin:0 10px;
+
+      border-top:1px solid $inactivegrey;
+      li {
+        height: 27px;
+        line-height: 18px;
+
+        margin-right:10px;
+
+        p {font-size:12px;line-height: 14px; }
+        p.label {font-size:9px; color:$lightgrey}
+
+
+        &.goal-name {@include fl(38%); margin-top:9px}
+        &.date-added {
+          @include fl(22%);
+          border-right:1px solid $inactivegrey;
+          border-left:1px solid $inactivegrey;
+          padding:0 10px;
+          margin-top:9px
+        }
+        &.percent-complete {@include fl(20%);margin-top:9px}
+      }
+
+
+    }
+  }// end notepaper
+
+  // start cement pages
+  .cement-page{
+    width:96%;
+    margin:18px auto 18px auto;
+
+    .stage {
+      background-color:$stagebkg;
+      @include border-radius($radius);
+      box-shadow:$stageshadow;
+
+      h2 {
+        //background: #f7f7f7;
+        //color:$mediumgrey;
+        //line-height:54px;
+        //margin:4px;
+        //position: relative;
+        //top:4px;
+
+        span {
+          float:left;
+          margin-right:10px;
+          line-height: $standardlineheight;
+          position: relative;
+          top:13px;
+          margin-left:10px;
+        }
+      }
+      h4 {
+        background: #f7f7f7;
+        color:$mediumgrey;
+        line-height:45px;
+        margin:4px;
+        position: relative;
+        top:4px;
+        padding-left:10px
+
+      }
+
+      .stage-content { margin:$stageintmargin;}
+      .grey-input {
+        background-color:#f2f2f2;
+        @include border-radius($radius);
+        line-height: $standardlineheight;
+        @include box-shadow($insetshadow);
+        //padding: $contentpad;
+      }
+      .blue-input {
+        background-color:#eefcff;
+        @include border-radius($radius);
+        line-height: $standardlineheight;
+        @include box-shadow($insetshadow);
+        padding: $contentpad;
+      }
+
+      ul {
+        margin:$contentpad;
+        :first-child{margin-top:0 !important;border-top:0}
+
+        li{
+          color:$mediumgrey;
+          padding:$contentpad;
+          line-height: 54px;
+          font-size: 16px;
+          border-top:1px solid #d5d5d5;
+          //height: 54px;
+
+          .icon {
+            position:relative;
+            top:15px;
+            margin-right:10px;
+            float:left;
+          }
+
+          p {float:left}
+          .label {width:74%}
+
+          .small-arrow  {
+            float:right;
+            margin-top:20px;
+            margin-left:5px;
+            border-bottom:0
+            // if done in % would have been a total width of 10%
+          }
+        }
+
+      }
+      &.add-wod{
+
+
+        hr {
+          clear:both;
+          background:transparent;
+          border:0;
+          border-bottom:1px solid #cccccc;
+          height:18px;
+          margin:0;
+        }
+        ol {
+          li{
+            font-size: $paragraphtext;
+            color:$mediumgrey;
+            font-weight: bold;
+            line-height: 36px;
+            clear:both;
+            list-style-position:inside;
+            margin-top:9px;
+            overflow: hidden;
+
+            h5 {margin-bottom:0px}
+          }
+        }
+        ul{
+          li{
+
+            margin-bottom: 18px;
+            padding-top: 9px;
+
+          }
+        }
+        .wod-details{
+          background:$woddetailsyellow;
+          border:1px solid #ebebeb;
+          padding:10px 15px;
+
+          p {color:$mediumgrey; font-size: 11px; line-height: 16.5px;}
+
+          .score {
+            font-size:38px;
+            font-weight:bold;
+            text-align: center;
+            padding:10px;
+
+            span {font-weight:12px}
+          }
+          h5 {text-align: center;}
+
+        }
+        .record-workout {
+          background: -webkit-linear-gradient(90deg, rgb(196, 42, 23) 6%, rgb(209, 57, 39) 30%);
+          border:1px solid #ab2407;
+          color:#672722;
+          margin-top:9px;
+        }
+        .create-custom-wod{
+
+          ol {
+            li{
+
+              p {line-height: 18px; font-weight:normal }
+
+              button {
+                height:63px;
+                color:$darkgrey;
+                width: 45%;
+                margin:18px 10px 18px 0px;
+                padding:0;
+              }
+
+              .radio {
+                float:left;
+                width:40%;
+                display:inline;
+                line-height: 36px;
+                overflow: hidden;
+
+                &.last {margin-bottom: 0px;}
+              }
+
+              ul{
+                margin:0;
+                li {
+                  height: 45px;
+                  padding:0;
+                  margin:0;
+                  border: 0;
+                  //input {width:95%}
+                }
+              }
+            }
+          }
+        }// end Create Custom Wod
+        .add-custom-wod-score {
+
+          .wod-score {
+            .grey-input { @include fl(63%);}
+            .level { @include fl(28%); line-height: 18px; position:relative; left:20px; top:0px;}
+          }
+          //textarea, input[type=text] {width:95%}
+          //input[type=checkbox] { margin:0px; padding:0; margin-right:4px; height: 18px; margin-bottom:9px}
+          label{  margin-right: 10px; line-height: 18px;position:relative; top:-4px;}
+        }
+
+        .complete-step {
+          margin: 0 auto 18px auto;
+
+          button {
+            width:80%;
+            margin-left:7%;
+            margin:18px 0 18px 10%;
+          }
+        } //end Add Custom WOD SCORE
+        .review-details {
+
+          button{
+            width:70%;
+            margin-left:15%;
+            margin-top:18px;
+
+            &.dark-grey{
+              margin-top:9px;
+              margin-bottom:18px;
+            }
+          }
+
+        } // end review details
+
+      }// end add wod
+      &.wod-history {
+
+        .stats {
+          background:$woddetailsyellow;
+          border:1px solid #ebebeb;
+          padding:10px 15px;
+        }
+        .historical-list{
+          p {
+            font-size:$paragraphtext;
+
+            &.date {float:left; width:50%;}
+            &.score {float:right; }
+          }
+        }
+      }
+
+    } // end stage
+    //.search-wods{
+      //margin-bottom:27px;
+
+     // ul li {
+       // line-height:$standardlineheight;
+       // background: #ffffff;
+       // @include border-radius($radius);
+       // @include box-shadow($insetshadow);
+       // padding: $contentpad;
+
+
+      //}
+    //}
+
+
+    ul#wods {
+      display: none;
+    }
+    h3.no-matches {
+      display: none;
+      color: rgba(0, 0, 0, 0.10);
+      text-shadow: 0px -1px 0px #818181;
+      font-size:24px;
+      text-align: center;
+    }
+
+    &.orientation{
+
+      width:95%;
+      margin:18px auto;
+      .title {
+        hr {margin:9px 0}
+      }
+      p{
+        color:$darkgrey;
+        font-size:12px;
+        line-height: 18px;
+
+        &.steps {
+          font-size:10px;
+          font-weight:normal;
+        }
+        &.help {font-weight: bold; font-size:10px;}
+
+      }
+
+      button, .button {
+        width:99%;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .toggle-wrapper {
+        p{line-height: 18px; float:left; position:relative; left:5px; text-transform: uppercase; margin:18px 0}
+        .toggle {top:9px;}
+      }
+      .shared-line {
+
+        margin-left:2%;
+        padding: 18px 0;
+        overflow: hidden;
+        width:98%;
+
+        p {float:left; width:15%; text-align: center; font-weight: bold;}
+        hr {float:left; width: 40%; margin-top: 9px;}
+
+
+      }
+      .skip {margin-top:9px; text-align:right}
+      .create-account {
+
+        &.register {
+
+          .gender {
+            float:left;
+            margin-right:10px;
+            line-height: 54px;
+            margin-bottom: 18px;
+          }
+
+          .icon {
+            float:left;
+            position: relative;
+            top:12px;
+            margin-right: 10px;
+          }
+        }
+        .account-type{
+          padding:16px 10px 10px 15px;
+          margin:9px 0;
+          @include border-radius($radius);
+          background: #f4f4f4;
+          border:1px solid #cccccc;
+          box-shadow:  0px 1px 0px rgba(0, 0, 0, 0.35);
+
+          h4 {margin-bottom: 5px;}
+
+
+
+          .button {
+            background:rgba(179, 177, 171, 0.5);
+            border:1px solid #a3a19d;
+            color:#5b5b58;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.35);
+          }
+
+          &:active{
+            background:rgba(255, 255, 255, 0.5);
+            @include box-shadow($insetshadow);
+          }
+
+          &.selected {
+            border:0px solid #6b861b;
+            background:rgba(0, 0, 0, 0.05);
+            @include box-shadow($insetshadow);
+
+            h4 {color:#6b861b; }
+
+
+            .button {
+              background:rgba(107, 134, 27, 0.95);
+              border:2px solid rgba(0, 0, 0, 0.025);
+              color:#ffffff;
+              box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.35);
+            }
+
+          }
+        }
+
+        &.step-3 {
+          ul li.form { margin-bottom:4px;}
+
+          hr {margin:18px 0}
+          p {line-height: 18px;}
+
+          .stage {margin:18px 0}
+
+        }
+
+      }
+    }
+
+
+
+
+  }//end Cement
+
+  .form {
+    line-height:$standardlineheight;
+    background: #ffffff;
+    @include border-radius($radius);
+    @include box-shadow($insetshadow);
+    overflow: hidden;
+    margin-bottom:18px;
+    text-shadow: 0;
+
+    .divider {
+      border-top:1px solid #cccccc;
+      box-shadow:none;
+      text-shadow:none;
+    }
+  }
+
+}  //end JQT
+
+
+//* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+  .sprite-sf{
+    display:block;
+    line-height:0 !important;
+    text-indent:-9999px;
+    font-size:0 !important;
+    background:transparent url(image_path('sprite-superfit@2x.png')) no-repeat 0 0;
+  }
+
+
+}

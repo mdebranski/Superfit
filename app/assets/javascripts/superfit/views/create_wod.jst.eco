@@ -1,0 +1,29 @@
+<div id="create-wod" class="page">
+
+    <div class="page-header">
+        <div class='toolbar'>
+            <div>
+                <a class="sprite-sf previous" href="#add-wod" style=""></a>
+            </div>
+            <h1>Create WOD</h1>
+        </div>
+    </div> <!-- end: page-header -->
+    <div class="content-main">
+      <div class="content-block">
+          <form>
+          <p>Name Your WOD</p>
+          <input type="text" name="custom-wod-label" placeholder="Today's Date" id="custom-wod-label" />
+
+          <p>Enter WOD Details</p>
+          <textarea placeholder="ex. 21 Burpees, 15 Thruster, 9 Toes to Bar" cols="30" rows="5"></textarea>
+          <div class="photo-capture">
+             <p>Too much to type?</p>
+             <a href="#" class="button"><span class="sprite-sf photo-icon"></span>Take a Photo</a>
+          </div>
+          </form>
+          <a href="#" class="button bottom">Next: Enter Your Score</a>
+      </div>
+    </div>
+
+
+</div>

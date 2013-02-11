@@ -23,7 +23,7 @@ $standardfontsize: 16px;
 
   h2 {
     text-shadow: none;
-    margin:0;
+    //margin:0;
   }
   ul{
     background-color:transparent;
@@ -112,7 +112,7 @@ $standardfontsize: 16px;
     background: url(image_path('on_off.png'))
   }
 
-  .button {
+  .button,  {
     position:relative;
     bottom:0px;
     right:0px;
@@ -120,5 +120,6 @@ $standardfontsize: 16px;
     top:0;
 
   }
+
 
 }
