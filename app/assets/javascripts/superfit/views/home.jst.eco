@@ -11,7 +11,7 @@
         <div class="date-navigation">
                <ul>
                    <li class="sprite-sf prev-day"></li>
-                   <li class="date">Jan 26, 2013</li>
+                   <li class="date"><%= moment().format('MMM D, YYYY') %></li>
                    <li class="sprite-sf next-day"></li>
                </ul>
         </div>
