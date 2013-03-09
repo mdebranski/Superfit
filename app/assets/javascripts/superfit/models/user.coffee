@@ -3,7 +3,7 @@ class User extends Spine.Model
              'id',
              'name'
 
-  @extend Spine.Model.Ajax
+  @extend Spine.Model.Local
   @extend Spine.Events
   @extend Spine.Log
 

@@ -10,7 +10,7 @@ class Wod extends Spine.Model
              'scoring_notes',
              'workout_notes'
 
-  @extend Spine.Model.Ajax
+  @extend Spine.Model.Local
   @extend Spine.Events
   @extend Spine.Log
 
@@ -21,5 +21,13 @@ class Wod extends Spine.Model
   @byCategory: (category) ->
     _.select @all(), (wod) ->
       wod.category.toLowerCase() == category.toLowerCase()
+
+  @search: (value, type = null) ->
+    wods = if type? then Wod.byType(type) else Wod.all()
+    _.select wods, (wod) ->
+      wod.name.toLowerCase().indexOf(value.toLowerCase()) >= 0
+
+  typeSlug: ->
+    @type.toLowerCase()
 
 window.Wod = Wod

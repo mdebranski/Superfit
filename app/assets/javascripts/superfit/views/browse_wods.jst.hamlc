@@ -1,0 +1,15 @@
+#browse-wods.page
+  .page-header
+    .toolbar
+      %div
+        %a.sprite-sf.previous{href: "#add-wod"} Back
+      %h1 Select WOD
+  .content-main
+    .content-block
+      %form
+        %input.search-text{type: "text", name: "search-text", placeholder: "Search WODs"}
+  .content-main
+    %h3.no-matches No WODs found for this search.
+    %ul.wods-search
+
+    %ul.wods-browse

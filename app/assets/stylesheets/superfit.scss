@@ -41,6 +41,13 @@ body {background:none}
   h4 {}
   p {color: $fontcolor; font-family:"Helvetica Neue", Helvetica; font-size: 16px; font-weight: normal; }
 
+  h3.no-matches {
+    display: none;
+    color: rgba(0, 0, 0, 0.10);
+    text-shadow: 0px -1px 0px #818181;
+    font-size:24px;
+    text-align: center;
+  }
 
   a {
     text-shadow: 0; color:$mediumgrey;
@@ -58,7 +65,7 @@ body {background:none}
   .page-header{
     background:#000000 url(image_path('tile-leather-interior-bkg@2x.png')) repeat 0 0;
 
-    h1 {font-size: 16px; bottom:12px;  font-weight: medium; text-transform: uppercase; letter-spacing: .25px;}
+    h1 {font-size: 16px; bottom:12px;  font-weight: medium; text-transform: uppercase; letter-spacing: .25px; width: 200px; margin-left: -100px;}
 
     .toolbar {
       @include box-sizing(border-box);
@@ -156,6 +163,9 @@ body {background:none}
       &.date {width:80%}
     }
   }
+
+  // ADD WODS
+  .wods-search { display: none; }
 
   /// CREATE WOD
   .photo-capture {

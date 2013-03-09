@@ -8,19 +8,14 @@
               %p.icon.home.sprite-sf
               Dashboard
           %li
-            %a{href: "/users/sign_out", rel: "external"}
-              %p.icon.affiliate.sprite-sf
-              Sign out
-          %li
             %a{href: "#calendar"}
               %p.icon.calendar.sprite-sf
               Calendar
           %li
-            %p.icon.goals.sprite-sf
-            Goals
+            %a{href: "#goals"}
+              %p.icon.goals.sprite-sf
+              Goals
           %li
-            %p.icon.records.sprite-sf
-            Records
-          %li
-            %p.icon.me.sprite-sf
-            = @user.name
+            %a{href: "#records"}
+              %p.icon.records.sprite-sf
+              Records

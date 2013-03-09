@@ -38,7 +38,7 @@ body {background:none}
     overflow: hidden;
     @include transition(height 1s ease);
   }
-  #navigation.active { display: block; height: 280px; }
+  #navigation.active { display: block; height: 180px; }
   .navigation-wrapper {
     vertical-align: bottom;
   }
@@ -733,18 +733,6 @@ body {background:none}
 
       //}
     //}
-
-
-    ul#wods {
-      display: none;
-    }
-    h3.no-matches {
-      display: none;
-      color: rgba(0, 0, 0, 0.10);
-      text-shadow: 0px -1px 0px #818181;
-      font-size:24px;
-      text-align: center;
-    }
 
     &.orientation{
 

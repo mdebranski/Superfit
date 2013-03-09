@@ -2,7 +2,7 @@ class Category extends Spine.Model
   @configure 'Category',
              'name'
 
-  @extend Spine.Model.Ajax
+  @extend Spine.Model.Local
   @extend Spine.Events
   @extend Spine.Log
 
