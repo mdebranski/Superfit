@@ -1,47 +1,50 @@
 <div id="review-wod" class="page">
 
-    <div class="leather-interior">
+    <div class="page-header">
         <div class='toolbar'>
             <div>
-                <a class="back" href="#" style="">Back</a>
+                <a class="sprite-sf previous" href="#add-wod" style=""></a>
             </div>
-            <h1>Completed Messaging</h1>
+            <h1>[DYNAMIC NAME]</h1>
         </div>
+    </div> <!-- end: page-header -->
+    <div class="content-main">
+      <div class="content-block">
+          <div class="yellow-block">
+              <div class="review-score"><span class="score">55:00</span> <span class="score-method"></span><span class="score-level">RX</span></div>
+              21 Burpees, 15 Thrusters @ 95lb,
+              9 Toes to Bar. For Time
+          </div>
+
+          <a href="#" class="button bottom">Return To Dashboard</a>
+          <a href="#" class="button bottom">Edit Workout</a>
+      </div>
     </div>
-
-    <div class="cement-page">
-        <div class="stage add-wod">
-            <h2><span class="icon sprite-sf custom"></span>Oct 24 2012</h2>
-            <div class="stage-content review-details">
-
-                    <div class="wod-details">
-                        <p class="score">22:25 <span class="level">RX</span></p>
-                        <h5>Your Time</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices, odio sed venenatis interdum, odio sapien pretium libero, at ullamcorper lectus tellus non leo. </p>
+    <!-- begin: bottom history -->
+    <div class="content-main">
+        <ul>
+            <li class="title">
+                <h3>[Workout Name] History</h3>
+            </li>
+            <li><div class="chart"></div></li>
+            <li>
+                <a href="#">
+                    <div class="label">
+                        <p>Jun 22 2012</p>
+                        <p>22:22</p>
                     </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="label">
+                        <p>Apr 22 2011</p>
+                        <p>25:22</p>
+                    </div>
+                </a>
+            </li>
 
-                   <button>Edit Workout</button>
-
-                   <button class="green">Go To My Dashboard</button>
-
-            </div>
-        </div>
-
-        <div class="stage wod-history">
-            <h4>Workout History</h4>
-            <div class="stage-content">
-                <div class="stats">stat box - if you can drop in a stat widget (of sorts) - i'll style it</div>
-                <ul class="historical-list">
-                    <li>
-                        <p class="date">Jan 21 2012 Jan 21 2012 </p>
-                        <p class="score">33:33</p>
-                    </li>
-                    <li>
-                        <p class="date">Jan 21 2012</p>
-                        <p class="score">33:33</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        </ul>
     </div>
+
 </div>

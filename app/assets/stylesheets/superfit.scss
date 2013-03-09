@@ -173,6 +173,18 @@ body {background:none}
     overflow: hidden;
   }
 
+  // REVIEW SCORE
+  .review-score {
+    text-align: center;
+    font-size: 40px;
+    color:$fontcolor;
+    font-weight: bold;
+    margin-bottom: 18px;
+
+    .score-level {font-size:14px}
+
+  }
+
   // UNIVERSAL ELEMENTS
 
   button, .button {

@@ -4,12 +4,8 @@
     != JST['superfit/views/home']()
     != JST['superfit/views/add_wod']()
     != JST['superfit/views/create_wod']()
-    != JST['superfit/views/new_wod']()
     != JST['superfit/views/enter_wod_score']()
-    != JST['superfit/views/add_strength_wod_step1']()
-    != JST['superfit/views/add_strength_wod_step2']()
     != JST['superfit/views/review_wod']()
-    != JST['superfit/views/calendar']()
   - else
     != JST['superfit/views/landing']()
     != JST['superfit/views/login']()

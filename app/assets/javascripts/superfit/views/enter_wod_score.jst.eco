@@ -39,7 +39,7 @@
           <textarea placeholder="Add details that affected your performance. Where you sore? Was the weather bad?" cols="30" rows="5"></textarea>
 
           </form>
-          <a href="#" class="button bottom">Save Workout</a>
+          <a href="#review-wod" class="button bottom">Save Workout</a>
       </div>
     </div>
 
