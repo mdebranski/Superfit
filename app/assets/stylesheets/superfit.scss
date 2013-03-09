@@ -25,7 +25,7 @@ $fontcolorlight:#939393;
 $standardfontsize: 16px;
 $paragraphtext: 12px;
 $standardlineheight: 45px;
-$woddetailsyellow:#fffae8;
+$yellow:#fffae8;
 $stageintmargin:20px;
 
 @mixin fl($width) { display: block; float: left; width: $width }
@@ -36,10 +36,11 @@ body {background:none}
 #jqt > * {
 
   h1 {}
-  h2 {font: medium 18px "Helvetica Neue", Helvetica; color: #414141; line-height: 54px; margin:0}
+  h2 {font: normal 18px "Helvetica Neue", Helvetica; color: #414141; line-height: 54px; margin:0}
   h3 {}
   h4 {}
   p {color: $fontcolor; font-family:"Helvetica Neue", Helvetica; font-size: 16px; font-weight: normal; }
+
 
   a {
     text-shadow: 0; color:$mediumgrey;
@@ -49,11 +50,15 @@ body {background:none}
 
     .button {display:block; width:100%}
   }
+  input, textarea, select {
+    -webkit-appearance: none;
+
+  }
 
   .page-header{
     background:#000000 url(image_path('tile-leather-interior-bkg@2x.png')) repeat 0 0;
 
-    h1 {font-size: 16px; bottom:12px;  font-weight: medium; text-transform: uppercase;}
+    h1 {font-size: 16px; bottom:12px;  font-weight: medium; text-transform: uppercase; letter-spacing: .25px;}
 
     .toolbar {
       @include box-sizing(border-box);
@@ -137,7 +142,20 @@ body {background:none}
 
   // PAGE LEVEL
 
+  // DASHBOARD
 
+  .date-navigation{
+    text-align: center;
+
+    li {
+      font-size:15px;
+      font-weight: normal;
+      color:$fontcolor;
+      float:left;
+      width:10%;
+      &.date {width:80%}
+    }
+  }
 
   /// CREATE WOD
   .photo-capture {
@@ -147,7 +165,13 @@ body {background:none}
     a.button {float:right;width:50%; text-align:left;padding:6px}
 
   }
-
+ // ENTER WOD SCORE
+  .enter-score{
+    div {width:60%; float:left; margin-bottom: 3px;}
+    div+div {width:33%; margin-left:7%;}
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
 
   // UNIVERSAL ELEMENTS
 
@@ -165,6 +189,16 @@ body {background:none}
     text-indent:-9999px;
     font-size:0 !important;
     background:transparent url(image_path('sprite-superfit.png')) no-repeat 0 0;
+  }
+
+  .yellow-block{
+    background-color:$yellow;
+    @include border-radius($radius);
+    font-size:12px;
+    border:1px solid #f7eecb;
+    margin-top:18px;
+    padding:20px;
+    color:$fontcolorlight;
   }
 
   //.sprite-sf:active {opacity:0.5;}
@@ -195,19 +229,15 @@ body {background:none}
   .photo-icon {width:30px;  height:25px; background-position: -152px -27px; float:left; margin:0 6px }
   .prev-day {width:40px;  height:21px; background-position: -85px -374px; opacity: .95;}
   .next-day {width:40px;  height:21px; background-position: -85px -404px;opacity: .95;}
-  .prev-day:active {width:40px;  height:21px; background-position: -85px -349px; opacity: 1.0;}
-  .next-day:active  {width:40px;  height:21px; background-position: -85px -322px;opacity: 1.0}
+  .prev-day:active {background-position: -85px -349px; opacity: 1.0;}
+  .next-day:active  {background-position: -85px -322px;opacity: 1.0}
   .inactive {color:$inactivegrey}
   .add-one {width:32px;  height:30px; background-position: -200px -275px; position:relative; top:12px; left:10px }
   .add-one:active {width:32px;  height:30px; background-position: -158px -275px;}
   .previous {width:24px;  height:22px; background-position: -94px -428px; position: relative; top:10px; left:9px;}
   .previous:active {width:24px;  height:22px; background-position: -94px -454px;}
 
-  input[type=search]{
-    @include box-shadow($insetshadow);
-    background: #f7f7f7;
-    -webkit-appearance:none;
-  }
+
 
  /// DUMMY CHART REMOVE BEFORE LAUNCH
   .chart {

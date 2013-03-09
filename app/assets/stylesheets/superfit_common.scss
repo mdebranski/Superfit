@@ -16,6 +16,7 @@ $insetshadow:inset 0px 1px 1px 0px rgba(0, 0, 0, .45);
 $activebutton:inset 0px 1px 12px 0px rgba(0, 0, 0, .65);
 $standardfont: "Helvetica Neue", Helvetica;
 $standardfontsize: 16px;
+$fontcolor:#464646;
 
 
 #jqt > * {
@@ -23,20 +24,18 @@ $standardfontsize: 16px;
   font-family: $standardfont;
   background:#cecece url(image_path('tile-grunge.png'))  repeat;
   color: #ddd;
+  color: $fontcolor;
 
 
 
-  h5 {
-    font-size:13px;
-    color:$darkgrey;
-    line-height: 18px;
-    margin: 9px 0;
+  ///h5 {
+   // font-size:13px;
+   // color:$darkgrey;
+   // line-height: 18px;
+   // margin: 9px 0;
 
-    span {font-weight:normal;color:$mediumgrey;}
-  }
-
-
-
+   // span {font-weight:normal;color:$mediumgrey;}
+  //}
 
 
   ul{
@@ -61,11 +60,8 @@ $standardfontsize: 16px;
     padding:12px 0px;
     margin:9px 0 9px 0;
     text-shadow: rgba(0,0,0,0.05) 0px 0, rgba(0,0,0,0.05) 0 -1px, rgba(255,255,255,0.1) 0 1px, rgba(0,0,0,0.05) 0px -1px;
-
     line-height: 18px;
     height:18px;
-
-
 
   }
   button:active, .button:active {
@@ -80,10 +76,10 @@ $standardfontsize: 16px;
 
   form {
     input[type=text], input[type=search], input[type=number], input[type=password] {
-      line-height: 45px;
       background: #f7f7f7;
       @include box-shadow($insetshadow);
       @include border-radius($radius);
+      line-height: 45px;
       height:45px;
       padding:0 0 0 10px;
       width:98%;
@@ -96,7 +92,14 @@ $standardfontsize: 16px;
       width: 18px;
       height: 18px;
       margin-right:5px;
+      @include box-shadow($insetshadow);
+      @include border-radius(24px);
     }
+    input[type=radio]:checked {
+      background:#000000;
+      -webkit-background-size: 10px 10px; /* shrink high resolution background */
+    }
+    input[type=radio]+span {position:relative; top:-4px; margin-right:10px}
     textarea {
       background:#f7f7f7;
       border:0;
@@ -106,9 +109,31 @@ $standardfontsize: 16px;
       padding:10px 5px;
       font-family:$standardfont ;
       @include border-radius($radius);
-      width:98%;
+      width:97%;
     }
+    select{
+      border:1px solid #cccccc;
+      box-shadow:  0px 1px 0px rgba(0, 0, 0, 0.35);
+      @include border-radius($radius);
+      line-height: 45px;
+      height:45px;
+      padding:0 0 0 10px;
+      width:98%;
+      border:0;
+      font-size:14px;
+      overflow: visible;
+      color:$fontcolor;
+      background: #f4f4f4 url(image_path('gfx-down-arrow.png')) no-repeat 0 0;
+      background-position: right;
+      position:relative;
+      top:-1px;
 
+    }
+    input[type=search]{
+      @include box-shadow($insetshadow);
+      background: #f7f7f7;
+      -webkit-appearance:none;
+    }
 
 
   }

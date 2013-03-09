@@ -70,6 +70,15 @@
                 <p class="sprite-sf arrow"></p>
                 </a>
             </li>
+            <li>
+                <a href="#">
+                    <div class="label">
+                        <div class="icon sprite-sf mainsite"></div>
+                        <p>Other</p>
+                    </div>
+                    <p class="sprite-sf arrow"></p>
+                </a>
+            </li>
 
         </ul>
 

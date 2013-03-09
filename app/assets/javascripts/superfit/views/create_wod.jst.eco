@@ -21,7 +21,7 @@
              <a href="#" class="button"><span class="sprite-sf photo-icon"></span>Take a Photo</a>
           </div>
           </form>
-          <a href="#" class="button bottom">Next: Enter Your Score</a>
+          <a href="#enter-wod-score" class="button bottom">Next: Enter Your Score</a>
       </div>
     </div>
 

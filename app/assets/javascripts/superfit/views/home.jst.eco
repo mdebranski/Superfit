@@ -7,7 +7,13 @@
                 <h1>Dashboard</h1>
             </div>
         </div> <!-- end: page-header -->
-        <div class="page-navigation">Date</div>
+        <div class="date-navigation">
+               <ul>
+                   <li class="sprite-sf prev-day"></li>
+                   <li class="date">Jan 26, 2013</li>
+                   <li class="sprite-sf next-day"></li>
+               </ul>
+        </div>
         <div class="content-main">
             <ul>
                 <li class="title">
