@@ -305,7 +305,7 @@ Benchmark,Hero,Luce,,"Wearing a 20 pound vest:
 Run 1K
 10 Muscle-ups
 100 Squats",For time,3 rounds for time,"Captain Ronald G. Luce, 27, of the U.S. Army Company C, 2nd Battalion, 20th Special Forces Group, headquartered at Jackson, Miss., died August 2, 2009 in Qole Gerdsar, Afghanistan, after his vehicle was struck by a command wire improvised explosive device. He is survived by by his wife Kendahl Shoemaker and 5 year old daughter Carrie, and parents Ronald and Katherine Luce."
-Benchmark,Hero,McCluskey,,"9 Muscle-ups
+Benchmark,Hero,“McCluskey“,,"9 Muscle-ups
 15 Burpee pull-ups
 21 Pull-ups
 Run 800 meters If you’ve got a twenty pound vest or body armor, wear it.",For time,3 rounds for time,"U.S. Army Sergeant Jason “Mick” McCluskey, 26, of McAlester, Oklahoma, assigned to the 27th Engineer Battalion, 20th Engineer Brigade, XVIII Airborne Corps, based out of Fort Bragg, North Carolina, was killed on November 4, 2010, when insurgents attacked his unit with small arms fire in Zarghun Shahr, Mohammad Agha district, Afghanistan. He is survived by his son Landen, and his mother Delores Olivares."
@@ -483,3 +483,129 @@ Benchmark,Hero,Wood,,"Run 400 meters
 95 pound Thruster, 10 reps
 
 Rest 1 minute",For time,5 rounds for time,"Australian Army Sergeant Brett Wood, 32, of Ferntree Gully, Victoria, assigned to the 2nd Commando Regiment, based in Sydney, New South Wales, died on May 23, 2011, in Helmand province, Afghanistan, after insurgents attacked him with an improvised explosive device. He is survived by his wife Elvi, his mother Allison, and his father David. Donations can be made in his name to the Commando Welfare Trust."
+Benchmark,Common,Tabata This,"Squats
+Rows
+Pull Ups
+Sit Ups
+Push Ups","Squats
+Rows
+Pull Ups
+Sit Ups
+Push Ups",Total Reps,8 rounds (20 sec work/10 sec rest),
+Benchmark,Common,Tabata Something Else,"Pull Ups
+Push Ups
+Sit Ups
+Squats","Pull Ups
+Push Ups
+Sit Ups
+Squats",Total Reps,8 rounds (20 sec work/10 sec rest),
+Benchmark,Common,Fight Gone Bad,"Wall ball shots 10' target @ 20lbs
+Sumo High Pull Dead Lift @ 75 lbs
+Box jump @ 20"" box
+Push Press @ 75 lbs
+Row","Wall ball shots 10' target @ 20lbs
+Sumo High Pull Dead Lift @ 75 lbs
+Box jump @ 20"" box
+Push Press @ 75 lbs
+Row",Total Reps,5 Rounds for total reps. Rotate movements each minute.,
+Benchmark,Common,Crossfit Total,"Back Squat
+Shoulder Press
+Dead Lift
+","Back squat x 1 rep, 
+Shoulder Press x 1 rep, 
+Deadlift x 1 rep
+",Total weight,"You get three attempts at each lift
+You cannot remove weight from the bar",
+Benchmark,Common,Filthy Fifty,"50 Box Jumps @ 24""
+50 Jumping Pull Ups
+50 Kettleball Swings @ 1 pood
+50 Walking Lunges
+50 Knees to Elbows
+50 Push Press @ 45 lbs
+50 Back Extensions
+50 Wall Ball Shots @ 20 lbs
+50 Burpees
+50 Double Unders",,For Time,For Time,
+Benchmark,Common,Nasty Girls,"50 Squats
+7 Muscle Ups
+10 Hang Power Cleans @ 135 lbs",,For Time,3 rounds for time.,
+Benchmark,Common,300,"50 Deadlifts 95 lbs
+50 Push Ups
+50 Box Jumps
+50 Floor Wipers 95 lbs
+50 Clean & Press 95 lbs
+25 Pul ups","25 Pull Ups
+50 Deadlifts 135 lbs
+50 Push Ups
+50 Box Jumps
+50 Floor Wipers 135 lbs
+50 Clean & Press 135 lbs
+25 Pul ups
+",For Time,For Time,
+Benchmark,Common,Baseline from Hell,"
+
+400m Run
+10 Pull Ups
+20 Push Ups
+30 Sit Ups
+40 Squats
+","
+
+400m Run
+10 Pull Ups
+20 Push Ups
+30 Sit Ups
+40 Squats
+",For Time,5 rounds. 3 min rest between rounds.,
+Benchmark,Common,Jeremy,"Overhead Squats 65lbs
+Burpees","Overhead Squats 95lbs
+Burpees",For Time,3 rounds of 21-15-9 (reps) for time,
+Benchmark,Common,King Kong,"1 Deadlift 310lbs
+2 Muscle Ups
+3 Squat Cleans 170lbs
+4 Handstand Push Ups","1 Deadlift 455lbs
+2 Muscle Ups
+3 Squat Cleans 250lbs
+4 Handstand Push Ups",For Time,3 rounds for time.,
+Benchmark,Endurance,5K run,5K run,5K run,For Time,For Time,
+Benchmark,Endurance,10K run,10K run,10K run,For Time,For Time,
+Benchmark,Endurance,5K row,5K row,5K row,For Time,For Time,
+Benchmark,Endurance,10K row,10K row,10K row,For Time,For Time,
+Benchmark,Endurance,5K Bike,5K Bike,5K Bike,For Time,For Time,
+Benchmark,Endurance,10K Bike,10K Bike,10K Bike,For Time,For Time,
+Benchmark,Endurance,15K Bike,15K Bike,15K Bike,For Time,For Time,
+Benchmark,Endurance,25K Bike,25K Bike,25K Bike,For Time,For Time,
+Benchmark,Endurance,30K Bike,30K Bike,30K Bike,For Time,For Time,
+Benchmark,Endurance,400m Swim,400m Swim,400m Swim,For Time,For Time,
+Benchmark,Endurance,750m Swim,750m Swim,750m Swim,For Time,For Time,
+Benchmark,Endurance,1.5 km Swim,1.5 km Swim,1.5 km Swim,For Time,For Time,
+Strength,,Back Extension,,,Max Reps,,
+Strength,,Back Squat,,,Weight / Reps / Rounds,,
+Strength,,Bench Press,,,Weight / Reps / Rounds,,
+Strength,,Burpees,,,Max Reps,,
+Strength,,Clean,,,Weight / Reps / Rounds,,
+Strength,,Clean and Jerk,,,Weight / Reps / Rounds,,
+Strength,,Deadlift,,,Weight / Reps / Rounds,,
+Strength,,Dips,,,Max Reps,,
+Strength,,Double Unders,,,Max Reps,,
+Strength,,Freestanding Handstand,,,Max Reps,,
+Strength,,Front Squat,,,Weight / Reps / Rounds,,
+Strength,,Handstand Push-ups,,,Max Reps,,
+Strength,,Hang Squat Clean,,,Weight / Reps / Rounds,,
+Strength,,Knees to Elbows,,,Max Reps,,
+Strength,,L-sit Pull-ups,,,Max Reps,,
+Strength,,Muscle Up,,,Max Reps,,
+Strength,,Overhead Squat,,,Weight / Reps / Rounds,,
+Strength,,Pistols,,,Max Reps,,
+Strength,,Power Clean,,,Weight / Reps / Rounds,,
+Strength,,Power Snatch,,,Weight / Reps / Rounds,,
+Strength,,Pull-ups,,,Max Reps,,
+Strength,,Push Jerk,,,Weight / Reps / Rounds,,
+Strength,,Push Press,,,Weight / Reps / Rounds,,
+Strength,,Push-ups,,,Max Reps,,
+Strength,,Ring Dips,,,Max Reps,,
+Strength,,Split Jerk,,,Weight / Reps / Rounds,,
+Strength,,Squat,,,Weight / Reps / Rounds,,
+Strength,,Sumo Deadlift High Pull,,,Weight / Reps / Rounds,,
+Strength,,Thruster,,,Weight / Reps / Rounds,,
+Strength,,Weighted pullup,,,Weight / Max Reps ,,

@@ -1,0 +1,40 @@
+.page-header
+  .toolbar
+    %div
+      %a.sprite-sf.previous.goback{href: "#"}
+    %h1= @wod.name
+.content-main
+  .content-block
+    .yellow-block
+      = @wod.scoringMethod()
+      %br/
+      %br/
+      Male:
+      %br/
+      != @wod.workout_male.replace(/(\r\n|\n|\r)/gm,"<br/>")
+      %br/
+      %br/
+      Female:
+      %br/
+      != @wod.workout_female.replace(/(\r\n|\n|\r)/gm,"<br/>")
+    %form
+      .enter-score
+        %div
+          %p Enter Score
+          %input#custom-wod-label{type: "text", name: "custom-wod-label", placeholder: "Your Score"}
+        %div
+          %p Method
+          %select
+            %option Time
+            %option Rounds
+            %option Weight
+            %option Reps
+            %option Pass / Fail
+      %div
+        %input{type: "radio", name: "wod-type", value: "rx"}
+          %span RX
+        %input{type: "radio", name: "wod-type", value: "scaled", checked: "checked"}
+          %span Scaled
+      %p Workout Notes
+      %textarea{placeholder: "Add details that affected your performance. Where you sore? Was the weather bad?", cols: "30", rows: "5"
+    %a.button.bottom{href: "#review-wod"} Save Workout

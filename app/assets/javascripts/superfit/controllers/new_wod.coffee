@@ -1,5 +1,5 @@
 class Superfit.NewWod extends Spine.Controller
-  templateName: 'new_wod'
+  templateName: 'enter_wod_score'
 
   constructor: ->
     super

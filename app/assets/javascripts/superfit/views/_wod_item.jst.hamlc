@@ -1,7 +1,7 @@
 %li{data-id: @wod.id}
   %p.label
   .label
-    .icon.sprite-sf.benchmark
+    .icon.sprite-sf{class: @wod.typeSlug()}
     %p.label
       %a{href: "#new-wod"}= @wod.name
   %p.sprite-sf.arrow

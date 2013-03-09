@@ -59,11 +59,27 @@ $ ->
   User.fetch()
   Wod.fetch()
   Category.fetch()
+  WodsVersion.fetch()
 
-  if Wod.all().length == 0
-    $.get '/wods.txt', (result) ->
-      wods = $.parseJSON(result)
-      Wod.refresh(wods)
+  $.get '/wods_version.txt', (latest_version) ->
+    latest_version = latest_version.trim()
+    wods_version = WodsVersion.first() || new WodsVersion()
+
+    console.log "WODs version - latest: #{latest_version}, current: #{wods_version.version}"
+
+    if wods_version.needs_update(latest_version)
+      console.log "WODs Updating..."
+      $.get '/wods.txt', (result) ->
+        wods = $.parseJSON(result)
+
+        Wod.destroyAll()
+        _.each wods, (wod_hash) ->
+          wod = new Wod(wod_hash)
+          wod.save()
+
+        wods_version.version = latest_version
+        wods_version.save()
+        console.log "#{Wod.all().length} WODs updated to version #{latest_version}"
 
   new Superfit(el: $('body'))
 
@@ -74,3 +90,4 @@ $ ->
     startupScreen: 'jqt_startup.png'
     statusBar: 'black-translucent'
     preloadImages: []
+

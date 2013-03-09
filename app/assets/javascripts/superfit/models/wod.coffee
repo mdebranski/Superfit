@@ -14,9 +14,11 @@ class Wod extends Spine.Model
   @extend Spine.Events
   @extend Spine.Log
 
+  @scoringMethodMap: {for_time: "For Time", pass_fail: "Pass/Fail", rounds: "AMRAP (rounds)", 'max_reps': "Max Reps"}
+
   @byType: (type) ->
     _.select @all(), (wod) ->
-      wod.type.toLowerCase() == type.toLowerCase()
+      wod.typeSlug() == type.toLowerCase()
 
   @byCategory: (category) ->
     _.select @all(), (wod) ->
@@ -26,6 +28,9 @@ class Wod extends Spine.Model
     wods = if type? then Wod.byType(type) else Wod.all()
     _.select wods, (wod) ->
       wod.name.toLowerCase().indexOf(value.toLowerCase()) >= 0
+
+  scoringMethod: ->
+    Wod.scoringMethodMap[@scoring_method]
 
   typeSlug: ->
     @type.toLowerCase()
