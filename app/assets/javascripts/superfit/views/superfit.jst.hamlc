@@ -5,6 +5,7 @@
     != JST['superfit/views/add_wod']()
     != JST['superfit/views/browse_wods']()
     != JST['superfit/views/create_wod']()
+    != JST['superfit/views/enter_strength_score']()
     #new-wod.page
     != JST['superfit/views/review_wod']()
 

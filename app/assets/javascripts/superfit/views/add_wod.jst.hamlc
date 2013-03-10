@@ -28,7 +28,7 @@
       %li{'data-type': 'other'}
         %a{href: "#browse-wods"}
           .label
-            .icon.sprite-sf.custom
+            .icon.sprite-sf.other
             %p Other
           %p.sprite-sf.arrow
       %li

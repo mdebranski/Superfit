@@ -10,9 +10,9 @@
 
         <div class="date-navigation">
                <ul>
-                   <li class="sprite-sf prev-day"></li>
+                   <li class="sprite-sf sm-arrow"></li>
                    <li class="date"><%= moment().format('MMM D, YYYY') %></li>
-                   <li class="sprite-sf next-day"></li>
+                   <li class="sprite-sf sm-arrow-reverse"></li>
                </ul>
         </div>
 

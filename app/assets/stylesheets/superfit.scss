@@ -41,6 +41,7 @@ body {background:none}
   h4 {}
   p {color: $fontcolor; font-family:"Helvetica Neue", Helvetica; font-size: 16px; font-weight: normal; }
 
+
   h3.no-matches {
     display: none;
     color: rgba(0, 0, 0, 0.10);
@@ -105,6 +106,7 @@ body {background:none}
 
       p {margin-top:18px;line-height: 36px;}
       form {margin-top:6px}
+      input + p.small {margin-top: 0;}
     }
 
     ul{
@@ -176,12 +178,27 @@ body {background:none}
 
   }
  // ENTER WOD SCORE
-  .enter-score{
-    div {width:60%; float:left; margin-bottom: 3px;}
-    div+div {width:33%; margin-left:7%;}
-    margin-bottom: 18px;
+  .enter-score-label {
+    width:95%;
+    p {float:left;width:50px }
+    .delete {float:left; position:relative;top:21px}
     overflow: hidden;
   }
+  .enter-score{
+    margin-bottom: 18px;
+    overflow: hidden;
+    .delete {overflow: hidden;}
+
+    div {
+      width:60%; float:left; margin-bottom: 3px;
+      p.input {width:95%; float:left; margin-top:0px}
+      .small {clear:both; display: block;}
+      p.times {float:left;width:5%; position: relative; top:-10px;}
+    }
+    div+div{width:33%; margin-left:7%;}
+  }
+
+
 
   // REVIEW SCORE
   .review-score {
@@ -228,37 +245,40 @@ body {background:none}
     width:29px; height:28px;
     &.strength { background-position: -29px -70px; }
     &.custom {background-position: -29px -113px;}
+    &.other {background-position: -29px -27px;}
     &.benchmark {background-position: -29px -152px;}
     &.mainsite {background-position: -29px -199px;}
-    &.enclosed-check {background-position: -29px -332px; }
-    &.enclosed-check-complete {background-position: -29px -286px; }
+    &.enclosed-check {background-position: -148px -123px; }
+    &.enclosed-check-complete {background-position: -191px -123px; }
     &.me {background-position: -202px -68px; }
     &.home {background-position: -202px -101px; }
     &.calendar {background-position: -202px -134px; }
     &.goals {background-position: -202px -170px; }
     &.records {background-position: -202px -204px; }
     &.affiliate {background-position: -202px -239px; }
-    &.circle-arrow-forward {background-position: -89px -239px; }
-    &.circle-arrow-forward:active {background-position: -89px -278px; }
-    &.circle-arrow-back {background-position: -89px -159px; }
-    &.circle-arrow-back:active {background-position: -89px -198px; }
+    &.repsx {background-position: -242px -25px; }
   }
 
   .arrow  { width:25px;  height:16px; background-position: -90px -25px;}
-  .reverse-arrow  { width:25px;  height:16px; background-position: -90px -60px;}
-  .small-arrow  { width:25px;  height:16px; background-position: -90px -93px;}
-  .write-icon {width:48px;  height:35px; background-position: -208px -18px;}
-  .photo-icon {width:30px;  height:25px; background-position: -152px -27px; float:left; margin:0 6px }
-  .prev-day {width:40px;  height:21px; background-position: -85px -374px; opacity: .95;}
-  .next-day {width:40px;  height:21px; background-position: -85px -404px;opacity: .95;}
-  .prev-day:active {background-position: -85px -349px; opacity: 1.0;}
-  .next-day:active  {background-position: -85px -322px;opacity: 1.0}
-  .inactive {color:$inactivegrey}
-  .add-one {width:32px;  height:30px; background-position: -200px -275px; position:relative; top:12px; left:10px }
-  .add-one:active {width:32px;  height:30px; background-position: -158px -275px;}
-  .previous {width:24px;  height:22px; background-position: -94px -428px; position: relative; top:10px; left:9px;}
-  .previous:active {width:24px;  height:22px; background-position: -94px -454px;}
+  //.reverse-arrow  { width:25px;  height:16px; background-position: -90px -60px;}
+  //.small-arrow  { width:25px;  height:16px; background-position: -90px -93px;}
+  //.write-icon {width:48px;  height:35px; background-position: -208px -18px;}
+  .photo-icon {width:34px;  height:21px; background-position: -148px -91px; float:left; margin:0 6px }
+  .sm-arrow {width:40px;  height:21px; background-position: -85px -139px; opacity: .95;}
+  .sm-arrow-reverse {width:40px;  height:21px; background-position: -85px -169px;opacity: .95;}
+  .sm-arrow:active {background-position: -85px -115px; opacity: 1.0;}
+  .sm-arrow-reverse :active  {background-position: -85px -87px;opacity: 1.0}
+  //.inactive {color:$inactivegrey}
+  .add-one {width:34px;  height:31px; background-position: -148px -22px; position:relative; top:12px; left:10px }
+  .add-one:active {width:32px;  height:30px; background-position: -191px -22px;}
+  .delete {width:25px;  height:25px; background-position: -154px -57px;}
+  .delete:active {width:25px;  height:25px; background-position: -197px -57px;}
+  //previous page
+  .previous {width:24px;  height:22px; background-position: -94px -200px; position: relative; top:10px; left:9px;}
+  .previous:active {width:24px;  height:22px; background-position: -94px -200px;}
 
+
+  .small {color:$fontcolorlight;font-size: 11px; }
 
 
  /// DUMMY CHART REMOVE BEFORE LAUNCH
