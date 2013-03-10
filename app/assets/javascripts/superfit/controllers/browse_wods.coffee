@@ -16,13 +16,12 @@ class Superfit.BrowseWods extends Superfit.SearchWods
 
   updateWods: (type) =>
     @type = type
-    @header.text("#{@type.toUpperCase()} WODs")
+    @header.text("#{@type.toUpperCase()}")
 
     wods = Wod.byType(type)
     @wodsBrowse.html('')
     for wod in wods
       item = new Superfit.WodItem(wod: wod)
-      rendered = item.render()
-      @wodsBrowse.append(rendered)
+      @wodsBrowse.append item.render()
 
   search: (e) -> super(e, @type)

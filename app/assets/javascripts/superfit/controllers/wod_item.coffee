@@ -1,4 +1,5 @@
 class Superfit.WodItem extends Spine.Controller
+  tag: 'li'
   templateName: '_wod_item'
 
   events:
