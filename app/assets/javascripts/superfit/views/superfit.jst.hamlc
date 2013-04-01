@@ -1,6 +1,7 @@
 #jqt
   - if @user
     != JST['superfit/views/navigation']()
+    != JST['superfit/views/calendar']()
     != JST['superfit/views/home']()
     != JST['superfit/views/add_wod']()
     != JST['superfit/views/browse_wods']()

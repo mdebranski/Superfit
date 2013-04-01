@@ -1,0 +1,11 @@
+#calendar.page
+  .custom-calendar-wrap
+    #custom-inner.custom-inner
+      .custom-header
+        %nav
+          %span#custom-prev.custom-prev
+          %span#custom-next.custom-next
+        %h2#custom-month.custom-month
+        %h3#custom-year.custom-year
+      .fc-calendar-container
+

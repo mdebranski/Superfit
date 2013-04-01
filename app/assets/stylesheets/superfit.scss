@@ -2,6 +2,8 @@
 //= require jqtouch_overrides
 //= require superfit_common
 //= require old_superfit
+//= require calendar
+//= require calendar_theme
 @import 'compass/css3';
 
 $radius: 3px;
@@ -162,7 +164,7 @@ body {background:none}
       color:$fontcolor;
       float:left;
       width:10%;
-      &.date {width:80%}
+      &.date {width:80%; cursor: pointer;}
     }
   }
 
