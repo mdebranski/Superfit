@@ -1,4 +1,4 @@
-    <div class='current scroll page' id='home'>
+    <div class='current page' id='home'>
         <div class="page-header">
             <div class='toolbar'>
                 <div class="pulldown">
@@ -8,6 +8,7 @@
             </div>
         </div> <!-- end: page-header -->
 
+       <div class="scroll">
         <div class="date-navigation">
                <ul>
                    <li class="sprite-sf sm-arrow"></li>
@@ -80,6 +81,6 @@
                 </li>
             </ul>
         </div>
-
+       </div>
 
 </div>
