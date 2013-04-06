@@ -72,48 +72,48 @@
 }
 
 .fc-calendar .fc-row > div {
-	border-right: 1px solid #ddd;
-	padding: 4px;
-	overflow: hidden;
-	position: relative;
+	/*border-right: 1px solid #ddd;   */
+    /*padding: 4px;          */
+    overflow: hidden;
+    position: relative;
 }
 
 .fc-calendar .fc-head > div {
-	text-align: center;
+    text-align: center;
 }
 
 .fc-calendar .fc-row > div > span.fc-date {
-	position: absolute;
-	width: 30px;
-	height: 20px;
-	font-size: 20px;
-	line-height: 20px;
-	font-weight: 700;
-	color: #ddd;
-	text-shadow: 0 -1px 0 rgba(255,255,255,0.8);
-	bottom: 5px;
-	right: 5px;
-	text-align: right;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ddd;
+    text-shadow: 0 -1px 0 rgba(255,255,255,0.8);
+    bottom: 5px;
+    right: 5px;
+    text-align: right;
 }
 
 .fc-calendar .fc-row > div > span.fc-weekday {
-	padding-left: 5px;
-	display: none;
+    padding-left: 5px;
+    display: none;
 }
 
 .fc-calendar .fc-row > div.fc-today {
-	background: #fff4c3;
+    background: #fff4c3;
 }
 
 .fc-calendar .fc-row > div.fc-out {
-	opacity: 0.6;
+    opacity: 0.6;
 }
 
 .fc-calendar .fc-row > div:last-child,
 .fc-calendar .fc-head > div:last-child {
-	border-right: none;
+    border-right: none;
 }
 
 .fc-calendar .fc-row:last-child {
-	border-bottom: none;
+    border-bottom: none;
 }

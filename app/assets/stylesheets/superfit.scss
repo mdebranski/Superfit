@@ -4,6 +4,7 @@
 //= require old_superfit
 //= require calendar
 //= require calendar_theme
+//= require font-awesome
 @import 'compass/css3';
 
 $radius: 3px;
@@ -11,6 +12,8 @@ $radiusleft: 0px 2px 2px 2px;
 $radiusright: 0px 2px 2px 0px;
 $radiusbottom: 0px 0px 2px 2px;
 $radiustop: 2px 2px 2px 2px;
+
+$radius-circle:100px;
 $darkgrey:#474747;
 $mediumgrey:#646464;
 $lightgrey:#858585;
@@ -22,13 +25,16 @@ $stagebkg:#ffffff;
 $contentpad:0 10px;
 $insetshadow:inset 0px 1px 2px 0px rgba(0, 0, 0, .45);
 $standardfont: "Helvetica Neue", Helvetica;
-$fontcolor:#464646;
-$fontcolorlight:#939393;
 $standardfontsize: 16px;
 $paragraphtext: 12px;
 $standardlineheight: 45px;
 $yellow:#fffae8;
 $stageintmargin:20px;
+
+$txt-dkgrey:#333333;
+$txt-grey:#666666;
+$txt-ltgrey:#999999;
+$red:#d91c00;
 
 @mixin fl($width) { display: block; float: left; width: $width }
 @mixin fr($width) { display: block; float: right; width: $width }
@@ -41,7 +47,7 @@ body {background:none}
   h2 {font: normal 18px "Helvetica Neue", Helvetica; color: #414141; line-height: 54px; margin:0}
   h3 {}
   h4 {}
-  p {color: $fontcolor; font-family:"Helvetica Neue", Helvetica; font-size: 16px; font-weight: normal; }
+  p {color: $txt-dkgrey; font-family:"Helvetica Neue", Helvetica; font-size: 16px; font-weight: normal; }
 
 
   h3.no-matches {
@@ -161,7 +167,7 @@ body {background:none}
     li {
       font-size:15px;
       font-weight: normal;
-      color:$fontcolor;
+      color:$txt-dkgrey;
       float:left;
       width:10%;
       &.date {width:80%; cursor: pointer;}
@@ -175,7 +181,7 @@ body {background:none}
   .photo-capture {
 
     overflow: hidden;
-    p {float:left; font-size:12px; color:$fontcolorlight; margin-top:6px !important;}
+    p {float:left; font-size:12px; color:$txt-ltgrey; margin-top:6px !important;}
     a.button {float:right;width:50%; text-align:left;padding:6px}
 
   }
@@ -206,7 +212,7 @@ body {background:none}
   .review-score {
     text-align: center;
     font-size: 40px;
-    color:$fontcolor;
+    color:$txt-dkgrey;
     font-weight: bold;
     margin-bottom: 18px;
 
@@ -239,7 +245,7 @@ body {background:none}
     border:1px solid #f7eecb;
     margin-top:18px;
     padding:20px;
-    color:$fontcolorlight;
+    color:$txt-ltgrey;
   }
 
   //.sprite-sf:active {opacity:0.5;}
@@ -280,7 +286,7 @@ body {background:none}
   .previous:active {width:24px;  height:22px; background-position: -94px -200px;}
 
 
-  .small {color:$fontcolorlight;font-size: 11px; }
+  .small {color:$txt-ltgrey;font-size: 11px; }
 
 
  /// DUMMY CHART REMOVE BEFORE LAUNCH
@@ -291,5 +297,35 @@ body {background:none}
     margin:10px auto;
   }
 }  //end JQT
+
+// Calendar Overrides
+
+#calendar{
+  .custom-header {
+    border:0px;
+    background-color:#f3f3f3;
+    height:50px;
+    text-align: center;
+    padding: 5px 20px 10px 20px;
+    .custom-month {display: inline-block; margin-right:5px; color:$txt-dkgrey;}
+    .custom-year {display: inline-block; font-size:18px; font-weight: normal; line-height: 54px; color:$txt-dkgrey}
+    nav span:last-child {right:25px}
+    nav span:before {color:$red}
+
+  }
+  .fc-calendar-container {background:#ffffff ;}
+  .fc-calendar .fc-head {color:$red; font-weight: normal; font-size:10px;}
+  .fc-calendar .fc-body {border:0px}
+  .fc-calendar .fc-row  {border:0px}
+  .fc-calendar .fc-row > div > span.fc-date   {color:$txt-grey; font-weight: bold; font-size:11px;}
+  .fc-calendar .fc-row > div.fc-today {
+    background: $red;
+    @include border-radius($radius-circle)
+  }
+  .fc-calendar .fc-row > div.fc-today > span.fc-date {
+    color:#ffffff
+  }
+
+}
 
 
