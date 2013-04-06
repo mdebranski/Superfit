@@ -11,9 +11,9 @@
        <div class="scroll">
         <div class="date-navigation">
                <ul>
-                   <li class="sprite-sf sm-arrow"></li>
+                   <li class="awesome icon-chevron-left"></li>
                    <li class="date"><%= moment().format('MMM D, YYYY') %></li>
-                   <li class="sprite-sf sm-arrow-reverse"></li>
+                   <li class="awesome icon-chevron-right"></li>
                </ul>
         </div>
 
@@ -21,7 +21,7 @@
             <ul>
                 <li class="title">
                     <h2>Workout Activity</h2>
-                    <a href="#add-wod" class="sprite-sf add-one"></a>
+                    <div class="action">  <a href="#add-wod" class="icon-button icon-plus"></a> </div>
                 </li>
                 <li>
                     <a href="#review-wod">
@@ -54,7 +54,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#add-wod" class="inactive">Add Another Workout +</a>
+                    <a href="#add-wod">
+                        <div class="label">
+                         <p>Add Another Workout </p>
+                        </div>
+                        <p class="awesome icon-plus arrow"></p>
+                    </a>
                 </li>
             </ul>
 
@@ -63,21 +68,23 @@
         <div class="content-main">
             <ul>
                 <li class="title">
-                    <h2>Latest Goal Activity</h2>
-                    <a href="#" class="sprite-sf add-one">add one</a>
+                    <h2>Goals</h2>
+                    <div class="action">
+                       <a href="#goals">
+                            <p>View All</p>
+                            <p class="sprite-sf arrow"></p>
+                       </a>
+                    </div>
                 </li>
                 <li><div class="chart"></div></li>
                 <li>
                     <a href="#">
                         <div class="label">
-                            <p>25 Unbroken Pullups</p>
-                            <p>35<sup>%</sup></p>
+                            <p class="goal">25 Unbroken Pullups <br><span>Last Update: 17 days ago (22 reps)</span></p>
+                            <p class="goal-progress">35%</p>
                         </div>
                         <p class="sprite-sf arrow"></p>
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="inactive">Create A New Goal +</a>
                 </li>
             </ul>
         </div>

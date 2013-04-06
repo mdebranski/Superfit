@@ -14,9 +14,6 @@ $radiusbottom: 0px 0px 2px 2px;
 $radiustop: 2px 2px 2px 2px;
 
 $radius-circle:100px;
-$darkgrey:#474747;
-$mediumgrey:#646464;
-$lightgrey:#858585;
 $inactivegrey:#cccccc;
 $notepapercolor:#ffffff; //#fcfadd;
 $stageshadow:0px 1px 2px rgba(0, 0, 0, 0.35);
@@ -28,8 +25,10 @@ $standardfont: "Helvetica Neue", Helvetica;
 $standardfontsize: 16px;
 $paragraphtext: 12px;
 $standardlineheight: 45px;
-$yellow:#fffae8;
 $stageintmargin:20px;
+
+$blue:#00afd5;
+$yellow:#fffae8;
 
 $txt-dkgrey:#333333;
 $txt-grey:#666666;
@@ -48,7 +47,7 @@ body {background:none}
   h3 {}
   h4 {}
   p {color: $txt-dkgrey; font-family:"Helvetica Neue", Helvetica; font-size: 16px; font-weight: normal; }
-
+  p.awesome {font-family:"FontAwesome"}
 
   h3.no-matches {
     display: none;
@@ -59,7 +58,7 @@ body {background:none}
   }
 
   a {
-    text-shadow: 0; color:$mediumgrey;
+    text-shadow: 0; color:$txt-grey;
     background:transparent;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-transform: translateZ(0);
@@ -125,7 +124,7 @@ body {background:none}
       li {
         border-color:transparent;
         border-bottom:1px solid #bfd2e1;
-        color:$lightgrey;
+        color:$txt-ltgrey;
         margin:0;
         padding:$contentpad;
         line-height: 54px;
@@ -142,13 +141,31 @@ body {background:none}
           @include fl(86%);
           p {float:left;position: relative;}
           p+p {float:right;text-align: right;}
+
+          .goal {
+            line-height: 18px;
+            height:54px;
+            margin-top: 18px;
+            span {font-size:10px; color:$txt-ltgrey}
+          }
         }
         .arrow  {float:right;margin-top:20px; margin-left:5px;border-bottom:0}
         &:last-of-type {border-bottom: 0;}
         &.title {
           border-bottom:1px solid #ff7f7f;
 
-          h2 {float:left; width:88%}
+          h2 {float:left; width:50%}
+          .action {
+            right:5px;
+            position: absolute;
+            display:inline-block;
+            text-align: right;
+            p {float:left}
+            a.icon-button {
+              position: relative;top: 14px;
+              color:$txt-ltgrey;
+            }
+          }
           .icon {margin-right:0}
         }
 
@@ -163,14 +180,16 @@ body {background:none}
 
   .date-navigation{
     text-align: center;
+    overflow: hidden;
 
     li {
-      font-size:15px;
+      font-size:13px;
       font-weight: normal;
       color:$txt-dkgrey;
       float:left;
       width:10%;
-      &.date {width:80%; cursor: pointer;}
+
+      &.date {width:80%; cursor: pointer;font-size:16px; position: relative; top: -3px;}
     }
   }
 
@@ -248,6 +267,14 @@ body {background:none}
     color:$txt-ltgrey;
   }
 
+  .icon-button {
+    background-color:#f1f1f1;
+    border:1px solid #e2e2e2;
+    @include border-radius($radius);
+    padding:4px;
+    color:$txt-ltgrey
+  }
+
   //.sprite-sf:active {opacity:0.5;}
   .icon {
     width:29px; height:28px;
@@ -272,13 +299,7 @@ body {background:none}
   //.small-arrow  { width:25px;  height:16px; background-position: -90px -93px;}
   //.write-icon {width:48px;  height:35px; background-position: -208px -18px;}
   .photo-icon {width:34px;  height:21px; background-position: -148px -91px; float:left; margin:0 6px }
-  .sm-arrow {width:40px;  height:21px; background-position: -85px -139px; opacity: .95;}
-  .sm-arrow-reverse {width:40px;  height:21px; background-position: -85px -169px;opacity: .95;}
-  .sm-arrow:active {background-position: -85px -115px; opacity: 1.0;}
-  .sm-arrow-reverse :active  {background-position: -85px -87px;opacity: 1.0}
   //.inactive {color:$inactivegrey}
-  .add-one {width:34px;  height:31px; background-position: -148px -22px; position:relative; top:12px; left:10px }
-  .add-one:active {width:32px;  height:30px; background-position: -191px -22px;}
   .delete {width:25px;  height:25px; background-position: -154px -57px;}
   .delete:active {width:25px;  height:25px; background-position: -197px -57px;}
   //previous page
@@ -307,25 +328,24 @@ body {background:none}
     height:50px;
     text-align: center;
     padding: 5px 20px 10px 20px;
-    .custom-month {display: inline-block; margin-right:5px; color:$txt-dkgrey;}
-    .custom-year {display: inline-block; font-size:18px; font-weight: normal; line-height: 54px; color:$txt-dkgrey}
-    nav span:last-child {right:25px}
+    .custom-month {display: inline-block; margin-right:5px; color:$txt-dkgrey; font-size: 16px; text-transform: capitalize;}
+    .custom-year {display: inline-block; font-size: 16px; font-weight: normal; line-height: 54px; color:$txt-dkgrey}
     nav span:before {color:$red}
 
   }
-  .fc-calendar-container {background:#ffffff ;}
+  .fc-calendar-container {background:#ffffff ; padding:10px 8px 50px 10px}
   .fc-calendar .fc-head {color:$red; font-weight: normal; font-size:10px;}
   .fc-calendar .fc-body {border:0px}
   .fc-calendar .fc-row  {border:0px}
+  .fc-calendar .fc-row > div {height: 80%;width: calc(100%/7); padding:0;border-right: 0;}
   .fc-calendar .fc-row > div > span.fc-date   {color:$txt-grey; font-weight: bold; font-size:11px;}
   .fc-calendar .fc-row > div.fc-today {
     background: $red;
-    @include border-radius($radius-circle)
+    @include border-radius($radius-circle);
   }
   .fc-calendar .fc-row > div.fc-today > span.fc-date {
     color:#ffffff
   }
 
 }
-
 

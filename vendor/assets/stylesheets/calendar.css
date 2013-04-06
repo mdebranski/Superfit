@@ -72,8 +72,8 @@
 }
 
 .fc-calendar .fc-row > div {
-	/*border-right: 1px solid #ddd;   */
-    /*padding: 4px;          */
+	border-right: 1px solid #ddd;
+    padding: 4px;
     overflow: hidden;
     position: relative;
 }

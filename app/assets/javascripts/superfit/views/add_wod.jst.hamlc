@@ -2,7 +2,7 @@
   .page-header
     .toolbar
       %div
-        %a.sprite-sf.previous{href: "#home"} Back
+        %a.sprite-sf.previous.goback{href: "#home"} Back
       %h1 Select WOD
   .content-main
     .content-block
