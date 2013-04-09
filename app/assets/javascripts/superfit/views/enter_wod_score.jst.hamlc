@@ -21,7 +21,7 @@
       .enter-score
         %div
           %p Enter Score
-          %input#custom-wod-label{type: "text", name: "custom-wod-label", placeholder: "Your Score"}
+          %input#custom-wod-label{type: "number", name: "custom-wod-label", placeholder: "Your Score"}
         %div
           %p Method
           %select
