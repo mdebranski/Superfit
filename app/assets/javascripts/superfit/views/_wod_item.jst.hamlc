@@ -1,6 +1,5 @@
-%p.label
-.label
-  .icon.sprite-sf{class: @wod.typeSlug()}
-  %p.label
-    %a{href: "#new-wod"}= @wod.name
-%p.sprite-sf.arrow
+%a{href: "#new-wod"}
+  .label
+    .icon.sprite-sf{class: @wod.typeSlug()}
+    %p= @wod.name
+  %p.sprite-sf.arrow
