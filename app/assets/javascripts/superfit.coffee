@@ -5,13 +5,13 @@
 #= require jqtouch-jquery.min
 #= require jquery.makeItRetina.min
 #= require moment.min
-#= require jquery.calendario
 #= require spine/spine
 #= require spine/manager
 #= require spine/local
 #= require spine/route
 #= require_tree ./lib
 #= require hamlcoffee
+#= require jquery.calendario
 #= require_self
 #= require_tree ./superfit/lib
 #= require_tree ./superfit/models
