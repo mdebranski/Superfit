@@ -342,7 +342,12 @@ body {background:none}
   .fc-calendar .fc-row > div.fc-today {
     background: $red;
     @include border-radius($radius-circle);
+    @include box-shadow($insetshadow);
   }
+  .fc-calendar .fc-row > div.hasworkouts{
+    background: #f1f1f1;
+    @include border-radius($radius-circle);
+}
   .fc-calendar .fc-row > div.fc-today > span.fc-date {
     color:#ffffff
   }
