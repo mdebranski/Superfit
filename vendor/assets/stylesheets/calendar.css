@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'fontawesome-selected';
-  src: url("../font/fontawesome-selected.eot");
-  src: url("../font/fontawesome-selected.eot?#iefix") format('embedded-opentype'), url("../font/fontawesome-selected.woff") format('woff'), url("../font/fontawesome-selected.ttf") format('truetype'), url("../font/fontawesome-selected.svg#fontawesome-selected") format('svg');
+  src: url(asset_path("font/fontawesome-selected.eot"));
+  src: url(asset_path("font/fontawesome-selected.eot?#iefix")) format('embedded-opentype'), url(asset_path("font/fontawesome-selected.woff")) format('woff'), url(asset_path("font/fontawesome-selected.ttf")) format('truetype'), url(asset_path("font/fontawesome-selected.svg#fontawesome-selected")) format('svg');
   font-weight: normal;
   font-style: normal;
 }
