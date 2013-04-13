@@ -2,12 +2,12 @@
   .page-header
     .toolbar
       %div
-        %a.sprite-sf.previous.goback{href: "#home"} Back
+        %a.awesome.icon-chevron-left.goback{href: "#home"}
       %h1 Select WOD
-  .content-main
-    .content-block
-      %form
-        %input.search-text{type: "text", name: "search-text", placeholder: "Search All"}
+
+  .search-block
+    %form
+      %input.search-text{type: "text", name: "search-text", placeholder: "Search All"}
   .content-main
     %h3.no-matches No WODs found for this search.
     %ul.wods-search
@@ -18,28 +18,28 @@
           .label
             .icon.sprite-sf.benchmark
             %p Benchmark
-          %p.sprite-sf.arrow
+          %p.awesome.icon-chevron-right.arrow
       %li{'data-type': 'strength'}
         %a{href: "#browse-wods"}
           .label
             .icon.sprite-sf.strength
             %p Strength
-          %p.sprite-sf.arrow
+          %p.awesome.icon-chevron-right.arrow
       %li{'data-type': 'other'}
         %a{href: "#browse-wods"}
           .label
             .icon.sprite-sf.other
             %p Other
-          %p.sprite-sf.arrow
+          %p.awesome.icon-chevron-right.arrow
       %li
         %a{href: "#create-wod"}
           .label
             .icon.sprite-sf.custom
             %p Custom
-          %p.sprite-sf.arrow
+          %p.awesome.icon-chevron-right.arrow
       %li
         %a{href: "#"}
           .label
             .icon.sprite-sf.mainsite
             %p Main Site
-          %p.sprite-sf.arrow
+          %p.awesome.icon-chevron-right.arrow

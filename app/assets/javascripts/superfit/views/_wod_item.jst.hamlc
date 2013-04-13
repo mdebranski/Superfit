@@ -2,4 +2,4 @@
   .label
     .icon.sprite-sf{class: @wod.typeSlug()}
     %p= @wod.name
-  %p.sprite-sf.arrow
+  %p.awesome.icon-chevron-right.arrow

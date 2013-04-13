@@ -2,9 +2,6 @@ $radius: 2px;
 $radiusleft: 0px 2px 2px 2px;
 $radiusright: 0px 2px 2px 0px;
 $radiusbottom: 0px 0px 2px 2px;
-$darkgrey:#474747;
-$mediumgrey:#646464;
-$lightgrey:#858585;
 $notepapercolor:#fcfadd;
 $stageshadow:0px 1px 3px rgba(0, 0, 0, 0.46);
 $stagebkg:#ffffff;
@@ -13,17 +10,27 @@ $insetshadow:inset 0px 2px 2px 0px rgba(0, 0, 0, .45);
 $standardfont: "Helvetica Neue", Helvetica;
 $standardfontsize: 16px;
 
+// colors
+$blue:#00afd5;
+$yellow:#fffae8;
+$red:#d91c00;
+$seashell:#f1f1f1;
+$silver:#cccccc;
+$silverchalice:#999999;
+$dovegray:#666666;
+$mineshaft:#333333;
+$codgray:#111111;
+
 #jqt > * {
 
   h1 {
     text-shadow: none;
     margin:0;
-    color:$darkgrey;
+    color:$mineshaft;
   }
 
   h2 {
     text-shadow: none;
-    //margin:0;
   }
   ul{
     background-color:transparent;
@@ -52,7 +59,7 @@ $standardfontsize: 16px;
       textarea,
       select
         {
-        color: $darkgrey;
+        color: $mineshaft;
         text-shadow: none;
         background: none;
         border: 0;
@@ -74,7 +81,7 @@ $standardfontsize: 16px;
         margin: 0px;
         -webkit-tap-highlight-color: none;
         -webkit-transform: translateZ(0);
-        color:$mediumgrey;
+        color:$dovegray;
         text-shadow: 0;
       }
     }
@@ -84,7 +91,7 @@ $standardfontsize: 16px;
     text-shadow: 0;
     border:0;
     font-size: $standardfontsize;
-    color:$darkgrey;
+    color:$mineshaft;
     font-family: $standardfont;
     background: transparent;
   }
@@ -102,7 +109,7 @@ $standardfontsize: 16px;
     background-color: #ffffff;
     -webkit-box-shadow: 0;
     box-shadow: none;
-    color: $lightgrey;
+    color: $silverchalice;
     text-shadow: none;
     border:0;
   }

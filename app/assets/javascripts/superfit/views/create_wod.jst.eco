@@ -3,7 +3,7 @@
     <div class="page-header">
         <div class='toolbar'>
             <div>
-                <a class="sprite-sf previous" href="#add-wod" style=""></a>
+                <a class="awesome icon-chevron-left goback" href="#add-wod" style=""></a>
             </div>
             <h1>Create WOD</h1>
         </div>
@@ -18,7 +18,7 @@
           <textarea placeholder="ex. 21 Burpees, 15 Thruster, 9 Toes to Bar" cols="30" rows="5"></textarea>
           <div class="photo-capture">
              <p>Too much to type?</p>
-             <a href="#" class="button"><span class="sprite-sf photo-icon"></span>Take a Photo</a>
+             <a href="#" class="button"><span class="awesome icon-camera-retro"></span> Take a Photo</a>
           </div>
           </form>
           <a href="#enter-wod-score" class="button bottom">Next: Enter Your Score</a>

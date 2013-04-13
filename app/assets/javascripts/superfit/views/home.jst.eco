@@ -17,11 +17,11 @@
                </ul>
         </div>
 
-        <div class="content-main">
+        <div class="home content-main">
             <ul>
                 <li class="title">
                     <h2>Workout Activity</h2>
-                    <div class="action">  <a href="#add-wod" class="icon-button icon-plus"></a> </div>
+                    <div class="action">  <a href="#add-wod" class="awesome icon-plus arrow"></a> </div>
                 </li>
                 <li>
                     <a href="#review-wod">
@@ -30,7 +30,7 @@
                             <p>Front Squat</p>
                             <p>145lb</p>
                         </div>
-                        <p class="sprite-sf arrow"></p>
+                        <p class="awesome icon-chevron-right arrow"></p>
                     </a>
                 </li>
                 <li>
@@ -40,7 +40,7 @@
                             <p>Other Label</p>
                             <p>4:30</p>
                         </div>
-                        <p class="sprite-sf arrow"></p>
+                        <p class="awesome icon-chevron-right arrow"></p>
                     </a>
                 </li>
                 <li>
@@ -71,19 +71,19 @@
                     <h2>Goals</h2>
                     <div class="action">
                        <a href="#goals">
-                            <p>View All</p>
-                            <p class="sprite-sf arrow"></p>
+                            <p></p>
+                            <p class="awesome icon-chevron-right arrow"></p>
                        </a>
                     </div>
                 </li>
                 <li><div class="chart"></div></li>
-                <li>
+                <li class="goal">
                     <a href="#">
                         <div class="label">
-                            <p class="goal">25 Unbroken Pullups <br><span>Last Update: 17 days ago (22 reps)</span></p>
+                            <p class="goal-label">25 Unbroken Pullups <br><span>Last Update: 17 days ago (22 reps)</span></p>
                             <p class="goal-progress">35%</p>
                         </div>
-                        <p class="sprite-sf arrow"></p>
+                        <p class="awesome icon-chevron-right arrow"></p>
                     </a>
                 </li>
             </ul>

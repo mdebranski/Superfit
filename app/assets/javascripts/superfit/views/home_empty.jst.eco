@@ -1,0 +1,38 @@
+<div class='page' id='home_empty'>
+  <div class="page-header">
+    <div class='toolbar'>
+      <div class="pulldown">
+        Navigation Pulldown
+      </div>
+      <h1>Dashboard</h1>
+    </div>
+  </div> <!-- end: page-header -->
+
+  <div class="scroll">
+    <div class="date-navigation">
+      <ul>
+        <li class="awesome icon-chevron-left"></li>
+        <li class="date"><%= moment().format('MMM D, YYYY') %></li>
+        <li class="awesome icon-chevron-right"></li>
+      </ul>
+    </div>
+
+    <div class="home content-main">
+      <ul>
+        <li>
+          You haven't entered any workouts! (I'll drop more content in here later)
+        </li>
+      </ul>
+
+    </div> <!-- end: content-main top block -->
+
+    <div class="content-main">
+      <ul>
+        <li>
+          You haven't created any goals!   (I'll drop more content in here later)
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

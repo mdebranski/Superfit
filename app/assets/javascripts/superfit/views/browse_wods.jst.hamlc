@@ -2,12 +2,12 @@
   .page-header
     .toolbar
       %div
-        %a.sprite-sf.previous.goback{href: "#add-wod"} Back
+        %a.awesome.icon-chevron-left.goback{href: "#add-wod"}
       %h1 Select WOD
-  .content-main
-    .content-block
-      %form
-        %input.search-text{type: "text", name: "search-text", placeholder: "Search WODs"}
+
+  .search-block
+    %form
+      %input.search-text{type: "text", name: "search-text", placeholder: "Search WODs"}
   .content-main
     %h3.no-matches No WODs found for this search.
     %ul.wods-search

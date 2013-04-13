@@ -3,7 +3,7 @@
 <div class="page-header">
     <div class='toolbar'>
         <div>
-            <a class="sprite-sf previous" href="#add-wod" style=""></a>
+            <a class="awesome icon-chevron-left goback" href="#add-wod" style=""></a>
         </div>
         <h1>[Strength Name]</h1>
     </div>

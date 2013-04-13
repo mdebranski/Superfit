@@ -1,7 +1,7 @@
 .page-header
   .toolbar
     %div
-      %a.sprite-sf.previous.goback{href: "#"}
+      %a.awesome.icon-chevron-left.goback{href: "#"}
     %h1= @wod.name
 .content-main
   .content-block
