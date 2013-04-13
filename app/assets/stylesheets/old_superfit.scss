@@ -32,38 +32,6 @@ body {background:none}
   .ui-header .ui-title { margin-left: 5%; margin-right: 5%; }
   ///////////  begin toolbar / header / main nav
 
-  #navigation {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    @include transition(height 1s ease);
-  }
-  #navigation.active { display: block; height: 180px; }
-  .navigation-wrapper {
-    vertical-align: bottom;
-  }
-  .navigation {
-    position: relative;
-    width: 95%;
-    margin: 0 auto;
-
-    ul{
-      margin-bottom: 18px;
-      li{
-        font-size:16px;
-        line-height: 36px;
-        border-bottom: 1px solid #040404;
-        border-top: 1px solid #323232;
-
-        &:first-of-type {border-top:none}
-        &:last-of-type {border-bottom:none}
-        p{
-          float:left ;
-          margin-right:20px;
-        }
-      }
-    }
-  }
 
   .toolbar {
     //@include box-sizing(border-box);

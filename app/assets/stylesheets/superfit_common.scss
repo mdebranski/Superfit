@@ -21,29 +21,7 @@ $fontcolor:#464646;
 
 #jqt > * {
 
-  font-family: $standardfont;
-  background:#cecece url(image_path('tile-grunge.png'))  repeat;
-  color: #ddd;
-  color: $fontcolor;
 
-
-
-  ///h5 {
-   // font-size:13px;
-   // color:$darkgrey;
-   // line-height: 18px;
-   // margin: 9px 0;
-
-   // span {font-weight:normal;color:$mediumgrey;}
-  //}
-
-
-  ul{
-    li {
-      color:$mediumgrey;
-      font-size: 14px;
-    }
-  }
 
   button, .button {
     text-transform:uppercase;

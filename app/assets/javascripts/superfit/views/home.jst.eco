@@ -50,11 +50,11 @@
                             <p>Fran</p>
                             <p>4:20</p>
                         </div>
-                        <p class="sprite-sf arrow"></p>
+                        <p class="awesome icon-chevron-right arrow"></p>
                     </a>
                 </li>
                 <li>
-                    <a href="#add-wod">
+                    <a href="#add-wod" class="add-new">
                         <div class="label">
                          <p>Add Another Workout </p>
                         </div>

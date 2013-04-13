@@ -1,21 +1,20 @@
 #navigation
-  .leather-interior
-    .navigation-wrapper
-      .navigation
-        %ul
-          %li
-            %a{href: "#home"}
-              %p.icon.home.sprite-sf
-              Dashboard
-          %li
-            %a{href: "#calendar"}
-              %p.icon.calendar.sprite-sf
-              Calendar
-          %li
-            %a{href: "#goals"}
-              %p.icon.goals.sprite-sf
-              Goals
-          %li
-            %a{href: "#records"}
-              %p.icon.records.sprite-sf
-              Records
+  .navigation-wrapper
+    .navigation
+      %ul
+        %li
+          %a{href: "#home"}
+            %p.icon.home.sprite-sf
+            Dashboard
+        %li
+          %a{href: "#calendar"}
+            %p.icon.calendar.sprite-sf
+            Calendar
+        %li
+          %a{href: "#goals"}
+            %p.icon.goals.sprite-sf
+            Goals
+        %li
+          %a{href: "#records"}
+            %p.icon.records.sprite-sf
+            Records
