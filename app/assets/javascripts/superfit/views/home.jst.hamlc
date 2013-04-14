@@ -1,0 +1,55 @@
+.page-header
+  .toolbar
+    .pulldown
+      Navigation Pulldown
+    %h1 Dashboard
+.scroll
+  .date-navigation
+    %ul
+      %li.awesome.icon-chevron-left
+      %li.date= moment(@currentDate).format('MMM D, YYYY')
+      %li.awesome.icon-chevron-right
+
+.content-main
+  %ul
+    %li.title
+      %h2 Workout Activity
+      .action
+        %a.icon-button.icon-plus{href: "#add-wod"}
+    - if @entries.length > 0
+      - for entry in @entries
+        %li
+          %a{href: "#review-wod", 'data-id': entry.id}
+            .label
+              .icon.sprite-sf{class: entry.wod().typeSlug()}
+              %p= entry.wod().name
+              %p= entry.scoreString()
+            %p.awesome.icon-chevron-right.arrow
+      %li
+        %a.add-new{href: "#add-wod"}
+          .label
+            %p Add Another Workout
+          %p.awesome.icon-plus.arrow
+    - else
+      %li
+        %a.add-new{href: "#add-wod"}
+          .label
+            %p Add Workout
+          %p.awesome.icon-plus.arrow
+
+.content-main
+  %ul
+    %li.title
+      %h2 Goals
+      .action
+        %a{href: "#goals"}
+          %p View All
+          %p.sprite-sf.arrow
+    %li
+      .chart
+    %li
+      %a{href: "#"}
+        .label
+          %p.goal 25 Unbroken Pullups <br><span>Last Update: 17 days ago (22 reps)</span>
+          %p.goal-progress 35%
+        %p.sprite-sf.arrow

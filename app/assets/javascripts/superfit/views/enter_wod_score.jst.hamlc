@@ -8,33 +8,36 @@
     .yellow-block
       = @wod.scoringMethod()
       %br/
-      %br/
-      Male:
-      %br/
-      != @wod.workout_male.replace(/(\r\n|\n|\r)/gm,"<br/>")
-      %br/
-      %br/
-      Female:
-      %br/
-      != @wod.workout_female.replace(/(\r\n|\n|\r)/gm,"<br/>")
+      - if @wod.workout_male?
+        %br/
+        Male:
+        %br/
+        != @wod.workout_male.replace(/(\r\n|\n|\r)/gm,"<br/>")
+        %br/
+      - if @wod.workout_female?
+        %br/
+        Female:
+        %br/
+        != @wod.workout_female.replace(/(\r\n|\n|\r)/gm,"<br/>")
     %form
+      %input{type: 'hidden', name: 'wod_id', value: @wod.id}
       .enter-score
         %div
           %p Enter Score
-          %input#custom-wod-label{type: "number", name: "custom-wod-label", placeholder: "Your Score"}
+          %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Your Score"}
         %div
           %p Method
-          %select
-            %option Time
-            %option Rounds
-            %option Weight
-            %option Reps
-            %option Pass / Fail
+          %select.required{name: 'method'}
+            %option{value: 'time'} Time (seconds)
+            %option{value: 'rounds'} Rounds
+            %option{value: 'weight'} Weight (lbs)
+            %option{value: 'reps'} Reps
+            %option{value: 'passfail'} Pass / Fail
       %div
-        %input{type: "radio", name: "wod-type", value: "rx"}
+        %input{type: "radio", name: "type", value: "rx"}
           %span RX
-        %input{type: "radio", name: "wod-type", value: "scaled", checked: "checked"}
+        %input{type: "radio", name: "type", value: "scaled", checked: "checked"}
           %span Scaled
       %p Workout Notes
-      %textarea{placeholder: "Add details that affected your performance. Where you sore? Was the weather bad?", cols: "30", rows: "5"
-    %a.button.bottom{href: "#review-wod"} Save Workout
+      %textarea{name: 'details', placeholder: "Add details that affected your performance. Where you sore? Was the weather bad?", cols: "30", rows: "5"}
+      %input.bottom{type: 'submit'} Save Workout

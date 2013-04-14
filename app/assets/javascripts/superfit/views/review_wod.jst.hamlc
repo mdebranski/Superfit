@@ -1,0 +1,34 @@
+#review-wod.page
+  .page-header
+    .toolbar
+      %div
+        %a.sprite-sf.previous.goback{href: '#'}
+      %h1= @wod.name
+  .content-main
+    .content-block
+      .yellow-block
+        .review-score
+          %span.score= @entry.score
+          %span.score-method= @entry.method
+          %span.score-level= @entry.type
+        = @wod.workout_male
+
+      %a.button.bottom.slideright{href: "#home"} Return To Dashboard
+      %a.button.bottom{href: "#new-wod"} Edit Workout
+
+  .content-main
+    %ul
+      %li.title
+        %h3 #{@wod.name} History
+      %li
+        .chart
+      %li
+        %a{href: "#"}
+          .label
+            %p Jun 22 2012
+            %p 22:22
+      %li
+        %a{href: "#"}
+          .label
+            %p Apr 22 2011
+            %p 25:22

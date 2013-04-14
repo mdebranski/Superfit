@@ -7,10 +7,6 @@
             %p.icon.home.sprite-sf
             Dashboard
         %li
-          %a{href: "#calendar"}
-            %p.icon.calendar.sprite-sf
-            Calendar
-        %li
           %a{href: "#goals"}
             %p.icon.goals.sprite-sf
             Goals

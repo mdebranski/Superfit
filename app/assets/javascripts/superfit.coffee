@@ -4,6 +4,8 @@
 #= require jqtouch.min
 #= require jqtouch-jquery.min
 #= require jquery.makeItRetina.min
+#= require jquery.validate.min
+#= require jquery.serialize-object
 #= require moment.min
 #= require spine/spine
 #= require spine/manager
@@ -24,9 +26,11 @@ class Superfit extends Spine.Controller
   templateName: 'superfit'
 
   elements:
+    '.page#home': 'home'
     '.page#add-wod': 'addWod'
     '.page#browse-wods': 'browseWods'
     '.page#new-wod': 'newWod'
+    '.page#review-wod': 'reviewWod'
     '.page#calendar': 'calendar'
     '.date': 'dateEl'
 
@@ -41,9 +45,11 @@ class Superfit extends Spine.Controller
 
     @render(user: user)
 
+    new Superfit.Home(el: @home)
     new Superfit.AddWod(el: @addWod)
     new Superfit.BrowseWods(el: @browseWods)
     new Superfit.NewWod(el: @newWod)
+    new Superfit.ReviewWod(el: @reviewWod)
     new Superfit.Calendar(el: @calendar)
 
     _.defer -> $.makeItRetina();
@@ -52,16 +58,8 @@ class Superfit extends Spine.Controller
     $('.pulldown').on 'tap', @pulldown
     $('.page').on 'pageAnimationEnd', => @navigation.removeClass('active'); @navigation.detach()
 
-    Superfit.bind 'changeDate', @changeDate
-
   openCalendar: ->
     jQT.goTo('#calendar', 'pop')
-
-  changeDate: (date) =>
-    @currentDate = date
-    @currentDateString = moment(date).format('MMM D, YYYY')
-    @dateEl.text(@currentDateString)
-    jQT.goTo('#home', 'pop')
 
   pulldown: =>
     if @navigation.is('.active')
@@ -80,6 +78,7 @@ $ ->
   Wod.fetch()
   Category.fetch()
   WodsVersion.fetch()
+  WodEntry.fetch()
 
   $.get '/wods_version.txt', (latest_version) ->
     latest_version = latest_version.trim()
