@@ -8,6 +8,7 @@
     != JST['superfit/views/create_wod']()
     != JST['superfit/views/enter_strength_score']()
     != JST['superfit/views/home_empty']()
+    != JST['superfit/views/get_started_step3']()
     #new-wod.page
     #review-wod.page
 
