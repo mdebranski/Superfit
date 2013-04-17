@@ -35,7 +35,7 @@
             %option{value: 'passfail'} Pass / Fail
       %div
         %input{type: "radio", name: "type", value: "rx"}
-          %span RX
+          %label RX
         %input{type: "radio", name: "type", value: "scaled", checked: "checked"}
           %span Scaled
       %p Workout Notes

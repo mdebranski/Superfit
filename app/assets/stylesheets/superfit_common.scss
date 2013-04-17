@@ -52,6 +52,7 @@ $fontcolor:#464646;
 
   button + button, .button + .button {margin-top: 0 !important;}
 
+  fieldset {border:0; margin: 0}
   form {
     input[type=text], input[type=search], input[type=number], input[type=password] {
       background: #f7f7f7;

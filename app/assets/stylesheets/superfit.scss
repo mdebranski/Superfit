@@ -321,6 +321,45 @@ body {background:none}
 
   }
 
+  //ORIENTATION
+  .orientation {
+    &.content-main {
+      width: 84%;
+
+      padding:0px;
+      @include box-shadow(0px 3px 6px rgba(0, 0, 0, 0.75));
+
+      .content-block{padding:27px 10px 0px 10px;}
+      h1 {font-size:25px; text-align: center; }
+      h2 {font-size:16px; font-weight: bold; line-height: 27px; margin-top:18px}
+
+      p {font-size:14px; text-align: center; line-height: 18px;margin-top:9px}
+      .small {
+        font-size:10px;
+        text-align: left;
+        line-height: 14px;
+        margin-top:0;
+        margin-bottom:18px;
+        font-weight:normal
+
+      }
+      a.small {float: right; position: relative; top:8px}
+
+
+      input[type=radio]+label {margin-right:20px; position: relative; top:-3px}
+      ul {margin:18px 0 18px 0}
+      .arrow {margin-top:9px; margin-bottom:9px}
+      .orientation-footer {
+        margin-top:18px;
+        background: $seashell;
+        overflow: hidden;
+        a {margin-top:18px; margin-bottom:18px;width:90%}
+      }
+
+    }
+
+  }
+
   // UNIVERSAL ELEMENTS
 
   button, .button {

@@ -1,33 +1,22 @@
 <div id="get-started-step1" class="page">
 
-    <div class="cement-page scroll orientation">
-        <div class="title">
-            <p class="steps">Getting Started - Step 1 of 3</p>
-            <h1>Create Account</h1>
-            <hr />
+  <div class="orientation content-main">
+    <div class="content-block">
+      <h1>Record Workouts</h1>
+      <p>Easily Record Benchmarks, Strength, Custom, Common & Main Site Workouts. </p>
 
-            <p>Sign in with Facebook to share your workouts and workout results! </p>
-            <a href="/users/auth/facebook" rel="external" class="button facebook">SIGN UP WITH FACEBOOK</a>
-        </div>
-        <div class="shared-line">
-            <hr />
-            <p>OR</p>
-            <hr />
-        </div>
-        <div class="create-account register">
-            <p>Create your account with Superfit:</p>
-            <form id="register" action="">
-                <ul>
-                    <li class="form">
-                        <input type="text" name="email-address" placeholder="Email Address" id="email-address" />
-                        <input class="divider" type="password" name="password" placeholder="Password" id="password" />
-                    </li>
-                    <li class="gender"><p class="sprite-sf icon enclosed-check"></p>  Male</li>
-                    <li class="gender"><p class="sprite-sf icon enclosed-check-complete"></p>  Female</li>
-                </ul>
-                <a href="#get-started-step2" class="button green">Register Now</a>
-            </form>
-        </div>
+      <img src="tobedetermined.jpg">
+      <p class="small">
+        <strong>TIP:</strong>  Look for the camera icon  <span class="awesome icon-camera-retro"></span>  to take a
+        photo of your Gyms custom daily workout
+        rather than typing it in.
+
+      </p>
+
 
     </div>
+
+    <div class="orientation-footer">
+      <a href="#get-started-step2" class="button bottom">Next: Progress You Can See</a></div>
+  </div>
 </div>

@@ -1,35 +1,58 @@
 <div id="get-started-step3" class="page">
 
-    <div class="cement-page scroll orientation">
-        <div class="title">
-            <p class="steps">Getting Started - Step 3 of 3</p>
-            <h1>Select Your Gym</h1>
-            <hr />
-            <p>Search for your Gym below:</p>
-        </div>
-        <div class="create-account step-3">
+    <div class="orientation content-main">
+      <div class="content-block">
+        <h1>Set-Up is Simple!</h1>
+        <p>We have just a few quick questions to get to know you better. </p>
+        <h2>Male or Female?</h2>
+        <p class="small">Some workouts differ for males and females. We ask you to
+            make this selection so we can present you with the correct workout.</p>
+         <fieldset>
+           <form>
+             <input type="radio" id="female" name="female"><label for="female">Female</label>
+             <input type="radio" id="male" name="male"><label for="male">Male</label>
+         </form>
+         </fieldset>
+
+        <h2>Where do you workout?<a href="#home" class="small">Skip Gym Selection ›</a></h2>
+
+        <fieldset>
             <form id="searchgym" action="">
-                <ul>
-                    <li class="form">
-                        <input type="text" name="search" placeholder="Search" id="search" />
-                    </li>
-                </ul>
+              <input type="text" name="search" placeholder="Search" id="search" />
             </form>
-            <p class="help">Search for you gym by Zip Code, City/State & Name.</p>
-            <hr>
-            <p class="skip">Don't work out at an affiliate?  <a href="#home">Skip this.</a> </p>
-            <div class="stage">
-                <ul>
-                    <li><p class="sprite-sf icon enclosed-check"></p> Your Gym Name</li>
-                    <li><p class="sprite-sf icon enclosed-check-complete"></p> Your Gym Name</li>
-                    <li><p class="sprite-sf icon enclosed-check"></p> Your Gym Name</li>
-                </ul>
-            </div>
+        </fieldset>
 
-            <a href="#home" class="button green">Save Gym & Go to Dashboard</a>
+        <ul style="display:none">
+          <li>
+            <a href="#dashboard">
+              <div class="label">
+                <p>Your Gym Name </p>
+              </div>
+              <p class="awesome icon-chevron-right arrow"></p>
+            </a>
+          </li>
+          <li>
+            <a href="#dashboard">
+              <div class="label">
+                <p>Your Gym Name </p>
+              </div>
+              <p class="awesome icon-chevron-right arrow"></p>
+            </a>
+          </li>
+          <li>
+            <a href="#dashboard">
+              <div class="label">
+                <p>Your Gym Name </p>
+              </div>
+              <p class="awesome icon-chevron-right arrow"></p>
+            </a>
+          </li>
+        </ul>
+
 
         </div>
 
-
+       <div class="orientation-footer">
+         <a href="#dashboard" class="button bottom">Start Logging Workout</a></div>
     </div>
 </div>

@@ -1,52 +1,23 @@
 <div id="get-started-step2" class="page">
 
-    <div class="cement-page scroll orientation">
-        <div class="title">
-            <p class="steps">Getting Started - Step 2 of 3</p>
-            <h1>Select Account</h1>
-            <hr />
-        </div>
-        <div class="create-account">
+  <div class="orientation content-main">
+    <div class="content-block">
+      <h1>See Your Progress</h1>
+      <p>Superfit visually tracks the progress of
+        Benchmarks, Strength and Common workouts. </p>
 
-            <p>Get started for Free with either our Scaled or RX versions!</p>
+             <img src="tobedetermined.jpg">
+      <p class="small">
+        <strong>TIP:</strong>  Set up Goals to configure Superfit to track
+        what you want to work on. Your Daily Dashboard
+        will display your most recent Goal Activity.
 
-
-            <a href="#">
-            <div class="account-type">
-                    <h4>SCALED - <span>ALWAYS FREE</span></h4>
-                    <p>
-                        Easily log your workouts, record your PRs,
-                        Benchmarks & more with 30 days of tracking on all.<br>
-
-                    </p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="account-type selected">
-
-                    <h4>RX - <span>30 DAY FREE TRIAL ($1.99/mo)</span></h4>
-                    <p>
-                        Everything  you get in Scaled plus Goals, Photo
-                        Capture for custom workouts and unlimited tracking
-                        for all of your data. <br>
-
-                    </p>
-                </div>
-            </a>
-
-            <hr />
-
-            <!--IF a user selects RX - they will be taken to a payment screen
-            <a href="#get-started-step3" class="button green">Next Step: Payment </a>   </p-->
+      </p>
 
 
-            <!--IF a user selects SCALED - they will be taken to select your gym-->
-                        <a href="#get-started-step3" class="button green">Next Step: Select Your Gym </a>
+    </div>
 
-
-                    </div>
-                    <hr>
-                    <p class="skip"><strong>SKIP: SELECT ACCOUNT</strong>  <br>& Jump to My Dashboard</p>
-
-                </div>
-            </div>
+    <div class="orientation-footer">
+      <a href="#get-started-step3" class="button bottom">Next:Let's Get You Set Up</a></div>
+  </div>
+</div>

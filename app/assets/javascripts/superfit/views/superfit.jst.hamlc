@@ -9,6 +9,8 @@
     != JST['superfit/views/enter_strength_score']()
     != JST['superfit/views/home_empty']()
     != JST['superfit/views/get_started_step3']()
+    != JST['superfit/views/get_started_step2']()
+    != JST['superfit/views/get_started_step1']()
     #new-wod.page
     #review-wod.page
 
