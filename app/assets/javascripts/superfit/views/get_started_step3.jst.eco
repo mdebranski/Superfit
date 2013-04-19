@@ -14,14 +14,14 @@
          </form>
          </fieldset>
 
-        <h2>Where do you workout?<a href="#home" class="small">Skip Gym Selection ›</a></h2>
+        <h2>Where do you Workout?</h2>
 
         <fieldset>
             <form id="searchgym" action="">
               <input type="text" name="search" placeholder="Search" id="search" />
             </form>
         </fieldset>
-
+        <p><a href="#home" class="small">Don't Workout at an Affiliate? Skip this ›</a></p>
         <ul style="display:none">
           <li>
             <a href="#dashboard">

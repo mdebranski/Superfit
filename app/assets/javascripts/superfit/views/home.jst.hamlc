@@ -10,12 +10,12 @@
       %li.date= moment(@currentDate).format('MMM D, YYYY')
       %li.awesome.icon-chevron-right
 
-.content-main
+.content-main.home
   %ul
     %li.title
       %h2 Workout Activity
       .action
-        %a.icon-button.icon-plus{href: "#add-wod"}
+        %a.awesome.icon-plus{href: "#add-wod"}
     - if @entries.length > 0
       - for entry in @entries
         %li
@@ -44,12 +44,12 @@
       .action
         %a{href: "#goals"}
           %p View All
-          %p.sprite-sf.arrow
+          %p.awesome.icon-chevron-right.arrow
     %li
       .chart
-    %li
+    %li.goal
       %a{href: "#"}
         .label
-          %p.goal 25 Unbroken Pullups <br><span>Last Update: 17 days ago (22 reps)</span>
+          %p.goal-label 25 Unbroken Pullups <br><span>Last Update: 17 days ago (22 reps)</span>
           %p.goal-progress 35%
-        %p.sprite-sf.arrow
+        %p.awesome.icon-chevron-right.arrow

@@ -5,7 +5,10 @@
       <h1>Record Workouts</h1>
       <p>Easily Record Benchmarks, Strength, Custom, Common & Main Site Workouts. </p>
 
-      <img src="tobedetermined.jpg">
+      <img src="/assets/gfx-landing-record-workouts.png" width="262px" height="126px">
+
+
+
       <p class="small">
         <strong>TIP:</strong>  Look for the camera icon  <span class="awesome icon-camera-retro"></span>  to take a
         photo of your Gyms custom daily workout
@@ -17,6 +20,6 @@
     </div>
 
     <div class="orientation-footer">
-      <a href="#get-started-step2" class="button bottom">Next: Progress You Can See</a></div>
+      <a href="#get-started-step2" class="slide button bottom">Next : Progress You Can See</a></div>
   </div>
 </div>

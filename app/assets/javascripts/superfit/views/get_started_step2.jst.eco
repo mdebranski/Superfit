@@ -6,7 +6,7 @@
       <p>Superfit visually tracks the progress of
         Benchmarks, Strength and Common workouts. </p>
 
-             <img src="tobedetermined.jpg">
+      <img src="/assets/gfx-landing-see-progress.png" width="262px" height="126px">
       <p class="small">
         <strong>TIP:</strong>  Set up Goals to configure Superfit to track
         what you want to work on. Your Daily Dashboard
@@ -18,6 +18,6 @@
     </div>
 
     <div class="orientation-footer">
-      <a href="#get-started-step3" class="button bottom">Next:Let's Get You Set Up</a></div>
+      <a href="#get-started-step3" class="button bottom">Next : Let's Get You Set Up</a></div>
   </div>
 </div>
