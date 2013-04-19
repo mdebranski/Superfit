@@ -19,25 +19,26 @@
         Female:
         %br/
         != @wod.workout_female.replace(/(\r\n|\n|\r)/gm,"<br/>")
-    %form
-      %input{type: 'hidden', name: 'wod_id', value: @wod.id}
-      .enter-score
+    %fieldset
+      %form
+        %input{type: 'hidden', name: 'wod_id', value: @wod.id}
+        .enter-score
+          %div
+            %p Enter Score
+            %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Your Score"}
+          %div
+            %p Method
+            %select.required{name: 'method'}
+              %option{value: 'time'} Time
+              %option{value: 'rounds'} Rounds
+              %option{value: 'weight'} Weight (lbs)
+              %option{value: 'reps'} Reps
+              %option{value: 'passfail'} Pass / Fail
         %div
-          %p Enter Score
-          %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Your Score"}
-        %div
-          %p Method
-          %select.required{name: 'method'}
-            %option{value: 'time'} Time (seconds)
-            %option{value: 'rounds'} Rounds
-            %option{value: 'weight'} Weight (lbs)
-            %option{value: 'reps'} Reps
-            %option{value: 'passfail'} Pass / Fail
-      %div
-        %input{type: "radio", name: "type", value: "rx"}
-          %label RX
-        %input{type: "radio", name: "type", value: "scaled", checked: "checked"}
-          %span Scaled
-      %p Workout Notes
-      %textarea{name: 'details', placeholder: "Add details that affected your performance. Where you sore? Was the weather bad?", cols: "30", rows: "5"}
-      %input.bottom{type: 'submit'} Save Workout
+          %input{type: "radio", name: "type", value: "rx", checked: "checked"}
+            %label.radio RX
+          %input{type: "radio", name: "type", value: "scaled"}
+            %label.radio Scaled
+        %p Workout Notes
+        %textarea{name: 'details', placeholder: "Add details that affected your performance. Where you sore? Was the weather bad?", cols: "30", rows: "5"}
+        %input.bottom{type: 'submit'} Save Workout
