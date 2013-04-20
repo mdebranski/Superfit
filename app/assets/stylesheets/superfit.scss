@@ -132,7 +132,7 @@ body {background:none}
       margin:0px 10px 0 10px;
 
       p {margin-top:18px;line-height: 36px;}
-      form {margin-top:6px}
+      form {margin-top:6px; overflow: hidden}
       input + p.small {margin-top: 0;}
     }
 
@@ -311,7 +311,7 @@ body {background:none}
       width:55%;  margin-bottom: 3px;margin-left:7%;
 
       .time-score {
-        input {width:40%; margin-right:5%; float:left}
+        input {width:36%; margin-right:5%; float:left}
       }
       .passfail-score {width:90%;}
     }

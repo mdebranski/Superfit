@@ -48,4 +48,4 @@
             %label.radio Scaled
         %p Workout Notes
         %textarea{name: 'details', placeholder: "Add details that affected your performance. Where you sore? Was the weather bad?", cols: "30", rows: "5"}
-        %input.bottom{type: 'submit'} Save Workout
+        %input.button.bottom{type: 'submit'} Save Workout
