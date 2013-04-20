@@ -1,0 +1,41 @@
+<div id='record-detail' class='page' >
+  <div class="page-header">
+    <div class='toolbar'>
+      <div>
+        <a class="awesome icon-chevron-left goback" href="#add-wod" style=""></a>
+      </div>
+      <h1>[Record Category]</h1>
+    </div>
+  </div> <!-- end: page-header -->
+
+  <div class="scroll">
+
+
+    <div class="home content-main">
+      <ul>
+        <li class="title">
+          <h2>Record Activity</h2>
+        </li>
+        <li><div class="chart"></div></li>
+        <li>
+          <div class="label">
+            <p>Jan 25, 2013</p>
+            <p>145lb</p>
+          </div>
+        </li>
+        <li>
+            <div class="label">
+              <p>Sep 25, 2012</p>
+              <p>145lb</p>
+            </div>
+        </li>
+
+
+      </ul>
+
+    </div> <!-- end: content-main top block -->
+
+
+  </div>
+
+</div>

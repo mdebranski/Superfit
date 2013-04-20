@@ -332,6 +332,27 @@ body {background:none}
 
   }
 
+  // RECORDS / INTERIOR
+
+  .filter-navigation{
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 2px groove #eae7e1;
+    padding-bottom: 12px;
+    margin:0 auto;
+
+    li {
+      font-size:13px;
+      font-weight: normal;
+      color:$mineshaft;
+      float:left;
+      width:33%;
+      text-align: center;
+
+      a {color:$silverchalice}
+      a.selected {color:$mineshaft}
+    }
+  }
   //ORIENTATION
   .orientation {
     &.content-main {

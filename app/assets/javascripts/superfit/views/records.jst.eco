@@ -1,0 +1,58 @@
+<div id='records' class='page' >
+  <div class="page-header">
+    <div class='toolbar'>
+      <div class="pulldown">
+        Navigation Pulldown
+      </div>
+      <h1>Records</h1>
+    </div>
+  </div> <!-- end: page-header -->
+
+  <div class="scroll">
+    <div class="filter-navigation">
+      <ul>
+        <li><a href="#records" class="selected">Strength</a> </li>
+        <li><a href="#records">Benchmarks</a></li>
+        <li><a href="#records">Other</a></li>
+      </ul>
+    </div>
+
+    <div class="content-main">
+      <ul>
+        <li>
+          <a href="#record-detail-strength">
+            <div class="label">
+              <p>Front Squat</p>
+              <p>145lb</p>
+            </div>
+            <p class="awesome icon-chevron-right arrow"></p>
+          </a>
+        </li>
+        <li>
+          <a href="#record-detail">
+            <div class="label">
+              <p>Front Squat</p>
+              <p>145lb</p>
+            </div>
+            <p class="awesome icon-chevron-right arrow"></p>
+          </a>
+        </li>
+        <li>
+          <a href="#record-detail">
+            <div class="label">
+              <p>Front Squat</p>
+              <p>145lb</p>
+            </div>
+            <p class="awesome icon-chevron-right arrow"></p>
+          </a>
+        </li>
+
+
+      </ul>
+
+    </div> <!-- end: content-main top block -->
+
+
+  </div>
+
+</div>

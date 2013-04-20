@@ -1,0 +1,47 @@
+<div id='record-detail-strength' class='page' >
+  <div class="page-header">
+    <div class='toolbar'>
+      <div>
+        <a class="awesome icon-chevron-left goback" href="#add-wod" style=""></a>
+      </div>
+      <h1>[Strength Name]</h1>
+    </div>
+  </div> <!-- end: page-header -->
+
+  <div class="scroll">
+    <div class="filter-navigation">
+      <ul>
+        <li><a href="#records" class="selected">1RM</a> </li>
+        <li><a href="#records">3RM</a></li>
+        <li><a href="#records">5RM</a></li>
+      </ul>
+    </div>
+
+    <div class="home content-main">
+      <ul>
+        <li class="title">
+          <h2>Record Activity</h2>
+        </li>
+        <li><div class="chart"></div></li>
+        <li>
+          <div class="label">
+            <p>Jan 25, 2013</p>
+            <p>145lb</p>
+          </div>
+        </li>
+        <li>
+            <div class="label">
+              <p>Sep 25, 2012</p>
+              <p>145lb</p>
+            </div>
+        </li>
+
+
+      </ul>
+
+    </div> <!-- end: content-main top block -->
+
+
+  </div>
+
+</div>
