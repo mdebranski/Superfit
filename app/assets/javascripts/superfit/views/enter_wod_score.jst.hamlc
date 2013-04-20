@@ -24,9 +24,6 @@
         %input{type: 'hidden', name: 'wod_id', value: @wod.id}
         .enter-score
           %div
-            %p Enter Score
-            %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Your Score"}
-          %div
             %p Method
             %select.required{name: 'method'}
               %option{value: 'time'} Time
@@ -34,6 +31,16 @@
               %option{value: 'weight'} Weight (lbs)
               %option{value: 'reps'} Reps
               %option{value: 'passfail'} Pass / Fail
+          %div.score
+            %p Enter Score
+            %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Your Score"}
+            %p.passfail-score
+              %input#custom-wod-label.required{type: "text", name: "score", placeholder: "Pass/Fail"}
+            %p.time-score
+              %input#custom-wod-label.required{type: "number", name: "time-min", placeholder: "Min"}
+              %input#custom-wod-label.required{type: "number", name: "time-sec", placeholder: "Sec"}
+
+
         %div
           %input{type: "radio", name: "type", value: "rx", checked: "checked"}
             %label.radio RX

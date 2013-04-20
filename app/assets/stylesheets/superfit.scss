@@ -301,12 +301,21 @@ body {background:none}
     .delete {overflow: hidden;}
 
     div {
-      width:60%; float:left; margin-bottom: 3px;
+      width:36%; float:left;
       p.input {width:95%; float:left; margin-top:0px}
       .small {clear:both; display: block;}
       p.times {float:left;width:5%; position: relative; top:-10px;}
     }
-    div+div{width:33%; margin-left:7%;}
+
+    div.score {
+      width:55%;  margin-bottom: 3px;margin-left:7%;
+
+      .time-score {
+        input {width:40%; margin-right:5%; float:left}
+      }
+      .passfail-score {width:90%;}
+    }
+
   }
 
 
