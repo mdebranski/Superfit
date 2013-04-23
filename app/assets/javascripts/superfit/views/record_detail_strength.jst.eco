@@ -20,7 +20,8 @@
     <div class="home content-main">
       <ul>
         <li class="title">
-          <h2>Record Activity</h2>
+          <h2>Latest Activity</h2>
+          <div class="action">145lb</div>
         </li>
         <li><div class="chart"></div></li>
         <li>

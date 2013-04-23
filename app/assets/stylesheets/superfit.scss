@@ -72,6 +72,7 @@ body {background:none}
     -webkit-transform: translateZ(0);
 
     .button {display:block; width:100%}
+    .active {background-image:none;}
   }
   input, textarea, select {
     -webkit-appearance: none;
@@ -80,6 +81,7 @@ body {background:none}
 
   .page-header{
     background:#000000 url(image_path('tile-leather-interior-bkg@2x.png')) repeat 0 0;
+    background:#000000 url(image_path('tile-pg-header.png')) repeat 0 0;
 
     h1 {font-size: 16px; bottom:12px;  font-weight: medium; text-transform: uppercase; letter-spacing: .25px; width: 200px; margin-left: -100px;}
 
@@ -87,7 +89,7 @@ body {background:none}
       @include box-sizing(border-box);
       border-bottom: 1px solid #000;
       padding: 0px 6px 6px 6px;
-      background: transparent url(image_path('tile-leather-toolbar.png')) repeat-x 0 0;
+      background: transparent url(image_path('tile-header.png')) repeat-x 0 0;
       position: relative;
       background-size: 10px 44px;
 
@@ -223,33 +225,39 @@ body {background:none}
     position: relative;
     height: 0;
     overflow: hidden;
+    background-color:#1f1f1f;
     @include transition(height 1s ease);
   }
   #navigation.active { display: block; height: 180px; }
-  .navigation-wrapper {
-    vertical-align: bottom;
-  }
+
   .navigation {
     position: relative;
     width: 95%;
-    margin: 0 auto;
+    margin: 12px auto 0 auto;
 
-    ul{
-      margin-bottom: 18px;
-      li{
-        font-size:16px;
-        line-height: 36px;
-        border-bottom: 1px solid #040404;
-        border-top: 1px solid #323232;
+    div{
 
-        &:first-of-type {border-top:none}
-        &:last-of-type {border-bottom:none}
-        p{
-          float:left ;
-          margin-right:20px;
-        }
+      font-size:16px;
+      line-height: 36px;
+      border-bottom: 1px solid #040404;
+      border-top: 1px solid #323232;
+
+      &:first-of-type {border-top:none; }
+      &:last-of-type {border-bottom:none}
+      p{
+        float:left ;
+        margin-right:20px;
       }
+      a{
+        color:white;
+        font-size:14px;
+        -webkit-tap-highlight-color:#1f1f1f;}
+      a:active {
+        opacity:0.75;
+      }
+
     }
+    div:active {background-color:$mineshaft}
   }
 
 

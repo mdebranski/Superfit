@@ -1,16 +1,19 @@
 #navigation
-  .navigation-wrapper
-    .navigation
-      %ul
-        %li
-          %a{href: "#home"}
-            %p.icon.home.sprite-sf
-            Dashboard
-        %li
-          %a{href: "#goals"}
-            %p.icon.goals.sprite-sf
-            Goals
-        %li
-          %a{href: "#records"}
-            %p.icon.records.sprite-sf
-            Records
+  .navigation
+    %div
+      %a{href: "#home"}
+        %p.icon.home.sprite-sf
+        Dashboard
+    %div
+      %a{href: "#goals"}
+        %p.icon.goals.sprite-sf
+        Goals
+    %div
+      %a{href: "#records"}
+        %p.icon.records.sprite-sf
+        Records
+    %div
+      %a{href: "#account"}
+        %p.icon.records.sprite-sf
+        Accounts
+

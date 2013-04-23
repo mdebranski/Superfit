@@ -11,22 +11,23 @@
   <div class="scroll">
 
 
-    <div class="home content-main">
+    <div class="content-main">
       <ul>
         <li class="title">
           <h2>Record Activity</h2>
+          <div class="action record"><img src="/assets/icon-inline-record.png"> 4:52</div>
         </li>
         <li><div class="chart"></div></li>
         <li>
           <div class="label">
-            <p>Jan 25, 2013</p>
-            <p>145lb</p>
+            <p>Ded 25, 2013</p>
+            <p>4:59</p>
           </div>
         </li>
         <li>
             <div class="label">
               <p>Sep 25, 2012</p>
-              <p>145lb</p>
+              <p>6:02</p>
             </div>
         </li>
 
