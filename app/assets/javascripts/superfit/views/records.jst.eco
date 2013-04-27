@@ -1,4 +1,4 @@
-<div id='records' class='page' >
+<div id='records' class='page slideupSelector in' >
   <div class="page-header">
     <div class='toolbar'>
       <div class="pulldown">
@@ -17,7 +17,7 @@
     <div class="filter-navigation">
       <ul>
         <li><a href="#records" class="selected">Strength</a> </li>
-        <li><a href="#records">Benchmarks</a></li>
+        <li><a href="#records-benchmarks">Benchmarks</a></li>
         <li><a href="#records">Other</a></li>
       </ul>
     </div>
@@ -27,26 +27,26 @@
         <li>
           <a href="#record-detail-strength">
             <div class="label">
-              <p>Front Squat</p>
+              <p>Back Squat</p>
               <p>145lb</p>
             </div>
             <p class="awesome icon-chevron-right arrow"></p>
           </a>
         </li>
         <li>
-          <a href="#record-detail">
-            <div class="label">
+          <a href="#enter-strength-record">
+            <div class="label empty">
               <p>Front Squat</p>
-              <p>145lb</p>
+              <p></p>
             </div>
-            <p class="awesome icon-chevron-right arrow"></p>
+            <p class="awesome icon-plus arrow"></p>
           </a>
         </li>
         <li>
           <a href="#record-detail">
             <div class="label">
-              <p>Front Squat</p>
-              <p>145lb</p>
+              <p>Deadlift</p>
+              <p>355lb</p>
             </div>
             <p class="awesome icon-chevron-right arrow"></p>
           </a>

@@ -20,18 +20,18 @@
     <div class="home content-main">
       <ul>
         <li class="title">
-          <h2>Latest Activity</h2>
-          <div class="action">145lb</div>
+          <h2>Workout Activity</h2>
+          <div class="action">  <a href="#" class="awesome icon-plus"></a> </div>
         </li>
         <li><div class="chart"></div></li>
         <li>
-          <div class="label">
+          <div class="label history">
             <p>Jan 25, 2013</p>
-            <p>145lb</p>
+            <p><img src="/assets/icon-inline-record.png"> 145lb</p>
           </div>
         </li>
         <li>
-            <div class="label">
+            <div class="label history">
               <p>Sep 25, 2012</p>
               <p>145lb</p>
             </div>

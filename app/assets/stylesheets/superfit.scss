@@ -168,8 +168,10 @@ body {background:none}
           p {float:left;position: relative;}
           p+p {float:right;text-align: right;}
 
-
         }
+
+        .label.history {@include fl(98%);}
+        .label.empty p {color:$silver;}
         .arrow  {float:right;margin-top:20px; margin-left:5px;border-bottom:0}
         &:last-of-type {border-bottom: 0;}
         &.title {
