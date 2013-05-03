@@ -2,8 +2,8 @@
 
   <div class="orientation content-main">
     <div class="content-block">
-      <h1>Record Workouts</h1>
-      <p>Easily Record Benchmarks, Strength, Custom, Common & Main Site Workouts. </p>
+      <h1>Simply Log Workouts</h1>
+      <p>Superfit was designed to allow you to quickly log all workout types.</p>
 
       <img src="/assets/gfx-landing-record-workouts.png" width="262px" height="126px">
 
@@ -20,6 +20,6 @@
     </div>
 
     <div class="orientation-footer">
-      <a href="#get-started-step2" class="slide button bottom">Next : Progress You Can See</a></div>
+      <a href="#get-started-step2" class="slide button bottom">Next : See Your Progres</a></div>
   </div>
 </div>

@@ -221,6 +221,20 @@ body {background:none}
 
   //////////// PAGE LEVEL ////////////
 
+  // LANDING SPLASH
+
+ .landing {
+   background: #000000 url(image_path('bkg-landing.png')) no-repeat 0 0;
+   overflow: hidden;
+
+   .splash {
+     text-align: center;
+     background: transparent url(image_path('bkg-landing-white.png')) no-repeat center center;
+     padding:50% 0;
+     overflow: hidden;
+   }
+ }
+
   // PULL DOWN NAVIGATION
 
   #navigation {

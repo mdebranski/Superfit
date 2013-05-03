@@ -1,14 +1,7 @@
-<div id="landing" class="page">
-     <div class="leather">
-        <div class="leather-binding ">
-            <div class="stitching">
-                <div class="branding-landing">
-                    <div class="get-started">
-                    <a href="#get-started-step1" class="button">Get Started  </a>
-                    <a href="#login" class="button red">Login   </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-     </div>
+<div id="landing" class="page landing">
+  <div class="landing">
+      <div class="splash">
+        <img src="/assets/logo-landing.png">
+      </div>
+  </div>
 </div>

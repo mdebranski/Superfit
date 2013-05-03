@@ -53,6 +53,6 @@
         </div>
 
        <div class="orientation-footer">
-         <a href="#dashboard" class="button bottom">Start Logging Workout</a></div>
+         <a href="#home" class="button bottom">Start Logging Workout</a></div>
     </div>
 </div>

@@ -15,6 +15,7 @@
     != JST['superfit/views/get_started_step3']()
     != JST['superfit/views/get_started_step2']()
     != JST['superfit/views/get_started_step1']()
+    != JST['superfit/views/landing']()
     #new-wod.page
     #review-wod.page
 
