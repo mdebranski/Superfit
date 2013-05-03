@@ -6,9 +6,9 @@
 .scroll
   .date-navigation
     %ul
-      %li.awesome.icon-chevron-left
+      %li.awesome.icon-chevron-left.prev-day
       %li.date= moment(@currentDate).format('MMM D, YYYY')
-      %li.awesome.icon-chevron-right
+      %li.awesome.icon-chevron-right.next-day
 
 .content-main.home
   %ul
