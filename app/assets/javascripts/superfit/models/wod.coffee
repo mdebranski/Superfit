@@ -17,8 +17,9 @@ class Wod extends Spine.Model
   @scoringMethodMap: {for_time: "For Time", pass_fail: "Pass/Fail", rounds: "AMRAP (rounds)", 'max_reps': "Max Reps"}
 
   @byType: (type) ->
-    _.select @all(), (wod) ->
+    wods = _.select @all(), (wod) ->
       wod.typeSlug() == type.toLowerCase()
+    _.sortBy wods, (wod) -> wod.name.toLowerCase()
 
   @byCategory: (category) ->
     _.select @all(), (wod) ->
