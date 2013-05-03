@@ -49,7 +49,7 @@ Pull-ups (30 reps)","1000 meter row
 Thruster 45 lbs (50 reps)
 Pull-ups (30 reps)",For time,For time,
 Benchmark,Girl,Karen,14lb Wall-ball 150 shots,20lb Wall-ball 150 shots,For time,For time,
-Benchmark,Girl,"Linda 
+Benchmark,Girl,"Linda
 (aka ""3 bars of death"")","Deadlift 1 1/2 BW
 Bench BW
 Clean 3/4 BW","Deadlift 1 1/2 BW
@@ -444,7 +444,7 @@ Benchmark,Hero,Tommy V,,"115 pound Thruster, 21 reps
 15 ft Rope Climb, 9 ascents
 115 pound Thruster, 9 reps
 15 ft Rope Climb, 6 ascents",For time,,"In honor of Senior Chief Petty Officer Thomas J. Valentine, 37, of Ham Lake, Minnesota, died in an training accident in Arizona, on Feb. 13 2008."
-Benchmark,Hero,Tyler,,"7 Muscle-ups 
+Benchmark,Hero,Tyler,,"7 Muscle-ups
 21 reps 95 pound Sumo-deadlift high-pull",For time,5 rounds for time,"1LT Tyler E. Parten, 24, of Arkansas, died Sept. 10 in Konar province, Afghanistan, of wounds sustained when insurgents attacked his unit using rocket-propelled grenades and small arms fire. He was assigned to the 3rd Squadron, 61st Cavalry Regiment, 4th Brigade Combat Team, 4th Infantry Division, Fort Carson, CO."
 Benchmark,Hero,War Frank,,"25 Muscle-ups
 100 Squats
@@ -483,7 +483,7 @@ Benchmark,Hero,Wood,,"Run 400 meters
 95 pound Thruster, 10 reps
 
 Rest 1 minute",For time,5 rounds for time,"Australian Army Sergeant Brett Wood, 32, of Ferntree Gully, Victoria, assigned to the 2nd Commando Regiment, based in Sydney, New South Wales, died on May 23, 2011, in Helmand province, Afghanistan, after insurgents attacked him with an improvised explosive device. He is survived by his wife Elvi, his mother Allison, and his father David. Donations can be made in his name to the Commando Welfare Trust."
-Benchmark,Common,Tabata This,"Squats
+Other,Common,Tabata This,"Squats
 Rows
 Pull Ups
 Sit Ups
@@ -492,14 +492,14 @@ Rows
 Pull Ups
 Sit Ups
 Push Ups",Total Reps,8 rounds (20 sec work/10 sec rest),
-Benchmark,Common,Tabata Something Else,"Pull Ups
+Other,Common,Tabata Something Else,"Pull Ups
 Push Ups
 Sit Ups
 Squats","Pull Ups
 Push Ups
 Sit Ups
 Squats",Total Reps,8 rounds (20 sec work/10 sec rest),
-Benchmark,Common,Fight Gone Bad,"Wall ball shots 10' target @ 20lbs
+Other,Common,Fight Gone Bad,"Wall ball shots 10' target @ 20lbs
 Sumo High Pull Dead Lift @ 75 lbs
 Box jump @ 20"" box
 Push Press @ 75 lbs
@@ -508,15 +508,15 @@ Sumo High Pull Dead Lift @ 75 lbs
 Box jump @ 20"" box
 Push Press @ 75 lbs
 Row",Total Reps,5 Rounds for total reps. Rotate movements each minute.,
-Benchmark,Common,Crossfit Total,"Back Squat
+Other,Common,Crossfit Total,"Back Squat
 Shoulder Press
 Dead Lift
-","Back squat x 1 rep, 
-Shoulder Press x 1 rep, 
+","Back squat x 1 rep,
+Shoulder Press x 1 rep,
 Deadlift x 1 rep
 ",Total weight,"You get three attempts at each lift
 You cannot remove weight from the bar",
-Benchmark,Common,Filthy Fifty,"50 Box Jumps @ 24""
+Other,Common,Filthy Fifty,"50 Box Jumps @ 24""
 50 Jumping Pull Ups
 50 Kettleball Swings @ 1 pood
 50 Walking Lunges
@@ -526,10 +526,10 @@ Benchmark,Common,Filthy Fifty,"50 Box Jumps @ 24""
 50 Wall Ball Shots @ 20 lbs
 50 Burpees
 50 Double Unders",,For Time,For Time,
-Benchmark,Common,Nasty Girls,"50 Squats
+Other,Common,Nasty Girls,"50 Squats
 7 Muscle Ups
 10 Hang Power Cleans @ 135 lbs",,For Time,3 rounds for time.,
-Benchmark,Common,300,"50 Deadlifts 95 lbs
+Other,Common,300,"50 Deadlifts 95 lbs
 50 Push Ups
 50 Box Jumps
 50 Floor Wipers 95 lbs
@@ -542,7 +542,7 @@ Benchmark,Common,300,"50 Deadlifts 95 lbs
 50 Clean & Press 135 lbs
 25 Pul ups
 ",For Time,For Time,
-Benchmark,Common,Baseline from Hell,"
+Other,Common,Baseline from Hell,"
 
 400m Run
 10 Pull Ups
@@ -557,28 +557,57 @@ Benchmark,Common,Baseline from Hell,"
 30 Sit Ups
 40 Squats
 ",For Time,5 rounds. 3 min rest between rounds.,
-Benchmark,Common,Jeremy,"Overhead Squats 65lbs
+Other,Common,Jeremy,"Overhead Squats 65lbs
 Burpees","Overhead Squats 95lbs
 Burpees",For Time,3 rounds of 21-15-9 (reps) for time,
-Benchmark,Common,King Kong,"1 Deadlift 310lbs
+Other,Common,King Kong,"1 Deadlift 310lbs
 2 Muscle Ups
 3 Squat Cleans 170lbs
 4 Handstand Push Ups","1 Deadlift 455lbs
 2 Muscle Ups
 3 Squat Cleans 250lbs
 4 Handstand Push Ups",For Time,3 rounds for time.,
-Benchmark,Endurance,5K run,5K run,5K run,For Time,For Time,
-Benchmark,Endurance,10K run,10K run,10K run,For Time,For Time,
-Benchmark,Endurance,5K row,5K row,5K row,For Time,For Time,
-Benchmark,Endurance,10K row,10K row,10K row,For Time,For Time,
-Benchmark,Endurance,5K Bike,5K Bike,5K Bike,For Time,For Time,
-Benchmark,Endurance,10K Bike,10K Bike,10K Bike,For Time,For Time,
-Benchmark,Endurance,15K Bike,15K Bike,15K Bike,For Time,For Time,
-Benchmark,Endurance,25K Bike,25K Bike,25K Bike,For Time,For Time,
-Benchmark,Endurance,30K Bike,30K Bike,30K Bike,For Time,For Time,
-Benchmark,Endurance,400m Swim,400m Swim,400m Swim,For Time,For Time,
-Benchmark,Endurance,750m Swim,750m Swim,750m Swim,For Time,For Time,
-Benchmark,Endurance,1.5 km Swim,1.5 km Swim,1.5 km Swim,For Time,For Time,
+Other,Endurance,5K run,5K run,5K run,For Time,For Time,
+Other,Endurance,10K run,10K run,10K run,For Time,For Time,
+Other,Endurance,5K row,5K row,5K row,For Time,For Time,
+Other,Endurance,10K row,10K row,10K row,For Time,For Time,
+Other,Endurance,5K Bike,5K Bike,5K Bike,For Time,For Time,
+Other,Endurance,10K Bike,10K Bike,10K Bike,For Time,For Time,
+Other,Endurance,15K Bike,15K Bike,15K Bike,For Time,For Time,
+Other,Endurance,25K Bike,25K Bike,25K Bike,For Time,For Time,
+Other,Endurance,30K Bike,30K Bike,30K Bike,For Time,For Time,
+Other,Endurance,400m Swim,400m Swim,400m Swim,For Time,For Time,
+Other,Endurance,750m Swim,750m Swim,750m Swim,For Time,For Time,
+Other,Endurance,1.5 km Swim,1.5 km Swim,1.5 km Swim,For Time,For Time,
+Other,Travel,Travel #1,10 push-ups 10 sit ups 10 squats – 10 rounds.,10 push-ups 10 sit ups 10 squats – 10 rounds.,For Time,For Time,
+Other,Travel,Travel #2,3 x 800m sprint,3 x 800m sprint,For Time,For Time,3 minute rest in between rounds
+Other,Travel,Travel #3,"5 push ups
+10 sit ups
+15 squats","5 push ups
+10 sit ups
+15 squats",Rounds,AMRAP 20 Minutes,
+Other,Travel,Travel #4,"10 vertical jumps, 10 push ups, 10 sit ups","10 vertical jumps, 10 push ups, 10 sit ups",For Time,4 Rounds,
+Other,Travel,Travel #5,4 x 400m sprint,4 x 400m sprint,For Time,For Time,2 minute rest in between rounds
+Other,Travel,Travel #6,10 Handstand push ups and a 200m run,10 Handstand push ups and a 200m run,For Time, 3 rounds,
+Other,Travel,Travel #7,100 air squats,100 air squats. For time.,For Time,For Time,
+Other,Travel,Travel #8,10-9-8-7-6-5-4-3-2-1 Burpees and Sit ups.,10-9-8-7-6-5-4-3-2-1 Burpees and Sit ups.,For Time,For Time,
+Other,Travel,Travel #9,100 burpees,100 burpees,For Time,For Time,
+Other,Games,Games 13.01,"40 Burpees
+45 pound Snatch, 30 reps
+30 Burpees
+75 pound Snatch, 30 reps
+20 Burpees
+100 pound Snatch, 30 reps
+10 burpees
+120 pound Snatch, as many reps as possible","40 Burpees
+75 pound Snatch, 30 reps
+30 Burpees
+135 pound Snatch, 30 reps
+20 Burpees
+165 pound Snatch, 30 reps
+10 burpees
+210 pound Snatch, as many reps as possible",Max Reps,Proceed through the sequence below completing as many reps as possible in 17 minutes of:,
+Other,Travel,Travel #10,"Run 400 meters, 50 air squats","run 400 meters, 50 air squats",For Time,4 Rounds,
 Strength,,Back Extension,,,Max Reps,,
 Strength,,Back Squat,,,Weight / Reps / Rounds,,
 Strength,,Bench Press,,,Weight / Reps / Rounds,,
@@ -609,3 +638,4 @@ Strength,,Squat,,,Weight / Reps / Rounds,,
 Strength,,Sumo Deadlift High Pull,,,Weight / Reps / Rounds,,
 Strength,,Thruster,,,Weight / Reps / Rounds,,
 Strength,,Weighted pullup,,,Weight / Max Reps ,,
+Hidden,,Step Ups,,,,,
