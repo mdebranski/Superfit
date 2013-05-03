@@ -93,7 +93,7 @@ gem install bundler
 bundle install
 ```
 
-### Create Facebook App
+### Create Facebook App (not needed currently)
 To see your promotion on Facebook, you will need to setup a custom Facebook application that points to your local
 domain. To create a Facebook app:
 
@@ -133,7 +133,7 @@ Ensure the following are running:
 
 1. PostgreSQL (for instructions on starting type _brew info postgresql_)
 2. Redis (for instructions on starting type _brew info redis_)
-3. Application (run _foreman start_)
+3. Application (run _foreman start -p 8080_)
 
 You may also want to setup nginx as a reverse proxy in front of [unicorn for SSL](http://www.cyberciti.biz/faq/howto-linux-unix-setup-nginx-ssl-proxy/). (optional)
 
