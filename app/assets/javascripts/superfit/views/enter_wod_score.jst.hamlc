@@ -1,0 +1,55 @@
+.page-header
+  .toolbar
+    %div
+      %a.awesome.icon-chevron-left.goback{href: "#"}
+    %h1= @wod.name
+.content-main
+  .content-block
+    - if @wod.workout_male?
+      .yellow-block
+        = @wod.scoringMethod()
+        %br/
+        - if @wod.workout_male?
+          %br/
+          Male:
+          %br/
+          != @wod.workout_male.replace(/(\r\n|\n|\r)/gm,"<br/>")
+          %br/
+        - if @wod.workout_female?
+          %br/
+          Female:
+          %br/
+          != @wod.workout_female.replace(/(\r\n|\n|\r)/gm,"<br/>")
+    %fieldset
+      %form
+        %input{type: 'hidden', name: 'wod_id', value: @wod.id}
+        .enter-score
+          %div
+            %p Method
+            %select.required{name: 'method'}
+              %option{value: 'for_time'} Time
+              %option{value: 'rounds'} Rounds
+              %option{value: 'weight'} Weight (lbs)
+              %option{value: 'reps'} Reps
+              %option{value: 'passfail'} Pass / Fail
+          %div.score
+            %p Enter Score
+            - switch @wod.scoring_method
+              - when 'rounds'
+                %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Enter Rounds"}
+              - when 'max_reps'
+                %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Enter Reps"}
+              - when 'pass_fail'
+                %input#custom-wod-label.required{type: "text", name: "score", placeholder: "Pass/Fail"}
+              - when 'for_time'
+                %input#custom-wod-label.required{type: "number", name: "min", placeholder: "Min"}
+                %input#custom-wod-label.required{type: "number", name: "sec", placeholder: "Sec"}
+
+        %div
+          %input{type: "radio", name: "type", value: "rx", checked: "checked"}
+            %label.radio RX
+          %input{type: "radio", name: "type", value: "scaled"}
+            %label.radio Scaled
+        %p Workout Notes
+        %textarea{name: 'details', placeholder: "Add details that affected your performance. Where you sore? Was the weather bad?", cols: "30", rows: "5"}
+        %input.button.bottom{type: 'submit'} Save Workout
