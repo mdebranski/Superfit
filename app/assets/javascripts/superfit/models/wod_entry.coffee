@@ -3,6 +3,8 @@ class WodEntry extends Spine.Model
              'id',
              'wod_id',
              'score',
+             'min',
+             'sec',
              'method',
              'type',
              'details',
@@ -19,15 +21,12 @@ class WodEntry extends Spine.Model
   wod: ->
     Wod.find(@wod_id)
 
-  units: ->
-    switch @method
-      when 'time' then 'seconds'
-      when 'rounds' then 'rounds'
-      when 'weight' then 'lbs'
-      when 'reps' then 'reps'
-      when 'passfail' then ''
-
   scoreString: ->
-    "#{@score} #{@units()}"
+    switch @method
+      when 'for_time' then "#{@min} minutes #{@sec} seconds"
+      when 'rounds' then "#{@score} rounds"
+      when 'weight' then "#{@score} lbs"
+      when 'reps' then "#{@score} reps"
+      when 'passfail' then @score
 
 window.WodEntry = WodEntry

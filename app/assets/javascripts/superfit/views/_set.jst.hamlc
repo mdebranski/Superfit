@@ -1,0 +1,12 @@
+.enter-score-label
+  %p Set #{@set_number}
+.enter-score
+  %div
+    %p.input
+      %input#custom-wod-label.required{type: "number", name: "weight", placeholder: "155"}
+      %span.small Enter Weight
+    %p.times
+      %span.icon.sprite-sf.repsx x
+  %div
+    %input#custom-wod-label.required{type: "number", name: "reps", placeholder: "155"}
+    %p.small Enter Reps
