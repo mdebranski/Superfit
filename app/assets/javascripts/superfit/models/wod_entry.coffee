@@ -26,7 +26,7 @@ class WodEntry extends Spine.Model
       when 'for_time' then "#{@min} minutes #{@sec} seconds"
       when 'rounds' then "#{@score} rounds"
       when 'weight' then "#{@score} lbs"
-      when 'reps' then "#{@score} reps"
-      when 'passfail' then @score
+      when 'max_reps' then "#{@score} reps"
+      when 'pass_fail' then @score.toUpperCase()
 
 window.WodEntry = WodEntry

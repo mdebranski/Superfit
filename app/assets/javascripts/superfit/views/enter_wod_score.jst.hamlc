@@ -34,7 +34,10 @@
               - when 'max_reps'
                 %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Enter Reps"}
               - when 'pass_fail'
-                %input#custom-wod-label.required{type: "text", name: "score", placeholder: "Pass/Fail"}
+                %input{type: "radio", name: "score", value: "pass", checked: "checked"}
+                  %label.radio Pass
+                %input{type: "radio", name: "score", value: "fail"}
+                  %label.radio Fail
               - when 'for_time'
                 %input#custom-wod-label.required{type: "number", name: "min", placeholder: "Min"}
                 %input#custom-wod-label.required{type: "number", name: "sec", placeholder: "Sec"}
