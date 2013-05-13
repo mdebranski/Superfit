@@ -3,14 +3,14 @@
     <div class="orientation content-main">
       <div class="content-block">
         <h1>Set-Up is Simple!</h1>
-        <p>We have just a few quick questions to get to know you better. </p>
+        <p>We have just a few quick questions to get to know you better.</p>
         <h2>Male or Female?</h2>
         <p class="small">Some workouts differ for males and females. We ask you to
             make this selection so we can present you with the correct workout.</p>
          <fieldset>
            <form>
-             <input type="radio" id="female" name="female"><label class="radio" for="female">Female</label>
-             <input type="radio" id="male" name="male"><label class="radio" for="male">Male</label>
+             <input type="radio" id="female" name="gender" value="female"><label class="radio" for="female">Female</label>
+             <input type="radio" id="male" name="gender" value="male"><label class="radio" for="male">Male</label>
          </form>
          </fieldset>
 
@@ -53,6 +53,6 @@
         </div>
 
        <div class="orientation-footer">
-         <a href="#home" class="button bottom">Start Logging Workout</a></div>
+         <a id='get-started' href="#home" class="button bottom">Start Logging Workout</a></div>
     </div>
 </div>

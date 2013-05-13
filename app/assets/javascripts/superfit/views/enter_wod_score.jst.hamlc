@@ -7,31 +7,25 @@
   .content-block
     - if @wod.workout_male?
       .yellow-block
-        = @wod.scoringMethod()
+        %strong= @wod.scoringMethod()
         %br/
-        - if @wod.workout_male?
-          %br/
-          Male:
-          %br/
+        - if @user.gender == 'male'
           != @wod.workout_male.replace(/(\r\n|\n|\r)/gm,"<br/>")
-          %br/
-        - if @wod.workout_female?
-          %br/
-          Female:
-          %br/
+        - if @user.gender == 'female'
           != @wod.workout_female.replace(/(\r\n|\n|\r)/gm,"<br/>")
     %fieldset
       %form
         %input{type: 'hidden', name: 'wod_id', value: @wod.id}
         .enter-score
-          %div
-            %p Method
-            %select.required{name: 'method'}
-              %option{value: 'for_time'} Time
-              %option{value: 'rounds'} Rounds
-              %option{value: 'weight'} Weight (lbs)
-              %option{value: 'reps'} Reps
-              %option{value: 'passfail'} Pass / Fail
+          - unless @wod
+            %div.type
+              %p Method
+              %select.required{name: 'method'}
+                %option{value: 'for_time'} Time
+                %option{value: 'rounds'} Rounds
+                %option{value: 'weight'} Weight (lbs)
+                %option{value: 'reps'} Reps
+                %option{value: 'passfail'} Pass / Fail
           %div.score
             %p Enter Score
             - switch @wod.scoring_method

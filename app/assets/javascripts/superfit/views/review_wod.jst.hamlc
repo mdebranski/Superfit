@@ -8,10 +8,8 @@
     .content-block
       .yellow-block
         .review-score
-          %span.score= @entry.score
-          %span.score-method= @entry.method
+          %span.score= @entry.scoreString()
           %span.score-level= @entry.type
-        = @wod.workout_male
 
       %a.button.bottom.slideright{href: "#home"} Return To Dashboard
       %a.button.bottom{href: "#new-wod"} Edit Workout

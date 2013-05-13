@@ -36,13 +36,12 @@ class Superfit extends Spine.Controller
 
   events:
     'click .date': 'openCalendar'
+    'click #get-started': 'createUser'
 
   constructor: ->
     super
 
     user = User.first()
-    user = new User() unless user
-
     @render(user: user)
 
     new Superfit.Home(el: @home)
@@ -70,6 +69,10 @@ class Superfit extends Spine.Controller
       @navigation.prependTo('.current')
       @navigation.show()
       _.defer => @navigation.addClass('active')
+
+  createUser: ->
+    gender = $('input[name=gender]:checked').val()
+    User.create(gender: gender)
 
 window.Superfit = Superfit
 

@@ -331,8 +331,9 @@ body {background:none}
       p.times {float:left;width:5%; position: relative; top:-10px;}
     }
 
-    div.score {
-      width:55%;  margin-bottom: 3px;margin-left:7%;
+    .type { margin-right: 7%; }
+    .score {
+      width:55%;  margin-bottom: 3px;
 
       .time-score {
         input {width:36%; margin-right:5%; float:left}

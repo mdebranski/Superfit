@@ -1,7 +1,8 @@
 class User extends Spine.Model
   @configure 'User',
              'id',
-             'name'
+             'name',
+             'gender'
 
   @extend Spine.Model.Local
   @extend Spine.Events

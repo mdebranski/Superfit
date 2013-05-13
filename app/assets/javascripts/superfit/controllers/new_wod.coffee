@@ -14,19 +14,18 @@ class Superfit.NewWod extends Spine.Controller
 
   updateNewWod: (wod) =>
     @wod = wod
-    console.log wod
+
     @templateName = if wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
 
-    @render(wod: @wod)
+    @render(wod: @wod, user: User.first())
     @form.validate
-
       submitHandler: @submit
 
     @addSets() if @wod.type == 'Strength'
 
   submit: =>
     data = @form.serializeObject()
-    _.extend data, {date: Superfit.currentDate}
+    _.extend data, {date: Superfit.currentDate, method: @wod.scoring_method}
     entry = new WodEntry(data)
     entry.save()
 
