@@ -10,6 +10,7 @@ task :generate_wods_json do
   arr = []
   count = 0
   CSV.foreach(File.join(Rails.root, 'db', 'wods.csv'), :headers => :first_row) do |row|
+    row['id'] = row['id'].to_i
     row['scoring_method'] = scoring_method_map[row['scoring_method']]
     arr << row.to_hash
     count += 1
