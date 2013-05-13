@@ -297,7 +297,11 @@ body {background:none}
       float:left;
       width:10%;
 
-      &.date {width:80%; cursor: pointer;font-size:16px; position: relative; top: -3px;}
+      &.date {
+        width:80%; cursor: pointer;font-size:16px; position: relative; top: -5px;
+        img {position:relative; top:5px}
+      }
+      &.prev-day, &.next-day {position:relative; top:5px}
     }
   }
 

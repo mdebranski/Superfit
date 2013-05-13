@@ -7,7 +7,9 @@
   .date-navigation
     %ul
       %li.awesome.icon-chevron-left.prev-day
-      %li.date= moment(@currentDate).format('MMM D, YYYY')
+      %li.date
+        %img(src="/assets/icon-calendar.png")
+        = moment(@currentDate).format('MMM D, YYYY')
       %li.awesome.icon-chevron-right.next-day
 
   .content-main.home
