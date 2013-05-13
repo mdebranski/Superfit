@@ -16,37 +16,40 @@
     %fieldset
       %form
         %input{type: 'hidden', name: 'wod_id', value: @wod.id}
+        - if @entry
+          %input{type: 'hidden', name: 'entry_id', value: @entry.id}
         .enter-score
           - unless @wod
             %div.type
               %p Method
               %select.required{name: 'method'}
-                %option{value: 'for_time'} Time
-                %option{value: 'rounds'} Rounds
-                %option{value: 'weight'} Weight (lbs)
-                %option{value: 'reps'} Reps
-                %option{value: 'passfail'} Pass / Fail
+                %option{value: 'for_time', selected: @entry?.method == 'for_time'} Time
+                %option{value: 'rounds', selected: @entry?.method == 'rounds'} Rounds
+                %option{value: 'weight', selected: @entry?.method == 'weight'} Weight (lbs)
+                %option{value: 'max_reps', selected: @entry?.method == 'max_reps'} Reps
+                %option{value: 'pass_fail', selected: @entry?.method == 'pass_fail'} Pass / Fail
           %div.score
             %p Enter Score
             - switch @wod.scoring_method
               - when 'rounds'
-                %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Enter Rounds"}
+                %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Enter Rounds", value: @entry?.score}
               - when 'max_reps'
-                %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Enter Reps"}
+                %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Enter Reps", value: @entry?.score}
               - when 'pass_fail'
-                %input{type: "radio", name: "score", value: "pass", checked: "checked"}
-                  %label.radio Pass
-                %input{type: "radio", name: "score", value: "fail"}
-                  %label.radio Fail
+                %input#score-pass{type: "radio", name: "score", value: "pass", checked: if @entry then @entry.score == 'pass' else 'checked'}
+                  %label.radio{for: 'score-pass'} Pass
+                %input#score-fail{type: "radio", name: "score", value: "fail", checked: @entry?.score == 'fail'}
+                  %label.radio{for: 'score-fail'} Fail
               - when 'for_time'
-                %input#custom-wod-label.required{type: "number", name: "min", placeholder: "Min"}
-                %input#custom-wod-label.required{type: "number", name: "sec", placeholder: "Sec"}
+                %input#custom-wod-label.required{type: "number", name: "min", placeholder: "Min", value: @entry?.min}
+                %input#custom-wod-label.required{type: "number", name: "sec", placeholder: "Sec", value: @entry?.sec}
 
         %div
-          %input{type: "radio", name: "type", value: "rx", checked: "checked"}
+          %input{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
             %label.radio RX
-          %input{type: "radio", name: "type", value: "scaled"}
+          %input{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
             %label.radio Scaled
         %p Workout Notes
         %textarea{name: 'details', placeholder: "Add details that affected your performance. Where you sore? Was the weather bad?", cols: "30", rows: "5"}
+          = @entry?.details
         %input.button.bottom{type: 'submit'} Save Workout

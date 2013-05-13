@@ -29,7 +29,7 @@ class Superfit extends Spine.Controller
     '.page#home': 'home'
     '.page#add-wod': 'addWod'
     '.page#browse-wods': 'browseWods'
-    '.page#new-wod': 'newWod'
+    '.page#edit-wod': 'editWod'
     '.page#review-wod': 'reviewWod'
     '.page#calendar': 'calendar'
     '.date': 'dateEl'
@@ -47,7 +47,7 @@ class Superfit extends Spine.Controller
     new Superfit.Home(el: @home)
     new Superfit.AddWod(el: @addWod)
     new Superfit.BrowseWods(el: @browseWods)
-    new Superfit.NewWod(el: @newWod)
+    new Superfit.EditWod(el: @editWod)
     new Superfit.ReviewWod(el: @reviewWod)
     new Superfit.Calendar(el: @calendar)
 

@@ -17,4 +17,4 @@ class Superfit.WodItem extends Spine.Controller
 
     @$('.wod-name', @step2).html("<span class='icon sprite-sf #{wod.type.toLowerCase()}'></span>#{wod.name}")
     @$('.wod-details p', @step2).html(workout)
-    jQT.goTo('#new-wod', jQT.settings.defaultAnimation)
+    jQT.goTo('#edit-wod', jQT.settings.defaultAnimation)

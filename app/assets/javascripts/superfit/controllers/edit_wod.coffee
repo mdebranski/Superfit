@@ -1,4 +1,4 @@
-class Superfit.NewWod extends Spine.Controller
+class Superfit.EditWod extends Spine.Controller
 
   elements:
     'form': 'form'
@@ -12,6 +12,11 @@ class Superfit.NewWod extends Spine.Controller
     super
     Wod.bind 'new', @updateNewWod
 
+    @el.bind "pageAnimationStart", =>
+      if id = @el.data('referrer')?.data('id')
+        entry = WodEntry.find(id)
+        @updateEditEntry(entry)
+
   updateNewWod: (wod) =>
     @wod = wod
 
@@ -23,11 +28,26 @@ class Superfit.NewWod extends Spine.Controller
 
     @addSets() if @wod.type == 'Strength'
 
+  updateEditEntry: (entry) ->
+    @wod = Wod.find(entry.wod_id)
+
+    @templateName = if @wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
+
+    @render(wod: @wod, entry: entry, user: User.first())
+    @form.validate
+      submitHandler: @submit
+
+    @addSets() if @wod.type == 'Strength'
+
   submit: =>
     data = @form.serializeObject()
     _.extend data, {date: Superfit.currentDate, method: @wod.scoring_method}
-    entry = new WodEntry(data)
-    entry.save()
+
+    if data.entry_id
+      entry = WodEntry.find(data.entry_id)
+      entry.updateAttributes(data)
+    else
+      entry = WodEntry.create(data)
 
     jQT.goTo('#review-wod', jQT.settings.defaultTransition)
 

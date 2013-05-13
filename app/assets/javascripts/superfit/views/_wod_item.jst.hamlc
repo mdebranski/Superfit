@@ -1,4 +1,4 @@
-%a{href: "#new-wod"}
+%a{href: "#edit-wod"}
   .label
     .icon.sprite-sf{class: @wod.typeSlug()}
     %p= @wod.name
