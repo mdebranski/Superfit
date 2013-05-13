@@ -32,6 +32,8 @@
             %p.awesome.icon-plus.arrow
       - else
         %li
+          You haven't entered any workouts!
+        %li
           %a.add-new{href: "#add-wod"}
             .label
               %p Add Workout
