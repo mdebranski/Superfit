@@ -9,6 +9,6 @@
       %form
         %input{type: 'hidden', name: 'wod_id', value: @wod.id}
         .sets
-        %a.button.bottom.add-set{href: "#"} Add Another Set
+        %a.button.lighter.bottom.add-set{href: "#"} Add Another Set
         %hr/
-        %input.button.bottom{type: 'submit'} Save Workout
+        %input.button.bluer.bottom{type: 'submit'} Save Workout

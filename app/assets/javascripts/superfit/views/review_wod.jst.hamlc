@@ -12,8 +12,8 @@
           .score-level= @entry.type
           %p.score-details= @entry.details
 
-      %a.button.bottom.slideright{href: "#home"} Return To Dashboard
-      %a.button.bottom{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
+      %a.button.bottom.lighter{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
+      %a.button.bottom.bluer.slideright{href: "#home"} Return To Dashboard
 
   .content-main
     %ul

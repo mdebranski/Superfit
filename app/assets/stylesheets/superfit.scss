@@ -29,7 +29,7 @@ $standardlineheight: 45px;
 $stageintmargin:20px;
 
 // colors
-$easternblue:#00afd5;
+$easternblue:#4ea3e3;
 $yellow:#fffae8;
 $red:#d91c00;
 $seashell:#f1f1f1;
@@ -77,7 +77,7 @@ body {background:none}
     -webkit-transform: translateZ(0);
     font-family:$standardfont;
 
-    .button {display:block; width:100%}
+    .button {display:block; }
     .active {background-image:none;}
   }
   input, textarea, select {
@@ -86,7 +86,6 @@ body {background:none}
   }
 
   .page-header{
-    background:#000000 url(image_path('tile-leather-interior-bkg@2x.png')) repeat 0 0;
     background:#000000 url(image_path('tile-pg-header.png')) repeat 0 0;
 
     h1 {font-size: 16px; bottom:11px;  font-family:$standardfontbold; font-weight: 100;  text-transform: uppercase; letter-spacing: .25px; width: 200px; margin-left: -100px;}
@@ -247,8 +246,8 @@ body {background:none}
     position: relative;
     height: 0;
     overflow: hidden;
-    background-color:#1f1f1f;
     @include transition(height .5s ease);
+    background:transparent url(image_path('tile-ticks.png')) repeat 0 0;
   }
   #navigation.active { display: block; height: 170px; @include transition(height 1s ease);}
 
@@ -256,6 +255,7 @@ body {background:none}
     position: relative;
     width: 95%;
     margin: 12px auto 0 auto;
+
 
     div{
 
@@ -277,7 +277,7 @@ body {background:none}
         font-family: $standardfontbold;
         line-height: 36px;
         display: block;
-        padding-left:10px;
+        padding-left:2px;
       }
       a:active {
         opacity:0.75;
@@ -330,7 +330,7 @@ body {background:none}
  // ENTER WOD SCORE
   .enter-score-label {
     width:95%;
-    p {float:left;width:50px }
+    p {float:left;width:50px; margin-top: 9px!important; }
     .delete {float:left; position:relative;top:21px}
     overflow: hidden;
   }
@@ -339,12 +339,10 @@ body {background:none}
     overflow: hidden;
     .delete {overflow: hidden;}
 
-    div {
-      width:36%; float:left;
-      p.input {width:95%; float:left; margin-top:0px}
-      .small {clear:both; display: block;}
-      p.times {float:left;width:5%; position: relative; top:-10px;}
-    }
+    div.input {  width:55%; float:left; margin-top:0px}
+    div.times {float:left;width:9%; position: relative; top:15px; text-align: center}
+    div.reps {width:35%; float:left;}
+    .small {positoin:relative; top:5px;}
 
     .type { margin-right: 7%; }
     .score {
@@ -435,7 +433,7 @@ body {background:none}
   // UNIVERSAL ELEMENTS
 
   button, .button {
-    width:99%;
+    //width:97%;
     display:block;
     margin-left: auto;
     margin-right: auto;
@@ -478,18 +476,16 @@ body {background:none}
     &.other {background-position: -29px -26px;}
     &.benchmark {background-position: -29px -152px;}
     &.mainsite {background-position: -29px -198px;}
-    &.me {background-position: -202px -68px; }
-    &.home {background-position: -202px -101px; }
-    &.calendar {background-position: -202px -134px; }
-    &.goals {background-position: -202px -170px; }
-    &.records {background-position: -202px -204px; }
-    &.affiliate {background-position: -202px -239px; }
-    &.repsx {background-position: -242px -25px; }
+
+    &.dashboard {background-position: -27px -243px; }
+    &.goals {background-position: -27px -282px;  }
+    &.records {background-position: -27px -320px;  }
+    &.me {background-position: -27px -356px;  }
+
   }
 
 
   .photo-icon {width:34px;  height:21px; background-position: -148px -91px; float:left; margin:0 6px }
-
   .delete {width:25px;  height:25px; background-position: -154px -57px;}
   .delete:active {width:25px;  height:25px; background-position: -197px -57px;}
 

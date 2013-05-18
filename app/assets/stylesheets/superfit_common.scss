@@ -17,10 +17,11 @@ $fontcolor:#464646;
 
 
 // colors
-$easternblue:#3295d1;     // #00afd5
+$easternblue:#4ea3e3;     // #00afd5
 $yellow:#fffae8;
 $red:#d91c00;
 $seashell:#f1f1f1;
+$silvershell:#e5e5e5;
 $silver:#cccccc;
 $silverchalice:#999999;
 $dovegray:#666666;
@@ -42,19 +43,23 @@ $codgray:#111111;
     @include border-radius($radius);
     //background: -webkit-linear-gradient(90deg, rgb(233, 233, 233) 6%, rgb(244, 244, 244) 30%);
     background: $mineshaft;
-    border:0px solid #cccccc;
+    border:0px solid $mineshaft;
     margin:9px 0 9px 0;
-    text-shadow: rgba(0,0,0,0.05) 0px 0, rgba(0,0,0,0.05) 0 -1px, rgba(255,255,255,0.1) 0 1px, rgba(0,0,0,0.05) 0px -1px;
+    text-shadow: none;
     line-height: 45px;
     height:45px;
+    @include box-shadow(none);
+
+    &.lighter {background: $silvershell; color:$mineshaft; border:1px solid #cccccc;}
+    &.bluer{background: $easternblue; color:#ffffff; border:1px solid #368dcf;}
 
   }
   button:active, .button:active {
-    background: #e5e5e5;
+    background: $silver;
     color:$mineshaft;
-    @include box-shadow($insetshadow);
     text-shadow: rgba(0,0,0,0.05) 0px 0, rgba(0,0,0,0.05) 0 -1px, rgba(255,255,255,0.1) 0 1px, rgba(0,0,0,0.05) 0px -1px;
     border:1px solid #cccccc;
+    text-shadow: none;
   }
 
   button + button, .button + .button {margin-top: 0 !important;}
@@ -120,6 +125,12 @@ $codgray:#111111;
       @include box-shadow($insetshadow);
       background: #f7f7f7;
       -webkit-appearance:none;
+    }
+    input[type=submit]{
+      @include box-shadow(0);
+      padding:0;
+      margin:0;
+      width:100%;
     }
     .button {line-height: 54px; height: 54px}
 
