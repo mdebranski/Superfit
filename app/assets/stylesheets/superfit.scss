@@ -98,7 +98,7 @@ body {background:none}
       position: relative;
       background-size: 10px 44px;
 
-      .goback {position: relative; top:12px; left:9px; color:#ffffff}
+      .goback {position: relative; padding:8px; top:5px; left:1px; color:#ffffff; display: block; height: 40px; width:40px;}
       .pulldown {
         background:url(image_path('img-mainnav.png')) repeat-x;
         width:33px;
