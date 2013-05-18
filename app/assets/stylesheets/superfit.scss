@@ -495,10 +495,7 @@ body {background:none}
 
  /// DUMMY CHART REMOVE BEFORE LAUNCH
   .chart {
-    background: transparent url(image_path('sample-chart.png')) no-repeat ;
-    height:198px;
-    width:280px;
-    margin:10px auto;
+    padding-top:20px;
   }
 }  //end JQT
 

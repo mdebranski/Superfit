@@ -50,8 +50,8 @@ $codgray:#111111;
     height:45px;
     @include box-shadow(none);
 
-    &.lighter {background: $silvershell; color:$mineshaft; border:1px solid #cccccc;}
-    &.bluer{background: $easternblue; color:#ffffff; border:1px solid #368dcf;}
+    &.lighter {background: $silvershell; color:$mineshaft; }
+    &.bluer{background: $easternblue; color:#ffffff;}
 
   }
   button:active, .button:active {

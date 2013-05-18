@@ -51,6 +51,7 @@
             %p.awesome.icon-chevron-right.arrow
       %li
         .chart
+          %img(src="/assets/gfx-landing-see-progress.png")
       %li.goal
         %a{href: "#"}
           .label
