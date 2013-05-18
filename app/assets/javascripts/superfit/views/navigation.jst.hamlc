@@ -2,18 +2,15 @@
   .navigation
     %div
       %a.dissolve{href: "#home"}
-        %p.icon.home.sprite-sf
+        -# %p.icon.home.sprite-sf
         Dashboard
     %div
       %a.dissolve{href: "#goals"}
-        %p.icon.goals.sprite-sf
         Goals
     %div
       %a.dissolve{href: "#records"}
-        %p.icon.records.sprite-sf
         Records
     %div
       %a.dissolve{href: "#account"}
-        %p.icon.records.sprite-sf
         Account
 

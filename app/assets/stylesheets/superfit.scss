@@ -272,10 +272,13 @@ body {background:none}
       a{
         color:white;
         font-size:14px;
-        -webkit-tap-highlight-color:#1f1f1f;}
+        -webkit-tap-highlight-color:#1f1f1f;
         text-transform: uppercase;
         font-family: $standardfontbold;
         line-height: 36px;
+        display: block;
+        padding-left:10px;
+      }
       a:active {
         opacity:0.75;
       }
