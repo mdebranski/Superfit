@@ -248,7 +248,7 @@ body {background:none}
     height: 0;
     overflow: hidden;
     background-color:#1f1f1f;
-    @include transition(height 0s ease);
+    @include transition(height .5s ease);
   }
   #navigation.active { display: block; height: 170px; @include transition(height 1s ease);}
 
@@ -260,7 +260,6 @@ body {background:none}
     div{
 
       font-size:16px;
-      line-height: 36px;
       border-bottom: 1px solid #040404;
       border-top: 1px solid #323232;
 
@@ -276,6 +275,7 @@ body {background:none}
         -webkit-tap-highlight-color:#1f1f1f;}
         text-transform: uppercase;
         font-family: $standardfontbold;
+        line-height: 36px;
       a:active {
         opacity:0.75;
       }

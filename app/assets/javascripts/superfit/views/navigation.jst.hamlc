@@ -1,7 +1,7 @@
 #navigation
   .navigation
     %div
-      %a.slideup{href: "#home"}
+      %a.dissolve{href: "#home"}
         %p.icon.home.sprite-sf
         Dashboard
     %div
@@ -9,11 +9,11 @@
         %p.icon.goals.sprite-sf
         Goals
     %div
-      %a.slideup{href: "#records"}
+      %a.dissolve{href: "#records"}
         %p.icon.records.sprite-sf
         Records
     %div
       %a.dissolve{href: "#account"}
         %p.icon.records.sprite-sf
-        Accounts
+        Account
 
