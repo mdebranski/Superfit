@@ -501,7 +501,8 @@ body {background:none}
     @include border-radius($radius);
     font-size:12px;
     border:1px solid #f7eecb;
-    margin-top:18px;
+    margin-top:9px;
+    margin-bottom: 5px;
     padding:20px;
     color:$silverchalice;
   }

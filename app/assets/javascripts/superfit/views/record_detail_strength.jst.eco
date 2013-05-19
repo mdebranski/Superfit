@@ -17,31 +17,46 @@
       </ul>
     </div>
 
-    <div class="home content-main">
-      <ul>
-        <li class="title">
-          <h2>Workout Activity</h2>
-          <div class="action">  <a href="#" class="awesome icon-plus"></a> </div>
-        </li>
-        <li><div class="chart"></div></li>
-        <li>
-          <div class="label history">
-            <p>Jan 25, 2013</p>
-            <p><img src="/assets/icon-inline-record.png"> 145lb</p>
+    <div class="content-main">
+      <div class="content-block">
+        <div class="yellow-block">
+          <div class="review-score">
+            <div class="score">145lb  <span class="score-level">RX</span></div>
+
+            <p class="score-details">Current Personal Record</p>
           </div>
-        </li>
-        <li>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-main">
+      <div class="secondary">
+        <div class="title">
+          <h3>Record History</h3>
+          <div class="action">
+            <a href="#" class="awesome icon-plus"></a>
+          </div>
+        </div>
+        <ul>
+          <li><div class="chart"></div></li>
+          <li>
+            <div class="label history">
+              <p>Dec 25, 2013</p>
+              <p class="record"><img src="/assets/icon-inline-record.png"> 4:59</p>
+            </div>
+          </li>
+          <li>
             <div class="label history">
               <p>Sep 25, 2012</p>
-              <p>145lb</p>
+              <p>6:02</p>
             </div>
-        </li>
+          </li>
+        </ul>
+      </div>
 
+     <!-- end: content-main top block -->
 
-      </ul>
-
-    </div> <!-- end: content-main top block -->
-
+    </div>
 
   </div>
 
