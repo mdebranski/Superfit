@@ -221,6 +221,53 @@ body {background:none}
 
       } // end li
     }
+
+     .secondary {
+       ul {
+         li {
+           line-height:45px;
+           height:45px;
+           border-bottom:1px solid $silver;
+
+           &:last-of-type {border-bottom:0px}
+         }
+       }
+      .title {
+        background: $seashell;
+        border-bottom:1px solid $silver;
+        overflow: hidden;
+
+        h3 {
+          line-height: 54px;
+          padding-left:18px;
+          position: relative;
+          top: 2px;
+          float:left;
+          width:50% ;
+          height: 54px;
+        }
+
+        .action {
+          right:9px;
+          position: absolute;
+          display:inline-block;
+          text-align: right;
+          color:$silverchalice;
+          font-size:18px;
+          p {float:left;}
+          a {
+            color:$silver;
+          }
+          .awesome {display: block; padding:18px 10px 0 8px;}
+        }
+      }
+       .label {
+         width:99%;
+
+       p {font-size:12px}
+       }
+
+    }
   }// end content-main
 
 
@@ -367,6 +414,7 @@ body {background:none}
     margin-bottom: 18px;
 
     .score-level {font-size:14px}
+    .score-details {margin-top:0 !important; line-height: 18px  !important}
 
   }
 

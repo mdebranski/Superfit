@@ -9,25 +9,26 @@
       .yellow-block
         .review-score
           .score= @entry.scoreString()
-          .score-level= @entry.type
+            %span.score-level= @entry.type
           %p.score-details= @entry.details
 
       %a.button.bottom.lighter{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
       %a.button.bottom.bluer.slideright{href: "#home"} Return To Dashboard
 
   .content-main
-    %ul
-      %li.title
+    %div.secondary
+      %div.title
         %h3 #{@wod.name} History
-      %li
-        .chart
-      %li
-        %a{href: "#"}
-          .label
-            %p Jun 22 2012
-            %p 22:22
-      %li
-        %a{href: "#"}
-          .label
-            %p Apr 22 2011
-            %p 25:22
+      %ul
+        %li
+          .chart
+        %li
+          %a{href: "#"}
+            .label
+              %p Jun 22 2012
+              %p 22:22
+        %li
+          %a{href: "#"}
+            .label
+              %p Apr 22 2011
+              %p 25:22
