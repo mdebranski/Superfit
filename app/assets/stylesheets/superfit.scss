@@ -39,6 +39,8 @@ $dovegray:#666666;
 $mineshaft:#333333;
 $codgray:#111111;
 
+$gibsonoffset: 4px;
+
 
 @mixin fl($width) { display: block; float: left; width: $width }
 @mixin fr($width) { display: block; float: right; width: $width }
@@ -200,26 +202,28 @@ body {background:none}
 
         }
 
-        &.goal{
-
-          .goal-label {
-            line-height: 18px;
-            height:54px;
-            margin-top: 18px;
-            span {font-size:10px; color:$silverchalice}
-          }
-          .goal-progress {
-            background:$easternblue;
-            color:white;
-            padding:0px 6px;
-            @include border-radius ($radius);
-            line-height: 36px;
-            margin-top: 18px;
-          }
-          .arrow {position:relative; top:5px;}
-        }
-
       } // end li
+    }
+
+
+    .goal{
+      .arrow {position:relative; top:5px;}
+      .goal-progress {margin-top: 18px;}
+    }
+
+    .goal-label {
+      line-height: 18px;
+      height:54px;
+      margin-top: 18px;
+      span {font-size:10px; color:$silverchalice}
+    }
+    .goal-progress {
+      background:$easternblue;
+      color:white;
+      padding:0px 6px;
+      @include border-radius ($radius);
+      line-height: 36px;
+
     }
 
      .secondary {
@@ -237,6 +241,7 @@ body {background:none}
         border-bottom:1px solid $silver;
         overflow: hidden;
 
+
         h3 {
           line-height: 54px;
           padding-left:18px;
@@ -245,6 +250,7 @@ body {background:none}
           float:left;
           width:50% ;
           height: 54px;
+          color:$mineshaft;
         }
 
         .action {
@@ -259,17 +265,36 @@ body {background:none}
             color:$silver;
           }
           .awesome {display: block; padding:18px 10px 0 8px;}
+          .goal-progress {margin-top:9px}
         }
-      }
+      } // end title
        .label {
          width:99%;
-
-       p {font-size:12px}
+         p {font-size:12px}
        }
 
-    }
+       &.details {
+         .title {
+           //background: none ;
+           h4 {
+             position: relative;
+             top: $gibsonoffset;
+             color:$mineshaft;
+             font-size:16px;
+           }
+         }
+         ul {
+           li{
+             p{font-size:14px;}
+           }
+         }
+
+       }
+    } // end secondary
+
   }// end content-main
 
+  .footer {width: 96%;margin: 9px auto;}
 
   //////////// PAGE LEVEL ////////////
 

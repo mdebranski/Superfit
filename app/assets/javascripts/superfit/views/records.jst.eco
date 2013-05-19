@@ -16,9 +16,9 @@
   <div class="scroll">
     <div class="filter-navigation">
       <ul>
-        <li><a href="#records" class="selected">Strength</a> </li>
-        <li><a href="#records-benchmarks">Benchmarks</a></li>
-        <li><a href="#records">Other</a></li>
+        <li><a href="#records" class="selected fade">Strength</a> </li>
+        <li><a href="#records-benchmarks" class="fade">Benchmarks</a></li>
+        <li><a href="#records" class="fade">Other</a></li>
       </ul>
     </div>
 

@@ -57,7 +57,10 @@
      <!-- end: content-main top block -->
 
     </div>
+    <div class="footer">
 
+      <a href="#home" class="button bottom fade">Go to My Dashboard</a>
+    </div>
   </div>
 
 </div>

@@ -25,9 +25,12 @@
     <div class="content-main">
       <div class="secondary">
         <div class="title">
-          <h3>Record History</h3>
+          <h3>History</h3>
           <div class="action">
-              <a href="#" class="awesome icon-plus"></a>
+            <a href="#">
+              <p>Add New</p>
+              <p class="awesome icon-plus"> </p>
+            </a>
           </div>
         </div>
         <ul>
@@ -48,8 +51,10 @@
       </div>
 
     </div> <!-- end: content-main top block -->
+    <div class="footer">
 
-
+    <a href="#home" class="button bottom fade">Go to My Dashboard</a>
+    </div>
   </div>
 
 </div>

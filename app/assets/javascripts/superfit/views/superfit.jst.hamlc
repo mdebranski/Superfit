@@ -12,9 +12,10 @@
   != JST['superfit/views/records']()
   != JST['superfit/views/record_detail']()
   != JST['superfit/views/record_detail_strength']()
-  != JST['superfit/views/components']()
   #edit-wod.page
   #review-wod.page
+  != JST['superfit/views/goals']()
+  != JST['superfit/views/goal_detail']()
 
 -# #fb-root
 -# :javascript

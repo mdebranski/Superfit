@@ -12,8 +12,8 @@
             %span.score-level= @entry.type
           %p.score-details= @entry.details
 
-      %a.button.bottom.lighter{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
-      %a.button.bottom.bluer.slideright{href: "#home"} Return To Dashboard
+      %a.button.bottom.lighter.dissolve{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
+
 
   .content-main
     %div.secondary
@@ -32,3 +32,6 @@
             .label
               %p Apr 22 2011
               %p 25:22
+
+  .footer
+    %a.button.bottom.fade{href: "#home"} Return To Dashboard
