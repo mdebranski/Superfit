@@ -33,7 +33,9 @@ class Superfit.Calendar extends Spine.Controller
     day = properties.day
     year = properties.year
     newDate = new Date(year, month - 1, day)
-    Superfit.trigger( 'changeDate', newDate)
+
+    if newDate.getTime() <= moment().startOf('day').valueOf()
+      Superfit.trigger( 'changeDate', newDate)
 
 
 
