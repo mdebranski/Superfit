@@ -23,7 +23,7 @@ class WodEntry extends Spine.Model
 
   scoreString: ->
     switch @method
-      when 'for_time' then "#{@min} minutes #{@sec} seconds"
+      when 'for_time' then _.str.sprintf "%d:%02d", Number(@min), Number(@sec)
       when 'rounds' then "#{@score} rounds"
       when 'weight' then "#{@score} lbs"
       when 'max_reps' then "#{@score} reps"

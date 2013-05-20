@@ -1,6 +1,7 @@
 #= require jquery.min
 #= require jquery_ujs
 #= require underscore-min
+#= require underscore.string.min
 #= require jqtouch.min
 #= require jqtouch-jquery.min
 #= require jquery.makeItRetina.min
