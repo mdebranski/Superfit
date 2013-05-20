@@ -7,6 +7,7 @@
 #= require jquery.makeItRetina.min
 #= require jquery.validate.min
 #= require jquery.serialize-object
+#= require jquery.ui.spinner
 #= require moment.min
 #= require spine/spine
 #= require spine/manager

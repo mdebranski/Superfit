@@ -17,6 +17,10 @@ class Superfit.EditWod extends Spine.Controller
         entry = WodEntry.find(id)
         @updateEditEntry(entry)
 
+  render: ->
+    super
+    @$('input[type=number]').spinner()
+
   updateNewWod: (wod) =>
     @wod = wod
 
