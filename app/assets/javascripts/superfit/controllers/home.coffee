@@ -6,8 +6,7 @@ class Superfit.Home extends Superfit.SearchWods
 
   constructor: ->
     super
-    Superfit.currentDate = moment().startOf('day').toDate()
-
+    Superfit.currentDate = @today()
     @render()
 
     Superfit.bind 'changeDate', @changeDate
@@ -15,7 +14,10 @@ class Superfit.Home extends Superfit.SearchWods
 
   render: ->
     entries = WodEntry.byDate(Superfit.currentDate)
-    super(currentDate: Superfit.currentDate, entries: entries)
+    super(currentDate: Superfit.currentDate, entries: entries, today: @today())
+
+  today: ->
+    moment().startOf('day').toDate()
 
   changeDate: (date) =>
     Superfit.currentDate = date
