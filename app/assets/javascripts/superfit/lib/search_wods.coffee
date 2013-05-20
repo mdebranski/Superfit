@@ -9,7 +9,7 @@ class Superfit.SearchWods extends Spine.Controller
       @wodsBrowse.hide()
 
       @wodsSearch.html('')
-      wods = Wod.search(value)
+      wods = Wod.search(value, type)
       if wods.length > 0
         for wod in wods
           item = new Superfit.WodItem(wod: wod)
