@@ -55,22 +55,8 @@ class Superfit extends Spine.Controller
 
     _.defer -> $.makeItRetina();
 
-    @navigation = $('#navigation').detach()
-    $('.pulldown').on 'tap', @pulldown
-    $('.page').on 'pageAnimationEnd', => @navigation.removeClass('active'); @navigation.detach()
-
   openCalendar: ->
     jQT.goTo('#calendar', 'pop')
-
-  pulldown: =>
-    if @navigation.is('.active')
-      @navigation.removeClass('active')
-      hide = => @navigation.hide()
-      _.delay hide, 1000
-    else
-      @navigation.prependTo('.current')
-      @navigation.show()
-      _.defer => @navigation.addClass('active')
 
   createUser: ->
     gender = $('input[name=gender]:checked').val()
