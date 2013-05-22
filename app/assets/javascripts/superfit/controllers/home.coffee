@@ -1,5 +1,8 @@
 class Superfit.Home extends Superfit.SearchWods
 
+  elements:
+    '.chart': 'chart'
+
   events:
     'tap .prev-day': 'prevDay'
     'tap .next-day': 'nextDay'
@@ -15,6 +18,10 @@ class Superfit.Home extends Superfit.SearchWods
 
     @navigation = $('#navigation').detach()
     $('.page').on 'pageAnimationEnd', => @navigation.removeClass('active'); @navigation.detach()
+
+    data = [[[0,0], [1,1], [2,3], [3,8], [4,15]]]
+    options = {xaxis: {labelWidth: 40}}
+    $.plot @chart, data, options
 
   render: ->
     entries = WodEntry.byDate(Superfit.currentDate)

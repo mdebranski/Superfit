@@ -4,6 +4,8 @@
 #= require underscore.string.min
 #= require jqtouch.min
 #= require jqtouch-jquery.min
+#= require jquery.flot
+#= require jquery.flot.resize
 #= require jquery.makeItRetina.min
 #= require jquery.validate.min
 #= require jquery.serialize-object
