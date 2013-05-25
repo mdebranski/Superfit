@@ -110,7 +110,7 @@ $codgray:#111111;
       -webkit-background-size: 10px 10px; /* shrink high resolution background */
     }
     input[type=radio]+span {position:relative; top:-4px; margin-right:10px}
-    input[type=number] {width:90%}
+
     textarea {
       background:#f7f7f7;
       border:0;
@@ -120,7 +120,7 @@ $codgray:#111111;
       padding:10px 5px;
       font-family:$standardfont ;
       @include border-radius($radius);
-      width:97%;
+
     }
     select{
       border:1px solid #cccccc;

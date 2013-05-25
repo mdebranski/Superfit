@@ -419,10 +419,11 @@ body {background:none}
 
     .type { margin-right: 7%; }
     .score {
-      width:55%;  margin-bottom: 3px;
+      width:98%;  margin-bottom: 3px;
 
       .time-score {
-        input {width:36%; margin-right:5%; float:left}
+        .ui-spinner:first-of-type {margin-right:5%;}
+        .ui-spinner {width:36%;}
       }
       .passfail-score {width:90%;}
     }
@@ -615,5 +616,49 @@ body {background:none}
     color:#ffffff
   }
 
+}   // end calendar
+
+/* Spinner
+----------------------------------*/
+.ui-spinner { display: inline-block; border:0 }
+.ui-spinner-input { border: none; background: none; padding: 0; margin: 0; vertical-align: middle; }
+.ui-spinner-button {
+  width: 16px;
+  height: 50%;
+  font-size: .5em;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  cursor: default;
+  display: block;
+  overflow: hidden;
+  width:35px;
+  background: $seashell !important;
+  border:1px solid $silver !important;
 }
+.ui-spinner a.ui-spinner-button { border-top: none; border-bottom: none; } /* more specificity required here to overide default borders */
+.ui-spinner .ui-icon { position: absolute; margin-top: -8px; top: 50%; left: 0; } /* vertical centre icon */
+.ui-spinner-up { top: 0; }
+.ui-spinner-down { bottom: 0; }
+.ui-button-text {text-align: center}
+.ui-spinner .ui-icon {left:9px}
+
+/* ltr (default) */
+.ui-spinner-ltr { direction: ltr; }
+.ui-spinner-ltr .ui-spinner-input { float: left; margin-left: .4em; margin-right: 22px; }
+.ui-spinner-ltr .ui-spinner-button { right: 0; }
+.ui-spinner-ltr a.ui-spinner-button { border-right: none; }
+
+/* rtl */
+.ui-spinner-rtl { direction: rtl; }
+.ui-spinner-rtl .ui-spinner-input { float: right; margin-left: 22px; margin-right: .4em; }
+.ui-spinner-rtl .ui-spinner-button { left: 0; }
+.ui-spinner-rtl a.ui-spinner-button { border-left: none; }
+
+/* TR overrides */
+div.ui-spinner { background: none; }
+
 
