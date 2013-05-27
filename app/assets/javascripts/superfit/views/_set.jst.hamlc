@@ -1,11 +1,12 @@
-.enter-score-label
-  %p Set #{@set_number}
-.enter-score
-  %div.input
-    %input#custom-wod-label.required{type: "number", name: "weight", placeholder: "ex. 155"}
-    %span.small Enter Weight (lbs)
-  %div.times
-    %span.awesome.icon-remove
-  %div.reps
-    %input#custom-wod-label.required{type: "number", name: "reps", placeholder: "ex. 10"}
-    %span.small Enter Reps
+.set
+  .enter-score-label
+    %p Set #{@set_number}
+  .enter-score
+    %div.input
+      %input#custom-wod-label.required{type: "number", name: "weight", placeholder: "ex. 155"}
+      %span.small Enter Weight (lbs)
+    %div.times
+      %span.awesome.icon-remove
+    %div.reps
+      %input#custom-wod-label.required{type: "number", name: "reps", placeholder: "ex. 10"}
+      %span.small Enter Reps

@@ -19,6 +19,9 @@ class Superfit.EditWod extends Spine.Controller
 
   render: ->
     super
+    @initSpinners()
+
+  initSpinners: ->
     @$('input[type=number]').spinner()
 
   updateNewWod: (wod) =>
@@ -60,8 +63,8 @@ class Superfit.EditWod extends Spine.Controller
 
   addSet: (e=null) ->
     e.preventDefault() if e
-    @set_number or= 0
-    @set_number += 1
+    @set_number = @$('.set').length + 1
 
     html = JST['superfit/views/_set'](set_number: @set_number)
     @sets.append(html)
+    @initSpinners()
