@@ -14,9 +14,10 @@ class Superfit.Calendar extends Spine.Controller
     @render()
 
     reduceData = (acc, entry) ->
+      wod = Wod.find(entry.wod_id)
       formattedDate = moment(entry.date).format('MM-DD-YYYY')
       acc[formattedDate] or= ""
-      acc[formattedDate] += "<span class='entry'></span>"
+      acc[formattedDate] += "<span class='entry #{wod.typeSlug()}'></span>"
       acc
 
     caldata = _.reduce WodEntry.all(), reduceData, {}
