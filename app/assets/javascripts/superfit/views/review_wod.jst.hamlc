@@ -13,6 +13,7 @@
           %p.score-details= @entry.details
 
       %a.button.bottom.lighter.dissolve{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
+      %a.button.bottom.lighter.pop.delete{"data-id": @entry.id, href: "#home"} Delete Workout
 
 
   .content-main
