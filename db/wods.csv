@@ -491,14 +491,14 @@ Push Ups","Squats
 Rows
 Pull Ups
 Sit Ups
-Push Ups",Total Reps,8 rounds (20 sec work/10 sec rest),
+Push Ups",Max Reps,8 rounds (20 sec work/10 sec rest),
 97,Other,Common,Tabata Something Else,"Pull Ups
 Push Ups
 Sit Ups
 Squats","Pull Ups
 Push Ups
 Sit Ups
-Squats",Total Reps,8 rounds (20 sec work/10 sec rest),
+Squats",Max Reps,8 rounds (20 sec work/10 sec rest),
 98,Other,Common,Fight Gone Bad,"Wall ball shots 10' target @ 20lbs
 Sumo High Pull Dead Lift @ 75 lbs
 Box jump @ 20"" box
@@ -507,14 +507,14 @@ Row","Wall ball shots 10' target @ 20lbs
 Sumo High Pull Dead Lift @ 75 lbs
 Box jump @ 20"" box
 Push Press @ 75 lbs
-Row",Total Reps,5 Rounds for total reps. Rotate movements each minute.,
+Row",Max Reps,5 Rounds for total reps. Rotate movements each minute.,
 99,Other,Common,Crossfit Total,"Back Squat
 Shoulder Press
 Dead Lift
 ","Back squat x 1 rep, 
 Shoulder Press x 1 rep, 
 Deadlift x 1 rep
-",Total weight,"You get three attempts at each lift
+",Weight / Reps / Rounds,"You get three attempts at each lift
 You cannot remove weight from the bar",
 100,Other,Common,Filthy Fifty,"50 Box Jumps @ 24""
 50 Jumping Pull Ups
@@ -585,7 +585,7 @@ Burpees",For Time,3 rounds of 21-15-9 (reps) for time,
 10 sit ups
 15 squats","5 push ups
 10 sit ups
-15 squats",Rounds,AMRAP 20 Minutes,
+15 squats",AMRAP  (rounds),AMRAP 20 Minutes,
 121,Other,Travel,Travel #4,"10 vertical jumps, 10 push ups, 10 sit ups","10 vertical jumps, 10 push ups, 10 sit ups",For Time,4 Rounds,
 122,Other,Travel,Travel #5,4 x 400m sprint,4 x 400m sprint,For Time,For Time,2 minute rest in between rounds
 123,Other,Travel,Travel #6,10 Handstand push ups and a 200m run,10 Handstand push ups and a 200m run,For Time, 3 rounds,
@@ -637,5 +637,5 @@ Burpees",For Time,3 rounds of 21-15-9 (reps) for time,
 155,Strength,,Squat,,,Weight / Reps / Rounds,,
 156,Strength,,Sumo Deadlift High Pull,,,Weight / Reps / Rounds,,
 157,Strength,,Thruster,,,Weight / Reps / Rounds,,
-158,Strength,,Weighted pullup,,,Weight / Max Reps ,,
-159,Hidden,,Step Ups,,,,,
+158,Strength,,Weighted pullup,,,Weight / Reps / Rounds,,
+159,Hidden,,Step Ups,,,AMRAP  (rounds),,

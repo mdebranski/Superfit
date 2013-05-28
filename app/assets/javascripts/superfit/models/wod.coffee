@@ -14,7 +14,7 @@ class Wod extends Spine.Model
   @extend Spine.Events
   @extend Spine.Log
 
-  @scoringMethodMap: {for_time: "For Time", pass_fail: "Pass/Fail", rounds: "AMRAP (rounds)", 'max_reps': "Max Reps"}
+  @scoringMethodMap: {for_time: "For Time", pass_fail: "Pass/Fail", rounds: "AMRAP (rounds)", max_reps: "Max Reps", weight_reps: "Weight / Reps / Rounds"}
 
   @byType: (type) ->
     wods = _.select @all(), (wod) ->
