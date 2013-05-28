@@ -1,16 +1,15 @@
-#enter-strength-score.page
-  .page-header
-    .toolbar
-      %div
-        %a.awesome.icon-chevron-left.goback{href: "#add-wod"}
-      %h1= @wod.name
-  .content-main
-    .content-block
-      %form
-        %input{type: 'hidden', name: 'wod_id', value: @wod.id}
-        - if @entry
-          %input{type: 'hidden', name: 'entry_id', value: @entry.id}
-        .sets
-        %a.button.lighter.bottom.add-set{href: "#"} Add Another Set
-        %hr/
-        %input.button.bluer.bottom{type: 'submit'} Save Workout
+.page-header
+  .toolbar
+    %div
+      %a.awesome.icon-chevron-left.goback{href: "#add-wod"}
+    %h1= @wod.name
+.content-main
+  .content-block
+    %form
+      %input{type: 'hidden', name: 'wod_id', value: @wod.id}
+      - if @entry
+        %input{type: 'hidden', name: 'entry_id', value: @entry.id}
+      .sets
+      %a.button.lighter.bottom.add-set{href: "#"} Add Another Set
+      %hr/
+      %input.button.bluer.bottom{type: 'submit'} Save Workout
