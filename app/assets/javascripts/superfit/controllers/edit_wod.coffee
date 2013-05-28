@@ -24,14 +24,17 @@ class Superfit.EditWod extends Spine.Controller
   initSpinners: ->
     @$('input[type=number]').spinner()
 
+  initValidation: ->
+    @form.validate
+      submitHandler: @submit
+
   updateNewWod: (wod) =>
     @wod = wod
 
     @templateName = if wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
 
     @render(wod: @wod, user: User.first())
-    @form.validate
-      submitHandler: @submit
+    @initValidation()
 
     @addSets() if @wod.type == 'Strength'
 
@@ -41,30 +44,57 @@ class Superfit.EditWod extends Spine.Controller
     @templateName = if @wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
 
     @render(wod: @wod, entry: entry, user: User.first())
-    @form.validate
-      submitHandler: @submit
+    @initValidation()
 
-    @addSets() if @wod.type == 'Strength'
+    @addSets(entry) if @wod.type == 'Strength'
+
+  toInt: (numOrArray) ->
+    return null unless numOrArray
+    if typeof(numOrArray) == 'object'
+      _.map numOrArray, (num) -> parseInt(num)
+    else
+      parseInt(numOrArray)
+
+  ensureArray: (arrayOrNot) ->
+    if typeof(arrayOrNot) == 'object'
+      arrayOrNot
+    else
+      [arrayOrNot]
 
   submit: =>
     data = @form.serializeObject()
-    _.extend data, {date: Superfit.currentDate, method: @wod.scoring_method}
+
+    attributes =
+       wod_id: @wod.id
+       score: @toInt(data.score)
+       min: @toInt(data.min)
+       sec: @toInt(data.sec)
+       reps: @ensureArray @toInt(data.reps)
+       weight: @ensureArray @toInt(data.weight)
+       method: @wod.scoring_method
+       type: data.type
+       details: data.details
+       date: Superfit.currentDate
+
 
     if data.entry_id
       entry = WodEntry.find(data.entry_id)
-      entry.updateAttributes(data)
+      entry.updateAttributes(attributes)
     else
-      entry = WodEntry.create(data)
+      entry = WodEntry.create(attributes)
 
     jQT.goTo('#review-wod', jQT.settings.defaultTransition)
 
-  addSets: ->
-    @addSet()
+  addSets: (entry=null) ->
+    unless entry
+      @addSet()
+    else
+      _.each entry.reps, (reps, i) => @addSet(null, reps, entry.weight[i])
 
-  addSet: (e=null) ->
+  addSet: (e=null, reps=null, weight=null) ->
     e.preventDefault() if e
     @set_number = @$('.set').length + 1
 
-    html = JST['superfit/views/_set'](set_number: @set_number)
+    html = JST['superfit/views/_set'](set_number: @set_number, reps: reps, weight: weight)
     @sets.append(html)
     @initSpinners()

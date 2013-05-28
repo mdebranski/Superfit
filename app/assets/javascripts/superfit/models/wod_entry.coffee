@@ -5,10 +5,12 @@ class WodEntry extends Spine.Model
              'score',
              'min',
              'sec',
+             'reps',
+             'weight'
              'method',
              'type',
              'details',
-             'date'
+             'date',
 
   @extend Spine.Model.Local
   @extend Spine.Events
@@ -28,5 +30,12 @@ class WodEntry extends Spine.Model
       when 'weight' then "#{@score} lbs"
       when 'max_reps' then "#{@score} reps"
       when 'pass_fail' then @score.toUpperCase()
+      when 'weight_reps' then @weightRepsString()
+
+  weightRepsString: ->
+    return "" unless @reps and @reps.length > 0
+    func = (acc, reps, i) => acc + "#{reps} x #{@weight[i]} lbs, "
+    str = _.reduce @reps, func, ""
+    str[0..str.length - 3]
 
 window.WodEntry = WodEntry

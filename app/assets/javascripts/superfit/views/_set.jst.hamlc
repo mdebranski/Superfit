@@ -3,10 +3,10 @@
     %p Set #{@set_number}
   .enter-score
     %div.input
-      %input#custom-wod-label.required{type: "number", name: "weight", placeholder: "ex. 155"}
+      %input.required.number{type: "number", name: "weight", placeholder: "ex. 155", value: @weight}
       %span.small Enter Weight (lbs)
     %div.times
       %span.awesome.icon-remove
     %div.reps
-      %input#custom-wod-label.required{type: "number", name: "reps", placeholder: "ex. 10"}
+      %input.required.number{type: "number", name: "reps", placeholder: "ex. 10", value: @reps}
       %span.small Enter Reps

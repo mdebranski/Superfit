@@ -32,9 +32,9 @@
             %p Enter Score
             - switch @wod.scoring_method
               - when 'rounds'
-                %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Enter Rounds", value: @entry?.score}
+                %input.required{type: "number", name: "score", placeholder: "Enter Rounds", value: @entry?.score}
               - when 'max_reps'
-                %input#custom-wod-label.required{type: "number", name: "score", placeholder: "Enter Reps", value: @entry?.score}
+                %input.required{type: "number", name: "score", placeholder: "Enter Reps", value: @entry?.score}
               - when 'pass_fail'
                 %input#score-pass{type: "radio", name: "score", value: "pass", checked: if @entry then @entry.score == 'pass' else 'checked'}
                   %label.radio{for: 'score-pass'} Pass
@@ -42,8 +42,8 @@
                   %label.radio{for: 'score-fail'} Fail
               - when 'for_time'
                 .time-score
-                  %input#custom-wod-label.required{type: "number", name: "min", placeholder: "Min", value: @entry?.min}
-                  %input#custom-wod-label.required{type: "number", name: "sec", placeholder: "Sec", value: @entry?.sec}
+                  %input.required{type: "number", name: "min", placeholder: "Min", value: @entry?.min}
+                  %input.required{type: "number", name: "sec", placeholder: "Sec", value: @entry?.sec}
 
         %div
           %input{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
