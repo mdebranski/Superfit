@@ -1,13 +1,13 @@
 //= require jqtouch
 //= require jqtouch_overrides
-//= require superfit_common
-//= require settings
-//= require calendar
-//= require calendar_theme
+//= require jquery.ui.spinner
 //= require font-awesome
 //= require gibson-webfont
-//= require jquery.ui.spinner
+//= require calendar
 
+@import 'settings';
+@import 'superfit_common';
+@import 'calendar_theme';
 
 
 // Colours
