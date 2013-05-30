@@ -24,8 +24,8 @@
           %li
             %a{href: "#review-wod", 'data-id': entry.id}
               .label
-                .icon.sprite-sf{class: entry.wod().typeSlug()}
-                %p= entry.wod().name
+                .icon.sprite-sf{class: entry.typeSlug()}
+                %p= entry.wodName()
                 %p= entry.scoreString()
               %p.awesome.icon-chevron-right.arrow
         %li

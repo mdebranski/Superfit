@@ -479,14 +479,13 @@ body {background:none}
     .small {position:relative; top:5px;}
 
     .type { margin-right: 7%; }
-    .score {
+    .score-container {
       width:98%;  margin-bottom: 3px;
 
-      .time-score {
+      .for_time {
         .ui-spinner:first-of-type {margin-right:5%;}
         .ui-spinner {width:46%;}
       }
-      .passfail-score {width:90%;}
     }
 
   }

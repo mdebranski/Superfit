@@ -14,25 +14,25 @@
 
     %ul.wods-browse
       %li{'data-type': 'benchmark'}
-        %a{href: "#browse-wods"}
+        %a.browse{href: "#browse-wods"}
           .label
             .icon.sprite-sf.benchmark
             %p Benchmark
           %p.awesome.icon-chevron-right.arrow
       %li{'data-type': 'strength'}
-        %a{href: "#browse-wods"}
+        %a.browse{href: "#browse-wods"}
           .label
             .icon.sprite-sf.strength
             %p Strength
           %p.awesome.icon-chevron-right.arrow
       %li{'data-type': 'other'}
-        %a{href: "#browse-wods"}
+        %a.browse{href: "#browse-wods"}
           .label
             .icon.sprite-sf.other
             %p Other
           %p.awesome.icon-chevron-right.arrow
       %li
-        %a{href: "#create-wod"}
+        %a.custom{href: "#edit-wod"}
           .label
             .icon.sprite-sf.custom
             %p Custom

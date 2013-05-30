@@ -3,7 +3,7 @@
     .toolbar
       %div
         %a.awesome.icon-chevron-left.goback{href: '#'}
-      %h1= @wod.name
+      %h1= @entry.wodName()
   .content-main
     .content-block
       .yellow-block
@@ -18,7 +18,7 @@
   .content-main
     %div.secondary
       %div.title
-        %h3 #{@wod.name} History
+        %h3 #{@entry.wodName()} History
       %ul
         %li.chart
         %li

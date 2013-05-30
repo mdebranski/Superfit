@@ -8,20 +8,29 @@ class Superfit.EditWod extends Spine.Controller
     'tap .add-set': 'addSet'
     'tap .remove-set': 'removeSet'
     'submit form': 'submit'
+    'change select[name=method]': 'changeMethod'
 
   constructor: ->
     super
     Wod.bind 'new', @updateNewWod
 
-    @el.bind "pageAnimationStart", =>
-      if id = @el.data('referrer')?.data('id')
+    @el.bind "pageAnimationStart", (e, data) =>
+      if data.direction == 'in' and id = @el.data('referrer')?.data('id')
         entry = WodEntry.find(id)
         @updateEditEntry(entry)
+
+  changeMethod: ->
+    @$('.score').hide()
+    @$('.score input').attr('disabled', true)
+    method = if @wod then @wod.scoring_method else @$('select[name=method]').val()
+    @$(".#{method}.score").show().attr('disabled', false)
+    @$(".#{method}.score input").removeAttr('disabled')
 
   render: ->
     super
     @initSpinners()
     @initValidation()
+    @changeMethod()
 
   initSpinners: ->
     @$('input[type=number]').spinner()
@@ -37,7 +46,7 @@ class Superfit.EditWod extends Spine.Controller
     @addSets() if @wod and @wod.type == 'Strength'
 
   updateEditEntry: (entry) ->
-    @wod = Wod.find(entry.wod_id)
+    @wod = Wod.find(entry.wod_id) if entry.wod_id
     @templateName = if @wod and @wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
     @render(wod: @wod, entry: entry, user: User.first())
     @addSets(entry) if @wod and @wod.type == 'Strength'
@@ -59,13 +68,14 @@ class Superfit.EditWod extends Spine.Controller
     data = @form.serializeObject()
 
     attributes =
-       wod_id: @wod.id
+       wod_id: @wod and @wod.id
+       name: data.name
        score: @toInt(data.score)
        min: @toInt(data.min)
        sec: @toInt(data.sec)
        reps: @ensureArray @toInt(data.reps)
        weight: @ensureArray @toInt(data.weight)
-       method: @wod.scoring_method
+       method: if @wod then @wod.scoring_method else data.method
        type: data.type
        details: data.details
        date: Superfit.currentDate

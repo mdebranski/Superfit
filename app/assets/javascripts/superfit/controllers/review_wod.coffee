@@ -16,7 +16,7 @@ class Superfit.ReviewWod extends Spine.Controller
         @updateReviewWod(entry)
 
   updateReviewWod: (entry) =>
-    @wod = Wod.find(entry.wod_id)
+    @wod = Wod.find(entry.wod_id) if entry.wod_id
     @entry = entry
     @render(wod: @wod, entry: @entry)
 

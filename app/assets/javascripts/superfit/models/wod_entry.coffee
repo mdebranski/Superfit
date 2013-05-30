@@ -2,6 +2,7 @@ class WodEntry extends Spine.Model
   @configure 'WodEntry',
              'id',
              'wod_id',
+             'name',
              'score',
              'min',
              'sec',
@@ -37,5 +38,9 @@ class WodEntry extends Spine.Model
     func = (acc, reps, i) => acc + "#{reps} x #{@weight[i]} lbs, "
     str = _.reduce @reps, func, ""
     str[0..str.length - 3]
+
+  typeSlug: -> if @wod_id then @wod().typeSlug() else "custom"
+
+  wodName: -> if @wod_id then @wod().name else @name
 
 window.WodEntry = WodEntry

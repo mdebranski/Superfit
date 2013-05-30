@@ -9,7 +9,10 @@ class Superfit.AddWod extends Superfit.SearchWods
   events:
     'keyup input.search-text': 'search'
     'tap input.search-text': 'search'
-    'tap .wods-browse li a': 'browseWods'
+    'tap .wods-browse li a.custom': 'addCustomWod'
+    'tap .wods-browse li a.browse': 'browseWods'
+
+  addCustomWod: -> Wod.trigger 'new', null
 
   browseWods: (e) ->
     type = $(e.target).closest('li').data('type')
