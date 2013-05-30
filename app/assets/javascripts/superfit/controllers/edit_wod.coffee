@@ -9,6 +9,8 @@ class Superfit.EditWod extends Spine.Controller
     'tap .remove-set': 'removeSet'
     'submit form': 'submit'
     'change select[name=method]': 'changeMethod'
+    'change input[type=number]' : 'notNegative'
+    'spinstop input[type=number]' : 'notNegative'
 
   constructor: ->
     super
@@ -112,3 +114,8 @@ class Superfit.EditWod extends Spine.Controller
       $('input[type=number]').val('')
 
     _.each $('.set-number'), (el, i) -> $(el).text(i+1)
+
+  notNegative: (e) ->
+    val = $(e.target).val()
+    if parseInt(val) < 0
+      $(e.target).val(0)
