@@ -6,6 +6,7 @@ class Superfit.EditWod extends Spine.Controller
 
   events:
     'tap .add-set': 'addSet'
+    'tap .remove-set': 'removeSet'
     'submit form': 'submit'
 
   constructor: ->
@@ -20,6 +21,7 @@ class Superfit.EditWod extends Spine.Controller
   render: ->
     super
     @initSpinners()
+    @initValidation()
 
   initSpinners: ->
     @$('input[type=number]').spinner()
@@ -30,23 +32,15 @@ class Superfit.EditWod extends Spine.Controller
 
   updateNewWod: (wod) =>
     @wod = wod
-
-    @templateName = if wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
-
+    @templateName = if wod and wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
     @render(wod: @wod, user: User.first())
-    @initValidation()
-
-    @addSets() if @wod.type == 'Strength'
+    @addSets() if @wod and @wod.type == 'Strength'
 
   updateEditEntry: (entry) ->
     @wod = Wod.find(entry.wod_id)
-
-    @templateName = if @wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
-
+    @templateName = if @wod and @wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
     @render(wod: @wod, entry: entry, user: User.first())
-    @initValidation()
-
-    @addSets(entry) if @wod.type == 'Strength'
+    @addSets(entry) if @wod and @wod.type == 'Strength'
 
   toInt: (numOrArray) ->
     return null unless numOrArray
@@ -98,3 +92,13 @@ class Superfit.EditWod extends Spine.Controller
     html = JST['superfit/views/_set'](set_number: @set_number, reps: reps, weight: weight)
     @sets.append(html)
     @initSpinners()
+
+  removeSet: (e) ->
+    e.preventDefault()
+
+    if $('.set').length > 1
+      $(e.target).closest('.set').detach()
+    else
+      $('input[type=number]').val('')
+
+    _.each $('.set-number'), (el, i) -> $(el).text(i+1)

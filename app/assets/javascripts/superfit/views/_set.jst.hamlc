@@ -1,7 +1,7 @@
 .set
   .enter-score-label
-    %p Set #{@set_number}
-    <i class="icon-remove-sign"></i>
+    %p Set <span class='set-number'>#{@set_number}</span>
+    <i class="remove-set icon-remove-sign"></i>
     <a href="#" class="warm-up">Warm-up</a>
   .enter-score
     %div.input
