@@ -2,7 +2,7 @@
   .enter-score-label
     %p Set #{@set_number}
     <i class="icon-remove-sign"></i>
-    <a href="#" class="warm-up selected">Warm-up</a>
+    <a href="#" class="warm-up">Warm-up</a>
   .enter-score
     %div.input
       %input.required.number{type: "number", name: "weight", placeholder: "ex. 155", value: @weight}

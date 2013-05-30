@@ -116,8 +116,8 @@ $gibsonoffset:                        4px;
       background: #f7f7f7;
       @include box-shadow($insetshadow);
       @include border-radius($radius);
-      line-height: 54px;
-      height:54px;
+      line-height: 63px;
+      height:62px;
       padding:0 0 0 10px;
       width:98%;
       -webkit-appearance:none;
@@ -147,6 +147,7 @@ $gibsonoffset:                        4px;
       padding:10px 5px;
       font-family:$standardfont ;
       @include border-radius($radius);
+      width:92%;
 
     }
     select{
