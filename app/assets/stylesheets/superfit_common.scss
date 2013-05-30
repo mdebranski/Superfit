@@ -1,44 +1,71 @@
 
 @import 'compass/css3';
 
-$radius: 3px;
-$radiusleft: 0px 2px 2px 2px;
-$radiusright: 0px 2px 2px 0px;
-$radiusbottom: 0px 0px 2px 2px;
-$notepapercolor:#fcfadd;
-$stageshadow:0px 1px 3px rgba(0, 0, 0, 0.46);
-$stagebkg:#ffffff;
-$contentpad:0 10px;
-$insetshadow:inset 0px 1px 1px 0px rgba(0, 0, 0, .45);
-$activebutton:inset 0px 1px 12px 0px rgba(0, 0, 0, .65);
-$standardfont: "Helvetica-Neue", Helvetica, Arial;
-$standardfontsize: 16px;
+// Colours
+// ------------------------------------------------------------
+
+$easternblue                        : #4ea3e3;  // blues
+$pictonblue-lt						: #5CC9EF;  // blues
+
+$emerald							: #57D68D;  // greens
+$mountmain-meadow					: #1ABC9C;  // greens
+
+$pickledbluewood					: #2C3E50;  // dark blues
+$pickledbluewood-lt					: #34495E;  // dark blues
+
+$zest								: #E67E22;  // oranges
+$piper 								: #DB7633;  // oranges
+
+$burntseinna 						: #EB6F63;  // reds
+$tallpoppy 							: #C0392B;  // reds
+
+$yellow                             : #fffae8;  // yellow
+
+$silverchalice 						: #999999;  // greys
+$dovegray							: #666666;  // greys
+$mineshaft							: #333333;  // greys
+$mineshaft-dk						: #222222;  // greys
+$mercury							: #e7e7e7;  // greys
+$silver								: #cccccc;  // greys
+$seashell							: #f1f1f1;  // greys
+
+
+// Radius & Shadow
+// ------------------------------------------------------------
+
+$radius                             : 3px;
+$radiusleft							: 0px 2px 2px 2px;
+$radiusright						: 0px 2px 2px 0px;
+$radiusbottom						: 0px 0px 2px 2px;
+$radiustop							: 2px 2px 2px 2px;
+$radius-circle						: 100px;
+
+
+$stageshadow						: 0px 1px 2px rgba(0, 0, 0, 0.35);
+$standardboxshadow					: 0px 0px 2px rgba(0, 0, 0, 0.20);
+$stagebkg							: #ffffff;
+$contentpad							: 0 8px;
+$insetshadow						: inset 0px 1px 2px 0px rgba(0, 0, 0, .45);
+
+$bevel                              : 0 1px 1px rgba(255,255,255,0.5), /*bottom external highlight*/
+                                      0 -1px 1px rgba(0,0,0,0.05), /*top external shadow*/
+                                      inset 0 -1px 1px rgba(0,0,0,0.15), /*bottom internal shadow*/
+                                      inset 0 1px 1px rgba(255,255,255,0.0); /*top internal highlight*/;
+
+
+$bevelinverse                       : 0 -1px 1px rgba(255,255,255,0.0), /*bottom external highlight*/
+                                      0 1px 1px rgba(0,0,0,0.05), /*top external shadow*/
+                                      inset 0 1px 1px rgba(0,0,0,0.15), /*bottom internal shadow*/
+                                      inset 0 -1px 1px rgba(255,255,255,0.0); /*top internal highlight*/;
+
+
+// Font Stuff
+// ------------------------------------------------------------
+$standardfont						: "Gibson-Regular", Helvetica, Arial;
+$standardfontbold					: "Gibson-SemiBold", Helvetica, Arial;
+$standardfontsize					: 16px;
 $fontcolor:#464646;
-$bevel:
-    0 1px 1px rgba(255,255,255,0.5), /*bottom external highlight*/
-    0 -1px 1px rgba(0,0,0,0.05), /*top external shadow*/
-    inset 0 -1px 1px rgba(0,0,0,0.15), /*bottom internal shadow*/
-    inset 0 1px 1px rgba(255,255,255,0.0); /*top internal highlight*/;
-
-
-$bevelinverse:
-    0 -1px 1px rgba(255,255,255,0.0), /*bottom external highlight*/
-    0 1px 1px rgba(0,0,0,0.05), /*top external shadow*/
-    inset 0 1px 1px rgba(0,0,0,0.15), /*bottom internal shadow*/
-    inset 0 -1px 1px rgba(255,255,255,0.0); /*top internal highlight*/;
-
-// colors
-$easternblue:#4ea3e3;     // #00afd5
-$yellow:#fffae8;
-$red:#d91c00;
-$seashell:#f1f1f1;
-$silvershell:#e5e5e5;
-$silver:#cccccc;
-$silverchalice:#999999;
-$dovegray:#666666;
-$mineshaft:#333333;
-$codgray:#111111;
-
+$gibsonoffset:                        4px;
 
 #jqt > * {
 
@@ -70,7 +97,7 @@ $codgray:#111111;
     }
 
     &.lighter {
-      background: $silvershell;
+      background: $mercury;
       color:$mineshaft;
       }
     &.bluer{
@@ -156,3 +183,4 @@ $codgray:#111111;
 
   }
 }
+

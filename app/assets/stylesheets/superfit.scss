@@ -1,46 +1,88 @@
 //= require jqtouch
 //= require jqtouch_overrides
 //= require superfit_common
+//= require settings
 //= require calendar
 //= require calendar_theme
 //= require font-awesome
 //= require gibson-webfont
 //= require jquery.ui.spinner
 
+
+
+// Colours
+// ------------------------------------------------------------
+
+$easternblue                        : #4ea3e3;  // blues
+$pictonblue-lt						: #5CC9EF;  // blues
+
+$emerald							: #57D68D;  // greens
+$mountmain-meadow					: #1ABC9C;  // greens
+
+$pickledbluewood					: #2C3E50;  // dark blues
+$pickledbluewood-lt					: #34495E;  // dark blues
+
+$zest								: #E67E22;  // oranges
+$piper 								: #DB7633;  // oranges
+
+$burntseinna 						: #EB6F63;  // reds
+$tallpoppy 							: #C0392B;  // reds
+
+$yellow                             : #fffae8;  // yellow
+
+$silverchalice 						: #999999;  // greys
+$dovegray							: #666666;  // greys
+$mineshaft							: #333333;  // greys
+$mineshaft-dk						: #222222;  // greys
+$mercury							: #e7e7e7;  // greys
+$silver								: #cccccc;  // greys
+$seashell							: #f1f1f1;  // greys
+
+
+// Radius & Shadow
+// ------------------------------------------------------------
+
+$radius                             : 3px;
+$radiusleft							: 0px 2px 2px 2px;
+$radiusright						: 0px 2px 2px 0px;
+$radiusbottom						: 0px 0px 2px 2px;
+$radiustop							: 2px 2px 2px 2px;
+$radius-circle						: 100px;
+
+
+$stageshadow						: 0px 1px 2px rgba(0, 0, 0, 0.35);
+$standardboxshadow					: 0px 0px 2px rgba(0, 0, 0, 0.20);
+$stagebkg							: #ffffff;
+$contentpad							: 0 8px;
+$insetshadow						: inset 0px 1px 2px 0px rgba(0, 0, 0, .45);
+
+$bevel                              : 0 1px 1px rgba(255,255,255,0.5), /*bottom external highlight*/
+  0 -1px 1px rgba(0,0,0,0.05), /*top external shadow*/
+inset 0 -1px 1px rgba(0,0,0,0.15), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,0.0); /*top internal highlight*/;
+
+
+$bevelinverse                       : 0 -1px 1px rgba(255,255,255,0.0), /*bottom external highlight*/
+0 1px 1px rgba(0,0,0,0.05), /*top external shadow*/
+inset 0 1px 1px rgba(0,0,0,0.15), /*bottom internal shadow*/
+inset 0 -1px 1px rgba(255,255,255,0.0); /*top internal highlight*/;
+
+
+// Font Stuff
+// ------------------------------------------------------------
+$standardfont						: "Gibson-Regular", Helvetica, Arial;
+$standardfontbold					: "Gibson-SemiBold", Helvetica, Arial;
+$standardfontsize					: 16px;
+$fontcolor:#464646;
+$gibsonoffset:                        4px;
+
+
+// End Variables
+// ------------------------------------------------------------
+//
+
+
 @import 'compass/css3';
-
-$radius: 3px;
-$radiusleft: 0px 2px 2px 2px;
-$radiusright: 0px 2px 2px 0px;
-$radiusbottom: 0px 0px 2px 2px;
-$radiustop: 2px 2px 2px 2px;
-$radius-circle:100px;
-
-$notepapercolor:#ffffff; //#fcfadd;
-$stageshadow:0px 1px 2px rgba(0, 0, 0, 0.35);
-$standardboxshadow: 0px 0px 2px rgba(0, 0, 0, 0.20);
-$stagebkg:#ffffff;
-$contentpad:0 8px;
-$insetshadow:inset 0px 1px 2px 0px rgba(0, 0, 0, .45);
-$standardfont: "Gibson-Regular", Helvetica, Arial;
-$standardfontbold: "Gibson-SemiBold", Helvetica, Arial;
-$standardfontsize: 16px;
-$paragraphtext: 12px;
-$standardlineheight: 45px;
-$stageintmargin:20px;
-
-// colors
-$easternblue:#4ea3e3;
-$yellow:#fffae8;
-$red:#d91c00;
-$seashell:#f1f1f1;
-$silver:#cccccc;
-$silverchalice:#999999;
-$dovegray:#666666;
-$mineshaft:#333333;
-$codgray:#111111;
-
-$gibsonoffset: 4px;
 
 
 @mixin fl($width) { display: block; float: left; width: $width }
@@ -127,7 +169,7 @@ body {background:none}
   }
   .content-main{
 
-    background: $notepapercolor;
+    background: #ffffff;
     position: relative;
     width: 96%;
     z-index: 4;
@@ -402,15 +444,34 @@ body {background:none}
   }
  // ENTER WOD SCORE
   .enter-score-label {
-    width:95%;
-    p {float:left;width:50px; margin-top: 9px!important; }
-    .delete {float:left; position:relative;top:21px}
+    width:99%;
+    p {float:left;width:42px; margin-top: 9px!important; }
+    .icon-remove-sign {
+      float:left;
+      position:relative;
+      top:17px;
+      color:$tallpoppy
+      }
+    .warm-up {
+      float:right;
+      background: $seashell;
+      color:$silver;
+      @include border-radius($radius);
+      padding:4px 8px;
+      font-size:10px ;
+      position:relative;
+      top:15px;
+      }
+
+    .warm-up.selected {
+      background: $mountmain-meadow;
+      color:#ffffff;
+    }
     overflow: hidden;
   }
   .enter-score{
     margin-bottom: 18px;
     overflow: hidden;
-    .delete {overflow: hidden;}
 
     div.input {  width:55%; float:left; margin-top:0px}
     div.times {float:left;width:9%; position: relative; top:15px; text-align: center}
@@ -514,6 +575,8 @@ body {background:none}
     margin-right: auto;
     &.bottom {margin-top:18px}
 
+    &.red {background: $tallpoppy; }
+
   }
   .sprite-sf{
     display:block;
@@ -562,8 +625,6 @@ body {background:none}
 
 
   .photo-icon {width:34px;  height:21px; background-position: -148px -91px; float:left; margin:0 6px }
-  .delete {width:25px;  height:25px; background-position: -154px -57px;}
-  .delete:active {width:25px;  height:25px; background-position: -197px -57px;}
 
 
   .small {color:$silverchalice;font-size: 11px; }
@@ -594,17 +655,17 @@ body {background:none}
     padding: 5px 20px 10px 20px;
     .custom-month {display: inline-block; margin-right:5px; color:$mineshaft; font-size: 16px; text-transform: capitalize;}
     .custom-year {display: inline-block; font-size: 16px; font-weight: normal; line-height: 54px; color:$mineshaft}
-    nav span:before {color:$red}
+    nav span:before {color:$tallpoppy}
 
   }
   .fc-calendar-container {background:#ffffff ; padding:10px 8px 50px 10px}
-  .fc-calendar .fc-head {color:$red; font-weight: normal; font-size:10px;}
+  .fc-calendar .fc-head {color:$tallpoppy; font-weight: normal; font-size:10px;}
   .fc-calendar .fc-body {border:0px}
   .fc-calendar .fc-row  {border:0px}
   .fc-calendar .fc-row > div {height: 80%;width: calc(100%/7); padding:0;border-right: 0;}
   .fc-calendar .fc-row > div > span.fc-date   {color:$dovegray; font-weight: bold; font-size:11px;}
   .fc-calendar .fc-row > div.fc-today {
-    background: $red;
+    background: $tallpoppy;
     @include border-radius($radius-circle);
     @include box-shadow($insetshadow);
   }
