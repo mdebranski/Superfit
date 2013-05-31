@@ -35,7 +35,7 @@ class WodEntry extends Spine.Model
 
   weightRepsString: ->
     return "" unless @reps and @reps.length > 0
-    func = (acc, reps, i) => acc + "#{reps} x #{@weight[i]} lbs, "
+    func = (acc, reps, i) => acc + "#{@weight[i]}lb x #{reps} reps, "
     str = _.reduce @reps, func, ""
     str[0..str.length - 3]
 
