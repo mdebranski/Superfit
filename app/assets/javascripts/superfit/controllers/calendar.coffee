@@ -6,8 +6,8 @@ class Superfit.Calendar extends Spine.Controller
     '#custom-year': 'yearEl'
 
   events:
-    'click #custom-next': 'nextMonth'
-    'click #custom-prev': 'prevMonth'
+    'tap #custom-next': 'nextMonth'
+    'tap #custom-prev': 'prevMonth'
 
   constructor: ->
     super

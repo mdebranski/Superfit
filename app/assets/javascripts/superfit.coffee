@@ -40,7 +40,7 @@ class Superfit extends Spine.Controller
     '.page#calendar': 'calendar'
 
   events:
-    'click #get-started': 'createUser'
+    'tap #get-started': 'createUser'
 
   constructor: ->
     super
