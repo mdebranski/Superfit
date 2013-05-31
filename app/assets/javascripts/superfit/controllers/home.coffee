@@ -6,7 +6,8 @@ class Superfit.Home extends Superfit.SearchWods
   events:
     'tap .prev-day': 'prevDay'
     'tap .next-day': 'nextDay'
-    'tap .pulldown': 'pulldown'
+    'tap .pulldown': -> Superfit.trigger('navigation')
+    'click .date': 'openCalendar'
 
   constructor: ->
     super
@@ -15,9 +16,6 @@ class Superfit.Home extends Superfit.SearchWods
 
     Superfit.bind 'changeDate', @changeDate
     WodEntry.bind 'change', => @render()
-
-    @navigation = $('#navigation').detach()
-    $('.page').on 'pageAnimationEnd', => @navigation.removeClass('active'); @navigation.detach()
 
   render: ->
     entries = WodEntry.byDate(Superfit.currentDate)
@@ -47,12 +45,5 @@ class Superfit.Home extends Superfit.SearchWods
     next = moment(Superfit.currentDate).add('days', 1).toDate()
     @changeDate(next)
 
-  pulldown: =>
-    if @navigation.is('.active')
-      @navigation.removeClass('active')
-      hide = => @navigation.hide()
-      _.delay hide, 1000
-    else
-      @navigation.prependTo('.current')
-      @navigation.show()
-      _.defer => @navigation.addClass('active')
+  openCalendar: ->
+    jQT.goTo('#calendar', 'pop')

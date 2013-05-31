@@ -31,15 +31,15 @@ class Superfit extends Spine.Controller
 
   elements:
     '.page#home': 'home'
+    '.page#goals': 'goals'
+    '.page#records': 'records'
     '.page#add-wod': 'addWod'
     '.page#browse-wods': 'browseWods'
     '.page#edit-wod': 'editWod'
     '.page#review-wod': 'reviewWod'
     '.page#calendar': 'calendar'
-    '.date': 'dateEl'
 
   events:
-    'click .date': 'openCalendar'
     'click #get-started': 'createUser'
 
   constructor: ->
@@ -49,6 +49,8 @@ class Superfit extends Spine.Controller
     @render(user: user)
 
     new Superfit.Home(el: @home)
+    new Superfit.Goals(el: @goals)
+    new Superfit.Records(el: @records)
     new Superfit.AddWod(el: @addWod)
     new Superfit.BrowseWods(el: @browseWods)
     new Superfit.EditWod(el: @editWod)
@@ -57,12 +59,23 @@ class Superfit extends Spine.Controller
 
     _.defer -> $.makeItRetina();
 
-  openCalendar: ->
-    jQT.goTo('#calendar', 'pop')
+    Superfit.bind 'navigation', @pulldown
+    @navigation = $('#navigation').detach()
+    $('.page').on 'pageAnimationEnd', => @navigation.removeClass('active'); @navigation.detach()
 
   createUser: ->
     gender = $('input[name=gender]:checked').val()
     User.create(gender: gender)
+
+  pulldown: =>
+    if @navigation.is('.active')
+      @navigation.removeClass('active')
+      hide = => @navigation.hide()
+      _.delay hide, 1000
+    else
+      @navigation.prependTo('.current')
+      @navigation.show()
+      _.defer => @navigation.addClass('active')
 
 window.Superfit = Superfit
 
