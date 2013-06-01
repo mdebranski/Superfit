@@ -21,8 +21,8 @@
           <!-- End: Benchmark Review Goal Layout-->
           <!-- Strength Review Goal Layout -->
           <div class="review-score" style="display: none;">
-            <div class="score">85  <span class="score-level">lb</span></div>
-            <p class="score-details">21 Reps</p>
+            <div class="score">Back Squat</div>
+            <p class="score-details">85lb x 21 Reps</p>
           </div>
           <!-- End: Strength  Review Goal Layout-->
         </div>

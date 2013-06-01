@@ -1,0 +1,72 @@
+<div id='edit-record' class='page' >
+  <div class="page-header">
+    <div class='toolbar'>
+      <div>
+        <a class="awesome icon-chevron-left goback" href="#add-wod" style=""></a>
+      </div>
+      <h1>[Record Name]</h1>
+    </div>
+  </div> <!-- end: page-header -->
+
+  <div class="scroll">
+
+    <div class="content-main">
+
+      <div class="content-block">
+        <form>
+
+          <!-- EXACT SAME ENTER SCORE CONTAINER FROM ENTER WOD SCORE with exception of p tag label-->
+          <div class="enter-score">
+            <div class="score-container">
+              <p>Enter New (or Update) Record</p>
+              <div class="for_time score" style="display: none;">
+                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="min" placeholder="Min" value="" autocomplete="off" role="spinbutton"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="sec" placeholder="Sec" value="" autocomplete="off" role="spinbutton"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+              </div>
+              <div class="rounds score" style="display: none;">
+                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="score" placeholder="Enter Rounds" value="" autocomplete="off" role="spinbutton" disabled="disabled"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+              </div>
+              <div class="score weight" style="display: block;">
+                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="score" placeholder="Enter Weight (lbs)" value="" autocomplete="off" role="spinbutton" disabled="disabled"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+              </div>
+              <div class="max_reps score" style="display: none;">
+                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="score" placeholder="Enter Reps" value="" autocomplete="off" role="spinbutton" disabled="disabled"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+              </div>
+              <div class="pass_fail score" style="display: none;">
+                <input id="score-pass" type="radio" name="score" value="pass" checked="checked" disabled="disabled">
+                <label class="radio" for="score-pass">Pass</label>
+                <input id="score-fail" type="radio" name="score" value="fail" disabled="disabled">
+                <label class="radio" for="score-fail">Fail</label>
+              </div>
+            </div>
+          </div>
+          <!-- End PR SCORE -->
+          <!-- NOTE TO JEREMY
+          ////////////////////////////
+          RX and Scaled should not appear for strenght PRS
+          ////////////////////////////
+          -->
+            <div>
+              <input id="rx-type" type="radio" name="type" value="rx" checked="checked">
+              <label class="radio" for="rx-type">RX</label>
+              <input id="scaled-type" type="radio" name="type" value="scaled">
+              <label class="radio" for="scaled-type">Scaled</label>
+            </div>
+
+        </form>
+        <!-- NOTE TO JEREMY
+        ////////////////////////////
+        Should go back to the same location in records they started from
+        ////////////////////////////
+        -->
+        <a href="#records" class="button bottom bluer">Save Record</a>
+      </div>
+
+    </div>
+
+
+    </div>
+  <!-- end:scroll -->
+
+
+</div>
