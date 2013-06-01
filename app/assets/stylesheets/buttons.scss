@@ -1,0 +1,49 @@
+
+@import 'compass/css3';
+
+#jqt > * {
+
+
+
+  button, .button {
+    text-transform:uppercase;
+    color:#f1f1f1;
+    font-family: $standardfont;
+    font-size:12px;
+    text-align: center;
+    font-weight:bold;
+    @include border-radius($radius);
+    //background: -webkit-linear-gradient(90deg, rgb(233, 233, 233) 6%, rgb(244, 244, 244) 30%);
+    background: $mineshaft;
+    border:0px solid $mineshaft;
+    margin:9px 0 9px 0;
+    text-shadow: none;
+    line-height: 45px;
+    height:45px;
+    @include box-shadow(none);
+    box-shadow: $bevel;
+
+    &:active {
+      background: $mineshaft;
+      border:0px solid #cccccc;
+      text-shadow: none;
+      @include box-shadow ($bevelinverse)
+    }
+
+    &.lighter {
+      background: $mercury;
+      color:$mineshaft;
+      }
+    &.bluer{
+      color:white;
+      background: $easternblue;
+
+    }
+
+  }
+
+  button + button, .button + .button {margin-top: 0 !important;}
+
+
+}
+
