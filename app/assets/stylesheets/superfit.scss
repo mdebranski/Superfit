@@ -6,87 +6,14 @@
 //= require calendar
 
 @import 'settings';
-@import 'superfit_common';
 @import 'calendar_theme';
-
-
-// Colours
-// ------------------------------------------------------------
-
-$easternblue                        : #4ea3e3;  // blues
-$pictonblue-lt						: #5CC9EF;  // blues
-
-$emerald							: #57D68D;  // greens
-$mountmain-meadow					: #1ABC9C;  // greens
-
-$pickledbluewood					: #2C3E50;  // dark blues
-$pickledbluewood-lt					: #34495E;  // dark blues
-
-$zest								: #E67E22;  // oranges
-$piper 								: #DB7633;  // oranges
-
-$burntseinna 						: #EB6F63;  // reds
-$tallpoppy 							: #C0392B;  // reds
-
-$yellow                             : #fffae8;  // yellow
-
-$silverchalice 						: #999999;  // greys
-$dovegray							: #666666;  // greys
-$mineshaft							: #333333;  // greys
-$mineshaft-dk						: #222222;  // greys
-$mercury							: #e7e7e7;  // greys
-$silver								: #cccccc;  // greys
-$seashell							: #f1f1f1;  // greys
-
-
-// Radius & Shadow
-// ------------------------------------------------------------
-
-$radius                             : 3px;
-$radiusleft							: 0px 2px 2px 2px;
-$radiusright						: 0px 2px 2px 0px;
-$radiusbottom						: 0px 0px 2px 2px;
-$radiustop							: 2px 2px 2px 2px;
-$radius-circle						: 100px;
-
-
-$stageshadow						: 0px 1px 2px rgba(0, 0, 0, 0.35);
-$standardboxshadow					: 0px 0px 2px rgba(0, 0, 0, 0.20);
-$stagebkg							: #ffffff;
-$contentpad							: 0 8px;
-$insetshadow						: inset 0px 1px 2px 0px rgba(0, 0, 0, .45);
-
-$bevel                              : 0 1px 1px rgba(255,255,255,0.5), /*bottom external highlight*/
-  0 -1px 1px rgba(0,0,0,0.05), /*top external shadow*/
-inset 0 -1px 1px rgba(0,0,0,0.15), /*bottom internal shadow*/
-inset 0 1px 1px rgba(255,255,255,0.0); /*top internal highlight*/;
-
-
-$bevelinverse                       : 0 -1px 1px rgba(255,255,255,0.0), /*bottom external highlight*/
-0 1px 1px rgba(0,0,0,0.05), /*top external shadow*/
-inset 0 1px 1px rgba(0,0,0,0.15), /*bottom internal shadow*/
-inset 0 -1px 1px rgba(255,255,255,0.0); /*top internal highlight*/;
-
-
-// Font Stuff
-// ------------------------------------------------------------
-$standardfont						: "Gibson-Regular", Helvetica, Arial;
-$standardfontbold					: "Gibson-SemiBold", Helvetica, Arial;
-$standardfontsize					: 16px;
-$fontcolor:#464646;
-$gibsonoffset:                        4px;
-
-
-// End Variables
-// ------------------------------------------------------------
-//
-
-
+@import 'plugins';
+@import 'forms';
+@import 'buttons';
 @import 'compass/css3';
 
 
-@mixin fl($width) { display: block; float: left; width: $width }
-@mixin fr($width) { display: block; float: right; width: $width }
+
 
 
 body {background:none}
@@ -564,7 +491,22 @@ body {background:none}
     }
 
   }
+  //GOALS
+  .new-goal{
+    background: $seashell;
+    border:1px solid $mercury;
+    overflow: hidden;
+    margin: 18px 0;
+    padding:0px 10px 18px 10px;
+    select {background: #ffffff; }
+    @include border-radius ($radius);
+    .goal-length {
+      input{width:30% !important; float:left; margin-right:10%}
+      select{width:50% !important; float:left}
+    }
 
+
+  }
   // UNIVERSAL ELEMENTS
 
   button, .button {
@@ -644,81 +586,5 @@ body {background:none}
 }  //end JQT
 
 // Calendar Overrides
-
-#calendar{
-  .custom-header {
-    border:0px;
-    background-color:$seashell;
-    height:50px;
-    text-align: center;
-    padding: 5px 20px 10px 20px;
-    .custom-month {display: inline-block; margin-right:5px; color:$mineshaft; font-size: 16px; text-transform: capitalize;}
-    .custom-year {display: inline-block; font-size: 16px; font-weight: normal; line-height: 54px; color:$mineshaft}
-    nav span:before {color:$tallpoppy}
-
-  }
-  .fc-calendar-container {background:#ffffff ; padding:10px 8px 50px 10px}
-  .fc-calendar .fc-head {color:$tallpoppy; font-weight: normal; font-size:10px;}
-  .fc-calendar .fc-body {border:0px}
-  .fc-calendar .fc-row  {border:0px}
-  .fc-calendar .fc-row > div {height: 80%;width: calc(100%/7); padding:0;border-right: 0;}
-  .fc-calendar .fc-row > div > span.fc-date   {color:$dovegray; font-weight: bold; font-size:11px;}
-  .fc-calendar .fc-row > div.fc-today {
-    background: $tallpoppy;
-    @include border-radius($radius-circle);
-    @include box-shadow($insetshadow);
-  }
-  .fc-calendar .fc-row > div.hasworkouts{
-    background: #f1f1f1;
-    @include border-radius($radius-circle);
-}
-  .fc-calendar .fc-row > div.fc-today > span.fc-date {
-    color:#ffffff
-  }
-
-}   // end calendar
-
-/* Spinner
-----------------------------------*/
-.ui-spinner { display: inline-block; border:0 }
-.ui-spinner-input { border: none; background: none; padding: 0; margin: 0; vertical-align: middle; }
-.ui-spinner-button {
-  width: 16px;
-  height: 50%;
-  font-size: .5em;
-  padding: 0;
-  margin: 0;
-  z-index: 100;
-  text-align: center;
-  vertical-align: middle;
-  position: absolute;
-  cursor: default;
-  display: block;
-  overflow: hidden;
-  width:35px;
-  background: $seashell !important;
-  border:1px solid $silver !important;
-}
-.ui-spinner a.ui-spinner-button { border-top: none; border-bottom: none; } /* more specificity required here to overide default borders */
-.ui-spinner .ui-icon { position: absolute; margin-top: -8px; top: 50%; left: 0; } /* vertical centre icon */
-.ui-spinner-up { top: 0; }
-.ui-spinner-down { bottom: 0; }
-.ui-button-text {text-align: center}
-.ui-spinner .ui-icon {left:9px}
-
-/* ltr (default) */
-.ui-spinner-ltr { direction: ltr; }
-.ui-spinner-ltr .ui-spinner-input { float: left; margin-left: .4em; margin-right: 22px; }
-.ui-spinner-ltr .ui-spinner-button { right: 0; }
-.ui-spinner-ltr a.ui-spinner-button { border-right: none; }
-
-/* rtl */
-.ui-spinner-rtl { direction: rtl; }
-.ui-spinner-rtl .ui-spinner-input { float: right; margin-left: 22px; margin-right: .4em; }
-.ui-spinner-rtl .ui-spinner-button { left: 0; }
-.ui-spinner-rtl a.ui-spinner-button { border-left: none; }
-
-/* TR overrides */
-div.ui-spinner { background: none; }
 
 

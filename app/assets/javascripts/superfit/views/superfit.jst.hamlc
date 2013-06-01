@@ -15,6 +15,7 @@
   #edit-wod.page
   #review-wod.page
   != JST['superfit/views/goals']()
+  != JST['superfit/views/create_goal']()
   != JST['superfit/views/goal_detail']()
 
 -# #fb-root

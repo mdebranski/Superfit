@@ -1,4 +1,4 @@
-<div id='goal-detail' class='page' >
+<div id='create-goal' class='page' >
   <div class="page-header">
     <div class='toolbar'>
       <div>
@@ -13,93 +13,110 @@
     <div class="content-main">
       <div class="content-block">
         <div class="yellow-block">
+          <!-- Benchmark & Common WODs Review Goal Layout-->
           <div class="review-score">
-            <div class="score">85<sup>%</sup>  <span class="score-level">Complete</span></div>
-
+            <div class="score">Linda</div>
+            <p class="score-details">Deadlift 1  1/2 BW, Bench BW, Clean 3/4 BW <br> For Time</p>
+          </div>
+          <!-- End: Benchmark Review Goal Layout-->
+          <!-- Strength Review Goal Layout -->
+          <div class="review-score" style="display: none;">
+            <div class="score">85  <span class="score-level">lb</span></div>
             <p class="score-details">21 Reps</p>
           </div>
+          <!-- End: Strength  Review Goal Layout-->
         </div>
       </div>
+      <div class="content-block">
+        <form>
+          <p>Name Your WOD</p>
+          <input type="text" name="custom-goal-label" placeholder="Wod Name + Todays Date" id="custom-goal-label" />
+
+          <!-- EXACT SAME ENTER SCORE CONTAINER FROM ENTER WOD SCORE with exception of p tag label-->
+          <div class="enter-score">
+            <div class="score-container">
+              <p>Enter Starting Score</p>
+              <div class="for_time score" style="display: block;">
+                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="min" placeholder="Min" value="" autocomplete="off" role="spinbutton"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="sec" placeholder="Sec" value="" autocomplete="off" role="spinbutton"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+              </div>
+              <div class="rounds score" style="display: none;">
+                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="score" placeholder="Enter Rounds" value="" autocomplete="off" role="spinbutton" disabled="disabled"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+              </div>
+              <div class="score weight" style="display: none;">
+                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="score" placeholder="Enter Weight (lbs)" value="" autocomplete="off" role="spinbutton" disabled="disabled"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+              </div>
+              <div class="max_reps score" style="display: none;">
+                <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="score" placeholder="Enter Reps" value="" autocomplete="off" role="spinbutton" disabled="disabled"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+              </div>
+              <div class="pass_fail score" style="display: none;">
+                <input id="score-pass" type="radio" name="score" value="pass" checked="checked" disabled="disabled">
+                <label class="radio" for="score-pass">Pass</label>
+                <input id="score-fail" type="radio" name="score" value="fail" disabled="disabled">
+                <label class="radio" for="score-fail">Fail</label>
+              </div>
+            </div>
+          </div>
+          <!-- End GOAL SCORE -->
+            <div>
+              <input id="rx-type" type="radio" name="type" value="rx" checked="checked">
+              <label class="radio" for="rx-type">RX</label>
+              <input id="scaled-type" type="radio" name="type" value="scaled">
+              <label class="radio" for="scaled-type">Scaled</label>
+            </div>
+          <div class="new-goal">
+            <!-- EXACT SAME ENTER SCORE CONTAINER FROM ENTER WOD SCORE with exception of p tag label-->
+            <div class="enter-score">
+              <div class="score-container">
+                <p>Enter Goal Score</p>
+                <div class="for_time score" style="display: block;">
+                  <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="min" placeholder="Min" value="" autocomplete="off" role="spinbutton"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+                  <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="sec" placeholder="Sec" value="" autocomplete="off" role="spinbutton"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+                </div>
+                <div class="rounds score" style="display: none;">
+                  <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="score" placeholder="Enter Rounds" value="" autocomplete="off" role="spinbutton" disabled="disabled"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+                </div>
+                <div class="score weight" style="display: none;">
+                  <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="score" placeholder="Enter Weight (lbs)" value="" autocomplete="off" role="spinbutton" disabled="disabled"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+                </div>
+                <div class="max_reps score" style="display: none;">
+                  <span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input class="required ui-spinner-input" type="number" name="score" placeholder="Enter Reps" value="" autocomplete="off" role="spinbutton" disabled="disabled"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+                </div>
+                <div class="pass_fail score" style="display: none;">
+                  <input id="score-pass" type="radio" name="score" value="pass" checked="checked" disabled="disabled">
+                  <label class="radio" for="score-pass">Pass</label>
+                  <input id="score-fail" type="radio" name="score" value="fail" disabled="disabled">
+                  <label class="radio" for="score-fail">Fail</label>
+                </div>
+              </div>
+            </div>
+            <!-- End GOAL SCORE -->
+            <div>
+              <input id="rx-type" type="radio" name="type" value="rx" checked="checked">
+              <label class="radio" for="rx-type">RX</label>
+              <input id="scaled-type" type="radio" name="type" value="scaled">
+              <label class="radio" for="scaled-type">Scaled</label>
+            </div>
+            <div class="goal-length">
+            <p>Goal Length <span>(Optional)</span></p>
+              <input type="text" name="goal-length" placeholder="0" id="goal-length" />
+              <select class="required" name="method">
+                <option value="for_time">Days</option>
+                <option value="rounds">Months</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <a href="#home" class="button bottom bluer">Save My Goal</a>
+      </div>
+
     </div>
 
-    <div class="content-main">
-      <div class="secondary">
-        <div class="title">
-          <h3>History</h3>
-          <div class="action">
-            <a href="#" class="awesome icon-plus"></a>
-          </div>
-        </div>
-        <ul>
-          <li><div class="chart"></div></li>
-          <li>
-            <div class="label history">
-              <p>Dec 25, 2013</p>
-              <p> 20 Reps</p>
-            </div>
-          </li>
-          <li>
-            <div class="label history">
-              <p>Sep 25, 2012</p>
-              <p>17 Reps</p>
-            </div>
-          </li>
-        </ul>
-      </div>
 
-
+    <div class="footer">
+      <a href="#" class="button bottom red">Delete This Goal</a>
+    </div>
     </div> <!-- end:scroll -->
 
-    <div class="content-main">
-      <div class="secondary details">
-        <div class="title">
-          <h3>Details</h3>
-        </div>
-        <ul>
-          <li>
-            <div class="label history">
-              <p>Start Date</p>
-              <p> Jan 21 2013</p>
-            </div>
-          </li>
-          <li>
-            <div class="label history">
-              <p>Movement</p>
-              <p>Pushup</p>
-            </div>
-          </li>
-          <li>
-            <div class="label history">
-              <p>Scoring Method</p>
-              <p>Reps</p>
-            </div>
-          </li>
-          <li>
-            <div class="label history">
-              <p>Goal Score</p>
-              <p>25 Reps</p>
-            </div>
-          </li>
-          <li>
-            <div class="label history">
-              <p>Start Score</p>
-              <p>11 Reps</p>
-            </div>
-          </li>
-          <li>
-            <div class="label history">
-              <p>Last Updated</p>
-              <p>12 days ago</p>
-            </div>
-          </li>
-        </ul>
-      </div>
 
-
-  </div>
-    <div class="footer">
-
-      <a href="#home" class="button bottom">Go to My Dashboard</a>
-      <a href="#" class="button bottom">Delete This Goal</a>
-    </div>
 </div>

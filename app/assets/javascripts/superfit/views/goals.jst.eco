@@ -45,6 +45,14 @@
             <p class="awesome icon-chevron-right arrow"></p>
           </a>
         </li>
+        <li class="goal">
+          <a class="add-new" href="#create-goal">
+            <div class="label">
+              <p>Create New Goal</p>
+            </div>
+            <p class="awesome icon-chevron-right arrow"></p>
+          </a>
+        </li>
 
 
       </ul>

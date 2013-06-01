@@ -1,4 +1,3 @@
-
 @import 'compass/css3';
 
 #jqt > * {
@@ -23,27 +22,26 @@
     @include box-shadow(none);
     box-shadow: $bevel;
 
-    &:active {
-      background: $mineshaft;
-      border:0px solid #cccccc;
-      text-shadow: none;
-      @include box-shadow ($bevelinverse)
-    }
-
-    &.lighter {
-      background: $mercury;
-      color:$mineshaft;
+      &:active {
+        background: $mineshaft;
+        border:0px solid #cccccc;
+        text-shadow: none;
+        @include box-shadow ($bevelinverse)
       }
-    &.bluer{
-      color:white;
-      background: $easternblue;
 
-    }
+      &.lighter {
+        background: $mercury;
+        color:$mineshaft;
+        }
+      &.bluer{
+        color:white;
+        background: $easternblue;
+
+      }
+
+    button + button, .button + .button {margin-top: 0 !important;}
+
 
   }
-
-  button + button, .button + .button {margin-top: 0 !important;}
-
-
 }
 
