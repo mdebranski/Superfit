@@ -59,6 +59,7 @@
     </div>
     <div class="footer">
 
+      <a href="#edit-record" class="button bottom lighter">Edit Record</a>
       <a href="#home" class="button bottom fade">Go to My Dashboard</a>
     </div>
   </div>

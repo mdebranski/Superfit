@@ -25,8 +25,26 @@ class Superfit.Home extends Superfit.SearchWods
   initCharts: ->
     data = [[[0,0], [1,1], [2,3], [3,8], [4,15]]]
     options =
+
       xaxis:
         labelWidth: 40
+      series:
+        color: 'rgba(78, 163, 227, 0.95)'
+        lines:
+          show: true
+          lineWidth: 1
+          fill: true
+          fillColor: 'rgba(78, 163, 227, 0.15)'
+        points:
+          show: true
+          borderWidth: 1
+        shadowSize:0
+      grid:
+        borderWidth:0
+        clickable: true
+        color:  'rgba(0, 0, 0, 0.2)'
+        labelMargin:20
+
     $.plot @chart, data, options
 
   today: ->
