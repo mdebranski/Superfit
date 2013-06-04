@@ -12,16 +12,23 @@ class Superfit.Calendar extends Spine.Controller
   constructor: ->
     super
     @render()
+    WodEntry.bind 'change', => @render()
+
+  render: ->
+    super
 
     reduceData = (acc, entry) ->
       formattedDate = moment(entry.date).format('MM-DD-YYYY')
       acc[formattedDate] or= ""
-      acc[formattedDate] += "<span class='entry #{entry.typeSlug()}'></span>"
+      acc[formattedDate] += "<span class='entry #{entry.typeSlug()}'></span>" unless acc[formattedDate].indexOf(entry.typeSlug()) >= 0
       acc
 
     caldata = _.reduce WodEntry.all(), reduceData, {}
 
+    date = moment(Superfit.currentDate)
     @cal = @calendarEl.calendario
+      month: date.month() + 1
+      year: date.year()
       onDayClick: @dayClick
       displayWeekAbbr : true
       caldata: caldata
