@@ -459,6 +459,10 @@ body {background:none}
       a {color:$silverchalice}
       a.selected {color:$mineshaft}
     }
+
+    &.two {
+      li {width:50%;}
+    }
   }
   //ORIENTATION
   .orientation {

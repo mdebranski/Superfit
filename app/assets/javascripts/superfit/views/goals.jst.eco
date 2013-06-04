@@ -9,7 +9,7 @@
   </div> <!-- end: page-header -->
 
   <div class="scroll">
-    <div class="filter-navigation">
+    <div class="filter-navigation two">
       <ul>
         <li><a href="#goals" class="selected fade">In Progress</a> </li>
         <li><a href="#goals-completed" class="fade">Complete</a></li>
