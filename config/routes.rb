@@ -4,6 +4,9 @@ Superfit::Application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  get '/models' => 'application#models'
+  scope :path => 'api' do
+    resources :gyms
+  end
+
   root :to => 'application#superfit'
 end

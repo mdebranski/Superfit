@@ -30,6 +30,7 @@ class Superfit extends Spine.Controller
   templateName: 'superfit'
 
   elements:
+    '.page#get-started-step3': 'start'
     '.page#home': 'home'
     '.page#goals': 'goals'
     '.page#records': 'records'
@@ -39,15 +40,13 @@ class Superfit extends Spine.Controller
     '.page#review-wod': 'reviewWod'
     '.page#calendar': 'calendar'
 
-  events:
-    'tap #get-started': 'createUser'
-
   constructor: ->
     super
 
     user = User.first()
     @render(user: user)
 
+    new Superfit.Start(el: @start) unless user
     new Superfit.Home(el: @home)
     new Superfit.Goals(el: @goals)
     new Superfit.Records(el: @records)
@@ -57,15 +56,13 @@ class Superfit extends Spine.Controller
     new Superfit.ReviewWod(el: @reviewWod)
     new Superfit.Calendar(el: @calendar)
 
-    _.defer -> $.makeItRetina();
 
     Superfit.bind 'navigation', @pulldown
     @navigation = $('#navigation').detach()
     $('.page').on 'pageAnimationEnd', => @navigation.removeClass('active'); @navigation.detach()
 
-  createUser: ->
-    gender = $('input[name=gender]:checked').val()
-    User.create(gender: gender)
+    _.defer -> $.makeItRetina();
+    _.defer -> jQT.goTo('#get-started-step1', jQT.settings.defaultTransition) unless user
 
   pulldown: =>
     if @navigation.is('.active')

@@ -16,11 +16,7 @@ else
   DB = Sequel.connect(props)
 end
 
-scoring_method_map = {"For Time" => 'for_time', "Pass/Fail" => 'pass_fail', "AMRAP  (rounds)" => 'rounds', "For time" => 'for_time', "Max Reps" => 'max_reps' }
-
-wods = DB[:wods]
-wods.truncate()
-CSV.foreach(File.join(Rails.root, 'db', 'wods.csv'), :headers => :first_row) do |row|
-  row['scoring_method'] = scoring_method_map[row['scoring_method']]
-  wods.insert(row.to_hash)
+Gym.destroy_all()
+CSV.foreach(File.join(Rails.root, 'db', 'gyms.csv'), :headers => :first_row) do |row|
+  Gym.create!(row.to_hash)
 end

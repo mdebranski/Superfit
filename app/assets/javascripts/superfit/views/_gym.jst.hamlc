@@ -1,0 +1,8 @@
+%li.gym{data-id: @gym.id}
+  %a{href: "#dashboard"}
+    .label
+      %p
+        = @gym.name
+        - if @gym.city
+          %span.location= "#{@gym.city} #{@gym.state}"
+    %p.awesome.icon-chevron-right.arrow}

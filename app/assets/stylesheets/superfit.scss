@@ -282,6 +282,13 @@ body {background:none}
    }
  }
 
+ .gyms {
+  .gym.selected {
+    background: $mountmain-meadow;
+    p { color:#ffffff; }
+  }
+ }
+
   // PULL DOWN NAVIGATION
 
   #navigation {

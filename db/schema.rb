@@ -32,6 +32,18 @@ ActiveRecord::Schema.define(:version => 20121218025912) do
     t.text    "nutritional_info", :null => false
   end
 
+  create_table "gyms", :force => true do |t|
+    t.string "name",       :null => false
+    t.string "lower_name", :null => false
+    t.string "website"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "phone"
+  end
+
+  add_index "gyms", ["lower_name"], :name => "index_gyms_on_lower_name"
+
   create_table "strengths", :force => true do |t|
     t.string "name", :null => false
   end

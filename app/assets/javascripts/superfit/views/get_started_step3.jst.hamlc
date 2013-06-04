@@ -1,0 +1,29 @@
+#get-started-step3.page
+  .orientation.content-main
+    .content-block
+      %form
+        %input{type: "hidden", name: "gym_id"}
+        %h1 Set-Up is Simple!
+        %p We have just a few quick questions to get to know you better.
+
+        %h2 Male or Female?
+        %p.small Some workouts differ for males and females. We ask you to make this selection so we can present you with the correct workout.
+        %fieldset
+          %input#female{type: "radio", name: "gender", value: "female", checked: 'checked'}
+            %label.radio{for: 'female'} Female
+          %input#male{type: "radio", name: "gender", value: "male"}
+            %label.radio{for: 'male'} Male
+
+        %h2 Where do you Workout?
+
+        %fieldset
+          %input#gym-search{type: "text", name: "search", placeholder: "Search"}
+
+        %p
+          %a.small{href: "#home"} Don't Workout at an Affiliate? Skip this ›
+
+        %h3.no-matches No gyms found for this search.
+        %ul.gyms{style: "display:none"}
+
+        .orientation-footer
+          %input#get-started.button.bottom{type: 'submit', value: 'Start Logging Workouts'}

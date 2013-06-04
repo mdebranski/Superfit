@@ -1,5 +1,16 @@
 class CreateModels < ActiveRecord::Migration
   def change
+    create_table :gyms do |t|
+      t.string :name, null: false
+      t.string :lower_name, null: false
+      t.string :website
+      t.string :address
+      t.string :city
+      t.string :state
+      t.string :phone
+    end
+    add_index :gyms, :lower_name
+
     create_table :wods do |t|
       t.string :name, null: false
       t.string :type, null: false
