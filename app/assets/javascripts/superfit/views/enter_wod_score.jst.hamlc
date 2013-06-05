@@ -13,9 +13,9 @@
         %strong= @wod.scoringMethod()
         %br/
         - if @user.gender == 'male'
-          != @wod.workout_male.replace(/(\r\n|\n|\r)/gm,"<br/>")
+          != Utils.simpleFormat(@wod.workout_male)
         - if @user.gender == 'female'
-          != @wod.workout_female.replace(/(\r\n|\n|\r)/gm,"<br/>")
+          != Utils.simpleFormat(@wod.workout_female)
     %fieldset
       %form
         - if @wod
