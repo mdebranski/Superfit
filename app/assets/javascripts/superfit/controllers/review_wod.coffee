@@ -7,10 +7,11 @@ class Superfit.ReviewWod extends Spine.Controller
   constructor: ->
     super
     WodEntry.bind 'create', @updateReviewWod
+    WodEntry.bind 'update', @updateReviewWod
 
     @el.bind "pageAnimationStart", (e, data) =>
       if data.direction == 'in' and referrer = @el.data('referrer')
-        console.log "Referrer", referrer
+        @el.data('referrer', null)
         id = referrer.data('id')
         entry = WodEntry.find(id)
         @updateReviewWod(entry)
