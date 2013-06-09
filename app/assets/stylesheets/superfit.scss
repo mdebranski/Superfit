@@ -58,7 +58,7 @@ body {background:none}
   }
 
   .page-header{
-    background:#000000 url(image_path('tile-pg-header.png')) repeat 0 0;
+    background:transparent url(image_path('tile-pg-header.png')) repeat-x 0 0;
 
     h1 {font-size: 16px; bottom:11px;  font-family:$standardfontbold; font-weight: 100;  text-transform: uppercase; letter-spacing: .25px; width: 200px; margin-left: -100px;}
 
@@ -71,15 +71,15 @@ body {background:none}
       background-size: 10px 44px;
 
       .goback {position: relative; padding:8px; top:5px; left:1px; color:#ffffff; display: block; height: 40px; width:40px;}
-      .pulldown {
-        background:url(image_path('img-mainnav.png')) repeat-x;
-        width:33px;
-        height:40px;
-        text-indent: -999px;
-        float:left;
-        position: relative;
-        left:2%;
-      } //end pulldown
+      //.pulldown {
+      //  background:url(image_path('img-mainnav.png')) repeat-x;
+      //  width:33px;
+      // height:40px;
+      // text-indent: -999px;
+      //  float:left;
+      //  position: relative;
+      //  left:2%;
+      //} //end pulldown
     }
   } //end page-header
 
@@ -530,13 +530,7 @@ body {background:none}
     &.red {background: $tallpoppy; }
 
   }
-  .sprite-sf{
-    display:block;
-    line-height:0 !important;
-    text-indent:-9999px;
-    font-size:0 !important;
-    background:transparent url(image_path('sprite-superfit.png')) no-repeat 0 0;
-  }
+
 
   .yellow-block{
     background-color:$yellow;
@@ -559,6 +553,17 @@ body {background:none}
 
   label.radio {margin-right:20px; position: relative; top:-3px}
 
+  // Sprite Setup
+  // ------------------------------------------------------------
+
+  .sprite-sf{
+    display:block;
+    line-height:0 !important;
+    text-indent:-9999px;
+    font-size:0 !important;
+    background:transparent url(image_path('sprite-superfit.png')) no-repeat 0 0;
+  }
+
   //.sprite-sf:active {opacity:0.5;}
   .icon {
     width:29px; height:28px;
@@ -576,7 +581,31 @@ body {background:none}
   }
 
 
-  .photo-icon {width:34px;  height:21px; background-position: -148px -91px; float:left; margin:0 6px }
+  .toolbar .pulldown{
+    display:block;
+    line-height:0 !important;
+    text-indent:-9999px;
+    font-size:0 !important;
+    background:transparent url(image_path('sprite-superfit.png')) no-repeat 0 0;
+    width:46px;
+    height:59px;
+    background-position: -214px -25px;
+    float:left;
+    position: relative;
+    top:-1px;
+    &:active {
+      background-position: -263px -25px;
+    }
+  }
+  //.pulldown {
+  //  background:url(image_path('img-mainnav.png')) repeat-x;
+  //  width:33px;
+  // height:40px;
+  // text-indent: -999px;
+  //  float:left;
+  //  position: relative;
+  //  left:2%;
+  //} //end pulldown
 
 
   .small {color:$silverchalice;font-size: 11px; }
