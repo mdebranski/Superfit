@@ -1,4 +1,4 @@
-#edit-record2.page
+#edit-record.page
   .page-header
     .toolbar
       %div
