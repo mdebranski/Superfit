@@ -66,22 +66,21 @@ div.ui-spinner { background: none; }
   .fc-calendar .fc-row > div {height: 80%;width: calc(100%/7); padding:0;border-right: 0;}
   .fc-calendar .fc-row > div > span.fc-date   {color:$dovegray; font-weight: bold; font-size:11px;}
   .fc-calendar .fc-row > div.fc-today {
-    background: $tallpoppy;
-    @include border-radius($radius-circle);
-    //@include box-shadow($insetshadow);
+    background: $mercury;
+    @include border-radius($radius);
   }
   .fc-calendar .fc-row > div.hasworkouts{
     background: #f1f1f1;
     @include border-radius($radius-circle);
   }
   .fc-calendar .fc-row > div.fc-today > span.fc-date {
-    color:#ffffff
   }
-  .fc-calendar .fc-content:active {
-    background: #f1f1f1;
-    @include border-radius($radius-circle);
-
-    .entry {display:none}
+  .fc-calendar .fc-row div:active {
+    background: $mineshaft;
+    @include box-shadow($insetshadow);
+    @include border-radius($radius);
+    font-weight:normal;
+    .fc-date, .fc-today > span.fc-date { color:$seashell;}
   }
   .fc-calendar .fc-content div {
     top: 80%;
