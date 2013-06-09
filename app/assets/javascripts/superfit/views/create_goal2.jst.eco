@@ -29,7 +29,7 @@
       </div>
       <div class="content-block">
         <form>
-          <p>Name Your WOD</p>
+          <p>Name Your Goal</p>
           <input type="text" name="custom-goal-label" placeholder="Wod Name + Todays Date" id="custom-goal-label" />
 
           <!-- EXACT SAME ENTER SCORE CONTAINER FROM ENTER WOD SCORE with exception of p tag label-->
@@ -98,7 +98,7 @@
               <label class="radio" for="scaled-type">Scaled</label>
             </div>
             <div class="goal-length">
-            <p>Goal Length <span>(Optional)</span></p>
+              <p>Goal Length <span>(Optional)</span></p>
               <input type="text" name="goal-length" placeholder="0" id="goal-length" />
               <select class="required" name="method">
                 <option value="for_time">Days</option>

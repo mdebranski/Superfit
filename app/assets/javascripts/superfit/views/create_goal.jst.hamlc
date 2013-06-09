@@ -1,0 +1,78 @@
+#create-goal2.page
+  .page-header
+    .toolbar
+      %div
+        %a.awesome.icon-chevron-left.goback{href: '#'}
+      %h1 Create Goal
+  .content-main
+    .content-block
+      .yellow-block
+        .review-score
+          .score Linda
+            %span.score-level  RX
+          %p.score-details  Deadlift 1  1/2 BW, Bench BW, Clean 3/4 BW,  For Time
+
+    .content-block
+      %form
+        %p Name Your Goal
+        %input.required{type: "text", name: "custom-goal-label", placeholder: "Wod Name + Todays Date"}
+
+        .enter-score
+          %div.score-container
+            %p Enter Starting Score
+            .for_time.score
+              %input.required{type: "number", name: "min", placeholder: "Min", value: @entry?.min}
+              %input.required{type: "number", name: "sec", placeholder: "Sec", value: @entry?.sec}
+              -#          .rounds.score
+              -#            %input.required{type: "number", name: "score", placeholder: "Enter Rounds", value: @entry?.score}
+              -#          .weight.score
+              -#            %input.required{type: "number", name: "score", placeholder: "Enter Weight (lbs)", value: @entry?.score}
+              -#          .max_reps.score
+              -#            %input.required{type: "number", name: "score", placeholder: "Enter Reps", value: @entry?.score}
+              -#          .pass_fail.score
+              -#            %input#score-pass{type: "radio", name: "score", value: "pass", checked: if @entry then @entry.score == 'pass' else 'checked'}
+              -#              %label.radio{for: 'score-pass'} Pass
+              -#            %input#score-fail{type: "radio", name: "score", value: "fail", checked: @entry?.score == 'fail'}
+              -#             %label.radio{for: 'score-fail'} Fail
+        %div
+          %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
+            %label.radio{for: 'rx-type'} RX
+          %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
+            %label.radio{for: 'scaled-type'} Scaled
+
+
+        .new-goal
+          .enter-score
+            %div.score-container
+              %p Enter Starting Score
+              .for_time.score
+                %input.required{type: "number", name: "min", placeholder: "Min", value: @entry?.min}
+                %input.required{type: "number", name: "sec", placeholder: "Sec", value: @entry?.sec}
+                -#          .rounds.score
+                -#            %input.required{type: "number", name: "score", placeholder: "Enter Rounds", value: @entry?.score}
+                -#          .weight.score
+                -#            %input.required{type: "number", name: "score", placeholder: "Enter Weight (lbs)", value: @entry?.score}
+                -#          .max_reps.score
+                -#            %input.required{type: "number", name: "score", placeholder: "Enter Reps", value: @entry?.score}
+                -#          .pass_fail.score
+                -#            %input#score-pass{type: "radio", name: "score", value: "pass", checked: if @entry then @entry.score == 'pass' else 'checked'}
+                -#              %label.radio{for: 'score-pass'} Pass
+                -#            %input#score-fail{type: "radio", name: "score", value: "fail", checked: @entry?.score == 'fail'}
+                -#             %label.radio{for: 'score-fail'} Fail
+          %div
+            %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
+              %label.radio{for: 'rx-type'} RX
+            %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
+              %label.radio{for: 'scaled-type'} Scaled
+          %div
+            %p Goal Length
+              %span (Optional)
+            %input#goal-length{type: "text", name: "goal-length", placeholder: "0"}
+            %select.required{name: "method"}
+              %option{value: "days"} Days
+              %option{value: "months"} Months
+
+      %a.button.bottom.fade{href: "#home"} Return To Dashboard
+
+
+
