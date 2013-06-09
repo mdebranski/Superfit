@@ -9,7 +9,7 @@
   </div> <!-- end: page-header -->
 
   <div class="scroll">
-    <div class="filter-navigation">
+    <div class="filter-navigation not-main">
       <ul>
         <li><a href="#records" class="selected">1RM</a> </li>
         <li><a href="#records">3RM</a></li>

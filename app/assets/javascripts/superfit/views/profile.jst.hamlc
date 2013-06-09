@@ -1,0 +1,36 @@
+#profile.page.slideupSelector.in
+  .page-header
+    .toolbar
+      .pulldown
+        Navigation Pulldown
+      %h1 Me
+  .scroll
+    .profile-header
+      .profile-image
+      .name
+        %p MD Debranski
+        %p Crossfit RX
+
+    .content-main.profile
+      %ul
+        %li
+          %h2 Lives in
+          %p Decatur, Ga
+        %li
+          %h2 Email is
+          %p madebran@vt.edu
+        %li
+          %h2 I am a
+          %p Female
+        %li
+          %h2 Crossfitter for
+          %p 3 years
+        %li
+          %h2 Born on
+          %p Feb 15 1977
+        %li.disable
+          %h2 Syncs data
+          %p soon, friend :)
+
+    .footer
+      %a.button.bottom.lighter.dissolve Edit Profile

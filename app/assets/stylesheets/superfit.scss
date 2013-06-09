@@ -450,6 +450,8 @@ body {background:none}
     padding-bottom: 12px;
     margin:0 auto;
 
+    ul:first-child {margin-top:0}
+    &.not-main ul:first-child   {margin-top:18px}
     li {
       font-size:13px;
       font-weight: normal;
@@ -517,6 +519,7 @@ body {background:none}
       input{width:30% !important; float:left; margin-right:10%}
       select{width:50% !important; float:left}
     }
+
 
 
   }
@@ -599,16 +602,6 @@ body {background:none}
       background-position: -263px -25px;
     }
   }
-  //.pulldown {
-  //  background:url(image_path('img-mainnav.png')) repeat-x;
-  //  width:33px;
-  // height:40px;
-  // text-indent: -999px;
-  //  float:left;
-  //  position: relative;
-  //  left:2%;
-  //} //end pulldown
-
 
   .small {color:$silverchalice;font-size: 11px; }
 
@@ -625,6 +618,37 @@ body {background:none}
     }
   }
 
+  //PROFILE
+
+  .profile-header{
+      text-align: left;
+      overflow: hidden;
+      border-bottom: 2px groove #eae7e1;
+      padding-bottom: 12px;
+
+      .name{
+        padding-top: 10px;
+
+        p {line-height: 18px}
+      }
+
+      .profile-image {
+        @include border-radius ($radius);
+        background:#ffffff;
+        width:60px;
+        height:60px;
+        float:left;
+        margin-right:20px;
+        margin-left:2%;
+      }
+  }
+  .profile {
+    h2 {float:left; width: 40%}
+    p {float:left; width:60%; text-align: right;}
+
+    .disable {opacity:0.35;}
+
+  }
 }  //end JQT
 
 // Calendar Overrides
