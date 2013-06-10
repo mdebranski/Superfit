@@ -5,7 +5,7 @@
   fieldset {border:0; margin: 0 0 18px 0; overflow: hidden}
   form {
     input[type=text], input[type=search], input[type=number], input[type=time],input[type=password] {
-      background: #f7f7f7;
+      background: #ffffff;
       @include box-shadow($insetshadow);
       @include border-radius($radius);
       line-height: 63px;
@@ -13,6 +13,7 @@
       padding:0 0 0 10px;
       width:98%;
       -webkit-appearance:none;
+      border: 1px solid $mercury;
     }
 
     input[type=radio] {
@@ -31,7 +32,7 @@
     input[type=radio]+span {position:relative; top:-4px; margin-right:10px}
 
     textarea {
-      background:#f7f7f7;
+      background:#ffffff;
       border:0;
       -webkit-appearance:none;
       @include box-shadow($insetshadow);
@@ -40,6 +41,7 @@
       font-family:$standardfont ;
       @include border-radius($radius);
       width:92%;
+      border: 1px solid $mercury;
 
     }
     select{

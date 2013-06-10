@@ -3,6 +3,7 @@
 //= require jquery.ui.spinner
 //= require font-awesome
 //= require gibson-webfont
+//= require superfit-font3
 //= require calendar
 
 @import 'settings';
@@ -20,15 +21,16 @@ body {background:none}
 #jqt > * {
 
   font-family:$standardfont;
-  background:$silver url(image_path('tile-grunge.png'))  repeat;
-  color: $dovegray;
+  background:#e8e6d9;
+  //background:#e8e6d9 url(image_path('tile-grunge.png'))  repeat;
+  color: $mineshaft;
 
   h1 {font-family:$standardfont; }
-  h2 {font: normal 18px $standardfont; color:$mineshaft; line-height: 54px; margin:0; position: relative; top:2px}
+  h2 {font: normal 22px $standardfont; color:$mineshaft; line-height: 54px; margin:0; position: relative; top:2px}
   h3 {font-family:$standardfont; }
   h4 {font-family:$standardfont; }
   p {color: $dovegray; font-family:$standardfont; font-size: 16px; font-weight: normal; }
-  .awesome {font-family:"FontAwesome"; color:$silver; font-size:18px;}
+  .awesome {font-family:$iconfont ; color:$silver; font-size:18px;}
   .awesome:active {
     color:$silverchalice;
   }
@@ -102,7 +104,7 @@ body {background:none}
     z-index: 4;
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.150);
-    @include box-shadow(0px 0px 2px rgba(0, 0, 0, 0.20));
+    //@include box-shadow(0px 0px 2px rgba(0, 0, 0, 0.20));
     @include border-radius ($radius);
     overflow: hidden;
     margin: 9px auto;
@@ -149,12 +151,12 @@ body {background:none}
 
         .label.history {@include fl(98%);}
         .label.empty p {color:$silver;}
-        .arrow  {float:right;margin-top:19px; margin-left:5px;border-bottom:0}
+        .arrow  {float:right;margin-top:15px; margin-left:5px;border-bottom:0}
         &:last-of-type {border-bottom: 0;}
         &.title {
           border-bottom:1px solid #ff7f7f;
 
-          h2 {float:left; width:50%}
+          h2 {float:left; width:60%}
           .action {
             right:9px;
             position: absolute;
@@ -341,13 +343,13 @@ body {background:none}
   .content-main.home {
     margin: 0px auto 9px auto;
     position: relative;
-    top: -5px;
+    //top: -5px;
   }
 
   .date-navigation{
     text-align: center;
     overflow: hidden;
-    border-bottom: 2px groove #eae7e1;
+    //border-bottom: 2px groove #eae7e1;
     padding-bottom: 12px;
 
     ul:first-child {margin-top:0}
@@ -360,7 +362,11 @@ body {background:none}
       width:10%;
 
       &.date {
-        width:80%; cursor: pointer;font-size:16px; position: relative; top: -5px;
+        width:80%;
+        cursor: pointer;
+        font-size:16px;
+        position: relative;
+        //top: -5px;
         img {position:relative; top:5px}
       }
       &.prev-day, &.next-day {position:relative; top:5px}
@@ -446,8 +452,8 @@ body {background:none}
   .filter-navigation{
     text-align: center;
     overflow: hidden;
-    border-bottom: 2px groove #eae7e1;
-    padding-bottom: 12px;
+    //border-bottom: 2px groove #eae7e1;
+    padding-bottom: 7px;
     margin:0 auto;
 
     ul:first-child {margin-top:0}

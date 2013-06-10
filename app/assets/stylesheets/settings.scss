@@ -34,7 +34,7 @@ $seashell							: #f1f1f1;  // greys
 // Radius & Shadow
 // ------------------------------------------------------------
 
-$radius                             : 3px;
+$radius                             : 2px;
 $radiusleft							: 0px 2px 2px 2px;
 $radiusright						: 0px 2px 2px 0px;
 $radiusbottom						: 0px 0px 2px 2px;
@@ -46,7 +46,8 @@ $stageshadow						: 0px 1px 2px rgba(0, 0, 0, 0.35);
 $standardboxshadow					: 0px 0px 2px rgba(0, 0, 0, 0.20);
 $stagebkg							: #ffffff;
 $contentpad							: 0 8px;
-$insetshadow						: inset 0px 1px 2px 0px rgba(0, 0, 0, .45);
+//$insetshadow						: inset 0px 1px 2px 0px rgba(0, 0, 0, .45);
+$insetshadow						: inset 0px 0px 0px 0px rgba(0, 0, 0, .45);
 
 $bevel                              : 0 1px 1px rgba(255,255,255,0.5), /*bottom external highlight*/
                                       0 -1px 1px rgba(0,0,0,0.05), /*top external shadow*/
@@ -62,12 +63,13 @@ $bevelinverse                       : 0 -1px 1px rgba(255,255,255,0.0), /*bottom
 
 // Font Stuff
 // ------------------------------------------------------------
-$standardfont						: "Gibson-Regular", Helvetica, Arial;
-$standardfontbold					: "Gibson-SemiBold", Helvetica, Arial;
+$standardfont						: "Gibson-Light", Helvetica, Arial;
+$standardfontbold					: "Gibson-Regular", Helvetica, Arial;
 $standardfontsize					: 16px;
 $fontcolor:#464646;
-$gibsonoffset:                        4px;
-
+$gibsonoffset                       : 4px;
+//$iconfont                           :"FontAwesome";
+$iconfont                           :"superfit";
 
 @mixin fl($width) { display: block; float: left; width: $width }
 @mixin fr($width) { display: block; float: right; width: $width }

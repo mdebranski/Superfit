@@ -8,7 +8,7 @@
     %ul
       %li.awesome.icon-chevron-left.prev-day
       %li.date
-        %img(src="/assets/icon-calendar.png")
+        %p.icon-calendar-1
         = moment(@currentDate).format('MMM D, YYYY')
       - if @currentDate.getTime() < @today.getTime()
         %li.awesome.icon-chevron-right.next-day
