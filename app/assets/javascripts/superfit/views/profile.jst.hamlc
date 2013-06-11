@@ -14,22 +14,22 @@
     .content-main.profile
       %ul
         %li
-          %h2 Lives in
+          %p Lives in
           %p Decatur, Ga
         %li
-          %h2 Email is
+          %p Email is
           %p madebran@vt.edu
         %li
-          %h2 I am a
+          %p I am a
           %p Female
         %li
-          %h2 Crossfitter for
+          %p Crossfitter for
           %p 3 years
         %li
-          %h2 Born on
+          %p Born on
           %p Feb 15 1977
         %li.disable
-          %h2 Syncs data
+          %p Syncs data
           %p soon, friend :)
 
     .footer

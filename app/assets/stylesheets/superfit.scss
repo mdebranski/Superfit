@@ -536,7 +536,7 @@ body {background:none}
     display:block;
     margin-left: auto;
     margin-right: auto;
-    &.bottom {margin-top:18px}
+    &.bottom {margin-bottom:9px}
 
     &.red {background: $tallpoppy; }
 
@@ -649,8 +649,8 @@ body {background:none}
       }
   }
   .profile {
-    h2 {float:left; width: 40%}
-    p {float:left; width:60%; text-align: right;}
+    p {float:left; width: 40%}
+    p+p {float:left; width:60%; text-align: right;}
 
     .disable {opacity:0.35;}
 
