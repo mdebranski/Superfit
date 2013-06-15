@@ -3,7 +3,7 @@
 //= require jquery.ui.spinner
 //= require font-awesome
 //= require gibson-webfont
-//= require superfit-font3
+//= require superfit-font
 //= require calendar
 
 @import 'settings';
@@ -151,7 +151,14 @@ body {background:none}
 
         .label.history {@include fl(98%);}
         .label.empty p {color:$silver;}
-        .arrow  {float:right;margin-top:15px; margin-left:5px;border-bottom:0}
+        .arrow  {
+          float:right;
+          margin-top:15px;
+          margin-left:5px;
+          border-bottom:0;
+
+          &.awesome.icon-chevron-right {font-size:14px; margin-top: 19px}
+        }
         &:last-of-type {border-bottom: 0;}
         &.title {
           border-bottom:1px solid #ff7f7f;
@@ -654,6 +661,9 @@ body {background:none}
 
     .disable {opacity:0.35;}
 
+  }
+  .edit-profile {
+    div {margin-top:18px}
   }
 }  //end JQT
 

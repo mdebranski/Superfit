@@ -32,7 +32,7 @@
     <div class="content-main">
       <div class="secondary">
         <div class="title">
-          <h3>Record History</h3>
+          <h3>History</h3>
           <div class="action">
             <a href="#" class="awesome icon-plus"></a>
           </div>
@@ -42,7 +42,7 @@
           <li>
             <div class="label history">
               <p>Dec 25, 2013</p>
-              <p class="record"><img src="/assets/icon-inline-record.png"> 4:59</p>
+              <p class="record">4:59</p>
             </div>
           </li>
           <li>
@@ -59,8 +59,8 @@
     </div>
     <div class="footer">
 
-      <a href="#edit-record" class="button bottom lighter">Edit Record</a>
-      <a href="#home" class="button bottom fade">Go to My Dashboard</a>
+      <a href="#edit-record" class="button bottom lighter">Add New Record</a>
+      <a href="#home" class="button bottom fade">Jump to Dashboard</a>
     </div>
   </div>
 

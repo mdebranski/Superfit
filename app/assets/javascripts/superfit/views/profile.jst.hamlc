@@ -26,11 +26,12 @@
           %p Crossfitter for
           %p 3 years
         %li
-          %p Born on
+          %p Birthdate
           %p Feb 15 1977
         %li.disable
           %p Syncs data
           %p soon, friend :)
 
     .footer
-      %a.button.bottom.lighter.dissolve Edit Profile
+      %a.button.bottom.lighter.dissolve{href: "#edit-profile"}
+        Edit Profile

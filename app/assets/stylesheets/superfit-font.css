@@ -72,3 +72,5 @@
 .icon-emo-wink:before { content: '\e800'; } /* '' */
 .icon-calendar:before { content: '\e80f'; } /* '' */
 .icon-phone:before { content: '📞'; } /* '\1f4de' */
+.icon-cancel:before { content: '\e818'; } /* '' */
+.icon-remove-sign:before { content: '\e814'; } /* '' */

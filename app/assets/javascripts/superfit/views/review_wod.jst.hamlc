@@ -12,7 +12,7 @@
             %span.score-level= @entry.type
           %p.score-details= @entry.details
 
-      %a.button.bottom.fade{href: "#home"} Return To Dashboard
+      %a.button.bottom.fade{href: "#home"} Jump To Dashboard
 
 
   .content-main
