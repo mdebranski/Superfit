@@ -11,6 +11,7 @@ class Superfit.EditWod extends Spine.Controller
     'change select[name=method]': 'changeMethod'
     'change input[type=number]' : 'notNegative'
     'spinstop input[type=number]' : 'notNegative'
+    'tap .take-photo': 'takePhoto'
 
   constructor: ->
     super
@@ -20,6 +21,10 @@ class Superfit.EditWod extends Spine.Controller
       if data.direction == 'in' and id = @el.data('referrer')?.data('id')
         entry = WodEntry.find(id)
         @updateEditEntry(entry)
+
+  takePhoto: (e) ->
+    e.preventDefault()
+    @log "PhoneGap camera integration goes here!"
 
   changeMethod: ->
     @$('.score').hide()
