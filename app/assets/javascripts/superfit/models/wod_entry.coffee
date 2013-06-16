@@ -21,6 +21,9 @@ class WodEntry extends Spine.Model
     _.select @all(), (entry) ->
       moment(entry.date).startOf('day').valueOf() == date.getTime()
 
+  @byWodId: (wod_id) ->
+    _.select @all(), (entry) -> wod_id == entry.wod_id
+
   wod: ->
     Wod.find(@wod_id)
 

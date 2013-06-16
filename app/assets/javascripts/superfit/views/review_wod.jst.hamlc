@@ -15,22 +15,18 @@
       %a.button.bottom.fade{href: "#home"} Jump To Dashboard
 
 
-  .content-main
-    %div.secondary
-      %div.title
-        %h3 #{@entry.wodName()} History
-      %ul
-        %li.chart
-        %li
-          %a{href: "#"}
-            .label
-              %p Jun 22 2012
-              %p 22:22
-        %li
-          %a{href: "#"}
-            .label
-              %p Apr 22 2011
-              %p 25:22
+  - if @pastEntries
+    .content-main
+      %div.secondary
+        %div.title
+          %h3 #{@entry.wodName()} History
+        %ul
+          - for history in @pastEntries
+            %li
+              %a{href: "#edit-wod", 'data-id': history.id}
+                .label
+                  %p= moment(history.date).format('MMM D, YYYY')
+                  %p= history.scoreString()
 
   .footer
     %a.button.bottom.lighter.dissolve{"data-id": @entry.id, href: "#edit-wod"} Edit Workout

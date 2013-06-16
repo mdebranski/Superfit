@@ -19,7 +19,11 @@ class Superfit.ReviewWod extends Spine.Controller
   updateReviewWod: (entry) =>
     @wod = Wod.find(entry.wod_id) if entry.wod_id
     @entry = entry
-    @render(wod: @wod, entry: @entry)
+
+    if entry.wod_id?
+      @pastEntries = _.sortBy WodEntry.byWodId(entry.wod_id), (entry) -> -1 * moment(entry.date).valueOf()
+
+    @render(wod: @wod, entry: @entry, pastEntries: @pastEntries)
 
   deleteWod: ->
     @entry.destroy()
