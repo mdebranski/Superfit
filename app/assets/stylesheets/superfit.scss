@@ -301,13 +301,15 @@ body {background:none}
   // PULL DOWN NAVIGATION
 
   #navigation {
-    position: relative;
-    height: 0;
+    position: absolute;
+    top: -170px;
     overflow: hidden;
-    @include transition(height .5s ease);
+    z-index: 1000;
+    width: 100%;
+    @include transition(all 0.5s ease);
     background:transparent url(image_path('tile-ticks.png')) repeat 0 0;
   }
-  #navigation.active { display: block; height: 170px; @include transition(height 1s ease);}
+  #navigation.active { @include translate3d(0, 170px, 0); }
 
   .navigation {
     position: relative;
