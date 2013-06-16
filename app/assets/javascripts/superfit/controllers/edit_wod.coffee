@@ -80,7 +80,7 @@ class Superfit.EditWod extends Spine.Controller
        method: if @wod then @wod.scoring_method else data.method
        type: data.type
        details: data.details
-       date: Superfit.currentDate
+       date: new Date(Superfit.currentDate)
 
 
     if data.entry_id
