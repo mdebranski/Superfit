@@ -61,6 +61,8 @@ body {background:none}
 
   .page-header{
     background:transparent url(image_path('tile-pg-header.png')) repeat-x 0 0;
+    z-index: 999;
+    position: relative;
 
     h1 {font-size: 16px; bottom:11px;  font-family:$standardfontbold; font-weight: 100;  text-transform: uppercase; letter-spacing: .25px; width: 200px; margin-left: -100px;}
 
@@ -70,6 +72,7 @@ body {background:none}
       padding: 0px 6px 6px 6px;
       background: transparent url(image_path('tile-header.png')) repeat-x 0 0;
       position: relative;
+      z-index: 1000;
       background-size: 10px 44px;
 
       .goback {position: relative; padding:8px; top:5px; left:1px; color:#ffffff; display: block; height: 40px; width:40px;}
@@ -304,18 +307,22 @@ body {background:none}
     position: absolute;
     top: -170px;
     overflow: hidden;
-    z-index: 1000;
+    z-index: 998;
     width: 100%;
     @include transition(all 0.5s ease);
     background:transparent url(image_path('tile-ticks.png')) repeat 0 0;
+    opacity: .95;
+    padding-bottom: 9px;
   }
-  #navigation.active { @include translate3d(0, 170px, 0); }
+  #navigation.active {
+    @include translate3d(0, 205px, 0);
+  }
 
   .navigation {
     position: relative;
     width: 95%;
     margin: 12px auto 0 auto;
-
+    -webkit-tap-highlight-color:tranparent;
 
     div{
 
@@ -616,6 +623,8 @@ body {background:none}
     &:active {
       background-position: -263px -25px;
     }
+
+    &.open {background-position: -214px -96px;}
   }
 
   .small {color:$silverchalice;font-size: 11px; }

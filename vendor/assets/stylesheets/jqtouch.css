@@ -754,6 +754,7 @@ body {
 /* line 34, ../scss/include/_animations.scss */
 #jqt .dissolve.in {
   -webkit-animation-name: dissolveIn;
+
 }
 
 /* line 38, ../scss/include/_animations.scss */

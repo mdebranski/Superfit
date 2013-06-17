@@ -129,4 +129,13 @@ $codgray:#111111;
   }
 
   .button.active, #jqt .back.active, #jqt .cancel.active, #jqt .add.active  {text-shadow: none}
+
 }
+
+#jqt .dissolve.in {
+  -webkit-animation-name: dissolveIn;
+  -webkit-animation-duration: .09s !important;
+
+}
+
+#jqt { -webkit-backface-visibility: hidden;}
