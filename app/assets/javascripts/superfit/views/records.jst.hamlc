@@ -4,15 +4,14 @@
     %h1 Records
 
 .scroll
+  %ul.filter-navigation
+    %li
+      %a{href: "#", 'data-type': 'strength'} Strength
+    %li
+      %a{href: "#", 'data-type': 'benchmark'} Benchmarks
+    %li
+      %a{href: "#", 'data-type': 'other'} Other
   .content-main
-    %ul.filter-navigation
-      %li
-        %a{href: "#", 'data-type': 'strength'} Strength
-      %li
-        %a{href: "#", 'data-type': 'benchmark'} Benchmarks
-      %li
-        %a{href: "#", 'data-type': 'other'} Other
-
     - _.each ['strength', 'benchmark', 'other'], (type) ->
       %section{class: type, style: 'display: none;'}
         %ul
