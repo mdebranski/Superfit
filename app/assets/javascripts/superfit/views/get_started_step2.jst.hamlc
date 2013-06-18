@@ -1,17 +1,15 @@
-#get-started-step1.page
+#get-started-step2.page
   .orientation.content-main
     .content-block
-      %h1 Log Workouts
-      %p Superfit was designed to allow you to quickly and easily log all of our workouts.
+      %h1 See Your Progress
+      %p Superfit visually tracks the progress ofBenchmarks, Strength and Common workouts.
 
-      %img{src:"/assets/gfx-landing-record-workouts.png"}
+      %img{src:"/assets/gfx-landing-see-progress.png"}
 
 
       %p.small
         %strong TIP:
-        Look for the camera icon
-        %span.icon-camera-alt
-        to take a photo of your Gyms custom daily workout rather than typing it in.
+        Set up Goals to configure Superfit to track  what you want to work on. Your Daily Dashboard will display your most recent Goal Activity.
 
     .orientation-footer
-      %a.slide.button.bottomk{href: "#get-started-step2"}  Next : See Your Progress
+      %a.slide.button.bottomk{href: "#get-started-step3"}  Next : Set-Up is Simple
