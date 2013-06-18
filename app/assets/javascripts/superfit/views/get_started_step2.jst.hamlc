@@ -1,0 +1,17 @@
+#get-started-step1.page
+  .orientation.content-main
+    .content-block
+      %h1 Log Workouts
+      %p Superfit was designed to allow you to quickly and easily log all of our workouts.
+
+      %img{src:"/assets/gfx-landing-record-workouts.png"}
+
+
+      %p.small
+        %strong TIP:
+        Look for the camera icon
+        %span.icon-camera-alt
+        to take a photo of your Gyms custom daily workout rather than typing it in.
+
+    .orientation-footer
+      %a.slide.button.bottomk{href: "#get-started-step2"}  Next : See Your Progress
