@@ -1,0 +1,32 @@
+.page-header
+  .toolbar
+    .pulldown Navigation Pulldown
+    %h1 Records
+
+.scroll
+  .content-main
+    %ul.filter-navigation
+      %li
+        %a{href: "#", 'data-type': 'strength'} Strength
+      %li
+        %a{href: "#", 'data-type': 'benchmark'} Benchmarks
+      %li
+        %a{href: "#", 'data-type': 'other'} Other
+
+    - _.each ['strength', 'benchmark', 'other'], (type) ->
+      %section{class: type, style: 'display: none;'}
+        %ul
+          - for wod in Wod.byType(type)
+            %li
+              - if wod.hasRecord()
+                %a{href: "#record-detail", 'data-id': wod.id}
+                  .label
+                    %p= wod.name
+                    %p= wod.record()
+                  %p.awesome.icon-chevron-right.arrow
+              - else
+                %a{href: "#edit-record", 'data-id': wod.id}
+                  .label.empty
+                    %p= wod.name
+                    %p/
+                  %p.awesome.icon-plus.arrow

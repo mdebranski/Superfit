@@ -36,4 +36,6 @@ class Wod extends Spine.Model
   typeSlug: ->
     @type.toLowerCase()
 
+  hasRecord: -> false
+
 window.Wod = Wod

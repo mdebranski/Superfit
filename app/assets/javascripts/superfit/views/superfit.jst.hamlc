@@ -9,15 +9,15 @@
   != JST['superfit/views/add_wod']()
   != JST['superfit/views/browse_wods']()
   != JST['superfit/views/create_wod']()
-  != JST['superfit/views/records']()
+  #records.page
   != JST['superfit/views/record_detail']()
   != JST['superfit/views/record_detail_strength']()
-  != JST['superfit/views/edit_record']()
-  != JST['superfit/views/create_goal2']()
+  #edit-record.page
   #edit-wod.page
   #review-wod.page
   != JST['superfit/views/goals']()
   != JST['superfit/views/create_goal']()
+  != JST['superfit/views/create_goal2']()
   != JST['superfit/views/profile']()
   != JST['superfit/views/edit_profile']()
   != JST['superfit/views/goal_detail']()
