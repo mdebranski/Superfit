@@ -1,35 +1,43 @@
-#record-detail.page
+#goals.page.slideupSelector.in
   .page-header
     .toolbar
       %a.awesome.icon-chevron-left.goback{href: "#back"}
-      %h1 [Record Name]
+      %h1 Goals
 
   .scroll
+    %ul.filter-navigation.two
+      %li
+        %a{href: "#"} In Progress
+      %li
+        %a{href: "#"} Completed
     .content-main
-      .content-block
-        .yellow-block
-          .review-score
-            .score 35:44
-              %span.score-level RX
-              %p.score-details Current Personal Record
+      %ul
+        %li.goal
+          %a{href: "#goal-detail"}
+            .label
+              %p.goal-label 125 Back Squat
+                %br
+                %span Last Update: 17 days ago
+              %p.goal-progress 25%
+            %p.awesome.icon-chevron-right.arrow
+        %li.goal
+          %a{href: "#goal-detail"}
+            .label
+              %p.goal-label 25 Unbroken Pullups
+                %br
+                %span Last Update: 17 days ago
+              %p.goal-progress 45%
+            %p.awesome.icon-chevron-right.arrow
+        %li.goal
+          %a.add-new{href: "#create-goal"}
+            .label
+              %p Create New Goal
+            %p.awesome.icon-chevron-right.arrow
 
-    .content-main
-      .secondary
-        .title
-          %h3 History
-          .action
-            %a.awesome.icon-plus{href: "#"}
 
-        %ul
-          %li
-            .chart
-          %li
-            .label.history
-              %p Dec 25, 2013
-              %p.record 4:59
-          %li
-            .label.history
-              %p Dec 25, 2013
-              %p.record 4:59
+
+
+
+
 
 
