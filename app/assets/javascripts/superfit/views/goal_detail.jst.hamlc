@@ -66,8 +66,8 @@
               %p.record 12 days ago
 
   .footer
-    %a.button.bottom {href: "#home"} Jump to Dashboard
-    %a.button.bottom.red {href: "#"} Delete Goal
+    %a.button.bottom{href: "#home"} Jump to Dashboard
+    %a.button.bottom.red{href: "#"} Delete Goal
 
 
 
