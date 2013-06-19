@@ -1,0 +1,35 @@
+#record-detail.page
+  .page-header
+    .toolbar
+      %a.awesome.icon-chevron-left.goback{href: "#back"}
+      %h1 [Record Name]
+
+  .scroll
+    .content-main
+      .content-block
+        .yellow-block
+          .review-score
+            .score 35:44
+              %span.score-level RX
+              %p.score-details Current Personal Record
+
+    .content-main
+      .secondary
+        .title
+          %h3 History
+          .action
+            %a.awesome.icon-plus{href: "#"}
+
+        %ul
+          %li
+            .chart
+          %li
+            .label.history
+              %p Dec 25, 2013
+              %p.record 4:59
+          %li
+            .label.history
+              %p Dec 25, 2013
+              %p.record 4:59
+
+
