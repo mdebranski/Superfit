@@ -1,22 +1,15 @@
-#record-detail-strength.page
+#record-detail.page
   .page-header
     .toolbar
       %a.awesome.icon-chevron-left.goback{href: "#back"}
-      %h1 [Strength Name]
+      %h1 [Record Name]
 
   .scroll
-    %ul.filter-navigation
-      %li
-        %a{href: "#"} 1RM
-      %li
-        %a{href: "#"} 3RM
-      %li
-        %a{href: "#"} 5RM
   .content-main
     .content-block
       .yellow-block
         .review-score
-          .score 145lb
+          .score 35:44
             %span.score-level RX
             %p.score-details Current Personal Record
 
