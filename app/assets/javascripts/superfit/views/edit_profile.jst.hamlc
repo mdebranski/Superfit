@@ -13,7 +13,7 @@
             %input.required{type: "text", name: "fullname", placeholder: "Full Name"}
           %div
             %label  Where do you workout?
-            %input.required{type: "text", name: "gymname", placeholder: "Gym Name"}
+            %li.awesome.icon-chevron-right.next-day
           %div
             %label Zip Code
             %input.required{type: "number", name: "zipcode", placeholder: "Zip Code"}
