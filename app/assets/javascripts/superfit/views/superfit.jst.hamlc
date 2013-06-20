@@ -15,7 +15,7 @@
   #edit-record.page
   #edit-wod.page
   #review-wod.page
-  != JST['superfit/views/goals']()
+  #goals.page.slideupSelector.in
   != JST['superfit/views/create_goal']()
   != JST['superfit/views/create_goal2']()
   #profile.page.slideupSelector.in

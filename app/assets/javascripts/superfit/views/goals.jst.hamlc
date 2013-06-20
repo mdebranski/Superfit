@@ -1,38 +1,37 @@
-#goals.page.slideupSelector.in
-  .page-header
-    .toolbar
-      .pulldown Navigation Pulldown
-      %h1 Goals
+.page-header
+  .toolbar
+    .pulldown Navigation Pulldown
+    %h1 Goals
 
-  .scroll
-    %ul.filter-navigation.two
-      %li
-        %a{href: "#"} In Progress
-      %li
-        %a{href: "#"} Completed
-    .content-main
-      %ul
-        %li.goal
-          %a{href: "#goal-detail"}
-            .label
-              %p.goal-label 125 Back Squat
-                %br
-                %span Last Update: 17 days ago
-              %p.goal-progress 25%
-            %p.awesome.icon-chevron-right.arrow
-        %li.goal
-          %a{href: "#goal-detail"}
-            .label
-              %p.goal-label 25 Unbroken Pullups
-                %br
-                %span Last Update: 17 days ago
-              %p.goal-progress 45%
-            %p.awesome.icon-chevron-right.arrow
-        %li.goal
-          %a.add-new{href: "#create-goal"}
-            .label
-              %p Create New Goal
-            %p.awesome.icon-chevron-right.arrow
+.scroll
+  %ul.filter-navigation.two
+    %li
+      %a{href: "#"} In Progress
+    %li
+      %a{href: "#"} Completed
+  .content-main
+    %ul
+      %li.goal
+        %a{href: "#goal-detail"}
+          .label
+            %p.goal-label 125 Back Squat
+              %br
+              %span Last Update: 17 days ago
+            %p.goal-progress 25%
+          %p.awesome.icon-chevron-right.arrow
+      %li.goal
+        %a{href: "#goal-detail"}
+          .label
+            %p.goal-label 25 Unbroken Pullups
+              %br
+              %span Last Update: 17 days ago
+            %p.goal-progress 45%
+          %p.awesome.icon-chevron-right.arrow
+      %li.goal
+        %a.add-new{href: "#create-goal"}
+          .label
+            %p Create New Goal
+          %p.awesome.icon-chevron-right.arrow
 
 
 
