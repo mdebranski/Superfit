@@ -40,6 +40,7 @@ class Superfit extends Spine.Controller
     '.page#edit-wod': 'editWod'
     '.page#review-wod': 'reviewWod'
     '.page#calendar': 'calendar'
+    '.page#profile': 'profile'
 
   constructor: ->
     super
@@ -57,6 +58,7 @@ class Superfit extends Spine.Controller
     new Superfit.EditWod(el: @editWod)
     new Superfit.ReviewWod(el: @reviewWod)
     new Superfit.Calendar(el: @calendar)
+    new Superfit.Profile(el: @profile)
 
 
     Superfit.bind 'navigation', @pulldown

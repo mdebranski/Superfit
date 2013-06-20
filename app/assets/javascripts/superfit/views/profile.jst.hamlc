@@ -1,37 +1,36 @@
-#profile.page.slideupSelector.in
-  .page-header
-    .toolbar
-      .pulldown
-        Navigation Pulldown
-      %h1 Me
-  .scroll
-    .profile-header
-      .profile-image
-      .name
-        %p MD Debranski
-        %p Crossfit RX
+.page-header
+  .toolbar
+    .pulldown
+      Navigation Pulldown
+    %h1 Me
+.scroll
+  .profile-header
+    .profile-image
+    .name
+      %p MD Debranski
+      %p Crossfit RX
 
-    .content-main.profile
-      %ul
-        %li
-          %p Lives in
-          %p Decatur, Ga
-        %li
-          %p Email is
-          %p madebran@vt.edu
-        %li
-          %p I am a
-          %p Female
-        %li
-          %p Crossfitter for
-          %p 3 years
-        %li
-          %p Birthdate
-          %p Feb 15 1977
-        %li.disable
-          %p Syncs data
-          %p soon, friend :)
+  .content-main.profile
+    %ul
+      %li
+        %p Lives in
+        %p Decatur, Ga
+      %li
+        %p Email is
+        %p madebran@vt.edu
+      %li
+        %p I am a
+        %p Female
+      %li
+        %p Crossfitter for
+        %p 3 years
+      %li
+        %p Birthdate
+        %p Feb 15 1977
+      %li.disable
+        %p Syncs data
+        %p soon, friend :)
 
-    .footer
-      %a.button.bottom.lighter.dissolve{href: "#edit-profile"}
-        Edit Profile
+  .footer
+    %a.button.bottom.lighter.dissolve{href: "#edit-profile"}
+      Edit Profile

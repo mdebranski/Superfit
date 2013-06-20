@@ -18,7 +18,7 @@
   != JST['superfit/views/goals']()
   != JST['superfit/views/create_goal']()
   != JST['superfit/views/create_goal2']()
-  != JST['superfit/views/profile']()
+  #profile.page.slideupSelector.in
   != JST['superfit/views/edit_profile']()
   != JST['superfit/views/goal_detail']()
 
