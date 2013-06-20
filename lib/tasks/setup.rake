@@ -12,7 +12,7 @@ task :generate_wods_json do
   CSV.foreach(File.join(Rails.root, 'db', 'wods.csv'), :headers => :first_row) do |row|
     row['id'] = row['id'].to_i
     original_scoring_method = row['scoring_method']
-    row['scoring_method'] = scoring_method_map[original_scoring_method]
+    row['scoring_method'] = scoring_method_map[original_scoring_method.strip]
     raise "ID is required" unless row['id']
     raise "No scoring method found for '#{original_scoring_method}' for WOD '#{row['name']}'" unless row['scoring_method']
     arr << row.to_hash
