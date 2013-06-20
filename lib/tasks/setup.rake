@@ -5,7 +5,7 @@ task :generate_wods_json do
   require 'csv'
   require 'active_support/all'
 
-  scoring_method_map = {"For Time" => 'for_time', "Pass/Fail" => 'pass_fail', "AMRAP  (rounds)" => 'rounds', "For time" => 'for_time', "Max Reps" => 'max_reps', 'Weight / Reps / Rounds' => 'weight_reps'}
+  scoring_method_map = {"For Time" => 'for_time', "Pass/Fail" => 'pass_fail', "AMRAP" => 'rounds', "For time" => 'for_time', "Max Reps" => 'max_reps', 'Weight / Reps / Rounds' => 'weight_reps'}
 
   arr = []
   count = 0
