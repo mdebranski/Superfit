@@ -16,10 +16,10 @@
   #edit-wod.page
   #review-wod.page
   #goals.page.slideupSelector.in
+  #edit_profile.page
   != JST['superfit/views/create_goal']()
   != JST['superfit/views/create_goal2']()
   #profile.page.slideupSelector.in
-  != JST['superfit/views/edit_profile']()
   != JST['superfit/views/goal_detail']()
 
 -# #fb-root

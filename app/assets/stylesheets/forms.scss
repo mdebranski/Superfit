@@ -3,6 +3,8 @@
 
 #jqt > * {
   fieldset {border:0; margin: 0 0 18px 0; overflow: hidden}
+
+  .ui-spinner label.error {display: none}
   form {
     input[type=text], input[type=search], input[type=number], input[type=time],input[type=password] {
       background: #ffffff;
@@ -14,6 +16,8 @@
       width:96%;
       -webkit-appearance:none;
       border: 1px solid $mercury;
+
+      &.error {background:#ffddd9; border:1px solid $tallpoppy}
     }
 
     input[type=radio] {
@@ -74,7 +78,6 @@
       width:100%;
     }
     .button {line-height: 54px; height: 54px}
-
 
   }
 }

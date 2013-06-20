@@ -1,37 +1,37 @@
-#edit-profile.page
-  .page-header
-    .toolbar
+.page-header
+  .toolbar
+    %div
+      %a.awesome.icon-chevron-left.goback{href: "#"}
+    %h1 Edit Me
+
+.content-main.edit-profile.scroll
+  .content-block
+    %form
       %div
-        %a.awesome.icon-chevron-left.goback{href: "#"}
-      %h1 Edit Me
+        %label Full Name
+        %input.required{type: "text", name: "fullname", placeholder: "Full Name"}
+      %div
+        %label  Where do you workout?
+        %li.awesome.icon-chevron-right.next-day
+      %div
+        %label Zip Code
+        %input.required{type: "number", name: "zipcode", placeholder: "Zip Code"}
+      %div
+        %label  Email Address
+        %input.required{type: "text", name: "email", placeholder: "Email Address"}
+      %div
+        %label  I am a
+        %fieldset
+          %input#female{type: "radio", name: "gender", value: "female", checked: 'checked'}
+            %label.radio{for: 'female'} Female
+          %input#male{type: "radio", name: "gender", value: "male"}
+            %label.radio{for: 'male'} Male
+      %div
+        %label How long have you been CrossFitting?
+        %input.required{type: "text", name: "length", placeholder: "Years, Months"}
+      %div
+        %label  Born on
+        %p Feb 15 1977
 
-    .content-main.edit-profile.scroll
-      .content-block
-        %form
-          %div
-            %label Full Name
-            %input.required{type: "text", name: "fullname", placeholder: "Full Name"}
-          %div
-            %label  Where do you workout?
-            %li.awesome.icon-chevron-right.next-day
-          %div
-            %label Zip Code
-            %input.required{type: "number", name: "zipcode", placeholder: "Zip Code"}
-          %div
-            %label  Email Address
-            %input.required{type: "text", name: "email", placeholder: "Email Address"}
-          %div
-            %label  I am a
-            %select.required{name: 'sex'}
-              %option{value: 'female'} Female
-              %option{value: 'male'} Male
-          %div
-            %label How long have you been CrossFitting?
-            %input.required{type: "text", name: "length", placeholder: "Years, Months"}
-          %div
-            %label  Born on
-            %p Feb 15 1977
+      %input.button.bottom.lighter.dissolve{type: 'submit', value:'Save Profile'}
 
-  .footer
-    %a.button.bottom.lighter.dissolve{href: "#profile"}
-      Save Profile
