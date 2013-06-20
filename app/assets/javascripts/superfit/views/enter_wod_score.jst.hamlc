@@ -25,9 +25,8 @@
         - unless @wod
           %label.custom{for: 'entry-name'} Name
           %input.required#entry-name{name: "name",type:"text", placeholder: "Name your WOD", value: if @entry then @entry.name else moment().format('MMM D, YYYY')}
-
-        %p Enter Workout Details
-          %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
+          %p Enter Workout Details
+            %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
         - unless @wod
           .photo-capture
             %p Too much to type?
