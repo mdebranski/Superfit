@@ -17,12 +17,10 @@
       .secondary
         .title
           %h3 History
-          .action
-            %a.awesome.icon-plus{href: "#"}
 
         %ul
           %li
-            .chart  Chart
+            .chart Chart
           %li
             .label.history
               %p Dec 25, 2013
@@ -35,9 +33,7 @@
     .content-main
       .secondary
         .title
-          %h3 Details
-          .action
-            %a.awesome.icon-plus{href: "#"}
+          %h3 Details}
 
         %ul
           %li
@@ -65,9 +61,9 @@
               %p Last Updated
               %p.record 12 days ago
 
-  .footer
-    %a.button.bottom{href: "#home"} Jump to Dashboard
-    %a.button.bottom.red{href: "#"} Delete Goal
+    .footer
+      %a.button.bottom{href: "#home"} Jump to Dashboard
+      %a.button.bottom.red{href: "#"} Delete Goal
 
 
 

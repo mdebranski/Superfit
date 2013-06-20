@@ -23,12 +23,21 @@
         - if @entry
           %input{type: 'hidden', name: 'entry_id', value: @entry.id}
         - unless @wod
-          %label{for: 'entry-name'} Name
-          %input.required#entry-name{name: "name", placeholder: "Name your WOD", value: if @entry then @entry.name else moment().format('MMM D, YYYY')}
+          %label.custom{for: 'entry-name'} Name
+          %input.required#entry-name{name: "name",type:"text", placeholder: "Name your WOD", value: if @entry then @entry.name else moment().format('MMM D, YYYY')}
+
+        %p Enter Workout Details
+          %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
+        - unless @wod
+          .photo-capture
+            %p Too much to type?
+            %a.take-photo.button{href: '#'}
+              %span.icon-camera-alt
+              Take a Photo
         .enter-score
           - unless @wod
             %div.type
-              %p Method
+              %p Scoring Method
               %select.required{name: 'method'}
                 %option{value: 'for_time', selected: @entry?.method == 'for_time'} Time
                 %option{value: 'rounds', selected: @entry?.method == 'rounds'} Rounds
@@ -36,11 +45,7 @@
                 %option{value: 'max_reps', selected: @entry?.method == 'max_reps'} Reps
                 %option{value: 'pass_fail', selected: @entry?.method == 'pass_fail'} Pass / Fail
           != JST['superfit/views/_score'](entry: @entry)
-        - unless @wod
-          .photo-capture
-            %p Too much to type?
-            %a.take-photo.button{href: '#'}
-              %span.awesome.icon-camera-retro Take a Photo
+
 
         %div
           %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}

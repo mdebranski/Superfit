@@ -118,6 +118,8 @@ body {background:none}
       p {margin-top:18px;line-height: 36px;}
       form {margin-top:6px; overflow: hidden}
       input + p.small {margin-top: 0;}
+
+      label.custom {margin: 14px 0 9px 0; display: block}
     }
 
     ul{
@@ -435,7 +437,7 @@ body {background:none}
     div.reps {width:35%; float:left;}
     .small {position:relative; top:5px;}
 
-    .type { margin-right: 7%; }
+    //.type { margin-right: 7%; }
     .score-container {
       width:98%;  margin-bottom: 3px;
 

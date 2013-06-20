@@ -1,7 +1,7 @@
 #goals.page.slideupSelector.in
   .page-header
     .toolbar
-      %a.awesome.icon-chevron-left.goback{href: "#back"}
+      .pulldown Navigation Pulldown
       %h1 Goals
 
   .scroll
