@@ -6,5 +6,5 @@ class Superfit.Profile extends Spine.Controller
   constructor: ->
     super
     @render()
-    Profile.bind 'update', @updateProfile
+    User.bind 'update', @updateProfile
 

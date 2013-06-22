@@ -5,12 +5,10 @@ class Superfit.EditProfile extends Spine.Controller
   elements:
     'form': 'form'
 
-  events:
-    'submit form': 'submit'
 
   constructor: ->
     super
-    @render()
+    @render(user: User.first())
     @form.validate
       submitHandler: @submit
 
@@ -20,6 +18,7 @@ class Superfit.EditProfile extends Spine.Controller
 
     user = User.first()
     user.updateAttributes(data)
+
 
 
     jQT.goTo('#profile', jQT.settings.defaultTransition)

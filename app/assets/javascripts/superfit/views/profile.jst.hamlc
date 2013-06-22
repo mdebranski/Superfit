@@ -32,5 +32,5 @@
         %p soon, friend :)
 
   .footer
-    %a.button.bottom.lighter.dissolve{href:"#edit_profile"}
+    %a.button.bottom.lighter.dissolve{href:"#edit-profile"}
       Edit Profile

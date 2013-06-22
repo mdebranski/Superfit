@@ -9,16 +9,16 @@
     %form
       %div
         %label Full Name
-        %input.required{type: "text", name: "fullname", placeholder: "Full Name"}
+        %input.required{type: "text", name: "fullname", placeholder: "Full Name", value:@user.name}
       %div
         %label  Where do you workout?
         %li.awesome.icon-chevron-right.next-day
       %div
         %label Zip Code
-        %input.required{type: "number", name: "zipcode", placeholder: "Zip Code"}
+        %input.required{type: "number", name: "zipcode", placeholder: "Zip Code", value:@user.zipcode}
       %div
         %label  Email Address
-        %input.required{type: "text", name: "email", placeholder: "Email Address"}
+        %input.required{type: "text", name: "email", placeholder: "Email Address", value:@user.email}
       %div
         %label  I am a
         %fieldset
@@ -28,7 +28,7 @@
             %label.radio{for: 'male'} Male
       %div
         %label How long have you been CrossFitting?
-        %input.required{type: "text", name: "length", placeholder: "Years, Months"}
+        %input.required{type: "text", name: "length", placeholder: "Years, Months", value:@user.crossfitlength}
       %div
         %label  Born on
         %p Feb 15 1977
