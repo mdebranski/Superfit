@@ -675,7 +675,39 @@ body {background:none}
 
   }
   .edit-profile {
-    div {margin-top:18px}
+    li{
+      clear:both;
+      overflow: hidden;
+      margin-top:18px;
+      input[type=text], input[type=number], input[type=date]{
+        border: 1px solid #e7e7e7;
+        background-color: $seashell;
+        height: 50px}
+      input[type=date]{ padding-left: 5%;width:84%; @include border-radius(0); padding-top:1px}
+      &.radio {
+        p {float:left; width:20%; margin:0 }
+        fieldset {position:relative; top:7px; margin:0}
+      }
+      .action {
+        right:0px;
+        position: absolute;
+        display:inline-block;
+        text-align: right;
+        color:$silverchalice;
+        font-size:18px;
+          input.date::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+            -webkit-appearance: none;
+          }
+        p {float:left;}
+        a {
+          color:$silver;
+        }
+      }
+
+    }
+    .divider {border-top: 1px solid #bfd2e1; border-bottom: 0px solid #bfd2e1; padding:9px 0}
   }
 }  //end JQT
 

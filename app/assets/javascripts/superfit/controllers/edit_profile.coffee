@@ -13,8 +13,11 @@ class Superfit.EditProfile extends Spine.Controller
       submitHandler: @submit
 
 
+
   submit: =>
     data = @form.serializeObject()
+
+    @log "Form data", data
 
     user = User.first()
     user.updateAttributes(data)

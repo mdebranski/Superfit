@@ -5,33 +5,48 @@
     %h1 Edit Me
 
 .content-main.edit-profile.scroll
-  .content-block
-    %form
-      %div
-        %label Full Name
-        %input.required{type: "text", name: "fullname", placeholder: "Full Name", value:@user.name}
-      %div
-        %label  Where do you workout?
-        %li.awesome.icon-chevron-right.next-day
-      %div
-        %label Zip Code
-        %input.required{type: "number", name: "zipcode", placeholder: "Zip Code", value:@user.zipcode}
-      %div
-        %label  Email Address
-        %input.required{type: "text", name: "email", placeholder: "Email Address", value:@user.email}
-      %div
-        %label  I am a
-        %fieldset
-          %input#female{type: "radio", name: "gender", value: "female", checked: 'checked'}
-            %label.radio{for: 'female'} Female
-          %input#male{type: "radio", name: "gender", value: "male"}
-            %label.radio{for: 'male'} Male
-      %div
-        %label How long have you been CrossFitting?
-        %input.required{type: "text", name: "length", placeholder: "Years, Months", value:@user.crossfitlength}
-      %div
-        %label  Born on
-        %p Feb 15 1977
 
+  %form
+    %ul
+      %li.title
+        %h2 Edit Profile
+      %li
+        %a.custom{href: "#edit-gym"}
+          .label
+            %p My Gym
+          .action
+            %p Select
+            %p.awesome.icon-chevron-right.arrow
+      %li.radio
+        .label
+          %p I am a
+        .action
+          %fieldset
+            %input#female{type: "radio", name: "gender", value: "female", checked: 'checked'}
+              %label.radio{for: 'female'} Female
+            %input#male{type: "radio", name: "gender", value: "male"}
+              %label.radio{for: 'male'} Male
+      %li
+        .label
+          %p Name
+        .action
+          %input.required{type: "text", name: "name", placeholder: "Full Name", value: @user.name}
+      %li
+        .label
+          %p Zip Code
+        .action
+          %input{type: "number", name: "zipcode", placeholder: "Zip Code", value: @user.zipcode}
+      %li
+        .label
+          %p Email
+        .action
+          %input{type: "text", name: "email", placeholder: "Email Address", value: @user.email}
+
+      %li
+        .label
+          %p Birth Date
+        .action
+          %input.date{type: "date", name: "birthdate", placeholder: "Your age", value: @user.birthdate}
+    .content-block.divider
       %input.button.bottom.lighter.dissolve{type: 'submit', value:'Save Profile'}
 

@@ -7,26 +7,23 @@
   .profile-header
     .profile-image
     .name
-      %p MD Debranski
-      %p Crossfit RX
+      %p= @user.name
+      %p= @user.gym
 
   .content-main.profile
     %ul
       %li
-        %p Lives in
-        %p Decatur, Ga
+        %p My zip code
+        %p= @user.zipcode
       %li
         %p Email is
-        %p madebran@vt.edu
+        %p= @user.email
       %li
-        %p I am a
-        %p Female
+        %p Gender
+        %p= @user.gender
       %li
-        %p Crossfitter for
-        %p 3 years
-      %li
-        %p Birthdate
-        %p Feb 15 1977
+        %p Crossfitting for
+        %p = @user.crossfitlength
       %li.disable
         %p Syncs data
         %p soon, friend :)
@@ -34,3 +31,5 @@
   .footer
     %a.button.bottom.lighter.dissolve{href:"#edit-profile"}
       Edit Profile
+
+
