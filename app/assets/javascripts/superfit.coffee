@@ -99,10 +99,16 @@ $ ->
       $.get '/wods.txt', (result) ->
         wods = $.parseJSON(result)
 
-        Wod.destroyAll()
         _.each wods, (wod_hash) ->
-          wod = new Wod(wod_hash)
-          wod.save()
+          id = wod_hash.id
+          if Wod.exists(id)
+            wod = Wod.find(id)
+            console.log "Updating wod #{id} with:", wod_hash
+            wod.updateAttributes(wod_hash)
+          else
+            console.log "Creating wod #{wod_hash.id} with:", wod_hash
+            wod = new Wod(wod_hash)
+            wod.save()
 
         wods_version.version = latest_version
         wods_version.save()
