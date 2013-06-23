@@ -17,11 +17,11 @@
         %ul
           - for wod in Wod.byType(type)
             %li
-              - if wod.hasRecord()
+              - if wod.personal_record?
                 %a{href: "#record-detail", 'data-id': wod.id}
                   .label
                     %p= wod.name
-                    %p= wod.record()
+                    %p= wod.recordString(true)
                   %p.awesome.icon-chevron-right.arrow
               - else
                 %a{href: "#edit-record", 'data-id': wod.id}

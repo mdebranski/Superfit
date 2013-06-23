@@ -21,7 +21,7 @@ class Superfit.ReviewWod extends Spine.Controller
     @entry = entry
 
     if entry.wod_id?
-      @pastEntries = _.sortBy WodEntry.byWodId(entry.wod_id), (entry) -> -1 * moment(entry.date).valueOf()
+      @pastEntries = WodEntry.history(@wod)
 
     @render(wod: @wod, entry: @entry, pastEntries: @pastEntries)
 

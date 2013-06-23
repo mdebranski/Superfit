@@ -24,26 +24,36 @@ class WodEntry extends Spine.Model
   @byWodId: (wod_id) ->
     _.select @all(), (entry) -> wod_id == entry.wod_id
 
+  @history: (wod) ->
+    _.sortBy WodEntry.byWodId(wod.id), (entry) -> -1 * moment(entry.date).valueOf()
+
   wod: ->
     Wod.find(@wod_id)
 
   scoreString: (summary=false) ->
-    switch @method
-      when 'for_time' then _.str.sprintf "%d:%02d", Number(@min), Number(@sec)
-      when 'rounds' then "#{@score} rounds"
-      when 'weight' then "#{@score} lbs"
-      when 'max_reps' then "#{@score} reps"
-      when 'pass_fail' then @score.toUpperCase()
-      when 'weight_reps' then @weightRepsString(summary)
+    WodEntry.scoreString(this, @method, summary)
 
-  weightRepsString: (summary) ->
-    return "" unless @reps and @reps.length > 0
+  @scoreString: (score_obj, method, summary=false) ->
+    switch method
+      when 'for_time'
+        if summary
+          _.str.sprintf "%d:%02d %s", Number(score_obj.min), Number(score_obj.sec), score_obj.type
+        else
+          _.str.sprintf "%d:%02d", Number(score_obj.min), Number(score_obj.sec)
+      when 'rounds' then "#{score_obj.score} rounds"
+      when 'weight' then "#{score_obj.score} lbs"
+      when 'max_reps' then "#{score_obj.score} reps"
+      when 'pass_fail' then score_obj.score.toUpperCase()
+      when 'weight_reps' then @weightRepsString(score_obj, summary)
+
+  @weightRepsString: (score_obj, summary) ->
+    return "" unless score_obj.reps and score_obj.reps.length > 0
     if summary
-      last_idx = @reps.length - 1
-      "#{@weight[last_idx]}lb x #{@reps[last_idx]} reps"
+      last_idx = score_obj.reps.length - 1
+      "#{score_obj.weight[last_idx]}lb x #{score_obj.reps[last_idx]} reps"
     else
-      func = (acc, reps, i) => acc + "#{@weight[i]}lb x #{reps} reps, "
-      str = _.reduce @reps, func, ""
+      func = (acc, reps, i) => acc + "#{score_obj.weight[i]}lb x #{reps} reps, "
+      str = _.reduce score_obj.reps, func, ""
       str[0..str.length - 3]
 
   typeSlug: -> if @wod_id then @wod().typeSlug() else "custom"

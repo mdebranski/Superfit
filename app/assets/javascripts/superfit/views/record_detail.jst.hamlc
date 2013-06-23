@@ -1,35 +1,16 @@
 #record-detail.page
   .page-header
     .toolbar
-      %a.awesome.icon-chevron-left.goback{href: "#back"}
-      %h1 [Record Name]
+      %a.awesome.icon-chevron-left{href: "#records"}
+      %h1= @wod.name
 
   .scroll
     .content-main
       .content-block
         .yellow-block
           .review-score
-            .score 35:44
-              %span.score-level RX
+            .score= @wod.recordString()
+              %span.score-level= @wod.personal_record.type
               %p.score-details Current Personal Record
 
-    .content-main
-      .secondary
-        .title
-          %h3 History
-          .action
-            %a.awesome.icon-plus{href: "#"}
-
-        %ul
-          %li
-            .chart
-          %li
-            .label.history
-              %p Dec 25, 2013
-              %p.record 4:59
-          %li
-            .label.history
-              %p Dec 25, 2013
-              %p.record 4:59
-
-
+    != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)

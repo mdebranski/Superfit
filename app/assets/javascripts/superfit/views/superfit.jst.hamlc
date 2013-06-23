@@ -10,8 +10,7 @@
   != JST['superfit/views/browse_wods']()
   != JST['superfit/views/create_wod']()
   #records.page
-  != JST['superfit/views/record_detail']()
-  != JST['superfit/views/record_detail_strength']()
+  #record-detail.page
   #edit-record.page
   #edit-wod.page
   #review-wod.page

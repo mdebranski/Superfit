@@ -1,0 +1,12 @@
+- if @pastEntries and @pastEntries.length > 0
+  .content-main
+    .secondary
+      .title
+        %h3 #{@wod.name} History
+      %ul
+        - for history in @pastEntries
+          %li
+            %a{href: "#edit-wod", 'data-id': history.id}
+              .label
+                %p= moment(history.date).format('MMM D, YYYY')
+                %p= history.scoreString()

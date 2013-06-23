@@ -14,19 +14,7 @@
 
       %a.button.bottom.fade{href: "#home"} Jump To Dashboard
 
-
-  - if @pastEntries
-    .content-main
-      %div.secondary
-        %div.title
-          %h3 #{@entry.wodName()} History
-        %ul
-          - for history in @pastEntries
-            %li
-              %a{href: "#edit-wod", 'data-id': history.id}
-                .label
-                  %p= moment(history.date).format('MMM D, YYYY')
-                  %p= history.scoreString()
+  != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
 
   .footer
     %a.button.bottom.lighter.dissolve{"data-id": @entry.id, href: "#edit-wod"} Edit Workout

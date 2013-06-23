@@ -8,7 +8,7 @@
   .content-block
     %form
       .enter-score
-        %p Enter New (or Update) Record
+        %p Enter New Record
         != JST['superfit/views/_score'](entry: @entry)
       %div
         %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
@@ -16,7 +16,7 @@
         %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
           %label.radio{for: 'scaled-type'} Scaled
 
-    %a.button.bottom.bluer{href: "#records"} Save Records
+      %input.button.bottom.bluer{type: 'submit'} Save Records
 
 
 

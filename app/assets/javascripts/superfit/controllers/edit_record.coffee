@@ -14,7 +14,6 @@ class Superfit.EditRecord extends Spine.Controller
 
   render: ->
     super
-
     @changeMethod()
     @initSpinners()
     @initValidation()
@@ -38,4 +37,7 @@ class Superfit.EditRecord extends Spine.Controller
     @render(wod: @wod)
 
   submit: =>
-    @log "SUBMIT"
+    data = @form.serializeObject()
+    @wod.updateAttributes(personal_record: data)
+    @wod.trigger('newRecord')
+    jQT.goTo('#record-detail', jQT.settings.defaultTransition)
