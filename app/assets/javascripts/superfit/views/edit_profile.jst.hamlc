@@ -22,9 +22,9 @@
           %p I am a
         .action
           %fieldset
-            %input#female{type: "radio", name: "gender", value: "female", checked: 'checked'}
+            %input#female{type: "radio", name: "gender", value: "female", checked: @user.gender == 'female'}
               %label.radio{for: 'female'} Female
-            %input#male{type: "radio", name: "gender", value: "male"}
+            %input#male{type: "radio", name: "gender", value: "male", checked: @user.gender == 'male'}
               %label.radio{for: 'male'} Male
       %li
         .label
