@@ -1,4 +1,4 @@
-#jqt
+#jqt.app-container
   - unless @user
     != JST['superfit/views/get_started_step1']()
     != JST['superfit/views/get_started_step2']()

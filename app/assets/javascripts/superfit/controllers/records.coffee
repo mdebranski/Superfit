@@ -1,7 +1,6 @@
 class Superfit.Records extends Spine.Controller
 
   events:
-    'tap .pulldown': -> Superfit.trigger('navigation')
     'tap .filter-navigation a': 'navigateType'
 
   currentType: 'strength'

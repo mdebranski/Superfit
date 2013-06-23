@@ -6,7 +6,6 @@ class Superfit.Home extends Superfit.SearchWods
   events:
     'tap .prev-day': 'prevDay'
     'tap .next-day': 'nextDay'
-    'tap .pulldown': -> Superfit.trigger('navigation')
     'tap .date': 'openCalendar'
 
   constructor: ->
