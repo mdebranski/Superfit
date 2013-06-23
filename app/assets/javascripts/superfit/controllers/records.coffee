@@ -41,18 +41,6 @@ class Superfit.Records extends Spine.Controller
           @findNewRecord(wod)
 
   findNewRecord: (wod) ->
-    wod.personal_record = null
-
-    isRecord = (acc, entry) ->
-      if wod.isRecord(entry)
-        entry
-      else
-        acc
+    isRecord = (acc, entry) -> if wod.isRecord(entry) then entry else acc
     record = _.reduce WodEntry.history(wod), isRecord, null
-
-    if record?
-      @log "NEW RECORD", record
-      wod.updateRecord(record)
-    else
-      @log "NO RECORD"
-      wod.updateRecord(null)
+    wod.updateRecord(record)
