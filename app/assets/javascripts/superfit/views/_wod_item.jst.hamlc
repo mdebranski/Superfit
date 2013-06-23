@@ -1,4 +1,4 @@
-%a.slideup{href: "#edit-wod"}
+%a.slideup{href: "#edit-wod", data-wod-id: @wod.id}
   .label
     .icon.sprite-sf{class: @wod.typeSlug()}
     %p= @wod.name

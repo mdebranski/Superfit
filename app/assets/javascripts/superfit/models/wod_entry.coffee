@@ -27,20 +27,24 @@ class WodEntry extends Spine.Model
   wod: ->
     Wod.find(@wod_id)
 
-  scoreString: ->
+  scoreString: (summary=false) ->
     switch @method
       when 'for_time' then _.str.sprintf "%d:%02d", Number(@min), Number(@sec)
       when 'rounds' then "#{@score} rounds"
       when 'weight' then "#{@score} lbs"
       when 'max_reps' then "#{@score} reps"
       when 'pass_fail' then @score.toUpperCase()
-      when 'weight_reps' then @weightRepsString()
+      when 'weight_reps' then @weightRepsString(summary)
 
-  weightRepsString: ->
+  weightRepsString: (summary) ->
     return "" unless @reps and @reps.length > 0
-    func = (acc, reps, i) => acc + "#{@weight[i]}lb x #{reps} reps, "
-    str = _.reduce @reps, func, ""
-    str[0..str.length - 3]
+    if summary
+      last_idx = @reps.length - 1
+      "#{@weight[last_idx]}lb x #{@reps[last_idx]} reps"
+    else
+      func = (acc, reps, i) => acc + "#{@weight[i]}lb x #{reps} reps, "
+      str = _.reduce @reps, func, ""
+      str[0..str.length - 3]
 
   typeSlug: -> if @wod_id then @wod().typeSlug() else "custom"
 

@@ -26,7 +26,7 @@
               .label
                 .icon.sprite-sf{class: entry.typeSlug()}
                 %p= entry.wodName()
-                %p= entry.scoreString()
+                %p= entry.scoreString(true)
               %p.awesome.icon-chevron-right.arrow
         %li
           %a.add-new{href: "#add-wod"}
