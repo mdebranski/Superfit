@@ -44,7 +44,15 @@ class WodEntry extends Spine.Model
       when 'weight' then "#{score_obj.score} lbs"
       when 'max_reps' then "#{score_obj.score} reps"
       when 'pass_fail' then score_obj.score.toUpperCase()
-      when 'weight_reps' then @weightRepsString(score_obj, summary)
+      when 'weight_reps'
+        if score_obj.max_1
+          "#{score_obj.max_1} lbs 1RM"
+        else if score_obj.max_3
+          "#{score_obj.max_3} lbs 3RM"
+        else if score_obj.max_5
+          "#{score_obj.max_5} lbs 5RM"
+        else
+          @weightRepsString(score_obj, summary)
 
   @weightRepsString: (score_obj, summary) ->
     return "" unless score_obj.reps and score_obj.reps.length > 0
@@ -59,5 +67,9 @@ class WodEntry extends Spine.Model
   typeSlug: -> if @wod_id then @wod().typeSlug() else "custom"
 
   wodName: -> if @wod_id then @wod().name else @name
+
+  repMax: (reps) ->
+    reduceWeights = (acc, currentReps, i) => if currentReps == reps and @weight[i] > acc then @weight[i] else acc
+    _.reduce @reps, reduceWeights, null
 
 window.WodEntry = WodEntry

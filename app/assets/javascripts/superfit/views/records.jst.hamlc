@@ -14,7 +14,7 @@
   .content-main
     - _.each ['strength', 'benchmark', 'other'], (type) ->
       %section{class: type, style: 'display: none;'}
-        %ul
+        %ul.records
           - for wod in Wod.byType(type)
             %li
               - if wod.personal_record?

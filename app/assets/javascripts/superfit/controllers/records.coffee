@@ -2,6 +2,7 @@ class Superfit.Records extends Spine.Controller
 
   events:
     'tap .filter-navigation a': 'navigateType'
+    'tap .records a': 'recordClicked'
 
   currentType: 'strength'
 
@@ -10,11 +11,11 @@ class Superfit.Records extends Spine.Controller
     @render()
 
     Wod.bind 'newRecord', => @render()
+    Wod.bind 'goToRecord', @goToRecord
     WodEntry.bind 'create update', (entry) => @checkIfNewRecord(entry)
     WodEntry.bind 'destroy', (entry) => @entryDestroyed(entry)
 
   render: ->
-    @log "Rendering records"
     super
     @updateTypes()
 
@@ -41,6 +42,21 @@ class Superfit.Records extends Spine.Controller
           @findNewRecord(wod)
 
   findNewRecord: (wod) ->
-    isRecord = (acc, entry) -> if wod.isRecord(entry) then entry else acc
-    record = _.reduce WodEntry.history(wod), isRecord, null
-    wod.updateRecord(record)
+    wod.personal_record = null
+    _.each WodEntry.history(wod), (entry) -> wod.updateRecord(entry)
+
+  recordClicked: (e) ->
+    e.preventDefault()
+    wod_id = $(e.target).closest('a').data('id')
+    Wod.trigger('goToRecord', wod_id)
+
+  goToRecord: (wod_id, repMax=1) ->
+    wod = Wod.find(wod_id)
+    hasRecord = if wod.strength() then wod.personal_record?["max_#{repMax}"]? else wod.personal_record?
+
+    if hasRecord
+      Wod.trigger 'recordDetail', wod, repMax
+      jQT.goTo('#record-detail', 'fade')
+    else
+      Wod.trigger 'editRecord', wod, repMax
+      jQT.goTo('#edit-record', 'fade')

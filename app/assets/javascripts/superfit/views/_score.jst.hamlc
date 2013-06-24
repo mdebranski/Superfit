@@ -1,5 +1,5 @@
 %div.score-container
-  %p Enter Score
+  %p.score-label Enter Score
   .for_time.score
     %input.required{type: "number", name: "min", placeholder: "Min", value: @entry?.min}
     %input.required{type: "number", name: "sec", placeholder: "Sec", value: @entry?.sec}
@@ -14,3 +14,5 @@
       %label.radio{for: 'score-pass'} Pass
     %input#score-fail{type: "radio", name: "score", value: "fail", checked: @entry?.score == 'fail'}
       %label.radio{for: 'score-fail'} Fail
+  .weight_reps.score
+    %input.required{type: "number", name: "max_#{@repMax}", placeholder: "Enter Weight (lbs)", value: @entry?.score}

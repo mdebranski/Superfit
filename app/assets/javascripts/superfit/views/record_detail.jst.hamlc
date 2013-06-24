@@ -5,12 +5,26 @@
       %h1= @wod.name
 
   .scroll
+    - if @wod.typeSlug() == 'strength'
+      %ul.filter-navigation
+        %li
+          %a{href: "#", data-rep-max: 1} 1RM
+        %li
+          %a{href: "#", data-rep-max: 3} 3RM
+        %li
+          %a{href: "#", data-rep-max: 5} 5RM
+
     .content-main
       .content-block
         .yellow-block
           .review-score
-            .score= @wod.recordString()
-              %span.score-level= @wod.personal_record.type
-              %p.score-details Current Personal Record
+            .score
+              - if @wod.typeSlug() == 'strength'
+                = @wod.repMax(@repMax)
+                %p.score-details Current #{@repMax} Max Rep Record
+              - else
+                = @wod.recordString()
+                %span.score-level= @wod.personal_record.type
+                %p.score-details Current Personal Record
 
     != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)

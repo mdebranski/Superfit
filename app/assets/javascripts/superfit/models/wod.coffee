@@ -17,6 +17,9 @@ class Wod extends Spine.Model
 
   @scoringMethodMap: {for_time: "For Time", pass_fail: "Pass/Fail", rounds: "AMRAP (rounds)", max_reps: "Max Reps", weight_reps: "Weight / Reps / Rounds"}
 
+  @byName: (name) ->
+    _.find @all(), (wod) -> wod.name == name
+
   @byType: (type) ->
     wods = _.select @all(), (wod) ->
       wod.typeSlug() == type.toLowerCase()
@@ -34,8 +37,15 @@ class Wod extends Spine.Model
   scoringMethod: ->
     Wod.scoringMethodMap[@scoring_method]
 
-  typeSlug: ->
-    @type.toLowerCase()
+  typeSlug: -> @type.toLowerCase()
+  strength: -> @typeSlug() == 'strength'
+
+  repMax: (reps) ->
+    max = @personal_record["max_#{reps}"]
+    if max
+      "#{max} lbs"
+    else
+      "No record"
 
   recordString: (summary=false) ->
     if @personal_record?
@@ -57,20 +67,42 @@ class Wod extends Spine.Model
             entry_seconds = entry.min * 60 + entry.sec
             entry_seconds < record_seconds
         when 'rounds', 'weight', 'max_reps' then entry.score > @personal_record.score
-        when 'weight_reps' then throw "Strength not supported yet"
+        when 'weight_reps'
+          record = {}
+          max_1 = entry.repMax(1)
+          max_3 = entry.repMax(3)
+          max_5 = entry.repMax(5)
+          (max_1 and (!@personal_record or max_1 > @personal_record?.max_1)) || (max_3 and (!@personal_record or max_3 > @personal_record?.max_3)) || (max_5 and (!@personal_record or max_5 > @personal_record?.max_5))
     else
       true
 
   updateRecord: (entry) ->
     if entry?
       throw "Can't update record unless entry is for this wod" unless entry.wod_id = @id
-      record =
-        switch @scoring_method
-          when 'for_time' then {min: entry.min, sec: entry.sec, type: entry.type}
-          when 'rounds', 'weight', 'max_reps' then {score: entry.score, type: entry.type}
-          when 'weight_reps' then throw "Strength not supported yet"
 
-      @personal_record = _.extend record, {entry_id: entry.id}
+      switch @scoring_method
+        when 'for_time'
+          record = {min: entry.min, sec: entry.sec, type: entry.type}
+        when 'rounds', 'weight', 'max_reps'
+          record = {score: entry.score, type: entry.type}
+        when 'weight_reps'
+          record = {}
+          max_1 = entry.repMax(1)
+          max_3 = entry.repMax(3)
+          max_5 = entry.repMax(5)
+          console.log "Max 1", max_1
+          console.log "Max 3", max_3
+          console.log "Max 5", max_5
+          record.max_1 = max_1 if max_1 and (!@personal_record?.max_1 or max_1 > @personal_record.max_1)
+          record.max_3 = max_3 if max_3 and (!@personal_record?.max_3 or max_3 > @personal_record.max_3)
+          record.max_5 = max_5 if max_5 and (!@personal_record?.max_5 or max_5 > @personal_record.max_5)
+
+      record = _.extend record, {entry_id: entry.id}
+      if @personal_record?
+        @personal_record = _.extend @personal_record, record
+      else
+        @personal_record = record
+      console.log "Record after", @personal_record
       @save()
     else
       @updateAttributes(personal_record: null)
