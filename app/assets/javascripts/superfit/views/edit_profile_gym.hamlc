@@ -1,0 +1,22 @@
+#edit-profile-gym.page
+
+
+.page-header
+  .toolbar
+    %div
+      %a.awesome.icon-chevron-left.goback{href: "#"}
+    %h1 Edit Profile
+
+.content-main.edit-profile.scroll
+
+  %form
+    %ul
+      %li
+        %fieldset
+          %input#gym-search{type: "text", name: "search", placeholder: "Search"}
+
+        %h3.no-matches No gyms found for this search.
+        %ul.gyms{style: "display:none"}
+
+    .content-block.divider
+      %input.button.bottom.lighter.dissolve{type: 'submit', value:'Save Profile'}

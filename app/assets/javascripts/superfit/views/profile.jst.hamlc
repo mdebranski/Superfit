@@ -2,28 +2,49 @@
   .toolbar
     .pulldown
       Navigation Pulldown
-    %h1 Me
+    %h1 Profile
 .scroll
-  .profile-header
-    .profile-image
-    .name
-      %p= @user.name
-      %p= @user.gym
 
   .content-main.profile
     %ul
       %li
-        %p My zip code
-        %p= @user.zipcode
+        %p Name
+        %p
+          - if @user.name
+            =@user.name
+          - unless @user.name
+            %a{href:"#edit-profile"} Enter Now
       %li
-        %p Email is
-        %p= @user.email
+        %p My Gym
+        %p
+          - if @user.gym
+            =@user.gym
+          - unless @user.gym
+            %a{href:"#edit-profile"} Enter Now
+      %li
+        %p Zip Code
+        %p
+          - if @user.zipcode
+            =@user.zipcode
+          - unless @user.zipcode
+            %a{href:"#edit-profile"} Enter Now
+      %li
+        %p Email
+        %p
+          - if @user.email
+            =@user.email
+          - unless @user.email
+            %a{href:"#edit-profile"} Enter Now
       %li
         %p Gender
         %p= @user.gender
       %li
-        %p Crossfitting for
-        %p = @user.crossfitlength
+        %p Birthdate
+        %p
+          - if @user.birthdate
+            =@user.birthdate
+          - unless @user.birthdate
+            %a{href:"#edit-profile"} Enter Now
       %li.disable
         %p Syncs data
         %p soon, friend :)

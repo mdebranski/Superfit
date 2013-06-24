@@ -2,35 +2,25 @@
   .toolbar
     %div
       %a.awesome.icon-chevron-left.goback{href: "#"}
-    %h1 Edit Me
+    %h1 Edit Profile
 
 .content-main.edit-profile.scroll
 
   %form
     %ul
-      %li.title
-        %h2 Edit Profile
-      %li
-        %a.custom{href: "#edit-gym"}
-          .label
-            %p My Gym
-          .action
-            %p Select
-            %p.awesome.icon-chevron-right.arrow
-      %li.radio
-        .label
-          %p I am a
-        .action
-          %fieldset
-            %input#female{type: "radio", name: "gender", value: "female", checked: @user.gender == 'female'}
-              %label.radio{for: 'female'} Female
-            %input#male{type: "radio", name: "gender", value: "male", checked: @user.gender == 'male'}
-              %label.radio{for: 'male'} Male
       %li
         .label
           %p Name
         .action
           %input.required{type: "text", name: "name", placeholder: "Full Name", value: @user.name}
+      %li
+        %a{href: "#edit-profile-gym"}
+          .label
+            %p My Gym
+          .action
+            %p Find My Gym
+            %p.awesome.icon-chevron-right.arrow
+
       %li
         .label
           %p Zip Code
@@ -41,6 +31,15 @@
           %p Email
         .action
           %input{type: "text", name: "email", placeholder: "Email Address", value: @user.email}
+      %li.radio
+        .label
+          %p Gender
+        .action
+          %fieldset
+            %input#female{type: "radio", name: "gender", value: "female", checked: @user.gender == 'female'}
+              %label.radio{for: 'female'} Female
+            %input#male{type: "radio", name: "gender", value: "male", checked: @user.gender == 'male'}
+              %label.radio{for: 'male'} Male
 
       %li
         .label

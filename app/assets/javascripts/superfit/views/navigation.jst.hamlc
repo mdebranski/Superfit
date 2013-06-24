@@ -15,7 +15,7 @@
     %div
       %a.dissolve{href: "#profile"}
         %p.icon.me.sprite-sf
-        Me
+        Profile
 
 
 
