@@ -15,8 +15,7 @@
   #edit-wod.page
   #review-wod.page
   #goals.page.slideupSelector.in
-  != JST['superfit/views/create_goal']()
-  != JST['superfit/views/create_goal2']()
+  #edit-goal.page
   #edit-profile.page
   #edit-profile-gym.page
   #profile.page.slideupSelector.in

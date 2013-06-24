@@ -34,6 +34,7 @@ class Superfit extends Spine.Controller
     '.page#home': 'home'
     '.page#goals': 'goals'
     '.page#goal-detail': 'goalDetail'
+    '.page#edit-goal': 'editGoal'
     '.page#records': 'records'
     '.page#edit-record': 'editRecord'
     '.page#record-detail': 'recordDetail'
@@ -57,6 +58,7 @@ class Superfit extends Spine.Controller
     new Superfit.Home(el: @home)
     new Superfit.Goals(el: @goals)
     new Superfit.GoalDetail(el: @goalDetail)
+    new Superfit.EditGoal(el: @editGoal)
     new Superfit.Records(el: @records)
     new Superfit.EditRecord(el: @editRecord)
     new Superfit.RecordDetail(el: @recordDetail)
