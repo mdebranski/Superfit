@@ -1,7 +1,8 @@
 #record-detail.page
   .page-header
     .toolbar
-      %a.awesome.icon-chevron-left{href: "#records"}
+      %div
+        %a.awesome.icon-chevron-left.goback{href: "#records"}
       %h1= @wod.name
 
   .scroll
@@ -27,4 +28,9 @@
                 %span.score-level= @wod.personal_record.type
                 %p.score-details Current Personal Record
 
+        %a.button.bottom.fade{href: "#home"} Jump To Dashboard
+
     != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
+
+    .footer
+      %a.button.bottom.lighter.dissolve Add New Record
