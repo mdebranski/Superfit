@@ -20,7 +20,7 @@
   #edit-profile.page
   #edit-profile-gym.page
   #profile.page.slideupSelector.in
-  != JST['superfit/views/goal_detail']()
+  #goal-detail.page
 
 -# #fb-root
 -# :javascript

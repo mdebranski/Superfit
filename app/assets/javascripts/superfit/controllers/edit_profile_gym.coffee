@@ -20,8 +20,6 @@ class Superfit.EditProfileGym extends Spine.Controller
     @form.validate
       submitHandler: @submit
 
-
-
   submit: =>
     data = @form.serializeObject()
 
@@ -32,7 +30,7 @@ class Superfit.EditProfileGym extends Spine.Controller
 
     user = User.first()
     user.updateAttributes(data)
-    jQT.goTo('#profile', jQT.settings.defaultTransition)
+    jQT.goTo('#edit-profile', jQT.settings.defaultTransition)
 
   search: (e) ->
     e.preventDefault() if e.keyCode == 13

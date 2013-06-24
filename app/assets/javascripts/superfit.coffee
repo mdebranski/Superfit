@@ -33,6 +33,7 @@ class Superfit extends Spine.Controller
     '.page#get-started-step3': 'start'
     '.page#home': 'home'
     '.page#goals': 'goals'
+    '.page#goal-detail': 'goalDetail'
     '.page#records': 'records'
     '.page#edit-record': 'editRecord'
     '.page#record-detail': 'recordDetail'
@@ -55,6 +56,7 @@ class Superfit extends Spine.Controller
     new Superfit.Start(el: @start) unless user
     new Superfit.Home(el: @home)
     new Superfit.Goals(el: @goals)
+    new Superfit.GoalDetail(el: @goalDetail)
     new Superfit.Records(el: @records)
     new Superfit.EditRecord(el: @editRecord)
     new Superfit.RecordDetail(el: @recordDetail)
@@ -66,6 +68,7 @@ class Superfit extends Spine.Controller
     new Superfit.EditProfile(el: @editProfile)
     new Superfit.EditProfileGym(el: @editProfileGym)
     new Superfit.Profile(el: @profile)
+
 
 
     $('.app-container').on 'click', '.pulldown', @pulldown

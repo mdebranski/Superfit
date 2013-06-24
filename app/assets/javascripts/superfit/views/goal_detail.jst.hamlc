@@ -1,69 +1,68 @@
-#goal-detail.page
-  .page-header
-    .toolbar
-      %a.awesome.icon-chevron-left.goback{href: "#back"}
-      %h1 [Goal Name]
+.page-header
+  .toolbar
+    %a.awesome.icon-chevron-left.goback{href: "#back"}
+    %h1 [Goal Name]
 
-  .scroll
-    .content-main
-      .content-block
-        .yellow-block
-          .review-score
-            .score 85%
-              %span.score-level Complete
-              %p.score-details 21 Reps
+.scroll
+  .content-main
+    .content-block
+      .yellow-block
+        .review-score
+          .score 85%
+            %span.score-level Complete
+            %p.score-details 21 Reps
 
-    .content-main
-      .secondary
-        .title
-          %h3 History
+  .content-main
+    .secondary
+      .title
+        %h3 History
 
-        %ul
-          %li
-            .chart Chart
-          %li
-            .label.history
-              %p Dec 25, 2013
-              %p.record 4:59
-          %li
-            .label.history
-              %p Dec 25, 2013
-              %p.record 4:59
+      %ul
+        %li
+          .chart Chart
+        %li
+          .label.history
+            %p Dec 25, 2013
+            %p.record 4:59
+        %li
+          .label.history
+            %p Dec 25, 2013
+            %p.record 4:59
 
-    .content-main
-      .secondary
-        .title
-          %h3 Details}
+  .content-main
+    .secondary
+      .title
+        %h3 Details
 
-        %ul
-          %li
-            .label.history
-              %p Start Date
-              %p.record Jan 21 2013
-          %li
-            .label.history
-              %p Movement
-              %p.record Pushup
-          %li
-            .label.history
-              %p Scoring Method
-              %p.record Pushup
-          %li
-            .label.history
-              %p Goal Score
-              %p.record 25
-          %li
-            .label.history
-              %p Start Score
-              %p.record 21
-          %li
-            .label.history
-              %p Last Updated
-              %p.record 12 days ago
+      %ul
+        %li
+          .label.history
+            %p Start Date
+            %p.record
+        %li
+          .label.history
+            %p Movement
+            %p.record Pushup
+        %li
+          .label.history
+            %p Scoring Method
+            %p.record Pushup
+        %li
+          .label.history
+            %p Goal Score
+            %p.record 25
+        %li
+          .label.history
+            %p Start Score
+            %p.record 21
+        %li
+          .label.history
+            %p Last Updated
+            %p.record 12 days ago
 
-    .footer
-      %a.button.bottom{href: "#home"} Jump to Dashboard
-      %a.button.bottom.red{href: "#"} Delete Goal
+  .footer
+    %a.button.bottom{href: "#home"} Jump to Dashboard
+    %a.button.bottom.red{href: "#"} Delete Goal
 
 
 

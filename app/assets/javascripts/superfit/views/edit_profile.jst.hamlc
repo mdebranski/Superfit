@@ -18,7 +18,11 @@
           .label
             %p My Gym
           .action
-            %p Find My Gym
+            %p
+              - if @user.gym
+                =@user.gym
+              - unless @user.gym
+                Find My Gym
             %p.awesome.icon-chevron-right.arrow
 
       %li
