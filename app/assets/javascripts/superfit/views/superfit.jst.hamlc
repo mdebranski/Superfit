@@ -4,7 +4,6 @@
     != JST['superfit/views/get_started_step2']()
     != JST['superfit/views/get_started_step3']()
   #home.page
-  != JST['superfit/views/navigation']()
   != JST['superfit/views/calendar']()
   != JST['superfit/views/add_wod']()
   != JST['superfit/views/browse_wods']()

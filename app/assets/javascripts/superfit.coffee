@@ -54,6 +54,7 @@ class Superfit extends Spine.Controller
     user = User.first()
     @render(user: user)
 
+    new Superfit.Navigation()
     new Superfit.Start(el: @start) unless user
     new Superfit.Home(el: @home)
     new Superfit.Goals(el: @goals)
@@ -71,23 +72,8 @@ class Superfit extends Spine.Controller
     new Superfit.EditProfileGym(el: @editProfileGym)
     new Superfit.Profile(el: @profile)
 
-
-
-    $('.app-container').on 'click', '.pulldown', @pulldown
-    @navigation = $('#navigation').detach()
-    $('.page').on 'pageAnimationEnd', => $('.pulldown').removeClass('open'); @navigation.removeClass('active'); @navigation.detach()
-
     _.defer -> $.makeItRetina();
     _.defer -> jQT.goTo('#get-started-step1', jQT.settings.defaultTransition) unless user
-
-  pulldown: (e) =>
-    if @navigation.is('.active')
-      $(e.target).removeClass('open')
-      @navigation.removeClass('active')
-    else
-      $(e.target).addClass('open')
-      @navigation.prependTo('.current')
-      _.defer => @navigation.addClass('active')
 
 window.Superfit = Superfit
 
