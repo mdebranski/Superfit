@@ -20,7 +20,7 @@
           - if @user.gym
             =@user.gym
           - unless @user.gym
-            %a{href:"#edit-profile"} Enter Now
+            %a{href:"#edit-profile-gym"} Enter Now
       %li
         %p Zip Code
         %p

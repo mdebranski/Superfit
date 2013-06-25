@@ -13,6 +13,7 @@ class Superfit.EditProfileGym extends Spine.Controller
     'keydown input#gym-search': 'search'
 
 
+
   constructor: ->
     super
     @render(user: User.first())

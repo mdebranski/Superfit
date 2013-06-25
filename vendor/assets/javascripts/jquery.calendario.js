@@ -198,7 +198,7 @@
 				}
 
 			}
-			html += '</div></div>';
+			html += '</div></div><div class="close-calendar"><a href="#home">Close Calendar</a></div>';
 
 			return html;
 

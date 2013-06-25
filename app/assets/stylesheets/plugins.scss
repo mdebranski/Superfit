@@ -116,6 +116,9 @@ div.ui-spinner { background: none; }
   .fc-calendar .fc-row > div.fc-content:after {
       color:transparent;
   }
+  .fc-calendar .close-calendar a{
+    width:100%; background: $seashell; padding: 9px 0; text-align: center; margin-top:9px; font-size:12px; display:block;
+  }
 
 }   // end calendar
 

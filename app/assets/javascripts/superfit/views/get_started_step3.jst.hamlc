@@ -17,7 +17,7 @@
         %h2 Where do you Workout?
 
         %fieldset
-          %input#gym-search{type: "text", name: "search", placeholder: "Search"}
+          %input#gym-search{type: "text", name: "search", placeholder: "Enter Gym Name"}
 
         %p
           %a.small{href: "#home"} Don't Workout at an Affiliate? Skip this ›
