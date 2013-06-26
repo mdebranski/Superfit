@@ -4,7 +4,7 @@ class Superfit.Navigation extends Spine.Controller
     super
     @navigation = $(@template())
 
-    $('.app-container').on 'click', '.pulldown', @pulldown
+    $('.app-container').on 'tap', '.pulldown', @pulldown
     @navigation.on 'tap', 'a', (e) => $('.pulldown').removeClass('open')
     $('.page').on 'pageAnimationEnd', @hideNavigation
 
