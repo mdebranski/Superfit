@@ -9,11 +9,11 @@
     - if @wod.typeSlug() == 'strength'
       %ul.filter-navigation
         %li
-          %a{href: "#", data-rep-max: 1} 1RM
+          %a{href: "#", data-rep-max: 1, class: if @repMax == 1 then 'selected' else ''} 1RM
         %li
-          %a{href: "#", data-rep-max: 3} 3RM
+          %a{href: "#", data-rep-max: 3, class: if @repMax == 3 then 'selected' else ''} 3RM
         %li
-          %a{href: "#", data-rep-max: 5} 5RM
+          %a{href: "#", data-rep-max: 5, class: if @repMax == 5 then 'selected' else ''} 5RM
 
     .content-main
       .content-block

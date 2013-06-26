@@ -27,6 +27,8 @@ class Superfit.Records extends Spine.Controller
   updateTypes: ->
     @$("section:visible").hide()
     @$("section.#{@currentType}").fadeIn()
+    @$(".filter-navigation a").removeClass('selected')
+    @$(".filter-navigation a[data-type=#{@currentType}]").addClass('selected')
 
   checkIfNewRecord: (entry) ->
     if entry.wod_id?
