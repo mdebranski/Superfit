@@ -52,7 +52,7 @@ class Superfit extends Spine.Controller
     super
 
     user = User.first()
-    @render(user: user) if user?
+    @render(user: user)
 
     new Superfit.Navigation()
     new Superfit.Start(el: @start) unless user

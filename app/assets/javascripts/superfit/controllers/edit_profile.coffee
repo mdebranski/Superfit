@@ -8,11 +8,12 @@ class Superfit.EditProfile extends Spine.Controller
 
   constructor: ->
     super
-    @render(user: User.first())
-    User.bind 'create update', => @render(user: User.first())
+
+    user = User.first()
+    @render(user: user) if user?
+    User.bind 'create update', (user) => @render(user: user)
     @form.validate
       submitHandler: @submit
-
 
 
   submit: =>
