@@ -58,4 +58,5 @@ class Superfit.EditRecord extends Spine.Controller
     @wod.personal_record = _.extend @wod.personal_record, data
     @wod.save()
     @wod.trigger('newRecord')
+    @wod.trigger('recordDetail')
     Wod.trigger('goToRecord', @wod.id, @repMax)
