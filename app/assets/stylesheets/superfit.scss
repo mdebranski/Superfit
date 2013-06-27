@@ -420,12 +420,11 @@ body {background:none}
       font-size:10px ;
       position:relative;
       top:15px;
+      width:50px;
+      text-align: center;
+      &.selected{background: $mountmain-meadow;color:#ffffff;}
       }
 
-    .warm-up.selected {
-      background: $mountmain-meadow;
-      color:#ffffff;
-    }
     overflow: hidden;
   }
   .enter-score{

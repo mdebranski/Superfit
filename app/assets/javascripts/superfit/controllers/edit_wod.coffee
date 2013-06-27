@@ -12,6 +12,8 @@ class Superfit.EditWod extends Spine.Controller
     'change input[type=number]' : 'notNegative'
     'spinstop input[type=number]' : 'notNegative'
     'tap .take-photo': 'takePhoto'
+    'tap .warm-up': 'togglestyle'
+
 
   constructor: ->
     super
@@ -101,6 +103,9 @@ class Superfit.EditWod extends Spine.Controller
       @addSet()
     else
       _.each entry.reps, (reps, i) => @addSet(null, reps, entry.weight[i])
+
+  togglestyle: (e) ->
+    $(e.target).toggleClass "selected"
 
   addSet: (e=null, reps=null, weight=null) ->
     e.preventDefault() if e

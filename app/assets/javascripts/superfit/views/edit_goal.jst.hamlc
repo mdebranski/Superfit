@@ -13,12 +13,11 @@
 
   .content-block
     %form
-      %p Name Your Goal
-      %input.required{type: "text", name: "custom-goal-label", placeholder: "Wod Name + Todays Date"}
+
 
       .enter-score
         %div.score-container
-          %p Enter Starting Score
+          %p Goal Score
           .for_time.score
             %input.required{type: "number", name: "min", placeholder: "Min", value: @entry?.min}
             %input.required{type: "number", name: "sec", placeholder: "Sec", value: @entry?.sec}
@@ -40,7 +39,7 @@
           %label.radio{for: 'scaled-type'} Scaled
 
 
-        .new-goal
+        -# .new-goal
           .enter-score
             %div.score-container
               %p Enter Starting Score
