@@ -76,6 +76,8 @@ class Superfit.EditWod extends Spine.Controller
   submit: =>
     data = @form.serializeObject()
 
+    @log "Form data", data
+
     attributes =
        wod_id: @wod and @wod.id
        name: data.name
@@ -105,6 +107,7 @@ class Superfit.EditWod extends Spine.Controller
       _.each entry.reps, (reps, i) => @addSet(null, reps, entry.weight[i])
 
   togglestyle: (e) ->
+
     $(e.target).toggleClass "selected"
 
   addSet: (e=null, reps=null, weight=null) ->

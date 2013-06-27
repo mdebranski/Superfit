@@ -2,8 +2,7 @@
   .enter-score-label
     %p Set <span class='set-number'>#{@set_number}</span>
     <i class="remove-set icon-remove-sign"></i>
-    .warm-up Warm-Up
-
+    %input.warm-up{type: "checkbox", name: "warm-up", placeholder: "Warm-up", value: @warmup}
 
   .enter-score
     %div.input
