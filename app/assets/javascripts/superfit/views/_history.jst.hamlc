@@ -3,10 +3,10 @@
     .secondary
       .title
         %h3 #{@wod.name} History
-      %ul
+      %ul.history
         - for history in @pastEntries
           %li
-            %a{href: "#edit-wod", 'data-id': history.id}
+            %a{href: "#review-wod", 'data-id': history.id}
               .label
                 %p= moment(history.date).format('MMM D, YYYY')
                 %p= history.scoreString()

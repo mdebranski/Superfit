@@ -3,6 +3,7 @@ class Superfit.ReviewWod extends Spine.Controller
 
   events:
     'tap .delete': 'deleteWod'
+    'tap .history a': 'history'
 
   constructor: ->
     super
@@ -27,3 +28,9 @@ class Superfit.ReviewWod extends Spine.Controller
 
   deleteWod: ->
     @entry.destroy()
+
+  history: (e) ->
+    id = $(e.target).closest('a').data('id')
+    console.log(id)
+    entry = WodEntry.find(id)
+    @updateReviewWod(entry)
