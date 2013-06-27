@@ -11,11 +11,15 @@
     - if @wod and @wod.workout_male?
       .yellow-block
         %strong= @wod.scoringMethod()
-        %br/
-        - if @user.gender == 'male'
-          != Utils.simpleFormat(@wod.workout_male)
-        - if @user.gender == 'female'
-          != Utils.simpleFormat(@wod.workout_female)
+        %br
+        %srong= @wod.scoring_notes
+        %br
+        %br
+        %p.score-details=
+          - if @user.gender == 'male'
+            != Utils.simpleFormat(@wod.workout_male)
+          - if @user.gender == 'female'
+            != Utils.simpleFormat(@wod.workout_female)
     %fieldset
       %form
         - if @wod

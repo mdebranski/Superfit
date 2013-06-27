@@ -401,6 +401,8 @@ body {background:none}
     a.button {float:right;width:50%; text-align:left;padding:6px}
     span {font-size:14px; margin:0 4px;}
   }
+
+  .score-details {margin-top:0 !important; line-height: 18px  !important}
  // ENTER WOD SCORE
   .enter-score-label {
     width:99%;
@@ -458,8 +460,30 @@ body {background:none}
     font-weight: bold;
     margin-bottom: 18px;
 
-    .score-level {font-size:14px}
-    .score-details {margin-top:0 !important; line-height: 18px  !important}
+
+    .score-level {
+      font-size:12px;
+      background-color:$dovegray;
+      padding:5px 4px 4px 5px;
+      color:white;
+      @include border-radius ($radius);
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      top:-6px;
+    }
+    .pr {
+      font-size:12px;
+      background-color:$mountmain-meadow;
+      padding:5px 4px 4px 5px;
+      color:white;
+      @include border-radius ($radius);
+      text-align: center;
+      position: relative;
+      left:-6px;
+      top:-6px;
+      text-transform: uppercase;
+    }
 
   }
 

@@ -10,6 +10,7 @@
         .review-score
           .score= @entry.scoreString()
             %span.score-level= @entry.type
+            %span.pr pr
           %p.score-details= @entry.details
 
       %a.button.bottom.fade{href: "#home"} Jump To Dashboard
