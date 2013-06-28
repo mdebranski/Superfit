@@ -18,7 +18,6 @@
     %ul
       %li.title
         %h2 Workout Activity
-        .action
 
       - if @entries.length > 0
         - for entry in @entries
@@ -32,7 +31,7 @@
         %li
           %a.add-new{href: "#add-wod"}
             .label
-              %p Add Another Workout
+              %p Add Workout
             %p.awesome.icon-plus.arrow
       - else
         %li

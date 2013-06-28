@@ -3,7 +3,7 @@
     .toolbar
       %div
         %a.awesome.icon-chevron-left.goback{href: "#home"}
-      %h1 Select WOD
+      %h1 Select Workout
 
   .search-block
     %form

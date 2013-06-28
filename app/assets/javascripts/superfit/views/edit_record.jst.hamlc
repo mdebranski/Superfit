@@ -6,7 +6,7 @@
 
 .scroll
   - if @wod.typeSlug() == 'strength'
-    %ul.filter-navigation
+    %ul.filter-navigation.not-main
       %li
         %a{href: "#", data-rep-max: 1} 1RM
       %li
