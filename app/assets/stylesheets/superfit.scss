@@ -76,6 +76,16 @@ body {background:none}
       background-size: 10px 44px;
 
       .goback {position: relative; padding:8px; top:5px; left:1px; color:#ffffff; display: block; height: 40px; width:40px;}
+      .icon-plus {
+        float:right;
+        @include border-radius (20px);
+        border:0px solid white;
+        position:relative;
+        top:9px;
+        right:1px;
+        padding:2px 0;
+        color:white
+        }
       //.pulldown {
       //  background:url(image_path('img-mainnav.png')) repeat-x;
       //  width:33px;
@@ -421,7 +431,7 @@ body {background:none}
       padding:0px;
       font-size:10px ;
       position:relative;
-      top:5px;
+      top:15px;
       width:60px;
       text-align: center;
       height: 20px;
