@@ -10,3 +10,4 @@ log
 public/assets
 public/uploads
 tmp
+build/*
