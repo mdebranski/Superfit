@@ -4,7 +4,7 @@
       %h1 Log Workouts
       %p Superfit was designed to allow you to quickly and easily log all of our workouts.
 
-      %img{src:"/assets/gfx-landing-record-workouts.png"}
+      %img{src:"./assets/gfx-landing-record-workouts.png"}
 
 
       %p.small

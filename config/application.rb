@@ -55,5 +55,9 @@ module Superfit
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # ignore database initialization, etc on precompile and prep for phonegap
+    config.assets.initialize_on_precompile=false
+    config.action_controller.relative_url_root = "."
   end
 end

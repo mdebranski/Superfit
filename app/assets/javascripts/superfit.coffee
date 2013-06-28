@@ -84,7 +84,7 @@ $ ->
   WodsVersion.fetch()
   WodEntry.fetch()
 
-  $.get '/wods_version.txt', (latest_version) ->
+  $.get 'wods_version.txt', (latest_version) ->
     latest_version = latest_version.trim()
     wods_version = WodsVersion.first() || new WodsVersion()
 
@@ -92,7 +92,7 @@ $ ->
 
     if wods_version.needs_update(latest_version)
       console.log "WODs Updating..."
-      $.get '/wods.txt', (result) ->
+      $.get 'wods.txt', (result) ->
         wods = $.parseJSON(result)
 
         _.each wods, (wod_hash) ->

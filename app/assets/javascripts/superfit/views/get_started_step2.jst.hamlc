@@ -4,7 +4,7 @@
       %h1 See Your Progress
       %p Superfit visually tracks the progress ofBenchmarks, Strength and Common workouts.
 
-      %img{src:"/assets/gfx-landing-see-progress.png"}
+      %img{src:"./assets/gfx-landing-see-progress.png"}
 
 
       %p.small

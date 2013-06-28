@@ -1,7 +1,7 @@
 <div id="landing" class="page landing">
   <div class="landing">
       <div class="splash">
-        <img src="/assets/logo-landing.png">
+        <img src="./assets/logo-landing.png">
       </div>
   </div>
 </div>
