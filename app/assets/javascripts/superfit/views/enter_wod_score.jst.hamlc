@@ -10,16 +10,19 @@
   .content-block
     - if @wod and @wod.workout_male?
       .yellow-block
-        %strong= @wod.scoringMethod()
-        %br
-        %srong= @wod.scoring_notes
-        %br
-        %br
         %p.score-details=
           - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
             != Utils.simpleFormat(@wod.workout_male)
           - if @user.gender == 'female'
             != Utils.simpleFormat(@wod.workout_female)
+
+        %hr
+        %p.score-notes
+          =@wod.scoringMethod()
+          %br
+          =@wod.scoring_notes
+
+
     %fieldset
       %form
         - if @wod

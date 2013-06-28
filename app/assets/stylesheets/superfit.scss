@@ -35,7 +35,6 @@ body {background:none}
     color:$silverchalice;
   }
   li {font-family:$standardfont; }
-
   h3.no-matches {
     display: none;
     color: rgba(0, 0, 0, 0.10);
@@ -64,7 +63,7 @@ body {background:none}
     z-index: 999;
     position: relative;
 
-    h1 {font-size: 16px; bottom:11px;  font-family:$standardfontbold; font-weight: 100;  text-transform: uppercase; letter-spacing: .25px; width: 200px; margin-left: -100px;}
+    h1 {top: 12px;font-size: 16px; bottom:11px;  font-family:$standardfontbold; font-weight: 100;  text-transform: uppercase; letter-spacing: .25px; width: 200px; margin-left: -100px;}
 
     .toolbar {
       @include box-sizing(border-box);
@@ -76,6 +75,17 @@ body {background:none}
       background-size: 10px 44px;
 
       .goback {position: relative; padding:8px; top:5px; left:1px; color:#ffffff; display: block; height: 40px; width:40px;}
+      .icon-plus {
+        float:right;
+        @include border-radius (4px);
+        border:0px solid $seashell;
+        position:relative;
+        top:9px;
+        right:1px;
+        padding:2px 0;
+        color:$seashell;
+        font-size:20px;
+        }
       //.pulldown {
       //  background:url(image_path('img-mainnav.png')) repeat-x;
       //  width:33px;
@@ -418,13 +428,20 @@ body {background:none}
       background: $seashell;
       color:$silver;
       @include border-radius($radius);
-      padding:4px 8px;
+      padding:0px;
       font-size:10px ;
       position:relative;
       top:15px;
-      width:50px;
+      width:60px;
       text-align: center;
+      height: 20px;
+      line-height: 18px;
       &.selected{background: $mountmain-meadow;color:#ffffff;}
+      text-transform:capitalize;
+
+        &:before {
+          content: "Warm-Up";
+        }
       }
 
     overflow: hidden;
@@ -495,9 +512,9 @@ body {background:none}
     //border-bottom: 2px groove #eae7e1;
     padding-bottom: 7px;
     margin:0 auto;
+    margin-top:3px !important;
 
-    ul:first-child {margin-top:0}
-    &.not-main ul:first-child   {margin-top:18px}
+    &.not-main {margin-top:18px !important}
     li {
       font-size:13px;
       font-weight: normal;
@@ -508,9 +525,10 @@ body {background:none}
 
       a {
         color:$silverchalice;
+
+        &:active, &.active {background: transparent;}
       }
       a.selected {color:$mineshaft}
-
     }
 
     &.two {
@@ -595,6 +613,12 @@ body {background:none}
     margin-bottom: 5px;
     padding:20px;
     color:$silverchalice;
+
+    p {font-size:14px}
+    span {font-size:12px; display: block}
+    hr {border:0px; border-bottom:1px dashed; margin:0;margin:18px 0 9px 0}
+
+    .score-notes {margin-top:0px !important; line-height: 18px !important;}
   }
 
   .icon-button {

@@ -4,29 +4,30 @@
       %a.awesome.icon-chevron-left.goback{href: "#home"}
     %h1= @wod.name
 
-- if @wod.typeSlug() == 'strength'
-  %ul.filter-navigation
-    %li
-      %a{href: "#", data-rep-max: 1} 1RM
-    %li
-      %a{href: "#", data-rep-max: 3} 3RM
-    %li
-      %a{href: "#", data-rep-max: 5} 5RM
+.scroll
+  - if @wod.typeSlug() == 'strength'
+    %ul.filter-navigation.not-main
+      %li
+        %a{href: "#", data-rep-max: 1} 1RM
+      %li
+        %a{href: "#", data-rep-max: 3} 3RM
+      %li
+        %a{href: "#", data-rep-max: 5} 5RM
 
-.content-main
-  .content-block
-    %form
-      .enter-score
-        != JST['superfit/views/_score'](entry: @entry, repMax: @repMax)
+  .content-main
+    .content-block
+      %form
+        .enter-score
+          != JST['superfit/views/_score'](entry: @entry, repMax: @repMax)
 
-      - unless @wod.typeSlug() == 'strength'
-        .score-type
-          %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
-            %label.radio{for: 'rx-type'} RX
-          %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
-            %label.radio{for: 'scaled-type'} Scaled
+        - unless @wod.typeSlug() == 'strength'
+          .score-type
+            %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
+              %label.radio{for: 'rx-type'} RX
+            %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
+              %label.radio{for: 'scaled-type'} Scaled
 
-      %input.button.bottom.bluer{type: 'submit'} Save Records
+        %input.button.bottom.bluer{type: 'submit'} Save Records
 
 
 

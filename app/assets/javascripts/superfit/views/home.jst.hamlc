@@ -3,6 +3,7 @@
     .pulldown
       Navigation Pulldown
     %h1 Dashboard
+    %a.awesome.icon-plus{href: "#add-wod"}
 .scroll
   .date-navigation
     %ul
@@ -17,8 +18,7 @@
     %ul
       %li.title
         %h2 Workout Activity
-        .action
-          %a.awesome.icon-plus{href: "#add-wod"}
+
       - if @entries.length > 0
         - for entry in @entries
           %li
@@ -31,7 +31,7 @@
         %li
           %a.add-new{href: "#add-wod"}
             .label
-              %p Add Another Workout
+              %p Add Workout
             %p.awesome.icon-plus.arrow
       - else
         %li
@@ -47,7 +47,7 @@
       %li.title
         %h2 Goals
         .action
-          %a{href: "#goals"}
+          %a.dissolve{href: "#goals"}
             %p View All
             %p.awesome.icon-chevron-right.arrow
       %li.chart-container

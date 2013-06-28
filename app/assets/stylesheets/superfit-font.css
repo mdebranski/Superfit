@@ -55,6 +55,10 @@
 .icon-plus:before { content: '\e801'; } /* '' */
 .icon-up-dir:before { content: '\e811'; } /* '' */
 .icon-down-dir:before { content: '\e812'; } /* '' */
+.icon-cancel:before { content: '\e818'; } /* '' */
+.icon-cancel-1:before { content: '\e800'; } /* '' */
+.icon-cancel-circled-1:before { content: '\e816'; } /* '' */
+.icon-cancel-circled:before { content: '\e814'; } /* '' */
 .icon-calendar-1:before { content: '\e810'; } /* '' */
 .icon-camera-alt:before { content: '\e802'; } /* '' */
 .icon-down-open:before { content: '\e80e'; } /* '' */
@@ -71,6 +75,7 @@
 .icon-up-open-big:before { content: '\e806'; } /* '' */
 .icon-emo-wink:before { content: '\e800'; } /* '' */
 .icon-calendar:before { content: '\e80f'; } /* '' */
-.icon-phone:before { content: '📞'; } /* '\1f4de' */
 .icon-cancel:before { content: '\e818'; } /* '' */
 .icon-remove-sign:before { content: '\e814'; } /* '' */
+.icon-clock:before { content: '\e819'; } /* '' */
+

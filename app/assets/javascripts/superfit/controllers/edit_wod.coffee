@@ -76,6 +76,8 @@ class Superfit.EditWod extends Spine.Controller
   submit: =>
     data = @form.serializeObject()
 
+    @log "Form data", data
+
     attributes =
        wod_id: @wod and @wod.id
        name: data.name
@@ -88,6 +90,7 @@ class Superfit.EditWod extends Spine.Controller
        type: data.type
        details: data.details
        date: new Date(Superfit.currentDate)
+       warmup: data.warmup
 
 
     if data.entry_id
@@ -104,8 +107,9 @@ class Superfit.EditWod extends Spine.Controller
     else
       _.each entry.reps, (reps, i) => @addSet(null, reps, entry.weight[i])
 
-  togglestyle: (e) ->
-    $(e.target).toggleClass "selected"
+  togglestyle: (e)->
+   $(e.target).toggleClass "selected", $(e.target).is(":checked")
+
 
   addSet: (e=null, reps=null, weight=null) ->
     e.preventDefault() if e

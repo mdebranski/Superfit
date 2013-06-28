@@ -4,7 +4,7 @@
 #jqt > * {
   fieldset {border:0; margin: 0 0 18px 0; overflow: hidden}
 
-  .ui-spinner label.error {display: none}
+  .ui-spinner label.error {display: none !important}
   form {
     input[type=text], input[type=search], input[type=number], input[type=time],input[type=password] {
       background: #ffffff;
@@ -17,7 +17,10 @@
       -webkit-appearance:none;
       border: 1px solid $mercury;
 
-      &.error {background:#ffddd9; border:1px solid $tallpoppy}
+      &.error {
+        background:#ffddd9;
+        border:1px solid $tallpoppy
+      }
     }
 
     input[type=radio] {
