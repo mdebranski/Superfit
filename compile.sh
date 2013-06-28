@@ -11,6 +11,9 @@ RAILS_ENV=production bundle exec rake assets:precompile
 # move the compiled assets to the build folder
 mv ./public/assets/ ./build
 
+# move cordova.js file to 'phonegap.js'
+mv ./build/assets/cordova.js ./build/phonegap.js
+
 # nuke out the gzipped files
 rm ./build/assets/*.gz
 
