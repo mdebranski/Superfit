@@ -90,6 +90,7 @@ class Superfit.EditWod extends Spine.Controller
        type: data.type
        details: data.details
        date: new Date(Superfit.currentDate)
+       warmup: data.warmup
 
 
     if data.entry_id
@@ -106,9 +107,9 @@ class Superfit.EditWod extends Spine.Controller
     else
       _.each entry.reps, (reps, i) => @addSet(null, reps, entry.weight[i])
 
-  togglestyle: (e) ->
+  togglestyle: (e)->
+   $(e.target).toggleClass "selected", $(e.target).is(":checked")
 
-    $(e.target).toggleClass "selected"
 
   addSet: (e=null, reps=null, weight=null) ->
     e.preventDefault() if e
