@@ -58,6 +58,6 @@ module Superfit
 
     # ignore database initialization, etc on precompile and prep for phonegap
     config.assets.initialize_on_precompile=false
-    config.action_controller.relative_url_root = "."
+    config.action_controller.relative_url_root = ".."
   end
 end
