@@ -19,6 +19,8 @@
           <div class="photo-capture">
              <p>Too much to type?</p>
              <a href="#" class="button"><span class="awesome icon-camera-retro"></span> Take a Photo</a>
+             <input type="text" class="custom-wod-photo" name="photo" value="" />
+             <img class="custom-wod-img" src="" style="display:none;" />
           </div>
           </form>
           <a href="#enter-wod-score" class="button bottom">Next: Enter Your Score</a>

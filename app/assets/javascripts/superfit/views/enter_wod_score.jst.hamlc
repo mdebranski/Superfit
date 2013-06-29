@@ -40,6 +40,8 @@
             %a.take-photo.button{href: '#'}
               %span.icon-camera-alt
               Take a Photo
+            %input.custom-wod-photo{name: "photo", type: "hidden"}
+            %img.custom-wod-img{}
         .enter-score
           - unless @wod
             %div.type
