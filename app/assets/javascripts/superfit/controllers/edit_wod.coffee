@@ -27,7 +27,6 @@ class Superfit.EditWod extends Spine.Controller
   takePhoto: (e) ->
     return  unless window.device.platform
     self = this
-    imagePath = null # Path to uploaded image.  This is set asynchronously.
   
     # a little bit of nested-callback hell.  Sorry about this, I didn't see any flow-control libs.
     captureSuccess = (filePath) ->
@@ -60,8 +59,7 @@ class Superfit.EditWod extends Spine.Controller
 
     options =
       quality: 75
-      destinationType: Camera.DestinationType.FILE_URI
-      
+      destinationType: Camera.DestinationType.FILE_URI      
       sourceType: Camera.PictureSourceType.CAMERA
       #sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
       #allowEdit: true
@@ -70,7 +68,6 @@ class Superfit.EditWod extends Spine.Controller
       targetHeight: 480
       saveToPhotoAlbum: false
 
-    
     # prompt user to take a picture or choose from their library
     navigator.camera.getPicture captureSuccess, captureError, options
     e.preventDefault()
