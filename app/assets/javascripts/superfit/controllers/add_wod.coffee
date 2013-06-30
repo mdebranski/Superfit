@@ -12,6 +12,10 @@ class Superfit.AddWod extends Superfit.SearchWods
     'tap .wods-browse li a.custom': 'addCustomWod'
     'tap .wods-browse li a.browse': 'browseWods'
 
+  constructor: ->
+    super
+    @render()
+
   addCustomWod: -> Wod.trigger 'new', null
 
   browseWods: (e) ->

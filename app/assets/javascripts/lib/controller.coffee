@@ -4,7 +4,7 @@ if Spine?
       @.__proto__.constructor.name
 
     defaultTemplateName: ->
-      @className().toLowerCase()
+      _.str.underscored @className()
 
     view: (name) ->
       viewPath = "superfit/views/#{name}"

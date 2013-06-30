@@ -1,10 +1,7 @@
 class Superfit.EditProfile extends Spine.Controller
 
-  templateName: 'edit_profile'
-
   elements:
     'form': 'form'
-
 
   constructor: ->
     super

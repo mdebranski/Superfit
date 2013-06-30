@@ -13,6 +13,7 @@ class Superfit.BrowseWods extends Superfit.SearchWods
   constructor: ->
     super
     Wod.bind 'browse', @updateWods
+    @render()
 
   updateWods: (type) =>
     @type = type

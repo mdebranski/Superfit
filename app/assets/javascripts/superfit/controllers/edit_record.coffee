@@ -1,7 +1,5 @@
 class Superfit.EditRecord extends Spine.Controller
 
-  templateName: 'edit_record'
-
   elements:
     'form': 'form'
     '.score-label': 'scoreLabel'

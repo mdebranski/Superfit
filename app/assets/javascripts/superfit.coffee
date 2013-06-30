@@ -27,8 +27,6 @@
 class Superfit extends Spine.Controller
   @extend Spine.Events
 
-  templateName: 'superfit'
-
   elements:
     '.page#get-started-step3': 'start'
     '.page#home': 'home'

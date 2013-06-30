@@ -1,5 +1,4 @@
 class Superfit.RecordDetail extends Spine.Controller
-  templateName: 'record_detail'
 
   events:
     'tap .filter-navigation a': 'navigate'

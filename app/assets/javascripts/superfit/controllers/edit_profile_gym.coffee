@@ -1,7 +1,5 @@
 class Superfit.EditProfileGym extends Spine.Controller
 
-  templateName: 'edit_profile_gym'
-
   elements:
     '.gyms': 'gymsEl'
     '.no-matches': 'noMatches'

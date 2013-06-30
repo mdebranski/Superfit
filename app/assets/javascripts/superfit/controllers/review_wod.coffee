@@ -1,5 +1,4 @@
 class Superfit.ReviewWod extends Spine.Controller
-  templateName: 'review_wod'
 
   events:
     'tap .delete': 'deleteWod'
