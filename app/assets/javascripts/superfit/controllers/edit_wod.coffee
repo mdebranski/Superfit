@@ -90,6 +90,15 @@ class Superfit.EditWod extends Spine.Controller
 
   initValidation: ->
     @form.validate
+      errorPlacement: (error, element) ->
+        error.appendTo( element.closest('.ui-spinner') )
+      highlight: (element) ->
+        $(element).removeClass('success').addClass('form-error')
+        $(element).closest('.enter-score').removeClass('success').addClass('error');
+      unhighlight: (element) ->
+        $(element).removeClass('form-error').addClass('success')
+        $(element).closest('.enter-score').removeClass('error').addClass('success');
+
       submitHandler: @submit
 
   updateNewWod: (wod) =>
@@ -135,7 +144,7 @@ class Superfit.EditWod extends Spine.Controller
        type: data.type
        details: data.details
        date: new Date(Superfit.currentDate)
-       warmup: data.warmup
+       warm_up: data.warm_up
 
 
     if data.entry_id

@@ -17,9 +17,9 @@
       -webkit-appearance:none;
       border: 1px solid $mercury;
 
-      &.error {
+      &.form-error {
         background:#ffddd9;
-        border:1px solid $tallpoppy
+        color:$tallpoppy;
       }
     }
 
@@ -79,6 +79,11 @@
       padding:0;
       margin:0;
       width:100%;
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
     .button {line-height: 54px; height: 54px}
 

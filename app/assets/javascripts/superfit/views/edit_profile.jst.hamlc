@@ -13,17 +13,6 @@
           %p Name
         .action
           %input.required{type: "text", name: "name", placeholder: "Full Name", value: @user.name}
-      %li
-        %a{href: "#edit-profile-gym"}
-          .label
-            %p My Gym
-          .action
-            %p
-              - if @user.gym
-                =@user.gym
-              - unless @user.gym
-                Find My Gym
-            %p.awesome.icon-chevron-right.arrow
 
       %li
         .label
@@ -35,6 +24,12 @@
           %p Email
         .action
           %input{type: "text", name: "email", placeholder: "Email Address", value: @user.email}
+
+      %li
+        .label
+          %p Birth Date
+        .action
+          %input.date{type: "date", name: "birthdate", placeholder: "Your age", value: @user.birthdate}
       %li.radio
         .label
           %p Gender
@@ -44,12 +39,17 @@
               %label.radio{for: 'female'} Female
             %input#male{type: "radio", name: "gender", value: "male", checked: @user.gender == 'male'}
               %label.radio{for: 'male'} Male
-
       %li
-        .label
-          %p Birth Date
-        .action
-          %input.date{type: "date", name: "birthdate", placeholder: "Your age", value: @user.birthdate}
+        %a{href: "#edit-profile-gym"}
+          .label
+            %p My Gym
+          .action
+            %p
+              - if @user.gym
+                =@user.gym
+              - unless @user.gym
+                Find My Gym
+            %p.awesome.icon-chevron-right.arrow
     .content-block.divider
       %input.button.bottom.lighter.dissolve{type: 'submit', value:'Save Profile'}
 

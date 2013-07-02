@@ -12,7 +12,7 @@ class WodEntry extends Spine.Model
              'type',
              'details',
              'date',
-             'warmup',
+             'warm_up',
 
   @extend Spine.Model.Local
   @extend Spine.Events

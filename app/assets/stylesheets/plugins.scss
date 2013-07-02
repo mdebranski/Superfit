@@ -8,7 +8,7 @@
 .ui-spinner-input { border: none; background: none; padding: 0; margin: 0; vertical-align: middle; }
 .ui-spinner-button {
   width: 16px;
-  height: 50%;
+  height: 30.5px;
   font-size: .5em;
   padding: 0;
   margin: 0;
@@ -20,8 +20,12 @@
   display: block;
   overflow: hidden;
   width:35px;
-  background: $seashell !important;
+  background:$seashell !important;
   border:1px solid $mercury !important;
+}
+
+.error .ui-spinner-button {
+  border:1px solid #ffa99f;
 }
 .ui-spinner a.ui-spinner-button { border-top: none; border-bottom: none; } /* more specificity required here to overide default borders */
 .ui-spinner .ui-icon { position: absolute; margin-top: -8px; top: 50%; left: 0; } /* vertical centre icon */
