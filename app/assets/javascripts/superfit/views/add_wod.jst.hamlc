@@ -36,9 +36,3 @@
           .icon.sprite-sf.custom
           %p Custom
         %p.awesome.icon-chevron-right.arrow
-    %li
-      %a{href: "#"}
-        .label
-          .icon.sprite-sf.mainsite
-          %p Main Site
-        %p.awesome.icon-chevron-right.arrow
