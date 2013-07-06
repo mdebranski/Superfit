@@ -111,6 +111,7 @@ body {background:none}
   }
   .content-main{
 
+    &.goals {display: none}
     background: #ffffff;
     position: relative;
     width: 96%;
@@ -324,7 +325,7 @@ body {background:none}
     @include transition(all 0.5s ease);
     background:transparent url(image_path('tile-ticks.png')) repeat 0 0;
     opacity: .95;
-    padding-bottom: 9px;
+    padding-bottom: 4px;
   }
   #navigation.active {
     @include translate3d(0, 205px, 0);
@@ -332,17 +333,19 @@ body {background:none}
 
   .navigation {
     position: relative;
-    width: 95%;
+    width: 100%;
     margin: 12px auto 0 auto;
     -webkit-tap-highlight-color:tranparent;
+
+
 
     div{
 
       font-size:16px;
       border-bottom: 1px solid #040404;
       border-top: 1px solid #323232;
-
-      &:first-of-type {border-top:none; }
+      padding-left:12px;
+      &:first-of-type {border-top:none; padding-top:5px; }
       &:last-of-type {border-bottom:none}
       p{
         float:left ;
@@ -354,13 +357,16 @@ body {background:none}
         -webkit-tap-highlight-color:#1f1f1f;
         text-transform: uppercase;
         font-family: $standardfontbold;
-        line-height: 36px;
+        line-height: 45px;
+        height:45px;
         display: block;
         padding-left:2px;
       }
       a:active {
         opacity:0.75;
+        background: transparent;
       }
+      a.dissolve:active { background: transparent}
 
     }
     div:active {background-color:$mineshaft}
@@ -652,10 +658,10 @@ body {background:none}
     &.benchmark {background-position: -29px -153px;}
     &.mainsite {background-position: -29px -199px;}
 
-    &.dashboard {background-position: -27px -243px; }
-    &.goals {background-position: -27px -282px;  }
-    &.records {background-position: -27px -320px;  }
-    &.me {background-position: -27px -356px;  }
+    &.dashboard {background-position: -27px -239px; height:32px }
+    &.goals {background-position: -27px -279px; height:32px  }
+    &.records {background-position: -27px -317px;  height:32px }
+    &.me {background-position: -27px -352px;  height:33px }
 
   }
 

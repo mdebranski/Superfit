@@ -10,8 +10,6 @@
     %ul
       %li
         .label
-          %p Name
-        .action
           %input.required{type: "text", name: "name", placeholder: "Full Name", value: @user.name}
 
       %li
