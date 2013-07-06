@@ -487,9 +487,8 @@ body {background:none}
 
     .score-level {
       font-size:12px;
-      background-color:$dovegray;
       padding:5px 4px 4px 5px;
-      color:white;
+      color:$dovegray;
       @include border-radius ($radius);
       text-align: center;
       text-transform: uppercase;
@@ -507,7 +506,8 @@ body {background:none}
       left:-6px;
       top:-6px;
       text-transform: uppercase;
-      width: 20px
+      width: 120px;
+      margin:auto;
     }
 
   }
@@ -521,7 +521,7 @@ body {background:none}
     padding-bottom: 7px;
     margin:0 auto;
     margin-top:3px !important;
-
+    color:$mineshaft;
     &.not-main {margin-top:18px !important}
     li {
       font-size:13px;
@@ -532,11 +532,11 @@ body {background:none}
       text-align: center;
 
       a {
-        color:$silverchalice;
+        color:$mineshaft;
 
-        &:active, &.active {background: transparent;}
+        &:active, &.active {background: transparent;color:$mineshaft;}
       }
-      a.selected {color:$mineshaft}
+      a.selected {color:$tallpoppy}
     }
 
     &.two {
@@ -778,6 +778,42 @@ body {background:none}
 
     }
     .divider {border-top: 1px solid #bfd2e1; border-bottom: 0px solid #bfd2e1; padding:9px 0}
+  }
+  .customwod-tabs {
+    ul.tab-nav {
+      width:100%;
+      overflow:hidden;
+      margin-left:0;
+      li {float:left; width: 50%; border:none; text-align: center; padding:0; margin:0}
+
+      .button.text-entry  {@include border-radius(0px 2px 2px 0px);}
+      .button.photo-capture {@include border-radius(2px 0px 0px 2px); }
+    }
+    &.photo {
+      .button.text-entry  {background: $seashell; color:$dovegray}
+      .button.photo-capture {background: $mountmain-meadow;}
+      #text-entry {display:none}
+    }
+
+    &.text {
+      .button.text-entry  {background: $seashell; color:$dovegray}
+      .button.photo-capture {background: $mountmain-meadow;}
+      #photo-capture {display:none}
+    }
+    .icon-camera-alt {font-size: 54px; opacity: .75}
+
+    .take-photo {
+       line-height: 27px;
+       font-size:14px;
+       background: $seashell;
+       width: 100%;
+       display: block;
+       height: 90px;
+       text-align: center;
+       padding-top:18px;
+       @include border-radius($radiusbottom);
+       border:1px solid $mercury
+     }
   }
 }  //end JQT
 

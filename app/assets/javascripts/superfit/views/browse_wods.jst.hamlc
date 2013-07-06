@@ -3,12 +3,12 @@
     %div
       %a.awesome.icon-chevron-left.goback{href: "#add-wod"}
     %h1 Select WOD
+.scroll
+  .search-block
+    %form
+      %input.search-text{type: "text", name: "search-text", placeholder: "Search WODs"}
+  .content-main
+    %h3.no-matches No WODs found for this search.
+    %ul.wods-search
 
-.search-block
-  %form
-    %input.search-text{type: "text", name: "search-text", placeholder: "Search WODs"}
-.content-main
-  %h3.no-matches No WODs found for this search.
-  %ul.wods-search
-
-  %ul.wods-browse
+    %ul.wods-browse

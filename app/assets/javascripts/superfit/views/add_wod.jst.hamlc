@@ -12,6 +12,12 @@
   %ul.wods-search
 
   %ul.wods-browse
+    %li
+      %a.custom{href: "#edit-wod"}
+        .label
+          .icon.sprite-sf.custom
+          %p Custom
+        %p.awesome.icon-chevron-right.arrow
     %li{'data-type': 'benchmark'}
       %a.browse{href: "#browse-wods"}
         .label
@@ -29,10 +35,4 @@
         .label
           .icon.sprite-sf.other
           %p Other
-        %p.awesome.icon-chevron-right.arrow
-    %li
-      %a.custom{href: "#edit-wod"}
-        .label
-          .icon.sprite-sf.custom
-          %p Custom
         %p.awesome.icon-chevron-right.arrow

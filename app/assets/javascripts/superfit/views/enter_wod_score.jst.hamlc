@@ -6,9 +6,10 @@
       %h1= @wod.name
     - else
       %h1 Custom
-.content-main
-  .content-block
-    - if @wod and @wod.workout_male?
+
+- if @wod and @wod.workout_male?
+  .content-main
+    .content-block
       .yellow-block
         %p.score-details=
           - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
@@ -21,10 +22,10 @@
           =@wod.scoringMethod()
           %br
           =@wod.scoring_notes
-
-
-    %fieldset
-      %form
+%fieldset
+  %form
+    .content-main
+      .content-block
         - if @wod
           %input{type: 'hidden', name: 'wod_id', value: @wod.id}
         - if @entry
@@ -32,16 +33,27 @@
         - unless @wod
           %label.custom{for: 'entry-name'} Name
           %input.required#entry-name{name: "name",type:"text", placeholder: "Name your WOD", value: if @entry then @entry.name else moment().format('MMM D, YYYY')}
+
           %p Enter Workout Details
-            %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
-        - unless @wod
-          .photo-capture
-            %p Too much to type?
-            %a.take-photo.button{href: '#'}
-              %span.icon-camera-alt
-              Take a Photo
-            %input.custom-wod-photo{name: "photo", type: "hidden"}
-            %img.custom-wod-img
+
+          %div.customwod-tabs.photo
+            %ul.tab-nav
+              %li
+                %a.button.photo-capture{href: '#'} Photo Capture
+              %li
+                %a.button.text-entry{href: '#'} Type It In
+            #photo-capture
+              %a.take-photo{href: '#'}
+                %span.icon-camera-alt
+                %br
+                %span Take a Photo
+              %input.custom-wod-photo{name: "photo", type: "hidden"}
+              %img.custom-wod-img
+            #text-entry
+              %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
+
+    .content-main
+      .content-block
         .enter-score
           - unless @wod
             %div.type

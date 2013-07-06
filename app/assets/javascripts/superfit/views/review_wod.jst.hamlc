@@ -10,7 +10,8 @@
         .review-score
           .score= @entry.scoreString()
             %span.score-level= @entry.type
-            %span.pr pr
+          %div.score-tags
+            %span.pr Personal Record
           %p.score-details= @entry.details
           %p.score-details= @entry.warmup
 
