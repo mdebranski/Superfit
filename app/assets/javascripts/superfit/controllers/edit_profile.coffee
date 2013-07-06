@@ -23,4 +23,4 @@ class Superfit.EditProfile extends Spine.Controller
 
 
 
-    jQT.goTo('#profile', jQT.settings.defaultTransition)
+    jQT.goTo('#edit-profile', jQT.settings.defaultTransition)

@@ -13,7 +13,7 @@
         %p.icon.records.sprite-sf
         Records
     %div
-      %a.dissolve{href: "#profile"}
+      %a.dissolve{href: "#edit-profile"}
         %p.icon.me.sprite-sf
         Profile
 

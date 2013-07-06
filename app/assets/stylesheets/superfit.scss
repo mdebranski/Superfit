@@ -740,17 +740,24 @@ body {background:none}
       clear:both;
       overflow: hidden;
       margin-top:18px;
+      //background-color: $seashell;
+
+      p {float:left; width:30%; font-size:14px;
+        font-family:$standardfont; color:$mineshaft}
+      .profile-data {float:left; width:60%}
       input[type=text], input[type=number], input[type=date]{
         border: 0px solid #e7e7e7;
-        background-color: $seashell;
         height: 50px;
+        font-family:$standardfont;
+        padding-left:0;
       }
       input[type=date]{ padding-left: 5%;width:95%; @include border-radius(0); padding-top:1px; font-size:14px;}
       &.radio {
-        p {float:left; width:20%; margin:0 }
+        p { margin:0 }
         fieldset {position:relative; top:7px; margin:0}
-        label {font-size:14px;}
+        label {font-size:14px; color:$mineshaft}
       }
+      .placeholder {color:$dovegray}
       .action {
         right:0px;
         position: absolute;
@@ -763,7 +770,6 @@ body {background:none}
             -webkit-appearance: none;
             -webkit-appearance: none;
           }
-        p {float:left;}
         a {
           color:$silver;
         }

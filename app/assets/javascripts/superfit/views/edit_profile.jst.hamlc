@@ -1,53 +1,40 @@
 .page-header
   .toolbar
-    %div
-      %a.awesome.icon-chevron-left.goback{href: "#"}
-    %h1 Edit Profile
+    .pulldown
+      Navigation Pulldown
+    %h1 Profile
 
-.content-main.edit-profile.scroll
 
-  %form
+
+%form
+  .content-main.edit-profile.scroll
     %ul
       %li
-        .label
-          %input.required{type: "text", name: "name", placeholder: "Full Name", value: @user.name}
+        %p Name
+        %input.profile-data{type: "text", name: "name", placeholder: "Enter Full Name", value: @user.name}
 
       %li
-        .label
-          %p Zip Code
-        .action
-          %input{type: "number", name: "zipcode", placeholder: "Zip Code", value: @user.zipcode}
+        %p Zip Code
+        %input.profile-data{type: "number", name: "zipcode", placeholder: "Enter Zip Code", value: @user.zipcode}
       %li
-        .label
-          %p Email
-        .action
-          %input{type: "text", name: "email", placeholder: "Email Address", value: @user.email}
-
-      %li
-        .label
-          %p Birth Date
-        .action
-          %input.date{type: "date", name: "birthdate", placeholder: "Your age", value: @user.birthdate}
+        %p Email
+        %input.profile-data{type: "text", name: "email", placeholder: "Enter Email", value: @user.email}
       %li.radio
-        .label
-          %p Gender
-        .action
-          %fieldset
-            %input#female{type: "radio", name: "gender", value: "female", checked: @user.gender == 'female'}
-              %label.radio{for: 'female'} Female
-            %input#male{type: "radio", name: "gender", value: "male", checked: @user.gender == 'male'}
-              %label.radio{for: 'male'} Male
+        %p Gender
+        %fieldset.profile-data
+          %input#female{type: "radio", name: "gender", value: "female", checked: @user.gender == 'female'}
+            %label.radio{for: 'female'} Female
+          %input#male{type: "radio", name: "gender", value: "male", checked: @user.gender == 'male'}
+            %label.radio{for: 'male'} Male
       %li
         %a{href: "#edit-profile-gym"}
-          .label
-            %p My Gym
-          .action
-            %p
-              - if @user.gym
-                =@user.gym
-              - unless @user.gym
-                Find My Gym
-            %p.awesome.icon-chevron-right.arrow
-    .content-block.divider
-      %input.button.bottom.lighter.dissolve{type: 'submit', value:'Save Profile'}
+          %p My Gym
+          %p.profile-data
+            - if @user.gym
+              =@user.gym
+            - unless @user.gym
+              %span.placeholder Find My Gym
+              %span.icon-chevron-right
+  .footer
+    %input.button.bottom.lighter.dissolve{type: 'submit', value:'Save Profile'}
 
