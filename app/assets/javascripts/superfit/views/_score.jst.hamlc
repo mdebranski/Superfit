@@ -1,5 +1,5 @@
 %div.score-container
-  %p.score-label Enter Score
+  %h2.score-label Enter Score
   .for_time.score
     %input.required{type: "number", name: "min", placeholder: "Min", value: @entry?.min}
     %input.required{type: "number", name: "sec", placeholder: "Sec", value: @entry?.sec}

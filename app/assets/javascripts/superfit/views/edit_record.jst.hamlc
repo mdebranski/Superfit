@@ -13,10 +13,9 @@
         %a{href: "#", data-rep-max: 3} 3RM
       %li
         %a{href: "#", data-rep-max: 5} 5RM
-
-  .content-main
-    .content-block
-      %form
+  %form
+    .content-main
+      .content-block
         .enter-score
           != JST['superfit/views/_score'](entry: @entry, repMax: @repMax)
 
@@ -26,8 +25,11 @@
               %label.radio{for: 'rx-type'} RX
             %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
               %label.radio{for: 'scaled-type'} Scaled
+          %br
 
-        %input.button.bottom.bluer{type: 'submit'} Save Records
+
+    .footer
+      %input.button.bottom.bluer{type: 'submit'} Save Records
 
 
 

@@ -21,6 +21,7 @@ class Superfit.RecordDetail extends Spine.Controller
       @pastEntries = WodEntry.history(@wod)
       @render(wod: @wod, pastEntries: @pastEntries, repMax: @repMax)
 
+
   navigate: (e) ->
     e.preventDefault()
     repMax = $(e.target).closest('a').data('rep-max')

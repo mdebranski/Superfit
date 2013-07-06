@@ -28,9 +28,10 @@
                 %span.score-level= @wod.personal_record.type
                 %p.score-details Current Personal Record
 
-        %a.button.bottom.fade{href: "#home"} Jump To Dashboard
 
     != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
 
     .footer
+
+      %a.button.bottom.fade{href: "#records"} Back to All Records
       %a.button.bottom.lighter.dissolve Add New Record

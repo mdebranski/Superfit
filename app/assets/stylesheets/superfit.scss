@@ -465,6 +465,7 @@ body {background:none}
     .score-container {
       width:98%;  margin-bottom: 3px;
 
+      h2 {border-bottom:1px solid #ff7f7f; margin-bottom:18px}
       .for_time {
         .ui-spinner:first-of-type {margin-right:5%;}
         .ui-spinner {width:46%;}
