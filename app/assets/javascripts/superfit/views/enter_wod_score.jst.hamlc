@@ -7,72 +7,75 @@
     - else
       %h1 Custom
 
-- if @wod and @wod.workout_male?
-  .content-main
-    .content-block
-      .yellow-block
-        %p.score-details=
-          - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
-            != Utils.simpleFormat(@wod.workout_male)
-          - if @user.gender == 'female'
-            != Utils.simpleFormat(@wod.workout_female)
-
-        %hr
-        %p.score-notes
-          =@wod.scoringMethod()
-          %br
-          =@wod.scoring_notes
-%fieldset
-  %form
+.scroll
+  - if @wod and @wod.workout_male?
     .content-main
       .content-block
-        - if @wod
-          %input{type: 'hidden', name: 'wod_id', value: @wod.id}
-        - if @entry
-          %input{type: 'hidden', name: 'entry_id', value: @entry.id}
-        - unless @wod
-          %label.custom{for: 'entry-name'} Name
-          %input.required#entry-name{name: "name",type:"text", placeholder: "Name your WOD", value: if @entry then @entry.name else moment().format('MMM D, YYYY')}
+        .yellow-block
+          %p.score-details=
+            - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
+              != Utils.simpleFormat(@wod.workout_male)
+            - if @user.gender == 'female'
+              != Utils.simpleFormat(@wod.workout_female)
 
-          %p Enter Workout Details
-
-          %div.customwod-tabs.photo
-            %ul.tab-nav
-              %li
-                %a.button.photo-capture{href: '#'} Photo Capture
-              %li
-                %a.button.text-entry{href: '#'} Type It In
-            #photo-capture
-              %a.take-photo{href: '#'}
-                %span.icon-camera-alt
-                %br
-                %span Take a Photo
-              %input.custom-wod-photo{name: "photo", type: "hidden"}
-              %img.custom-wod-img
-            #text-entry
-              %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
-
-    .content-main
-      .content-block
-        .enter-score
+          %hr
+          %p.score-notes
+            =@wod.scoringMethod()
+            %br
+            =@wod.scoring_notes
+  %fieldset
+    %form
+      .content-main
+        .content-block
+          - if @wod
+            %input{type: 'hidden', name: 'wod_id', value: @wod.id}
+          - if @entry
+            %input{type: 'hidden', name: 'entry_id', value: @entry.id}
           - unless @wod
-            %div.type
-              %p Scoring Method
-              %select.required{name: 'method'}
-                %option{value: 'for_time', selected: @entry?.method == 'for_time'} Time
-                %option{value: 'rounds', selected: @entry?.method == 'rounds'} Rounds
-                %option{value: 'weight', selected: @entry?.method == 'weight'} Weight (lbs)
-                %option{value: 'max_reps', selected: @entry?.method == 'max_reps'} Reps
-                %option{value: 'pass_fail', selected: @entry?.method == 'pass_fail'} Pass / Fail
-          != JST['superfit/views/_score'](entry: @entry)
+            %label.custom{for: 'entry-name'} Name
+            %input.required#entry-name{name: "name",type:"text", placeholder: "Name your WOD", value: if @entry then @entry.name else moment().format('MMM D, YYYY')}
+
+            %p Enter Workout Details
+
+            %div.customwod-tabs.photo
+              %ul.tab-nav
+                %li
+                  %a.button.photo-capture{href: '#'} Photo Capture
+                %li
+                  %a.button.text-entry{href: '#'} Type It In
+              #photo-capture
+                %a.take-photo{href: '#'}
+                  %input.custom-wod-photo{name: "photo", type: "hidden"}
+                  %img.custom-wod-img
+                  %initial-capture
+                    %span.icon-camera-alt
+                    %br
+                    %span Take a Photo
+                %a.take-photo.replace
+              #text-entry
+                %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
+
+      .content-main
+        .content-block
+          .enter-score
+            - unless @wod
+              %div.type
+                %p Scoring Method
+                %select.required{name: 'method'}
+                  %option{value: 'for_time', selected: @entry?.method == 'for_time'} Time
+                  %option{value: 'rounds', selected: @entry?.method == 'rounds'} Rounds
+                  %option{value: 'weight', selected: @entry?.method == 'weight'} Weight (lbs)
+                  %option{value: 'max_reps', selected: @entry?.method == 'max_reps'} Reps
+                  %option{value: 'pass_fail', selected: @entry?.method == 'pass_fail'} Pass / Fail
+            != JST['superfit/views/_score'](entry: @entry)
 
 
-        %div
-          %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
-            %label.radio{for: 'rx-type'} RX
-          %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
-            %label.radio{for: 'scaled-type'} Scaled
-        %p Workout Notes
-        %textarea{name: 'details', placeholder: "Add details that affected your performance. ", cols: "30", rows: "5"}
-          = @entry?.details
-        %input.button.bluer.bottom{type: 'submit'} Save Workout
+          %div
+            %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
+              %label.radio{for: 'rx-type'} RX
+            %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
+              %label.radio{for: 'scaled-type'} Scaled
+          %p Workout Notes
+          %textarea{name: 'details', cols: "30", rows: "5"}
+            = @entry?.details
+          %input.button.bluer.bottom{type: 'submit'} Save Workout

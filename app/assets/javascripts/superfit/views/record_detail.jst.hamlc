@@ -34,4 +34,3 @@
     .footer
 
       %a.button.bottom.fade{href: "#records"} Back to All Records
-      %a.button.bottom.lighter.dissolve Add New Record
