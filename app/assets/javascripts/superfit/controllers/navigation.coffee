@@ -5,8 +5,16 @@ class Superfit.Navigation extends Spine.Controller
     @navigation = $(@template())
 
     $('.app-container').on 'tap', '.pulldown', @pulldown
-    @navigation.on 'tap', 'a', (e) => $('.pulldown').removeClass('open')
+    @navigation.on 'tap', 'a', @clicked
     $('.page').on 'pageAnimationEnd', @hideNavigation
+
+  clicked: (e) =>
+    e.preventDefault()
+    $('.pulldown').removeClass('open')
+    @navigation.removeClass('active')
+
+    goTo = -> document.location.href = $(e.target).attr('href')
+    _.delay goTo, 300
 
   hideNavigation: =>
     @navigation.detach();
