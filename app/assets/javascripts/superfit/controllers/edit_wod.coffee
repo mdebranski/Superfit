@@ -7,13 +7,11 @@ class Superfit.EditWod extends Spine.Controller
   events:
     'tap .add-set': 'addSet'
     'tap .remove-set': 'removeSet'
-    'submit form': 'submit'
     'change select[name=method]': 'changeMethod'
     'change input[type=number]' : 'notNegative'
     'spinstop input[type=number]' : 'notNegative'
     'tap .take-photo': 'takePhoto'
     'tap .warm-up': 'togglestyle'
-
 
   constructor: ->
     super
@@ -27,19 +25,19 @@ class Superfit.EditWod extends Spine.Controller
   takePhoto: (e) ->
     return  unless window.device.platform
     self = this
-  
+
     # a little bit of nested-callback hell.  Sorry about this, I didn't see any flow-control libs.
     captureSuccess = (filePath) ->
-      
+
       # get pointer to image
       window.resolveLocalFileSystemURI filePath, ((file) ->
-        
+
         # guarantee a unique filename
         filename = Date.now() + ".jpg"
-        
+
         # get pointer to persistent storage
         window.requestFileSystem LocalFileSystem.PERSISTENT, 0, ((fs) ->
-          
+
           # copy the image to persistent storage
           file.copyTo fs.root, filename, ((newFile) ->
             self.$(".custom-wod-photo").val newFile.fullPath
@@ -51,7 +49,7 @@ class Superfit.EditWod extends Spine.Controller
     captureError = (error) ->
       self.log error
       unless error is "no image selected"
-        
+
         # have to use a timer because of a weird phonegap-ios quirk
         setTimeout (->
           navigator.notification.alert "An error occurred with your photo.  Please try again."
@@ -59,7 +57,7 @@ class Superfit.EditWod extends Spine.Controller
 
     options =
       quality: 75
-      destinationType: Camera.DestinationType.FILE_URI      
+      destinationType: Camera.DestinationType.FILE_URI
       sourceType: Camera.PictureSourceType.CAMERA
       #sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
       #allowEdit: true
@@ -128,9 +126,6 @@ class Superfit.EditWod extends Spine.Controller
 
   submit: =>
     data = @form.serializeObject()
-
-    @log "Photo", data.photo
-    @log "Form data", data
 
     attributes =
        wod_id: @wod and @wod.id

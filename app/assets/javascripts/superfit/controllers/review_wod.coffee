@@ -30,6 +30,5 @@ class Superfit.ReviewWod extends Spine.Controller
 
   history: (e) ->
     id = $(e.target).closest('a').data('id')
-    console.log(id)
     entry = WodEntry.find(id)
     @updateReviewWod(entry)

@@ -51,3 +51,20 @@ class Utils
     text = text.replace(/\n/g, '<br/>')
 
 window.Utils = Utils
+
+
+# Fix jQuery Validation bug: https://github.com/jzaefferer/jquery-validation/issues/423?source=c
+`
+$.validator.prototype.elements = function() {
+    var validator = this;
+    // select all valid inputs inside the form (no submit or reset buttons)
+    return $(this.currentForm)
+        .find("input")
+        .not(":submit, :reset, :image, [disabled]")
+        .not( this.settings.ignore )
+        .filter(function() {
+            !this.name && validator.settings.debug && window.console && console.error( "%o has no name assigned", this);
+            return validator.objectLength($(this).rules());
+        });
+};
+`
