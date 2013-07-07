@@ -25,13 +25,13 @@
             =@wod.scoring_notes
   %fieldset
     %form
-      .content-main
-        .content-block
-          - if @wod
-            %input{type: 'hidden', name: 'wod_id', value: @wod.id}
-          - if @entry
-            %input{type: 'hidden', name: 'entry_id', value: @entry.id}
-          - unless @wod
+      - if @wod
+        %input{type: 'hidden', name: 'wod_id', value: @wod.id}
+      - if @entry
+        %input{type: 'hidden', name: 'entry_id', value: @entry.id}
+      - unless @wod
+        .content-main
+          .content-block
             %label.custom{for: 'entry-name'} Name
             %input.required#entry-name{name: "name",type:"text", placeholder: "Name your WOD", value: if @entry then @entry.name else moment().format('MMM D, YYYY')}
 
@@ -51,7 +51,6 @@
                     %span.icon-camera-alt
                     %br
                     %span Take a Photo
-                %a.take-photo.replace
               #text-entry
                 %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
 

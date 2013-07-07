@@ -74,7 +74,7 @@ body {background:none}
       z-index: 1000;
       background-size: 10px 44px;
 
-      .goback {position: relative; padding:8px; top:5px; left:1px; color:#ffffff; display: block; height: 40px; width:40px;}
+      .icon-chevron-left {position: relative; padding:8px; top:5px; left:1px; color:#ffffff; display: block; height: 40px; width:40px;}
       .icon-plus {
         float:right;
         @include border-radius (4px);
@@ -335,7 +335,6 @@ body {background:none}
     position: relative;
     width: 100%;
     margin: 12px auto 0 auto;
-    -webkit-tap-highlight-color:tranparent;
 
 
 
@@ -347,6 +346,7 @@ body {background:none}
       padding-left:12px;
       &:first-of-type {border-top:none; padding-top:5px; }
       &:last-of-type {border-bottom:none}
+      &:active {background: #000000;}
       p{
         float:left ;
         margin-right:20px;
@@ -354,7 +354,7 @@ body {background:none}
       a{
         color:white;
         font-size:14px;
-        -webkit-tap-highlight-color:#1f1f1f;
+
         text-transform: uppercase;
         font-family: $standardfontbold;
         line-height: 45px;
@@ -522,6 +522,7 @@ body {background:none}
     margin:0 auto;
     margin-top:3px !important;
     color:$mineshaft;
+    margin-left:5px;
     &.not-main {margin-top:18px !important}
     li {
       font-size:13px;
@@ -532,11 +533,11 @@ body {background:none}
       text-align: center;
 
       a {
-        color:$mineshaft;
+        color:$mineshaft; padding:4px 0px;
 
         &:active, &.active {background: transparent;color:$mineshaft;}
       }
-      a.selected {color:$tallpoppy}
+      a.selected {background: #dedcd0; @include border-radius (18px)}
     }
 
     &.two {

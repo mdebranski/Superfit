@@ -32,5 +32,4 @@
     != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
 
     .footer
-
       %a.button.bottom.fade{href: "#records"} Back to All Records

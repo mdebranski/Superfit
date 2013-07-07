@@ -1,7 +1,7 @@
 .page-header
   .toolbar
     %div
-      %a.awesome.icon-chevron-left.goback{href: "#records"}
+      %a.awesome.icon-chevron-left.goback{href: "#record"}
     %h1= @wod.name
 
 .scroll
