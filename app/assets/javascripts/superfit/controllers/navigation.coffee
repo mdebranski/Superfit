@@ -13,7 +13,7 @@ class Superfit.Navigation extends Spine.Controller
     $('.pulldown').removeClass('open')
     @navigation.removeClass('active')
 
-    goTo = -> document.location.href = $(e.target).attr('href')
+    goTo = -> jQT.goTo $(e.target).attr('href'), 'dissolve'
     _.delay goTo, 300
 
   hideNavigation: =>
