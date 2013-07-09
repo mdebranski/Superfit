@@ -51,6 +51,7 @@
                     %span.icon-camera-alt
                     %br
                     %span Take a Photo
+                  %post-capture
               #text-entry
                 %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
 

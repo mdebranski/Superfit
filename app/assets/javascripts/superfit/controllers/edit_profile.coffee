@@ -3,6 +3,9 @@ class Superfit.EditProfile extends Spine.Controller
   elements:
     'form': 'form'
 
+  events:
+    'change form': 'submit'
+
   constructor: ->
     super
 

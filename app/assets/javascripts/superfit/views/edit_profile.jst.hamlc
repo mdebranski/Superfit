@@ -36,5 +36,5 @@
               %span.placeholder Find My Gym
               %span.icon-chevron-right
   .footer
-    %input.button.bottom.lighter.dissolve{type: 'submit', value:'Save Profile'}
+    -# %input.button.bottom.lighter.dissolve{type: 'submit', value:'Save Profile'}
 
