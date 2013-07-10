@@ -781,28 +781,55 @@ body {background:none}
     .divider {border-top: 1px solid #bfd2e1; border-bottom: 0px solid #bfd2e1; padding:9px 0}
   }
   .customwod-tabs {
+    margin-bottom: 9px;
     ul.tab-nav {
       width:100%;
       overflow:hidden;
       margin-left:0;
       li {float:left; width: 50%; border:none; text-align: center; padding:0; margin:0}
 
-      .button.text-entry  {@include border-radius(0px 2px 2px 0px);}
-      .button.photo-capture {@include border-radius(2px 0px 0px 2px); }
+      .text-entry  {@include border-radius(0px 2px 2px 0px); margin-bottom:0; border:1px solid mercury}
+      .photo-capture {@include border-radius(2px 0px 0px 2px); margin-bottom:0;  border:1px solid mercury}
     }
+    #text-entry {
+      background: $seashell;
+      height: 90px;
+      padding:9px;
+
+      textarea {width:97%; height: 63px;}
+    }
+
     &.photo {
-      .button.text-entry  {background: $seashell; color:$dovegray}
-      .button.photo-capture {background: $mountmain-meadow;}
+      .text-entry  {background: #f6f6f6; color:$silverchalice}
+      .photo-capture {
+        background: $seashell;
+        color:$dovegray;
+        border:1px solid $mercury;
+        border-bottom:0;
+      }
       #text-entry {display:none}
     }
 
     &.text {
-      .button.text-entry  {background: $seashell; color:$dovegray}
-      .button.photo-capture {background: $mountmain-meadow;}
+      .text-entry  {
+        background: $seashell;
+        color:$dovegray;
+        border:1px solid $mercury;
+        border-bottom:0;
+      }
+      .photo-capture {background: #f6f6f6; color:$silverchalice}
       #photo-capture {display:none}
     }
-    .icon-camera-alt {font-size: 54px; opacity: .75}
+    #photo-capture {
 
+      &.initial {
+        .post-capture {display:none}
+      }
+      &.post {
+        .initial-capture {display:none}
+      }
+    }
+    .icon-camera-alt {font-size: 54px; opacity: .75}
     .take-photo {
        line-height: 27px;
        font-size:14px;
@@ -813,7 +840,8 @@ body {background:none}
        text-align: center;
        padding-top:18px;
        @include border-radius($radiusbottom);
-       border:1px solid $mercury
+       border:1px solid $mercury;
+       border-top:0
      }
   }
 }  //end JQT

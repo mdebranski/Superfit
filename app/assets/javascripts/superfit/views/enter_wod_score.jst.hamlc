@@ -37,21 +37,24 @@
 
             %p Enter Workout Details
 
-            %div.customwod-tabs.photo
+            .customwod-tabs.photo
               %ul.tab-nav
                 %li
-                  %a.button.photo-capture{href: '#'} Photo Capture
+                  %a.tab-btn.photo-capture{href: '#'} Photo Capture
                 %li
-                  %a.button.text-entry{href: '#'} Type It In
-              #photo-capture
+                  %a.tab-btn.text-entry{href: '#'} Type It In
+              #photo-capture.initial
                 %a.take-photo{href: '#'}
-                  %input.custom-wod-photo{name: "photo", type: "hidden"}
-                  %img.custom-wod-img
-                  %initial-capture
+                  .initial-capture
                     %span.icon-camera-alt
                     %br
                     %span Take a Photo
-                  %post-capture
+                  .post-capture
+                    %input.custom-wod-photo{name: "photo", type: "hidden"}
+                    %img.custom-wod-img
+                    %div
+                      .icon-camera-alt
+                      %span Take a Photo
               #text-entry
                 %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
 
