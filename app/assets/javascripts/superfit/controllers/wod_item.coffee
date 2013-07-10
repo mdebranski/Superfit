@@ -5,7 +5,10 @@ class Superfit.WodItem extends Spine.Controller
   events:
     'tap a': 'select'
 
-  render: -> super(wod: @wod)
+  render: -> super(wod: @wod, type: @type)
 
   select: =>
-    Wod.trigger 'new', @wod
+    if @type == 'goal'
+      Goal.trigger 'new', @wod
+    else if @type == 'wod'
+      Wod.trigger 'new', @wod

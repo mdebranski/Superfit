@@ -15,36 +15,43 @@ class Superfit.Home extends Superfit.SearchWods
 
     Superfit.bind 'changeDate', @changeDate
     WodEntry.bind 'change', => @render()
+    Goal.bind 'change', => @render()
 
   render: ->
     entries = WodEntry.byDate(Superfit.currentDate)
-    super(currentDate: Superfit.currentDate, entries: entries, today: @today())
+    @goals = Goal.inProgress()
+    super(currentDate: Superfit.currentDate, entries: entries, goals: @goals, today: @today())
     @initCharts()
 
   initCharts: ->
-    data = [[[0,0], [1,1], [2,3], [3,8], [4,15]]]
-    options =
+    goal = @goals[0]
+    if goal
+      data = [goal.history]
+      options =
+        xaxis:
+          mode: 'time'
+          labelWidth: 40
+        series:
+          color: 'rgba(78, 163, 227, 0.95)'
+          lines:
+            show: true
+            lineWidth: 1
+            fill: true
+            fillColor: 'rgba(78, 163, 227, 0.15)'
+          points:
+            show: true
+            borderWidth: 1
+          shadowSize:0
+        grid:
+          borderWidth:0
+          clickable: true
+          color:  'rgba(0, 0, 0, 0.2)'
+          labelMargin:20
 
-      xaxis:
-        labelWidth: 40
-      series:
-        color: 'rgba(78, 163, 227, 0.95)'
-        lines:
-          show: true
-          lineWidth: 1
-          fill: true
-          fillColor: 'rgba(78, 163, 227, 0.15)'
-        points:
-          show: true
-          borderWidth: 1
-        shadowSize:0
-      grid:
-        borderWidth:0
-        clickable: true
-        color:  'rgba(0, 0, 0, 0.2)'
-        labelMargin:20
+      $.plot @chart, data, options
 
-    $.plot @chart, data, options
+    else
+      @chart.hide()
 
   today: ->
     moment().startOf('day').toDate()

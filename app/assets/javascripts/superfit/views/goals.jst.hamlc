@@ -6,29 +6,31 @@
 .scroll
   %ul.filter-navigation.two
     %li
-      %a{href: "#"} In Progress
+      %a{href: "#", data-type: 'in_progress', class: if @type == 'in_progress' then 'selected' else ''} In Progress
     %li
-      %a{href: "#"} Completed
+      %a{href: "#", data-type: 'completed', class: if @type == 'completed' then 'selected' else ''} Completed
   .content-main
     %ul
+      - if @goals.length == 0
+        - if @type == 'in_progress'
+          %li No goals in progress
+        - else
+          %li No goals completed yet
+
+      - for goal in @goals
+        %li.goal
+          %a{href: "#goal-detail", data-id: goal.id}
+            .label
+              %p.goal-label= goal.name()
+                %br
+                %span
+                  Last Update:
+                  %time.timeago{datetime: moment(goal.last_update).format()}
+              %p.goal-progress= "#{goal.percentComplete()}%"
+            %p.awesome.icon-chevron-right.arrow
+
       %li.goal
-        %a{href: "#goal-detail"}
-          .label
-            %p.goal-label 125 Back Squat
-              %br
-              %span Last Update: 17 days ago
-            %p.goal-progress 25%
-          %p.awesome.icon-chevron-right.arrow
-      %li.goal
-        %a{href: "#goal-detail"}
-          .label
-            %p.goal-label 25 Unbroken Pullups
-              %br
-              %span Last Update: 17 days ago
-            %p.goal-progress 45%
-          %p.awesome.icon-chevron-right.arrow
-      %li.goal
-        %a.add-new{href: "#create-goal"}
+        %a.add-goal{href: "#edit-goal"}
           .label
             %p Create New Goal
           %p.awesome.icon-chevron-right.arrow

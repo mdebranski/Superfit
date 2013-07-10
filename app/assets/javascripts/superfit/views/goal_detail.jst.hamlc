@@ -1,33 +1,18 @@
 .page-header
   .toolbar
-    %a.awesome.icon-chevron-left.goback{href: "#back"}
-    %h1 [Goal Name]
+    %a.awesome.icon-chevron-left{href: "#goals"}
+    %h1= @goal.name()
 
 .scroll
   .content-main
     .content-block
       .yellow-block
         .review-score
-          .score 85%
-            %span.score-level Complete
-            %p.score-details 21 Reps
+          .score= "#{@goal.percentComplete()}% complete"
+            %span.score-level= @goal.type
+            %p.score-details= @goal.scoreString(true)
 
-  .content-main
-    .secondary
-      .title
-        %h3 History
-
-      %ul
-        %li
-          .chart Chart
-        %li
-          .label.history
-            %p Dec 25, 2013
-            %p.record 4:59
-        %li
-          .label.history
-            %p Dec 25, 2013
-            %p.record 4:59
+  != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
 
   .content-main
     .secondary
@@ -38,31 +23,28 @@
         %li
           .label.history
             %p Start Date
-            %p.record
+            %p.record= moment(@goal.start_date).format()
         %li
           .label.history
             %p Movement
-            %p.record Pushup
+            %p.record= @goal.wod().name
         %li
           .label.history
             %p Scoring Method
-            %p.record Pushup
+            %p.record= @goal.type
         %li
           .label.history
             %p Goal Score
-            %p.record 25
-        %li
-          .label.history
-            %p Start Score
-            %p.record 21
+            %p.record= @goal.scoreString()
         %li
           .label.history
             %p Last Updated
-            %p.record 12 days ago
+            %p.record
+              %time.timeago{datetime: moment(@goal.last_update).format()}
 
   .footer
     %a.button.bottom{href: "#home"} Jump to Dashboard
-    %a.button.bottom.red{href: "#"} Delete Goal
+    %a.button.bottom.red.delete{href: "#goals", data-id: @goal.id} Delete Goal
 
 
 

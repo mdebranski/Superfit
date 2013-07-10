@@ -52,9 +52,16 @@
             %p.awesome.icon-chevron-right.arrow
       %li.chart-container
         .chart
-      %li.goal
-        %a{href: "#"}
-          .label
-            %p.goal-label 25 Unbroken Pullups <br><span>Last Update: 17 days ago (22 reps)</span>
-            %p.goal-progress 35%
-          %p.awesome.icon-chevron-right.arrow
+      - if @goals.length == 0
+        %li No goals in progress
+      - for goal in @goals
+        %li.goal
+          %a{href: "#goal-detail", data-id: goal.id}
+            .label
+              %p.goal-label= goal.name()
+              %br/
+              %span
+                Last Update:
+                %time.timeago{datetime: moment(goal.last_update).format()}
+              %p.goal-progress= "#{goal.percentComplete()}%"
+            %p.awesome.icon-chevron-right.arrow

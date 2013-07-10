@@ -7,70 +7,29 @@
   .content-block
     .yellow-block
       .review-score
-        .score Linda
-          %span.score-level  RX
-        %p.score-details  Deadlift 1  1/2 BW, Bench BW, Clean 3/4 BW,  For Time
+        .score= @wod.name
+        %p.score-details=
+          - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
+            != Utils.simpleFormat(@wod.workout_male)
+          - if @user.gender == 'female'
+            != Utils.simpleFormat(@wod.workout_female)
 
   .content-block
     %form
-
-
+      - if @wod
+        %input{type: 'hidden', name: 'wod_id', value: @wod.id}
+      - if @goal
+        %input{type: 'hidden', name: 'goal_id', value: @goal.id}
       .enter-score
         %div.score-container
-          %p Goal Score
-          .for_time.score
-            %input.required{type: "number", name: "min", placeholder: "Min", value: @entry?.min}
-            %input.required{type: "number", name: "sec", placeholder: "Sec", value: @entry?.sec}
-            -#          .rounds.score
-            -#            %input.required{type: "number", name: "score", placeholder: "Enter Rounds", value: @entry?.score}
-            -#          .weight.score
-            -#            %input.required{type: "number", name: "score", placeholder: "Enter Weight (lbs)", value: @entry?.score}
-            -#          .max_reps.score
-            -#            %input.required{type: "number", name: "score", placeholder: "Enter Reps", value: @entry?.score}
-            -#          .pass_fail.score
-            -#            %input#score-pass{type: "radio", name: "score", value: "pass", checked: if @entry then @entry.score == 'pass' else 'checked'}
-            -#              %label.radio{for: 'score-pass'} Pass
-            -#            %input#score-fail{type: "radio", name: "score", value: "fail", checked: @entry?.score == 'fail'}
-            -#             %label.radio{for: 'score-fail'} Fail
-      %div
-        %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
-          %label.radio{for: 'rx-type'} RX
-        %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
-          %label.radio{for: 'scaled-type'} Scaled
-
-
-        -# .new-goal
-          .enter-score
-            %div.score-container
-              %p Enter Starting Score
-              .for_time.score
-                %input.required{type: "number", name: "min", placeholder: "Min", value: @entry?.min}
-                %input.required{type: "number", name: "sec", placeholder: "Sec", value: @entry?.sec}
-                -#          .rounds.score
-                -#            %input.required{type: "number", name: "score", placeholder: "Enter Rounds", value: @entry?.score}
-                -#          .weight.score
-                -#            %input.required{type: "number", name: "score", placeholder: "Enter Weight (lbs)", value: @entry?.score}
-                -#          .max_reps.score
-                -#            %input.required{type: "number", name: "score", placeholder: "Enter Reps", value: @entry?.score}
-                -#          .pass_fail.score
-                -#            %input#score-pass{type: "radio", name: "score", value: "pass", checked: if @entry then @entry.score == 'pass' else 'checked'}
-                -#              %label.radio{for: 'score-pass'} Pass
-                -#            %input#score-fail{type: "radio", name: "score", value: "fail", checked: @entry?.score == 'fail'}
-                -#             %label.radio{for: 'score-fail'} Fail
-          %div
-            %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
+          != JST['superfit/views/_score'](entry: @goal, repMax: @repMax)
+        - unless @wod.typeSlug() == 'strength'
+          .score-type
+            %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @goal then @goal?.type == 'rx' else 'checked'}
               %label.radio{for: 'rx-type'} RX
-            %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
+            %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @goal?.type == 'scaled'}
               %label.radio{for: 'scaled-type'} Scaled
-          -#%div
-          -#  %p Goal Length  -- NEXT RELEASE
-          -#    %span (Optional)
-          -#  %input#goal-length{type: "text", name: "goal-length", placeholder: "0"}
-          -#  %select.required{name: "method"}
-          -#    %option{value: "days"} Days
-          -#    %option{value: "months"} Months
-
-      %a.button.bottom.fade{href: "#home"} Return To Dashboard
+      %input.button.bottom.fade{type: 'submit'} Save My Goal!
 
 
 

@@ -22,7 +22,7 @@ class Superfit.BrowseWods extends Superfit.SearchWods
     wods = Wod.byType(type)
     @wodsBrowse.html('')
     for wod in wods
-      item = new Superfit.WodItem(wod: wod)
+      item = new Superfit.WodItem(wod: wod, type: 'wod')
       @wodsBrowse.append item.render()
 
   search: (e) -> super(e, @type)

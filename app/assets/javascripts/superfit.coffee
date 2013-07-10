@@ -6,10 +6,12 @@
 #= require jqtouch-jquery.min
 #= require jquery.flot
 #= require jquery.flot.resize
+#= require jquery.flot.time
 #= require jquery.makeItRetina.min
 #= require jquery.validate.min
 #= require jquery.serialize-object
 #= require jquery.ui.spinner
+#= require timeago
 #= require moment.min
 #= require spine/spine
 #= require spine/manager
@@ -70,6 +72,9 @@ class Superfit extends Spine.Controller
     new Superfit.EditProfileGym(el: @editProfileGym)
     new Superfit.Profile(el: @profile)
 
+    $(@el).timeago()
+    Superfit.bind 'timeago', => $(@el).timeago('refresh')
+
     _.defer -> $.makeItRetina();
     _.defer -> jQT.goTo('#get-started-step1', jQT.settings.defaultTransition) unless user
 
@@ -81,6 +86,7 @@ $ ->
   Category.fetch()
   WodsVersion.fetch()
   WodEntry.fetch()
+  Goal.fetch()
 
   $.get 'wods_version.txt', (latest_version) ->
     latest_version = latest_version.trim()
