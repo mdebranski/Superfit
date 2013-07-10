@@ -43,18 +43,15 @@
                   %a.tab-btn.photo-capture{href: '#'} Photo Capture
                 %li
                   %a.tab-btn.text-entry{href: '#'} Type It In
-              #photo-capture.initial
+              #photo-capture
                 %a.take-photo{href: '#'}
                   .initial-capture
                     %span.icon-camera-alt
                     %br
                     %span Take a Photo
-                  .post-capture
                     %input.custom-wod-photo{name: "photo", type: "hidden"}
                     %img.custom-wod-img
-                    %div
-                      .icon-camera-alt
-                      %span Take a Photo
+                  .post-capture
               #text-entry
                 %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
 

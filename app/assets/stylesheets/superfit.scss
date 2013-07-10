@@ -841,7 +841,9 @@ body {background:none}
        padding-top:18px;
        @include border-radius($radiusbottom);
        border:1px solid $mercury;
-       border-top:0
+       border-top:0;
+
+      .custom-wod-img {width:280px}
      }
   }
 }  //end JQT
