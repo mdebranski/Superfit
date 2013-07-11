@@ -2,7 +2,7 @@
   .toolbar
     %div
       %a.awesome.icon-chevron-left.goback{href: '#'}
-    %h1 Create Goal
+    %h1 Create Goal - #{@wod.name}
 .content-main
   .content-block
     .yellow-block
