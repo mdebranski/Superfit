@@ -23,7 +23,7 @@
         %li
           .label.history
             %p Start Date
-            %p.record= moment(@goal.start_date).format()
+            %p.record= moment(@goal.start_date).format('MMMM D, YYYY')
         %li
           .label.history
             %p Movement
