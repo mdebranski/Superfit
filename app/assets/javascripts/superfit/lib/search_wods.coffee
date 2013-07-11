@@ -12,7 +12,7 @@ class Superfit.SearchWods extends Spine.Controller
       wods = Wod.search(value, type)
       if wods.length > 0
         for wod in wods
-          item = new Superfit.WodItem(wod: wod, 'wod')
+          item = new Superfit.WodItem(wod: wod, type: @searchType)
           @wodsSearch.append item.render()
         @noMatches.hide()
         @wodsSearch.fadeIn()

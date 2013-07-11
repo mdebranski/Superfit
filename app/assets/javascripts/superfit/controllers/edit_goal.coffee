@@ -1,5 +1,7 @@
 class Superfit.EditGoal extends Superfit.SearchWods
 
+  searchType: 'goal'
+
   templateName: 'edit_goal'
 
   elements:

@@ -1,5 +1,7 @@
 class Superfit.BrowseWods extends Superfit.SearchWods
 
+  searchType: 'wod'
+
   elements:
     '.wods-search': 'wodsSearch'
     '.wods-browse': 'wodsBrowse'

@@ -1,4 +1,5 @@
-class Superfit.Home extends Superfit.SearchWods
+class Superfit.Home extends Spine.Controller
+
 
   elements:
     '.chart': 'chart'
