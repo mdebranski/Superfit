@@ -24,6 +24,11 @@ class Superfit.EditGoal extends Superfit.SearchWods
     @render()
 
     @el.bind "pageAnimationStart", (e, data) =>
+      if data.direction == 'in'
+        @goal_id = null
+        @wod = null
+        @wods = null
+        @wods_type = null
       if data.direction == 'in' and @goal_id = @el.data('referrer')?.data('id')
         @render()
 
@@ -33,7 +38,7 @@ class Superfit.EditGoal extends Superfit.SearchWods
       @render()
     else
       @goal_id = null
-      @wod_id = null
+      @wod = null
       @wods = null
       @wods_type = null
       @render()
@@ -106,11 +111,5 @@ class Superfit.EditGoal extends Superfit.SearchWods
       goal = Goal.create(data)
       if last = _.last WodEntry.byWodId(goal.wod_id)
         goal.newEntry(last)
-
-
-    @goal_id = null
-    @wod_id = null
-    @wods = null
-    @wods_type = null
 
     jQT.goTo('#goal-detail', jQT.settings.defaultTransition)
