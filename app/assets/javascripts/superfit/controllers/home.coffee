@@ -25,7 +25,7 @@ class Superfit.Home extends Superfit.SearchWods
 
   initCharts: ->
     goal = @goals[0]
-    if goal
+    if goal?.history
       data = [goal.history]
       options =
         xaxis:
