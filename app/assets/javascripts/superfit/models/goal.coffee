@@ -24,10 +24,13 @@ class Goal extends Spine.Model
     "#{wod.name} #{@scoreString()}"
 
   percentComplete: ->
-    if @last_entry_id
+    if @total() == 0
+      100
+    else if @last_entry_id
       Math.floor(_.min [(@progress() / @total() * 100), 100])
     else
       0
+
   wod: -> Wod.find(@wod_id)
   start_entry: -> WodEntry.find(@start_entry_id) if @start_entry_id
   last_entry:  -> WodEntry.find(@last_entry_id)  if @last_entry_id
