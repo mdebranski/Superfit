@@ -2,6 +2,7 @@
   .toolbar
     .pulldown Navigation Pulldown
     %h1 Goals
+    %a.awesome.icon-plus{href: "#edit-goal"}
 
 .scroll
   %ul.filter-navigation.two
@@ -26,7 +27,7 @@
                 %span
                   Last Update:
                   %time.timeago{datetime: moment(goal.last_update).format()}
-              %p.goal-progress= "#{goal.percentComplete()}%"
+            %p.goal-progress= "#{goal.percentComplete()}%"
             %p.awesome.icon-chevron-right.arrow
 
       %li.goal

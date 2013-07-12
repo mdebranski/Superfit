@@ -19,8 +19,6 @@ gem 'sass'
 gem 'sequel'
 gem 'twitter-bootstrap-rails'
 gem 'unicorn'
-gem 'therubyracer', '0.11.0beta5'
-gem 'libv8', '~> 3.11.8'
 
 group :development do
   gem 'heroku'

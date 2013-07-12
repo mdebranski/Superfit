@@ -203,7 +203,8 @@ body {background:none}
 
     .goal{
       .arrow {position:relative; top:5px;}
-      .goal-progress {margin-top: 18px;}
+      .goal-progress {margin-top: 18px; float:left}
+      .label {width:80%}
     }
 
     .goal-label {

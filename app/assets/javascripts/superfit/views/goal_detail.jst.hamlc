@@ -1,6 +1,6 @@
 .page-header
   .toolbar
-    %a.awesome.icon-chevron-left{href: "#goals"}
+    %a.awesome.icon-chevron-left.goback{href: "#goals"}
     %h1= @goal.name()
 
 .scroll
@@ -43,8 +43,8 @@
               %time.timeago{datetime: moment(@goal.last_update).format()}
 
   .footer
-    %a.button.bottom{href: "#home"} Jump to Dashboard
-    %a.button.bottom.red.delete{href: "#goals", data-id: @goal.id} Delete Goal
+    %a.button.bottom.dissolve{href: "#home"} Jump to Dashboard
+    %a.button.bottom.red.pop.delete{href: "#goals", data-id: @goal.id} Delete Goal
 
 
 

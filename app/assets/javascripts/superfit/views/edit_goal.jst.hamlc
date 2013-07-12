@@ -2,7 +2,7 @@
   .toolbar
     %div
       %a.awesome.icon-chevron-left.goback{href: '#'}
-    %h1 Create Goal - #{@wod.name}
+    %h1 #{@wod.name} Goal
 .content-main
   .content-block
     .yellow-block
@@ -13,7 +13,7 @@
             != Utils.simpleFormat(@wod.workout_male)
           - if @user.gender == 'female'
             != Utils.simpleFormat(@wod.workout_female)
-
+.content-main
   .content-block
     %form
       - if @wod
