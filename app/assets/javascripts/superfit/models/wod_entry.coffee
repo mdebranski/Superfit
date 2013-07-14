@@ -46,7 +46,9 @@ class WodEntry extends Spine.Model
       when 'max_reps' then "#{score_obj.score} reps"
       when 'pass_fail' then score_obj.score.toUpperCase()
       when 'weight_reps'
-        if score_obj.max_1
+        if score_obj.score
+          "#{score_obj.score}lb x #{score_obj.reps} reps"
+        else if score_obj.max_1
           "#{score_obj.max_1} lbs 1RM"
         else if score_obj.max_3
           "#{score_obj.max_3} lbs 3RM"
