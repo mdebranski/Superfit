@@ -20,14 +20,13 @@ class Superfit.Home extends Spine.Controller
 
   render: ->
     entries = WodEntry.byDate(Superfit.currentDate)
-    @goals = Goal.inProgress()
-    super(currentDate: Superfit.currentDate, entries: entries, goals: @goals, today: @today())
+    @goal = Goal.lastUpdated()
+    super(currentDate: Superfit.currentDate, entries: entries, goal: @goal, today: @today())
     @initCharts()
 
   initCharts: ->
-    goal = @goals[0]
-    if goal?.history
-      data = [goal.history]
+    if @goal?.history
+      data = [@goal.history]
       options =
         xaxis:
           mode: 'time'

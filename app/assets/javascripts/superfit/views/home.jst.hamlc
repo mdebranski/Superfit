@@ -52,20 +52,20 @@
             %p.awesome.icon-chevron-right.arrow
       %li.chart-container
         .chart
-      - if @goals.length == 0
+      - if @goal
+        %li.goal
+          %a{href: "#goal-detail", data-id: @goal.id}
+            .label
+              %p.goal-label= @goal.name()
+                %br/
+                %span
+                  Last Update:
+                  %time.timeago{datetime: moment(@goal.last_update).format()}
+            .goal-progress= "#{@goal.percentComplete()}%"
+            %p.awesome.icon-chevron-right.arrow
+      - else
         %li
           %a.add-new{href: "#edit-goal"}
             .label
               %p Create New Goal
             %p.awesome.icon-plus.arrow
-      - for goal in @goals
-        %li.goal
-          %a{href: "#goal-detail", data-id: goal.id}
-            .label
-              %p.goal-label= goal.name()
-                %br/
-                %span
-                  Last Update:
-                  %time.timeago{datetime: moment(goal.last_update).format()}
-            .goal-progress= "#{goal.percentComplete()}%"
-            %p.awesome.icon-chevron-right.arrow

@@ -96,6 +96,9 @@ class Goal extends Spine.Model
   @byWodId: (wodId) ->
     _.filter Goal.all(), (goal) -> goal.wod_id == wodId
 
+  @lastUpdated: ->
+    _.max Goal.inProgress(), (goal) -> goal.last_update
+
   @inProgress: ->
     _.filter Goal.all(), (goal) -> !goal.complete_date?
 
