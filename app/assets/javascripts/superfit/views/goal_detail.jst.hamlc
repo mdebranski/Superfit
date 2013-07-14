@@ -37,11 +37,17 @@
           .label.history
             %p Goal Score
             %p.record= @goal.scoreString()
-        %li
-          .label.history
-            %p Last Updated
-            %p.record
-              %time.timeago{datetime: moment(@goal.last_update).format()}
+        - if @goal.complete_date
+          %li
+            .label.history
+              %p Completed
+              %p.record= moment(@goal.complete_date).format('MMMM D, YYYY')
+        - else
+          %li
+            .label.history
+              %p Last Updated
+              %p.record
+                %time.timeago{datetime: moment(@goal.last_update).format()}
 
   .footer
     %a.button.bottom.dissolve{href: "#goals"} Return to Goals
