@@ -19,6 +19,10 @@ class Superfit.RecordDetail extends Spine.Controller
     @repMax = repMax
     if @wod.personal_record?
       @pastEntries = WodEntry.history(@wod)
+
+      if @wod.type == 'Strength'
+        @pastEntries = _.filter @pastEntries, (entry) => _.contains(entry.reps, @repMax)
+
       @render(wod: @wod, pastEntries: @pastEntries, repMax: @repMax)
 
 
