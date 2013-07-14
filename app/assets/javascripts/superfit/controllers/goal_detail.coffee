@@ -1,5 +1,8 @@
 class Superfit.GoalDetail extends Spine.Controller
 
+  elements:
+    '.chart': 'chart'
+
   events:
     'tap .delete': 'delete'
 
@@ -22,6 +25,7 @@ class Superfit.GoalDetail extends Spine.Controller
 
     @render(wod: @wod, goal: @goal, pastEntries: @pastEntries)
     Superfit.trigger 'timeago'
+    Superfit.Chart.goalChart(@chart, @goal?.history)
 
   delete: ->
     @goal.destroy()

@@ -18,7 +18,6 @@
     .secondary
       .title
         %h3 Details
-
       %ul
         %li
           .label.history

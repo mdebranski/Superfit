@@ -4,6 +4,8 @@
       .title
         %h3 #{@wod.name} History
       %ul.history
+        %li.chart-container
+          .chart
         - for history in @pastEntries
           %li
             %a{href: "#review-wod", 'data-id': history.id}

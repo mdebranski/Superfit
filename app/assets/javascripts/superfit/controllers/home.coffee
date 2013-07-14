@@ -1,6 +1,5 @@
 class Superfit.Home extends Spine.Controller
 
-
   elements:
     '.chart': 'chart'
 
@@ -22,41 +21,7 @@ class Superfit.Home extends Spine.Controller
     entries = WodEntry.byDate(Superfit.currentDate)
     @goal = Goal.lastUpdated()
     super(currentDate: Superfit.currentDate, entries: entries, goal: @goal, today: @today())
-    @initCharts()
-
-  initCharts: ->
-    if @goal?.history
-      data = [@goal.history]
-      options =
-        xaxis:
-          mode: 'time'
-          labelWidth: 40
-        yaxis:
-          min: 0
-          max: 100
-          minTickSize: 1
-          tickFormatter: (value) -> "#{value}%"
-        series:
-          color: 'rgba(78, 163, 227, 0.95)'
-          lines:
-            show: true
-            lineWidth: 1
-            fill: true
-            fillColor: 'rgba(78, 163, 227, 0.15)'
-          points:
-            show: true
-            borderWidth: 1
-          shadowSize:0
-        grid:
-          borderWidth:0
-          clickable: true
-          color:  'rgba(0, 0, 0, 0.2)'
-          labelMargin:20
-
-      $.plot @chart, data, options
-
-    else
-      @chart.hide()
+    Superfit.Chart.goalChart(@chart, @goal?.history)
 
   today: ->
     moment().startOf('day').toDate()
