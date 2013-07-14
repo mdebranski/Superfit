@@ -28,10 +28,11 @@
           .label.history
             %p Movement
             %p.record= @goal.wod().name
-        %li
-          .label.history
-            %p Scoring Method
-            %p.record= @goal.type
+        - if @goal.type
+          %li
+            .label.history
+              %p Scoring Method
+              %p.record= @goal.type
         %li
           .label.history
             %p Goal Score
