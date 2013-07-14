@@ -3,23 +3,22 @@
     %div
       %a.awesome.icon-chevron-left.goback{href: '#'}
     %h1 #{@wod.name} Goal
-.content-main
-  .content-block
-    .yellow-block
-      .score= @wod.name
-      %p.score-details=
-        - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
-          != Utils.simpleFormat(@wod.workout_male)
-        - if @user.gender == 'female'
-          != Utils.simpleFormat(@wod.workout_female)
-      %hr
-      %p.score-notes
-        =@wod.scoringMethod()
-        %br
-        =@wod.scoring_notes
 
-
-
+- unless @wod.type == 'Strength'
+  .content-main
+    .content-block
+      .yellow-block
+        .score= @wod.name
+        %p.score-details=
+          - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
+            != Utils.simpleFormat(@wod.workout_male)
+          - if @user.gender == 'female'
+            != Utils.simpleFormat(@wod.workout_female)
+        %hr
+        %p.score-notes
+          =@wod.scoringMethod()
+          %br
+          =@wod.scoring_notes
 
 .content-main
   .content-block
