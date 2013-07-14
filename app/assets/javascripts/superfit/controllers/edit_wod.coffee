@@ -13,6 +13,7 @@ class Superfit.EditWod extends Spine.Controller
     'spinstop input[type=number]' : 'notNegative'
     'tap .take-photo': 'takePhoto'
     'tap .warm-up': 'togglestyle'
+    'tap .tab-nav .tab-btn': 'togglePhoto'
 
   constructor: ->
     super
@@ -160,6 +161,12 @@ class Superfit.EditWod extends Spine.Controller
 
   togglestyle: (e)->
    $(e.target).toggleClass "selected", $(e.target).is(":checked")
+
+  togglePhoto: (e)->
+    if @tabs.hasClass('photo')
+      @tabs.removeClass('photo').addClass('text')
+    else if @tabs.hasClass('text')
+      @tabs.removeClass('text').addClass('photo')
 
 
   addSet: (e=null, reps=null, weight=null) ->

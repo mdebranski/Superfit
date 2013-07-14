@@ -6,13 +6,21 @@
 .content-main
   .content-block
     .yellow-block
-      .review-score
-        .score= @wod.name
-        %p.score-details=
-          - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
-            != Utils.simpleFormat(@wod.workout_male)
-          - if @user.gender == 'female'
-            != Utils.simpleFormat(@wod.workout_female)
+      .score= @wod.name
+      %p.score-details=
+        - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
+          != Utils.simpleFormat(@wod.workout_male)
+        - if @user.gender == 'female'
+          != Utils.simpleFormat(@wod.workout_female)
+      %hr
+      %p.score-notes
+        =@wod.scoringMethod()
+        %br
+        =@wod.scoring_notes
+
+
+
+
 .content-main
   .content-block
     %form

@@ -27,7 +27,8 @@ body {background:none}
 
   h1 {font-family:$standardfont; }
   h2 {font: normal 22px $standardfont; color:$mineshaft; line-height: 54px; margin:0; position: relative; top:2px}
-  h3 {font-family:$standardfont; }
+  h3 {font-family:$standardfont; color:$mineshaft;}
+  h3.sub-header {border-bottom:1px solid #ff7f7f; margin-bottom:18px; padding-left:3px; line-height: 45px; height: 45px; margin-top:5px}
   h4 {font-family:$standardfont; }
   p {color: $dovegray; font-family:$standardfont; font-size: 16px; font-weight: normal; }
   .awesome {font-family:$iconfont ; color:$silver; font-size:18px;}
@@ -74,7 +75,10 @@ body {background:none}
       z-index: 1000;
       background-size: 10px 44px;
 
-      .icon-chevron-left {position: relative; padding:8px; top:5px; left:1px; color:#ffffff; display: block; height: 40px; width:40px;}
+      .icon-chevron-left {
+        position: relative; padding:8px; top:5px; left:1px; color:#ffffff; display: block; height: 20px; width:26px;
+        &:active {background: #666666; @include box-shadow (inset 0 0 30px 8px #131313);}
+        }
       .icon-plus {
         float:right;
         @include border-radius (4px);
@@ -85,7 +89,10 @@ body {background:none}
         padding:2px 0;
         color:$seashell;
         font-size:20px;
+        height: 20px;
+        width:26px;
         }
+      .icon-plus:active {background: #666666; @include box-shadow (inset 0 0 20px 4px #131313)}
       //.pulldown {
       //  background:url(image_path('img-mainnav.png')) repeat-x;
       //  width:33px;
@@ -204,7 +211,7 @@ body {background:none}
     .goal{
       .arrow {position:relative; top:5px;}
       .goal-progress {margin-top: 18px; float:left}
-      .label {width:80%}
+      .label {width:75%}
     }
 
     .goal-label {
@@ -386,6 +393,7 @@ body {background:none}
     overflow: hidden;
     //border-bottom: 2px groove #eae7e1;
     padding-bottom: 12px;
+    margin-top:9px;
 
     ul:first-child {margin-top:0}
 
@@ -422,7 +430,7 @@ body {background:none}
   .score-details {margin-top:0 !important; line-height: 18px  !important}
  // ENTER WOD SCORE
   .enter-score-label {
-    width:99%;
+
     p {float:left;width:42px; margin-top: 9px!important; }
     .icon-remove-sign {
       float:left;
@@ -454,8 +462,8 @@ body {background:none}
     overflow: hidden;
   }
   .enter-score{
-    margin-bottom: 18px;
-    overflow: hidden;
+    margin-bottom: 9px;
+    //overflow: hidden;
 
     div.input {  width:55%; float:left; margin-top:0px}
     div.times {float:left;width:9%; position: relative; top:22px; text-align: left}
@@ -464,12 +472,11 @@ body {background:none}
 
     //.type { margin-right: 7%; }
     .score-container {
-      width:98%;  margin-bottom: 3px;
+      margin-bottom: 3px;
 
-      h2 {border-bottom:1px solid #ff7f7f; margin-bottom:18px}
       .for_time {
         .ui-spinner:first-of-type {margin-right:5%;}
-        .ui-spinner {width:46%;}
+        .ui-spinner {width:46.5%;}
       }
     }
 
@@ -521,7 +528,7 @@ body {background:none}
     //border-bottom: 2px groove #eae7e1;
     padding-bottom: 7px;
     margin:0 auto;
-    margin-top:3px !important;
+    margin-top:12px !important;
     color:$mineshaft;
     margin-left:5px;
     &.not-main {margin-top:18px !important}
@@ -676,7 +683,7 @@ body {background:none}
     font-size:0 !important;
     background:transparent url(image_path('sprite-superfit.png')) no-repeat 0 0;
     width:46px;
-    height:59px;
+    height:50px;
     background-position: -214px -25px;
     float:left;
     position: relative;
@@ -801,7 +808,7 @@ body {background:none}
     }
 
     &.photo {
-      .text-entry  {background: #f6f6f6; color:$silverchalice}
+      .text-entry  {background: white; color:$silverchalice;border:1px solid $mercury;border-bottom:0px; border-left:0px}
       .photo-capture {
         background: $seashell;
         color:$dovegray;
@@ -818,7 +825,7 @@ body {background:none}
         border:1px solid $mercury;
         border-bottom:0;
       }
-      .photo-capture {background: #f6f6f6; color:$silverchalice}
+      .photo-capture {background: white; color:$silverchalice;border:1px solid $mercury;border-bottom:0px;border-right:0}
       #photo-capture {display:none}
     }
     #photo-capture {

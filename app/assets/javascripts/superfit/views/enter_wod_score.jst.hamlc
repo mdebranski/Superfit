@@ -32,10 +32,21 @@
       - unless @wod
         .content-main
           .content-block
-            %label.custom{for: 'entry-name'} Name
+            %h3.sub-header Create Workout
+            %label.custom{for: 'entry-name'} Workout name
             %input.required#entry-name{name: "name",type:"text", placeholder: "Name your WOD", value: if @entry then @entry.name else moment().format('MMM D, YYYY')}
 
-            %p Enter Workout Details
+            - unless @wod
+              %div.type
+                %p How is the workout scored
+                %select.required{name: 'method'}
+                  %option{value: 'for_time', selected: @entry?.method == 'for_time'} Time
+                  %option{value: 'rounds', selected: @entry?.method == 'rounds'} Rounds
+                  %option{value: 'weight', selected: @entry?.method == 'weight'} Weight (lbs)
+                  %option{value: 'max_reps', selected: @entry?.method == 'max_reps'} Reps
+                  %option{value: 'pass_fail', selected: @entry?.method == 'pass_fail'} Pass / Fail
+
+            %p Enter the workout details
 
             .customwod-tabs.photo
               %ul.tab-nav
@@ -55,27 +66,18 @@
               #text-entry
                 %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
 
+
       .content-main
         .content-block
           .enter-score
-            - unless @wod
-              %div.type
-                %p Scoring Method
-                %select.required{name: 'method'}
-                  %option{value: 'for_time', selected: @entry?.method == 'for_time'} Time
-                  %option{value: 'rounds', selected: @entry?.method == 'rounds'} Rounds
-                  %option{value: 'weight', selected: @entry?.method == 'weight'} Weight (lbs)
-                  %option{value: 'max_reps', selected: @entry?.method == 'max_reps'} Reps
-                  %option{value: 'pass_fail', selected: @entry?.method == 'pass_fail'} Pass / Fail
             != JST['superfit/views/_score'](entry: @entry)
 
 
-          %div
-            %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
-              %label.radio{for: 'rx-type'} RX
-            %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
-              %label.radio{for: 'scaled-type'} Scaled
-          %p Workout Notes
-          %textarea{name: 'details', cols: "30", rows: "5"}
-            = @entry?.details
+            %div
+              %input#rx-type.left{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
+                %label.radio{for: 'rx-type'} RX
+              %input#scaled-type.right{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
+                %label.radio{for: 'scaled-type'} Scaled
+              %textarea{name: 'notes', placeholder: "Enter Workout Notes", cols: "30", rows: "5"}
+              = @entry?.details
           %input.button.bluer.bottom{type: 'submit'} Save Workout

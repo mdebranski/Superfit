@@ -43,7 +43,7 @@
               %time.timeago{datetime: moment(@goal.last_update).format()}
 
   .footer
-    %a.button.bottom.dissolve{href: "#home"} Jump to Dashboard
+    %a.button.bottom.dissolve{href: "#goals"} Return to Goals
     %a.button.bottom.red.pop.delete{href: "#goals", data-id: @goal.id} Delete Goal
 
 
