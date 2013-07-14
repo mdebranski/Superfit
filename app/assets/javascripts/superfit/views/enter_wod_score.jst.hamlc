@@ -74,7 +74,7 @@
 
 
             %div
-              %input#rx-type.left{type: "radio", name: "type", value: "rx", checked: if @entry then @entry?.type == 'rx' else 'checked'}
+              %input#rx-type.left{type: "radio", name: "type", value: "RX", checked: if @entry then @entry?.type == 'rx' else 'checked'}
                 %label.radio{for: 'rx-type'} RX
               %input#scaled-type.right{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
                 %label.radio{for: 'scaled-type'} Scaled

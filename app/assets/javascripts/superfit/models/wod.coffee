@@ -58,9 +58,9 @@ class Wod extends Spine.Model
     if @personal_record?
       switch @scoring_method
         when 'for_time'
-          if entry.type == 'rx' and @personal_record.type == 'scaled'
+          if entry.type == 'RX' and @personal_record.type == 'scaled'
             true
-          else if entry.type == 'scaled' and @personal_record.type == 'rx'
+          else if entry.type == 'scaled' and @personal_record.type == 'RX'
             false
           else
             record_seconds = @personal_record.min * 60 + @personal_record.sec

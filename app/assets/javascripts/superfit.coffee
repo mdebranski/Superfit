@@ -75,7 +75,7 @@ class Superfit extends Spine.Controller
     $(@el).timeago()
     Superfit.bind 'timeago', => $(@el).timeago('refresh')
 
-    _.defer -> $.makeItRetina();
+    _.defer -> $.makeItRetina('retinaBackgrounds': true);
     _.defer -> jQT.goTo('#get-started-step1', jQT.settings.defaultTransition) unless user
 
 window.Superfit = Superfit

@@ -156,8 +156,8 @@ body {background:none}
         font-weight: normal;
 
         .icon {
-          margin-top:13px;
-          margin-right:10px;
+          margin-top:8px;
+          margin-right:15px;
           float:left;
         }
 
@@ -657,16 +657,20 @@ body {background:none}
     text-indent:-9999px;
     font-size:0 !important;
     background:transparent url(image_path('sprite-superfit.png')) no-repeat 0 0;
+    background-size: 320px 480px;
+    height: 480px;
+    width: 320px;
+
   }
 
   //.sprite-sf:active {opacity:0.5;}
   .icon {
-    width:29px; height:28px;
-    &.strength { background-position: -29px -71px; }
-    &.custom {background-position: -29px -113px;}
-    &.other {background-position: -29px -27px;}
-    &.benchmark {background-position: -29px -153px;}
-    &.mainsite {background-position: -29px -199px;}
+    width:35px; height:34px;
+    &.strength { background-position: -25px -68px; }
+    &.custom {background-position: -25px -110px;}
+    &.other {background-position: -25px -24px;}
+    &.benchmark {background-position: -25px -150px;}
+    &.mainsite {background-position: -25px -195px;}
 
     &.dashboard {background-position: -27px -239px; height:32px }
     &.goals {background-position: -27px -279px; height:32px  }
@@ -854,6 +858,14 @@ body {background:none}
       .custom-wod-img {width:280px}
      }
   }
+
+  /***** Here goes the retina display good stuff ***/
+  @media
+  (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+    .sprite-sf { background:transparent url(image_path('sprite-superfit_2x.png')) no-repeat 0 0; }
+  }
+
+
 }  //end JQT
 
 // Calendar Overrides
