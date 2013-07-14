@@ -33,7 +33,9 @@ class Superfit.Home extends Spine.Controller
           labelWidth: 40
         yaxis:
           min: 0
+          max: 100
           minTickSize: 1
+          tickFormatter: (value) -> "#{value}%"
         series:
           color: 'rgba(78, 163, 227, 0.95)'
           lines:
