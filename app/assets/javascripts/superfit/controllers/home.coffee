@@ -31,6 +31,9 @@ class Superfit.Home extends Spine.Controller
         xaxis:
           mode: 'time'
           labelWidth: 40
+        yaxis:
+          min: 0
+          minTickSize: 1
         series:
           color: 'rgba(78, 163, 227, 0.95)'
           lines:
