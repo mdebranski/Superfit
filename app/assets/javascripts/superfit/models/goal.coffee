@@ -5,6 +5,7 @@ class Goal extends Spine.Model
              'complete_date',
              'last_update',
              'start_entry_id',
+             'start_score',
              'last_entry_id',
              'history',
 
@@ -38,36 +39,42 @@ class Goal extends Spine.Model
   scoreString: (summary=false) ->
     WodEntry.scoreString(this, @wod().scoring_method, summary)
 
-  start_score: ->
-    if @start_entry_id
-      Goal.score(@start_entry())
-    else
-      0
-
-  last_score: ->
+  best_score: ->
     if @last_entry_id
-      Goal.score(@last_entry())
+      if @wod().scoring_method == 'for_time'
+        best_entry = _.min @entries(), (entry) => @calcScore(entry)
+      else
+        best_entry = _.max @entries(), (entry) => @calcScore(entry)
+      @calcScore(best_entry)
     else
       0
 
   progress: ->
     if @wod().scoring_method == 'for_time'
-      @start_score() - @last_score()
+      @start_score - @best_score()
     else
-      @last_score() - @start_score()
+      @best_score() - @start_score
 
   total: ->
     if @wod().scoring_method == 'for_time'
-      @start_score() - @goal_score()
+      @start_score - @goal_score()
     else
-      @goal_score() - @start_score()
+      @goal_score() - @start_score
 
   goal_score: ->
-    Goal.score(this)
+    @calcScore(this)
 
-  newEntry: (entry) =>
+  entries: ->
+    entries = _.select WodEntry.byWodId(@wod_id), (entry) =>
+      @start_entry_id == entry.id || (@isMatch(entry) && entry.created_date >= @start_date and (!@complete_date or entry.date < @complete_date))
+    _.sortBy entries, (entry) -> -1 * moment(entry.created_date).valueOf()
+
+  newEntry: (entry, start=false) =>
     if @isMatch(entry)
-      @start_entry_id = entry.id unless @start_entry_id
+      if start
+        @start_entry_id = entry.id
+        @start_score = @calcScore(entry)
+
       @last_entry_id = entry.id
 
       @history or= []
@@ -89,9 +96,23 @@ class Goal extends Spine.Model
 
   isComplete: ->
     if @wod().scoring_method == 'for_time'
-      @last_score() <= @goal_score()
+      @best_score() <= @goal_score()
     else
-      @last_score() >= @goal_score()
+      @best_score() >= @goal_score()
+
+  calcScore: (model) ->
+    wod = model.wod()
+
+    switch wod.scoring_method
+      when 'for_time' then (model.min * 60) + model.sec
+      when 'rounds', 'weight', 'max_reps' then model.score
+      when 'weight_reps'
+        if model.score #Goal
+          model.score
+        else #Strength entry
+          model.repMax(@reps)
+      when 'pass_fail'
+        if model.score.toUpperCase() == 'PASS' then 1 else 0
 
   @byWodId: (wodId) ->
     _.filter Goal.all(), (goal) -> goal.wod_id == wodId
@@ -104,14 +125,5 @@ class Goal extends Spine.Model
 
   @completed: ->
     _.filter Goal.all(), (goal) -> goal.complete_date?
-
-  @score: (model) ->
-    wod = model.wod()
-
-    switch wod.scoring_method
-      when 'for_time' then (model.min * 60) + model.sec
-      when 'rounds', 'weight', 'max_reps', 'weight_reps' then model.score
-      when 'pass_fail'
-        if model.score.toUpperCase() == 'PASS' then 1 else 0
 
 window.Goal = Goal

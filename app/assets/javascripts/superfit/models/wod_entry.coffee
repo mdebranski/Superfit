@@ -11,6 +11,7 @@ class WodEntry extends Spine.Model
              'method',
              'type',
              'details',
+             'created_date',
              'date',
              'warm_up',
 
@@ -26,7 +27,7 @@ class WodEntry extends Spine.Model
     _.select @all(), (entry) -> wod_id == entry.wod_id
 
   @history: (wod) ->
-    _.sortBy WodEntry.byWodId(wod.id), (entry) -> -1 * moment(entry.date).valueOf()
+    _.sortBy WodEntry.byWodId(wod.id), (entry) -> -1 * moment(entry.created_date).valueOf()
 
   wod: ->
     Wod.find(@wod_id)

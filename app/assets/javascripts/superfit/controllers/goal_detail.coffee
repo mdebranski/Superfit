@@ -18,7 +18,7 @@ class Superfit.GoalDetail extends Spine.Controller
   update: (goal) =>
     @wod = Wod.find(goal.wod_id)
     @goal = goal
-    @pastEntries = WodEntry.history(@wod)
+    @pastEntries = @goal.entries()
 
     @render(wod: @wod, goal: @goal, pastEntries: @pastEntries)
     Superfit.trigger 'timeago'
