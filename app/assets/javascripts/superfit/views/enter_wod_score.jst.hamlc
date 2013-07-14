@@ -40,7 +40,7 @@
               %div.type
                 %p How is the workout scored
                 %select.required{name: 'method'}
-                  %option{value: 'for_time', selected: @entry?.method == 'for_time'} Time
+                  %option{value: 'for_time', selected: !@entry || @entry?.method == 'for_time'} Time
                   %option{value: 'rounds', selected: @entry?.method == 'rounds'} Rounds
                   %option{value: 'weight', selected: @entry?.method == 'weight'} Weight (lbs)
                   %option{value: 'max_reps', selected: @entry?.method == 'max_reps'} Reps
