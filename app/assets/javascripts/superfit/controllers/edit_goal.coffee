@@ -109,9 +109,12 @@ class Superfit.EditGoal extends Superfit.SearchWods
       goal.updateAttributes(data)
     else
       goal = Goal.create(data)
-      if last = _.last WodEntry.byWodId(goal.wod_id)
+      last = _.last WodEntry.byWodId(goal.wod_id)
+      if last && goal.isMatch(last)
         goal.newEntry(last, true)
       else
-        goal.updateAttributes(start_score: 0)
+        goal.start_score = 0
+        goal.history = [[moment().valueOf(), 0]]
+        goal.save()
 
     jQT.goTo('#goal-detail', jQT.settings.defaultTransition)
