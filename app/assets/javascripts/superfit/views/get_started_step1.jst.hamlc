@@ -1,14 +1,10 @@
 #get-started-step1.page
   .orientation
     .main
-      %h1 Log Your Workouts
-      %p Superfit does the rest. The app transparently maintains your Personal Records and Goals.
+      .step1
+      %h1 All about the work
+      %p Log workouts and see the days activity from the dashboard. Want to see what you did last week? Pop open the calendar. Tap through to a day.
 
-      %p.small
-        %strong TIP:
-        Look for the camera icon
-        %span.icon-camera-alt
-        to take photos of your Gyms daily workouts rather than typing them in.
 
     .orientation-footer
       %a.slide.button.bottom{href: "#get-started-step2"}  Next : See Your Progress

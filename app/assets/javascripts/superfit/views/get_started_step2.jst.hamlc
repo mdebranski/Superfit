@@ -1,12 +1,10 @@
 #get-started-step2.page
-  .orientation.
-
+  .orientation
     .main
-      %h1
-      %p Superfit was designed to allow you to quickly and easily log all of our workouts.
-      %p.small
-        %strong TIP:
-        Set up Goals to configure Superfit to track  what you want to work on. Your Daily Dashboard will display your most recent Goal Activity.
+      .step2
+      %h1 Work = Progress
+      %p Goals and PRs are integral to measuring progress. Superfit maintains those transparently with the workouts you enter via the dashboard.
+
 
     .orientation-footer
-      %a.slide.button.bottomk{href: "#get-started-step3"}  Next : Set-Up is Simple
+      %a.slide.button.bottom{href: "#get-started-step3"}  Next : Set-Up is Simple

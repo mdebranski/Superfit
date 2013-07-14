@@ -565,9 +565,20 @@ body {background:none}
       h2 {font-size:16px; font-weight: bold; line-height: 27px; margin-top:18px}
       img {text-align: center; margin-top:9px; margin-bottom: 9px}
       p {font-size:14px; text-align: center; line-height: 18px;margin-top:9px}
+      .step1 {
+        background: transparent url(image_path('intro-step1.png')) no-repeat center center;
+        width:298px;
+        height:298px;
+        background-size: 298px 298px;
+      }
+    .step2 {
+      background: transparent url(image_path('intro-step2.png')) no-repeat center center;
+      width:287px;
+      height:253px;
+      background-size: 287px 253px;
+    }
 
-
-      .main{padding:27px 20px 80px 20px;}
+      .main{padding:18px 20px 80px 20px;}
       .button {background:$mineshaft; color:white; }
       .small {
         font-size:10px;
@@ -861,6 +872,8 @@ body {background:none}
   @media(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
     .sprite-sf { background:transparent url(image_path('sprite-superfit_2x.png')) no-repeat 0 0; }
     .page-header{ background:transparent url(image_path('tile-pg-header_2x.png')) repeat-x 0 0 }
+    .step1 {background: transparent url(image_path('intro-step1_2x.png')) no-repeat center center; }
+    .step2 {background: transparent url(image_path('intro-step2_2x.png')) no-repeat center center; }
   }
 
 

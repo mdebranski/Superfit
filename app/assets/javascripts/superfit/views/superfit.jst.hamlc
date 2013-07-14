@@ -18,5 +18,3 @@
   #edit-profile-gym.page
   #profile.page.slideupSelector.in
   #goal-detail.page
-  != JST['superfit/views/get_started_step1']()
-  != JST['superfit/views/get_started_step2']()
