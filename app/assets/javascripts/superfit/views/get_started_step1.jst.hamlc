@@ -1,17 +1,14 @@
 #get-started-step1.page
-  .orientation.content-main
-    .content-block
-      %h1 Log Workouts
-      %p Superfit was designed to allow you to quickly and easily log all of our workouts.
-
-      %img{src:"./assets/gfx-landing-record-workouts.png"}
-
+  .orientation
+    .main
+      %h1 Log Your Workouts
+      %p Superfit does the rest. The app transparently maintains your Personal Records and Goals.
 
       %p.small
         %strong TIP:
         Look for the camera icon
         %span.icon-camera-alt
-        to take a photo of your Gyms custom daily workout rather than typing it in.
+        to take photos of your Gyms daily workouts rather than typing them in.
 
     .orientation-footer
-      %a.slide.button.bottomk{href: "#get-started-step2"}  Next : See Your Progress
+      %a.slide.button.bottom{href: "#get-started-step2"}  Next : See Your Progress

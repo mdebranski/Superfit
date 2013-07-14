@@ -1,6 +1,6 @@
 .page-header
   .toolbar
-    .pulldown
+    .sprite-sf.pulldown
       Navigation Pulldown
     %h1 Dashboard
     %a.awesome.icon-plus{href: "#add-wod"}

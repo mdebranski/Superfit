@@ -1,6 +1,6 @@
 .page-header
   .toolbar
-    .pulldown
+    .sprite-sf.pulldown
       Navigation Pulldown
     %h1 Profile
 .scroll

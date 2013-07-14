@@ -1,12 +1,9 @@
 #get-started-step2.page
-  .orientation.content-main
-    .content-block
-      %h1 See Your Progress
-      %p Superfit visually tracks the progress ofBenchmarks, Strength and Common workouts.
+  .orientation.
 
-      %img{src:"./assets/gfx-landing-see-progress.png"}
-
-
+    .main
+      %h1
+      %p Superfit was designed to allow you to quickly and easily log all of our workouts.
       %p.small
         %strong TIP:
         Set up Goals to configure Superfit to track  what you want to work on. Your Daily Dashboard will display your most recent Goal Activity.
