@@ -725,6 +725,14 @@ body {background:none}
     }
   }
 
+  // OVERLAY
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+
+    .main {background: white; width:80%; padding: 27px 10px}
+  }
+
   //PROFILE
 
   .profile-header{

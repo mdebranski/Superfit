@@ -48,6 +48,7 @@ class Superfit extends Spine.Controller
     '.page#profile': 'profile'
 
 
+
   constructor: ->
     super
 

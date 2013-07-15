@@ -1,6 +1,6 @@
 .page-header
   .toolbar
-    .pulldown Navigation Pulldown
+    .sprite-sf.pulldown Navigation Pulldown
     %h1 Goals
     %a.awesome.icon-plus{href: "#edit-goal"}
 

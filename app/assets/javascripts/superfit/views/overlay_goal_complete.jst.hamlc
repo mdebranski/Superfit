@@ -1,0 +1,6 @@
+#overlay-goal-complete.page
+  .overlay
+    .main
+      %h1 High Fives!
+      %p You completed [Enter Goal Name Here]!
+
