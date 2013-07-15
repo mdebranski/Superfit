@@ -303,26 +303,9 @@ body {background:none}
 
   //////////// PAGE LEVEL ////////////
 
-  // LANDING SPLASH
 
- .landing {
-   background: #000000 url(image_path('bkg-landing.png')) no-repeat 0 0;
-   overflow: hidden;
 
-   .splash {
-     text-align: center;
-     background: transparent url(image_path('bkg-landing-white.png')) no-repeat center center;
-     padding:50% 0;
-     overflow: hidden;
-   }
- }
 
- .gyms {
-  .gym.selected {
-    background: $mountmain-meadow;
-    p { color:#ffffff; }
-  }
- }
 
   // PULL DOWN NAVIGATION
 
@@ -557,6 +540,7 @@ body {background:none}
     }
   }
   #get-started-step1 {height:100%}
+
   //ORIENTATION
   .orientation {
       padding:0px;
@@ -580,7 +564,8 @@ body {background:none}
       background-size: 287px 253px;
     }
 
-      .main{padding:18px 20px 80px 20px;}
+      .main{padding:18px 20px 100px 20px;}
+      .left {text-align: left}
       .button {background:$mineshaft; color:white; }
       .small {
         font-size:10px;
@@ -603,11 +588,29 @@ body {background:none}
         bottom:0;
         width:100%;
         height:80px;
-
-        a {margin-top:18px; margin-bottom:18px;width:80%}
+        a, input {margin-top:18px; margin-bottom:18px;width:80%}
+        input {margin:18px auto; line-height: 45px; height: 45px;}
       }
 
 
+  }
+
+
+  .gyms {
+    .gym{
+      line-height: 45px;
+      height:45px;
+      padding-top:9px;
+      border-top:1px solid $mercury
+    }
+    .label p{float:left; width:83%; padding-left:10px}
+    .label p+p {float:left; width:10%}
+    p { text-align: left }
+    .gym.selected {
+      background: $mountmain-meadow;
+      text-align: left;
+      p { color:#ffffff; text-align: left }
+    }
   }
   //GOALS
   .new-goal{

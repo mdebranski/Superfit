@@ -4,5 +4,5 @@
       %p
         = @gym.name
         - if @gym.city
-          %span.location= "#{@gym.city} #{@gym.state}"
-    %p.awesome.icon-chevron-right.arrow}
+          / = %span.location= "(#{@gym.city}, #{@gym.state})"
+      %p.awesome.icon-chevron-right.arrow
