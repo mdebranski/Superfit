@@ -3,7 +3,7 @@
     .main
       .step2
       %h1 Work = Progress
-      %p Goals and PRs are integral to measuring progress. Superfit maintains those transparently with the workouts you enter via the dashboard.
+      %p Goals and PRs are integral to measuring progress. Superfit maintains those in the background with the workouts you enter via the dashboard.
 
 
     .orientation-footer
