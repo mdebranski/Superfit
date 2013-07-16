@@ -18,6 +18,13 @@
     - if @repMax
       %input.required{type: "number", name: "max_#{@repMax}", placeholder: "Enter Weight (lbs)", value: @entry?.score}
     - else
-      %input.required{type: "number", name: "score", placeholder: "Enter Weight (lbs)", value: @entry?.score}
-      x
-      %input.required{type: "number", name: "reps", placeholder: "Reps", value: @entry?.reps}
+      .enter-score
+        .set
+          %div.input
+            %input.required.number{type: "number", name: "weight", placeholder: "ex. 155", value: @weight}
+            %span.small Enter Weight (lbs)
+          %div.times
+            %span.awesome.icon-cancel
+          %div.reps
+            %input.required.number{type: "number", name: "reps", placeholder: "ex. 10", value: @reps}
+            %span.small Enter Reps

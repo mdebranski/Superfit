@@ -2,7 +2,7 @@
   .content-main
     .secondary
       .title
-        %h3 #{@wod.name} History
+        %h3 History
       %ul.history
         %li.chart-container
           .chart

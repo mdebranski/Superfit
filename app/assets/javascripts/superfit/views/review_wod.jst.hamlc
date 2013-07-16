@@ -14,10 +14,13 @@
             %span.pr Personal Record
           %p.score-details= @entry.details
 
+      %a.button.bottom.lighter.dissolve{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
       %a.button.bottom.fade{href: "#home"} Jump To Dashboard
+
+      %a.red.pop.delete{"data-id": @entry.id, href: "#home"} <i class="remove-set icon-remove-sign"></i> Delete This Workout
+
+  .footer
 
   != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
 
-  .footer
-    %a.button.bottom.lighter.dissolve{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
-    %a.button.bottom.red.pop.delete{"data-id": @entry.id, href: "#home"} Delete Workout
+

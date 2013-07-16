@@ -138,7 +138,7 @@ body {background:none}
       p {margin-top:18px;line-height: 36px;}
       form {margin-top:6px; overflow: hidden}
       input + p.small {margin-top: 0;}
-
+      a.red.delete {font-size:12px; text-align: center; color:$tallpoppy; padding:10px 0; display: block}
       label.custom {margin: 14px 0 9px 0; display: block}
     }
 
@@ -175,7 +175,7 @@ body {background:none}
         }
 
         .label.history {@include fl(98%);}
-        .label.empty p {color:$silver;}
+        .label.empty p {color:$silverchalice;}
         .arrow  {
           float:right;
           margin-top:15px;
@@ -378,7 +378,7 @@ body {background:none}
     overflow: hidden;
     //border-bottom: 2px groove #eae7e1;
     padding-bottom: 12px;
-    margin-top:9px;
+    margin-top:12px;
 
     ul:first-child {margin-top:0}
 
@@ -415,7 +415,7 @@ body {background:none}
   .score-details {margin-top:0 !important; line-height: 18px  !important}
  // ENTER WOD SCORE
 
-  .sets .set {overflow:hidden; margin-bottom:9px; padding-bottom: 18px}
+  .set {overflow:hidden; margin-bottom:9px; padding-bottom: 18px}
   .enter-score-label {
 
     p {float:left;width:42px; margin-top: 9px!important; }
@@ -477,7 +477,6 @@ body {background:none}
     font-size: 40px;
     color:$mineshaft;
     font-weight: bold;
-    margin-bottom: 18px;
 
 
     .score-level {
