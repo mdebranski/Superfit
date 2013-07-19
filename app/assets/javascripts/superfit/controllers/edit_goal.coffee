@@ -97,9 +97,10 @@ class Superfit.EditGoal extends Superfit.SearchWods
   submit: =>
     data = @form.serializeObject()
     data.wod_id = parseInt(data.wod_id)
-    data.score = parseInt(data.score)
+    data.score = if data.score then parseInt(data.score) else parseInt(data.weight)
     data.min = parseInt(data.min)
     data.sec = parseInt(data.sec)
+    data.reps = parseInt(data.reps)
     data.reps = parseInt(data.reps)
     data.start_date = moment().valueOf()
     data.last_update = moment().valueOf()
