@@ -35,7 +35,8 @@
             %p.awesome.icon-plus.arrow
       - else
         %li
-          You haven't entered any workouts!
+          %a.add-new{href: "#add-wod"}
+            %p.wodnodata
         %li
           %a.add-new{href: "#add-wod"}
             .label
@@ -50,9 +51,9 @@
           %a.dissolve{href: "#goals"}
             %p View All
             %p.awesome.icon-chevron-right.arrow
-      %li.chart-container
-        .chart
       - if @goal
+        %li.chart-container
+          .chart
         %li.goal
           %a{href: "#goal-detail", data-id: @goal.id}
             .label
@@ -64,6 +65,9 @@
             .goal-progress= "#{@goal.percentComplete()}%"
             %p.awesome.icon-chevron-right.arrow
       - else
+        %li
+          %a.add-new{href: "#edit-goal"}
+            %p.goalsnodata
         %li
           %a.add-new{href: "#edit-goal"}
             .label

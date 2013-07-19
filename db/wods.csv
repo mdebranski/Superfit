@@ -85,7 +85,7 @@ Note number of pull-ups completed for each round.",
 155 pound Clean and jerk, 21 reps
 Run 800 meters
 155 pound Clean and jerk, 21 reps
-Run 1 Mile",For Time,For time,"U.S. Marine Corps Sergeant Matthew T. Abbate, 26, of Honolulu, Hawaii, assigned to the 3rd Battalion, 5th Marine Regiment, 1st Marine Division, I Marine Expeditionary Force, based out of Camp Pendleton, California, was killed on December 2, 2010, while conducting combat operations in Helmand province, Afghanistan. He is survived by his wife Stacie Rigall, son Carson, mother Karen Binion, father Salvatore Abbate, and siblings Dominica Abbate, Elliot Abbate, Valerie Binion, and Kelly Binion."
+Run 1 Mile",For Time,,"U.S. Marine Corps Sergeant Matthew T. Abbate, 26, of Honolulu, Hawaii, assigned to the 3rd Battalion, 5th Marine Regiment, 1st Marine Division, I Marine Expeditionary Force, based out of Camp Pendleton, California, was killed on December 2, 2010, while conducting combat operations in Helmand province, Afghanistan. He is survived by his wife Stacie Rigall, son Carson, mother Karen Binion, father Salvatore Abbate, and siblings Dominica Abbate, Elliot Abbate, Valerie Binion, and Kelly Binion."
 22,Benchmark,Hero,Adam Brown,,"295 pound Deadlift, 24 reps
 24 Box jumps, 24 inch box
 24 Wallball shots, 20 pound ball
@@ -507,7 +507,7 @@ You cannot remove weight from the bar",
 50 Box Jumps
 50 Floor Wipers 135 lbs
 50 Clean & Press 135 lbs
-25 Pul ups",For Time,For Time,
+25 Pul ups",For Time,,
 103,Other,Common,Baseline from Hell,"400m Run
 10 Pull Ups
 20 Push Ups
@@ -578,8 +578,6 @@ Burpees",For Time,21-15-9  (Reps Per Round),
 129,Strength,,Back Extension,,,Weight / Reps / Rounds,,
 130,Strength,,Back Squat,,,Weight / Reps / Rounds,,
 131,Strength,,Bench Press,,,Weight / Reps / Rounds,,
-130,Strength,,Back Squat,,,Weight / Reps / Rounds,,
-131,Strength,,Bench Press,,,Weight / Reps / Rounds,,
 134,Strength,,Clean and Jerk,,,Weight / Reps / Rounds,,
 135,Strength,,Deadlift,,,Weight / Reps / Rounds,,
 139,Strength,,Front Squat,,,Weight / Reps / Rounds,,
@@ -604,10 +602,10 @@ Burpees",For Time,21-15-9  (Reps Per Round),
 172,Strength,,Glute Ham Raise,,,Weight / Reps / Rounds,,
 173,Strength,,Reverse Hyper,,,Weight / Reps / Rounds,,
 174,Strength,,Push Press (Behind Neck),,,Weight / Reps / Rounds,,
-175,Strength,Hidden,Bicep Curls,,,Weight / Reps / Rounds,,
-176,Strength,Hidden,Tricep Kickback,,,Weight / Reps / Rounds,,
-177,Strength,Hidden,Tricep Extension,,,Weight / Reps / Rounds,,
-127,Other,Games,Open 13.01,"40 Burpees
+175,Strength,,Clean Deadlift,,,Weight / Reps / Rounds,,
+176,Strength,,Snatch Push Press,,,Weight / Reps / Rounds,,
+177,Strength,,Muscle Snatch,,,Weight / Reps / Rounds,,
+127,Other,CF Games,Open 13.01,"40 Burpees
 45 pound Snatch, 30 reps
 30 Burpees
 75 pound Snatch, 30 reps
@@ -622,17 +620,17 @@ Burpees",For Time,21-15-9  (Reps Per Round),
 165 pound Snatch, 30 reps
 10 burpees
 210 pound Snatch, as many reps as possible",Max Reps,17 minutes,
-178,Other,Games,Open 13.02,"75 pound Shoulder to overhead, 5 reps
+178,Other,CF Games,Open 13.02,"75 pound Shoulder to overhead, 5 reps
 75 pound Deadlift, 10 reps
 15 Box jumps, 20"" box","115 pound Shoulder to overhead, 5 reps
 115 pound Deadlift, 10 reps
 15 Box jumps, 24"" box",AMRAP,10 minutes,
-179,Other,Games,Open 13.03,"150 Wall balls (14 lbs to 9' target)
+179,Other,CF Games,Open 13.03,"150 Wall balls (14 lbs to 9' target)
 90 Double-unders
 30 Muscle-ups","150 Wall balls (20 lbs to 10' target)
 90 Double-unders
 30 Muscle-ups",AMRAP,12 minutes,
-180,Other,Games,Open 13.04,"95 pound Clean and jerk, 3 reps
+180,Other,CF Games,Open 13.04,"95 pound Clean and jerk, 3 reps
 3 Toes-to-bar
 95 pound Clean and jerk, 6 reps
 6 Toes-to-bar
@@ -657,23 +655,23 @@ This is a timed workout. If you complete the round of 18, go on to 21. If you co
 135 pound Clean and jerk, 18 reps
 18 Toes-to-bar...
 This is a timed workout. If you complete the round of 18, go on to 21. If you complete 21, go on to 24, etc.",Max Reps,7 min,
-181,Other,Games,Open 13.05,"65 pound Thruster, 15 reps
+181,Other,CF Games,Open 13.05,"65 pound Thruster, 15 reps
 15 Chest to bar Pull-ups","100 pound Thruster, 15 reps
 15 Chest to bar Pull-ups",AMRAP,"4 min: If 90 reps (3 rounds) are completed in under 4 minutes, time extends to 8 minutes.
 If 180 reps (6 rounds) are completed in under 8 minutes, time extends to 12 minutes.
 If 270 reps (9 rounds) are completed in under 12 minutes, time extends to 16 minutes.",
-182,Other,Games,Regionals  13.03,30 Muscle Up Burpees,30 Muscle Up Burpees,For Time,,
-183,Other,Games,Regionals  13.04,"100 Wall balls (14lb)
+182,Other,CF Games,Regionals  13.03,30 Muscle Up Burpees,30 Muscle Up Burpees,For Time,,
+183,Other,CF Games,Regionals  13.04,"100 Wall balls (14lb)
 100 Chest to Bar Pull ups
 100 One-Legged Squats, Alternating
 100 One-Arm Dumbbell Snatchs (50lb)","100 Wall balls (20lb)
 100 Chest to Bar Pull ups
 100 One-Legged Squats, Alternating
 100 One-Arm Dumbbell Snatchs (70lb)",For Time,,
-184,Other,Games,Regionals  13.05,"Deadlift 205lb
+184,Other,CF Games,Regionals  13.05,"Deadlift 205lb
 Box Jump 24","Deadlift 315lb
 Box Jump 30",For Time,21-15-9 ,
-185,Other,Games,Regionals  13.06,"100 Double Unders
+185,Other,CF Games,Regionals  13.06,"100 Double Unders
 50 Handstand Push-Ups
 40 Toes to Bar
 30 Shoulder to Overhead w/ axle (100lb)
@@ -682,7 +680,7 @@ Box Jump 30",For Time,21-15-9 ,
 40 Toes to Bar
 30 Shoulder to Overhead w/ axle (160lb)
 90 ft Walking lunge w/ axle in front rack (160lb)",For Time,,
-186,Other,Games,Regionals  13.07,"15 ft. Rope Climb, 2 ascents
+186,Other,CF Games,Regionals  13.07,"15 ft. Rope Climb, 2 ascents
 100 ft. Sprint
 4 Squat Cleans (135lb)
 100 ft. Sprint
@@ -691,3 +689,18 @@ Box Jump 30",For Time,21-15-9 ,
 4 Squat Cleans (225lb)
 100 ft. Sprint
 ",For Time,4 Rounds,
+187,Strength,,Shoulder Press,,,Weight / Reps / Rounds,,
+188,Other,,KB Swings,,,Max Reps,,
+189,Strength,,Snatch Deadlift,,,Weight / Reps / Rounds,,
+190,Other,Gymnastics,Bar Muscle Up,,,Max Reps,,
+191,Strength,,Clean - 3 Position ,,,Weight / Reps / Rounds,,
+192,Strength,,Snatch - 3 Position ,,,Weight / Reps / Rounds,,
+193,Strength,,Snatch Shrug,,,Weight / Reps / Rounds,,
+194,Strength,,Snatch - 2 Position ,,,Weight / Reps / Rounds,,
+195,Strength,,Stiff Legged DeadLift,,,Weight / Reps / Rounds,,
+196,Other,,Turkish Get-Up,,,Max Reps,,
+197,Strength,,Clean - 2 Position ,,,Weight / Reps / Rounds,,
+198,Strength,,Hang Snatch,,,Weight / Reps / Rounds,,
+199,Other,Endurance,400m,400m,400m,For Time,,
+200,Other,Endurance,800m,800m,800m,For Time,,
+200,Other,Endurance,200m,200m,200m,For Time,,

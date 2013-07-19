@@ -76,6 +76,7 @@ body {background:none}
       position: relative;
       z-index: 1000;
       background-size: 10px 44px;
+      @include box-shadow (rgba(0, 0, 0, 0.20) 0 1px 6px);
 
       .icon-chevron-left {
         position: relative; padding:8px; top:5px; left:1px; color:#ffffff; display: block; height: 20px; width:26px;
@@ -316,7 +317,8 @@ body {background:none}
     z-index: 998;
     width: 100%;
     @include transition(all 0.5s ease);
-    background:transparent url(image_path('tile-ticks.png')) repeat 0 0;
+    //background:transparent url(image_path('tile-ticks.png')) repeat 0 0;
+    background: #1f1f1f;
     opacity: .95;
     padding-bottom: 4px;
   }
@@ -334,8 +336,8 @@ body {background:none}
     div{
 
       font-size:16px;
-      border-bottom: 1px solid #040404;
-      border-top: 1px solid #323232;
+      border-bottom: 1px solid #1a1a1a;
+      //border-top: 1px solid #323232;
       padding-left:12px;
       &:first-of-type {border-top:none; padding-top:5px; }
       &:last-of-type {border-bottom:none}
@@ -725,6 +727,18 @@ body {background:none}
       font-size: 14px;
       line-height: 1.2em;
     }
+  }
+
+  // DASHBOARD
+
+  .wodnodata {
+    background:transparent url(image_path('img-workout-nodata.png')) no-repeat 40px 20px;
+    height:160px;
+
+  }
+  .goalsnodata{background:transparent url(image_path('img-goals-nodata.png')) no-repeat 40px 20px;
+    height:160px;
+
   }
 
   // OVERLAY
