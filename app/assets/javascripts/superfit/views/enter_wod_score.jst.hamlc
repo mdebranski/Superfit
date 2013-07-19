@@ -79,5 +79,5 @@
               %input#scaled-type.right{type: "radio", name: "type", value: "scaled", checked: @entry?.type == 'scaled'}
                 %label.radio{for: 'scaled-type'} Scaled
               %textarea{name: 'details', placeholder: "Enter Workout Notes", cols: "30", rows: "5"}
-              = @entry?.details
+                = @entry?.details
           %input.button.bluer.bottom{type: 'submit'} Save Workout
