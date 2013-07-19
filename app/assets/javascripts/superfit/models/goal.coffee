@@ -45,7 +45,11 @@ class Goal extends Spine.Model
         best_entry = _.min @entries(), (entry) => @calcScore(entry)
       else
         best_entry = _.max @entries(), (entry) => @calcScore(entry)
-      @calcScore(best_entry)
+
+      if best_entry
+        @calcScore(best_entry)
+      else
+        0
     else
       0
 
