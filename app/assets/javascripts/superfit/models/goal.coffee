@@ -85,6 +85,7 @@ class Goal extends Spine.Model
       @history.push [moment().valueOf(), @percentComplete()]
 
       if @isComplete() and !@complete_date
+        @trigger('complete')
         @complete_date = moment().valueOf()
 
       @save()

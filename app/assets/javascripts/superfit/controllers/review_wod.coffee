@@ -11,6 +11,7 @@ class Superfit.ReviewWod extends Spine.Controller
     super
     WodEntry.bind 'create', @updateReviewWod
     WodEntry.bind 'update', @updateReviewWod
+    Goal.bind 'complete', (goal) => @completedGoal = goal
 
     @el.bind "pageAnimationStart", (e, data) =>
       if data.direction == 'in' and referrer = @el.data('referrer')
@@ -26,7 +27,9 @@ class Superfit.ReviewWod extends Spine.Controller
     if entry.wod_id?
       @pastEntries = WodEntry.history(@wod)
 
-    @render(wod: @wod, entry: @entry, pastEntries: @pastEntries)
+    @render(wod: @wod, entry: @entry, pastEntries: @pastEntries, completedGoal: @completedGoal)
+
+    @completedGoal = null
 
     if @wod.method == 'pass_fail'
       @chart.hide()
