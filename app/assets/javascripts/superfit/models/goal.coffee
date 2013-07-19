@@ -111,10 +111,10 @@ class Goal extends Spine.Model
       when 'for_time' then (model.min * 60) + model.sec
       when 'rounds', 'weight', 'max_reps' then model.score
       when 'weight_reps'
-        if model.score #Goal
-          model.score
-        else #Strength entry
+        if model.repMax?
           model.repMax(@reps)
+        else
+          model.score
       when 'pass_fail'
         if model.score.toUpperCase() == 'PASS' then 1 else 0
 
