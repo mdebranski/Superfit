@@ -1,14 +1,13 @@
-- if @pastEntries and @pastEntries.length > 0
-  .content-main
-    .secondary
-      .title
-        %h3 History
-      %ul.history
-        %li.chart-container
-          .chart
-        - for history in @pastEntries
-          %li
-            %a{href: "#review-wod", 'data-id': history.id}
-              .label
-                %p= moment(history.date).format('MMM D, YYYY')
-                %p= history.scoreString()
+.content-main
+  .secondary
+    .title
+      %h3 History
+    %ul.history
+      %li.chart-container
+        .chart
+      - for history in @pastEntries
+        %li
+          %a{href: "#review-wod", 'data-id': history.id}
+            .label
+              %p= moment(history.date).format('MMM D, YYYY')
+              %p= history.scoreString()
