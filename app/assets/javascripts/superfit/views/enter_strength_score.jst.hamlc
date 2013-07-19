@@ -11,6 +11,6 @@
         %input{type: 'hidden', name: 'entry_id', value: @entry.id}
       .sets
       %textarea{name: 'details', placeholder: "Enter Workout Notes", cols: "30", rows: "5"}
-      = @entry?.details
+        = @entry?.details
       %a.button.lighter.bottom.add-set{href: "#"} Add Another Set
       %input.button.bluer.bottom{type: 'submit'} Save Workout

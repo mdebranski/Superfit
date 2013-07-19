@@ -1,26 +1,28 @@
-#review-wod.page
-  .page-header
-    .toolbar
-      %div
-        %a.awesome.icon-chevron-left.goback{href: '#'}
-      %h1= @entry.wodName()
-  .content-main
-    .content-block
-      .yellow-block
-        .review-score
-          .score= @entry.scoreString()
-            %span.score-level= @entry.type
-          %div.score-tags
-            %span.pr Personal Record
-          %p.score-details= @entry.details
+.page-header
+  .toolbar
+    %div
+      %a.awesome.icon-chevron-left.goback{href: '#'}
+    %h1= @entry.wodName()
+- if @completedGoal
+  .overlay
+    .main
+      %h1 High Fives!
+      %p You completed #{@completedGoal.name()}!
+.content-main
+  .content-block
+    .yellow-block
+      .review-score
+        .score= @entry.scoreString()
+          %span.score-level= @entry.type
+        %div.score-tags
+          %span.pr Personal Record
+        %p.score-details= @entry.details
 
-      %a.button.bottom.lighter.dissolve{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
-      %a.button.bottom.fade{href: "#home"} Jump To Dashboard
+    %a.button.bottom.lighter.dissolve{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
+    %a.button.bottom.fade{href: "#home"} Jump To Dashboard
 
-      %a.red.pop.delete{"data-id": @entry.id, href: "#home"} <i class="remove-set icon-remove-sign"></i> Delete This Workout
+    %a.red.pop.delete{"data-id": @entry.id, href: "#home"} <i class="remove-set icon-remove-sign"></i> Delete This Workout
 
-  .footer
+.footer
 
-  != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
-
-
+!= JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
