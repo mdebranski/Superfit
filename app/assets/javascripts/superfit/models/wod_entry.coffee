@@ -27,13 +27,22 @@ class WodEntry extends Spine.Model
     _.select @all(), (entry) -> wod_id == entry.wod_id
 
   @history: (wod) ->
-    _.sortBy WodEntry.byWodId(wod.id), (entry) -> -1 * moment(entry.created_date).valueOf()
+    _.sortBy WodEntry.byWodId(wod.id), (entry) -> -1 * entry.created_date
 
   wod: ->
     Wod.find(@wod_id)
 
   scoreString: (summary=false) ->
     WodEntry.scoreString(this, @method, summary)
+
+  value: ->
+    switch @method
+      when 'for_time'
+        @min * 60 + @sec
+      when 'rounds','weight','max_reps'
+        @score
+      when 'weight_reps'
+        _.max @weight
 
   @scoreString: (score_obj, method, summary=false) ->
     switch method

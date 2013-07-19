@@ -53,6 +53,10 @@ class Wod extends Spine.Model
     else
       ""
 
+  history: ->
+    history = _.map WodEntry.byWodId(@id), (entry) -> [entry.date, entry.value()]
+    _.sortBy history, (history) -> history[0]
+
   isRecord: (entry) ->
     throw "Can't check record unless entry is for this wod" unless entry.wod_id = @id
     if @personal_record?

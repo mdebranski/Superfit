@@ -1,5 +1,8 @@
 class Superfit.ReviewWod extends Spine.Controller
 
+  elements:
+    '.chart': 'chart'
+
   events:
     'tap .delete': 'deleteWod'
     'tap .history a': 'history'
@@ -24,6 +27,11 @@ class Superfit.ReviewWod extends Spine.Controller
       @pastEntries = WodEntry.history(@wod)
 
     @render(wod: @wod, entry: @entry, pastEntries: @pastEntries)
+
+    if @wod.method == 'pass_fail'
+      @chart.hide()
+    else
+      Superfit.Chart.wodChart(@chart, @wod.history(), @wod.scoring_method)
 
   deleteWod: ->
     @entry.destroy()

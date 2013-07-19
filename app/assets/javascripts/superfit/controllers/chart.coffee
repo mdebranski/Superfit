@@ -12,17 +12,34 @@ class Superfit.Chart extends Spine.Module
 
   @goalChart: (el, data) ->
     options =
-      xaxis:
-        mode: 'time'
       yaxis:
         max: 100
         tickFormatter: (value) -> "#{value}%"
     @chart(el, data, options)
 
+  @wodChart: (el, data, method) ->
+    options =
+      yaxis:
+        tickFormatter: (value) => @formatWodValue(value, method)
+    @chart(el, data, options)
+
+  @formatWodValue: (value, method) ->
+    switch method
+      when 'for_time'
+        min = Math.floor(value / 60)
+        sec = value % 60
+        _.str.sprintf "%d:%02d", Number(min), Number(sec)
+      when 'rounds','weight','max_reps'
+        value
+      when 'weight_reps'
+        "#{value} lb"
+
   @defaultOptions:
     options =
       xaxis:
+        mode: 'time'
         labelWidth: 40
+        tickFormatter: (value) -> moment(value).format('MMM D, YYYY')
       yaxis:
         min: 0
         minTickSize: 1
