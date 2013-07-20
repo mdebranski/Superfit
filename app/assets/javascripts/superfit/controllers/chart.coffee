@@ -39,7 +39,7 @@ class Superfit.Chart extends Spine.Module
       xaxis:
         mode: 'time'
         labelWidth: 40
-        tickFormatter: (value) -> moment(value).format('MMM D, YYYY')
+        tickFormatter: (value) -> moment(value).format('MMM D')
       yaxis:
         min: 0
         minTickSize: 1
