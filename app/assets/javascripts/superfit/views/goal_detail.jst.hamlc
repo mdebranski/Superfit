@@ -1,6 +1,7 @@
 .page-header
   .toolbar
-    %a.awesome.icon-chevron-left.back{href: "#goals"}
+    %div
+      %a.awesome.icon-chevron-left.slideright{href: "#goals"}
     %h1= @goal.name()
 
 .scroll

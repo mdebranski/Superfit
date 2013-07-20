@@ -2,18 +2,18 @@
   .page-header
     .toolbar
       %div
-        %a.awesome.icon-chevron-left.goback{href: "#records"}
+        %a.awesome.icon-chevron-left.slideright{href: "#records"}
       %h1= @wod.name
 
   .scroll
     - if @wod.typeSlug() == 'strength'
       %ul.filter-navigation.not-main
         %li
-          %a{href: "#", data-rep-max: 1, class: if @repMax == 1 then 'selected' else ''} 1RM
+          %a.dissolve{href: "#", data-rep-max: 1, class: if @repMax == 1 then 'selected' else ''} 1RM
         %li
-          %a{href: "#", data-rep-max: 3, class: if @repMax == 3 then 'selected' else ''} 3RM
+          %a.dissolve{href: "#", data-rep-max: 3, class: if @repMax == 3 then 'selected' else ''} 3RM
         %li
-          %a{href: "#", data-rep-max: 5, class: if @repMax == 5 then 'selected' else ''} 5RM
+          %a.dissolve{href: "#", data-rep-max: 5, class: if @repMax == 5 then 'selected' else ''} 5RM
 
     .content-main
       .content-block

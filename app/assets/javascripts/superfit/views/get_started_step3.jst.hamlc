@@ -17,13 +17,16 @@
           %h2 Where do you Workout?
 
           %fieldset
-            %input#gym-search{type: "text", name: "search", placeholder: "Enter Gym Name"}
+            %input{type: "text", name: "gym", placeholder: "Enter Gym Name"}
 
-          %p
-            %a.small{href: "#home"} Don't Workout at an Affiliate? Skip this ›
-
-          %h3.no-matches No gyms found for this search.
-          %ul.gyms{style: "display:none"}
+          -#%fieldset
+          -#  %input#gym-search{type: "text", name: "search", placeholder: "Enter Gym Name"}
+          -#
+          -#%p
+          -#  %a.small{href: "#home"} Don't Workout at an Affiliate? Skip this ›
+          -#
+          -#%h3.no-matches No gyms found for this search.
+          -#%ul.gyms{style: "display:none"}
 
       .orientation-footer
         %input#get-started.button.bottom{type: 'submit', value: 'Start Logging Workouts'}

@@ -14,6 +14,7 @@ class Superfit.Chart extends Spine.Module
     options =
       yaxis:
         max: 100
+        tickSize: 25
         tickFormatter: (value) -> "#{value}%"
     @chart(el, data, options)
 
@@ -43,6 +44,7 @@ class Superfit.Chart extends Spine.Module
       yaxis:
         min: 0
         minTickSize: 1
+        ticks: 5
       series:
         color: 'rgba(78, 163, 227, 0.95)'
         lines:
@@ -59,3 +61,4 @@ class Superfit.Chart extends Spine.Module
         clickable: true
         color:  'rgba(0, 0, 0, 0.2)'
         labelMargin:20
+

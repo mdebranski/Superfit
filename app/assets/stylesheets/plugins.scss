@@ -131,6 +131,10 @@ div.ui-spinner { background: none; }
 /* Flot overrides */
 
 .chart {
-  .flot-tick-label.tickLabel {color:$silver; font-size:9px}
+  margin:15px 0; padding-bottom:15px;
+  .flot-tick-label.tickLabel {color:$silverchalice; font-size:10px; line-height: 18px;text-align: right}
+  .flot-y-axis .flot-tick-label.tickLabel {position: absolute; left:0 !important;}
+  .flot-text {position:relative; top:-8px !important; }
+  .flot-overlay {position:relative; left:18px !important; }
 
 }

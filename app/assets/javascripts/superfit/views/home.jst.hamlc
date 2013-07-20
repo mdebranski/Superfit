@@ -37,11 +37,6 @@
         %li
           %a.add-new{href: "#add-wod"}
             %p.wodnodata
-        %li
-          %a.add-new{href: "#add-wod"}
-            .label
-              %p Add Workout
-            %p.awesome.icon-plus.arrow
 
   .content-main
     %ul
@@ -68,8 +63,3 @@
         %li
           %a.add-new{href: "#edit-goal"}
             %p.goalsnodata
-        %li
-          %a.add-new{href: "#edit-goal"}
-            .label
-              %p Create New Goal
-            %p.awesome.icon-plus.arrow

@@ -20,21 +20,23 @@
         %p Email
         %input.profile-data{type: "text", name: "email", placeholder: "Enter Email", value: @user.email}
       %li
-        %a{href: "#edit-profile-gym"}
-          %p My Gym
-          %p.profile-data
-            - if @user.gym
-              =@user.gym
-            - unless @user.gym
-              %span.placeholder Find My Gym
-              %span.icon-chevron-right
+        %p My Gym
+        %input.profile-data{type: "text", name: "gym", placeholder: "My Gym", value: @user.gym}
       %li.radio
         %p Gender
-        %fieldset.profile-data
-          %input#female.left{type: "radio", name: "gender", value: "female", checked: @user.gender == 'female'}
-            %label.radio{for: 'female'} Female
-          %input#male.right{type: "radio", name: "gender", value: "male", checked: @user.gender == 'male'}
-            %label.radio{for: 'male'} Male
+        %select.profile-data{name: 'gender'}
+          %option{value: 'female', selected: @user.gender == 'female'} Female
+          %option{value: 'male', selected: @user.gender == 'male'} Male
+      -#%li
+      -#  %a{href: "#edit-profile-gym"}
+      -#    %p My Gym
+      -#    %p.profile-data
+      -#      - if @user.gym
+      -#        =@user.gym
+      -#      - unless @user.gym
+      -#        %span.placeholder Find My Gym
+      -#        %span.icon-chevron-right
+
   .footer
     -# %input.button.bottom.lighter.dissolve{type: 'submit', value:'Save Profile'}
 

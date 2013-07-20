@@ -30,7 +30,7 @@ body {background:none}
   h3 {font-family:$standardfont; color:$mineshaft;}
   h3.sub-header {border-bottom:1px solid #ff7f7f; margin-bottom:18px; padding-left:3px; line-height: 45px; height: 45px; margin-top:5px}
   h4 {font-family:$standardfont; }
-  p {color: $dovegray; font-family:$standardfont; font-size: 16px; font-weight: normal; }
+  p {color: $dovegray; font-family:$standardfont; font-size: 14px; font-weight: normal; }
   .awesome {font-family:$iconfont ; color:$silver; font-size:18px;}
   .awesome:active {
     color:$silverchalice;
@@ -160,7 +160,7 @@ body {background:none}
 
         .icon {
           margin-top:8px;
-          margin-right:15px;
+          margin-right:5px;
           float:left;
         }
 
@@ -237,14 +237,13 @@ body {background:none}
          li {
            line-height:45px;
            height:45px;
-           border-bottom:1px solid $silver;
+           border-bottom:1px solid $mercury;
 
            &:last-of-type {border-bottom:0px}
          }
        }
       .title {
         background: $seashell;
-        border-bottom:1px solid $silver;
         overflow: hidden;
 
 
@@ -529,11 +528,11 @@ body {background:none}
       text-align: center;
 
       a {
-        color:$mineshaft; padding:4px 0px;
+        color:$silverchalice; padding:4px 0px; height: 18px; line-height: 18px;
 
-        &:active, &.active {background: transparent;color:$mineshaft;}
+        &:active, &.active {background: transparent;}
       }
-      a.selected {background: #dedcd0; @include border-radius (18px)}
+      a.selected {background: #dedcd0; @include border-radius (18px);color:$mineshaft;}
     }
 
     &.two {
@@ -558,12 +557,12 @@ body {background:none}
         height:298px;
         background-size: 298px 298px;
       }
-    .step2 {
-      background: transparent url(image_path('intro-step2.png')) no-repeat center center;
-      width:287px;
-      height:253px;
-      background-size: 287px 253px;
-    }
+      .step2 {
+        background: transparent url(image_path('intro-step2.png')) no-repeat center center;
+        width:287px;
+        height:253px;
+        background-size: 287px 253px;
+      }
 
       .main{padding:18px 20px 100px 20px;}
       .left {text-align: left}
@@ -719,11 +718,13 @@ body {background:none}
 
   .chart-container {
     width: 100%;
-    height: 200px !important;
+    height: 220px !important;
+    margin-bottom:20px !important;
 
     .chart {
-      width: 100%;
-      height: 100%;
+      width: 95%;
+      padding-left:5%;
+      height: 90%;
       font-size: 14px;
       line-height: 1.2em;
     }
@@ -733,11 +734,15 @@ body {background:none}
 
   .wodnodata {
     background:transparent url(image_path('img-workout-nodata.png')) no-repeat 40px 20px;
+    width:227px;
     height:160px;
+    background-size: 187px 123px;
 
   }
   .goalsnodata{background:transparent url(image_path('img-goals-nodata.png')) no-repeat 40px 20px;
+    width:227px;
     height:160px;
+    background-size: 187px 123px;
 
   }
 
@@ -794,7 +799,7 @@ body {background:none}
       p {float:left; width:30%; font-size:14px;
         font-family:$standardfont; color:$mineshaft}
       .profile-data {float:left; width:60%}
-      input[type=text], input[type=number], input[type=date]{
+      input[type=text], input[type=number], input[type=date], select{
         border: 0px solid #e7e7e7;
         height: 50px;
         font-family:$standardfont;
@@ -898,8 +903,12 @@ body {background:none}
   @media(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
     .sprite-sf { background:transparent url(image_path('sprite-superfit_2x.png')) no-repeat 0 0; }
     .page-header{ background:transparent url(image_path('tile-pg-header_2x.png')) repeat-x 0 0 }
-    .step1 {background: transparent url(image_path('intro-step1_2x.png')) no-repeat center center; }
-    .step2 {background: transparent url(image_path('intro-step2_2x.png')) no-repeat center center; }
+    .orientation .step1 {background: transparent url(image_path('intro-step1_2x.png')) no-repeat center center; }
+    .orientation .step2 {background: transparent url(image_path('intro-step2_2x.png')) no-repeat center center; }
+  // DASHBOARD
+
+    .wodnodata { background:transparent url(image_path('img-workout-nodata_2x.png')) no-repeat 40px 20px;}
+    .goalsnodata{background:transparent url(image_path('img-goals-nodata_2x.png')) no-repeat 40px 20px; }
   }
 
 

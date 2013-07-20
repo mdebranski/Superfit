@@ -14,7 +14,9 @@
     %ul
       - if @goals.length == 0
         - if @type == 'in_progress'
-          %li No goals in progress
+          %li
+            %a.add-new{href: "#edit-goal"}
+              %p.goalsnodata
         - else
           %li No goals completed yet
 
