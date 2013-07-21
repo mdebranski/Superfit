@@ -27,6 +27,9 @@ class Superfit.ReviewWod extends Spine.Controller
     if entry.wod_id?
       @pastEntries = WodEntry.history(@wod)
 
+      if entry.type
+        @pastEntries = @pastEntries.filter (pastEntry) -> entry.type == pastEntry.type
+
     @render(wod: @wod, entry: @entry, pastEntries: @pastEntries, completedGoal: @completedGoal, showHistory: true)
 
     @completedGoal = null
