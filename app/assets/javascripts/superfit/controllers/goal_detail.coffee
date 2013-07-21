@@ -23,7 +23,7 @@ class Superfit.GoalDetail extends Spine.Controller
     @goal = goal
     @pastEntries = @goal.entries()
 
-    @render(wod: @wod, goal: @goal, pastEntries: @pastEntries)
+    @render(wod: @wod, goal: @goal, pastEntries: @pastEntries, showHistory: true)
     Superfit.trigger 'timeago'
     Superfit.Chart.goalChart(@chart, @goal.history)
 

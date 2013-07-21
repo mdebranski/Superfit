@@ -1,19 +1,20 @@
-.content-main
-  .secondary
-    .title
-      %h3 History
-    %ul.history
-      %li.chart-container
-        .chart
-      - for history in @pastEntries
-        -#%li
-        -#  %a{href: "#review-wod", 'data-id': history.id}
-        -#    .label
-        -#      %p= moment(history.date).format('MMM D, YYYY')
-        -#      %p= history.scoreString()
-        %li
-          %a{href: "#", 'data-id': history.id}
-          .label
-            %p= moment(history.date).format('MMM D, YYYY')
-            %p= history.scoreString()
+- if @showHistory
+  .content-main
+    .secondary
+      .title
+        %h3 History
+      %ul.history
+        %li.chart-container
+          .chart
+        - for history in @pastEntries
+          -#%li
+          -#  %a{href: "#review-wod", 'data-id': history.id}
+          -#    .label
+          -#      %p= moment(history.date).format('MMM D, YYYY')
+          -#      %p= history.scoreString()
+          %li
+            %a{href: "#", 'data-id': history.id}
+            .label
+              %p= moment(history.date).format('MMM D, YYYY')
+              %p= history.scoreString()
 
