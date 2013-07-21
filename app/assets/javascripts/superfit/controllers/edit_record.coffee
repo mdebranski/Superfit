@@ -2,7 +2,7 @@ class Superfit.EditRecord extends Spine.Controller
 
   elements:
     'form': 'form'
-    '.score-label': 'scoreLabel'
+    '.score-container .sub-header': 'scoreLabel'
 
   events:
     'tap .filter-navigation a': 'navigate'

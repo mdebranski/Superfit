@@ -10,7 +10,7 @@ class Superfit.EditGoal extends Superfit.SearchWods
     '.no-matches': 'noMatches'
     'input.search-text': 'searchEl'
     'form': 'form'
-    '.score-label': 'scoreLabel'
+    '.score-container .sub-header': 'scoreLabel'
 
   events:
     'keyup input.search-text': 'search'
