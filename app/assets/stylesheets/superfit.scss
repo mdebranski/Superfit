@@ -320,6 +320,8 @@ body {background:none}
     background: #1f1f1f;
     opacity: .95;
     padding-bottom: 4px;
+    border-bottom: 1px solid #111111;
+    @include box-shadow (rgba(0, 0, 0, 0.70) 0 1px 6px);
   }
   #navigation.active {
     @include translate3d(0, 205px, 0);
@@ -717,16 +719,17 @@ body {background:none}
 
 
   .chart-container {
-    width: 100%;
+    width: 98%;
     height: 220px !important;
-    margin-bottom:20px !important;
+    border-bottom: 0 !important;
 
     .chart {
-      width: 95%;
-      padding-left:5%;
+      width: 100%;
+      padding-left:2%;
       height: 90%;
       font-size: 14px;
       line-height: 1.2em;
+      border-bottom:1px solid #bfd2e1 !important;
     }
   }
 
@@ -746,6 +749,12 @@ body {background:none}
 
   }
 
+  .chart-container + goal {
+
+     .goal-label {margin-top:0}
+     .goal-progress  {margin-top:0}
+  }
+
   // OVERLAY
 
   .overlay {
@@ -753,6 +762,10 @@ body {background:none}
 
     .main {background: white; width:80%; padding: 27px 10px}
   }
+
+  // CREATE GOAL
+
+  .goalstart {text-align: center; margin:9px auto; padding-top:18px; width:75%; font-size: 16px}
 
   //PROFILE
 

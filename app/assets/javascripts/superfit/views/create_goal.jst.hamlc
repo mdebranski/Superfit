@@ -7,7 +7,7 @@
     - else
       %h1 Create Goal
 
-%p Start by selecting a Movement or Benchmark you want to measure.
+%p.goalstart Start by selecting a Movement, Workout or Benchmark you want to measure.
 
 .search-block
   %form

@@ -16,6 +16,7 @@
       width:96%;
       -webkit-appearance:none;
       border: 1px solid $mercury;
+      font-family: $standardfont;
 
       &.form-error {
         background:#ffddd9;
@@ -66,6 +67,7 @@
       background-position: right;
       position:relative;
       top:-1px;
+      font-family: $standardfont;
 
     }
     input[type=search]{
@@ -113,7 +115,8 @@
     input[type=radio].right + label  {@include border-radius($radiusright);}
 
     input[type=radio]:checked + label, input[type=checkbox]:checked + label{
-      background-color: $seashell;
+      background-color: $mountmain-meadow;
+      color:white;
       outline: 0;
     }
 
