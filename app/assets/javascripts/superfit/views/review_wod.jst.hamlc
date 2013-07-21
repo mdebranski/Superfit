@@ -25,4 +25,5 @@
 
 .footer
 
-!= JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
+- if @showHistory
+  != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)

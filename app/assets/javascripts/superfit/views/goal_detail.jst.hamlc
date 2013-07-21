@@ -13,7 +13,8 @@
             %span.score-level= @goal.type
             %p.score-details= @goal.scoreString(true)
 
-  != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
+  - if @showHistory
+    != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
 
   .content-main
     .secondary

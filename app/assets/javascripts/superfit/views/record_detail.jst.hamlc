@@ -29,7 +29,8 @@
                 %p.score-details Current Personal Record
 
 
-    != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries, showHistory: @pastEntries.length > 0)
+    - if @showHistory
+      != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries, showHistory: @pastEntries.length > 0)
 
     .footer
       %a.button.bottom.fade{href: "#records"} Back to All Records
