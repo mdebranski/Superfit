@@ -50,15 +50,15 @@ class Superfit.Records extends Spine.Controller
   recordClicked: (e) ->
     e.preventDefault()
     wod_id = $(e.target).closest('a').data('id')
-    Wod.trigger('goToRecord', wod_id)
+    Wod.trigger('goToRecord', wod_id, 1, 'slideleft')
 
-  goToRecord: (wod_id, repMax=1) ->
+  goToRecord: (wod_id, repMax=1, transition='fade') ->
     wod = Wod.find(wod_id)
     hasRecord = if wod.strength() then wod.personal_record?["max_#{repMax}"]? else wod.personal_record?
 
     if hasRecord
       Wod.trigger 'recordDetail', wod, repMax
-      jQT.goTo('#record-detail', 'fade')
+      jQT.goTo('#record-detail', transition)
     else
       Wod.trigger 'editRecord', wod, repMax
-      jQT.goTo('#edit-record', 'fade')
+      jQT.goTo('#edit-record', transition)
