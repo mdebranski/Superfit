@@ -722,6 +722,9 @@ body {background:none}
     width: 98%;
     height: 220px !important;
     border-bottom: 0 !important;
+    margin: 0 auto;
+    margin-bottom: 10px !important;
+    text-align: center;
 
     .chart {
       width: 100%;
@@ -729,7 +732,6 @@ body {background:none}
       height: 90%;
       font-size: 14px;
       line-height: 1.2em;
-      border-bottom:1px solid #bfd2e1 !important;
     }
   }
 
@@ -749,10 +751,9 @@ body {background:none}
 
   }
 
-  .chart-container + goal {
+  .goal.home {
 
-     .goal-label {margin-top:0}
-     .goal-progress  {margin-top:0}
+      border-top:1px solid #bfd2e1 !important;
   }
 
   // OVERLAY

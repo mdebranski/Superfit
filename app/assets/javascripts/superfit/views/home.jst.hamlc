@@ -49,7 +49,7 @@
       - if @goal
         %li.chart-container
           .chart
-        %li.goal
+        %li.goal.home
           %a{href: "#goal-detail", data-id: @goal.id}
             .label
               %p.goal-label= @goal.name()
