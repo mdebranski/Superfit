@@ -23,10 +23,11 @@ class Superfit.Home extends Spine.Controller
     @goal = Goal.lastUpdated()
     super(currentDate: Superfit.currentDate, entries: entries, goal: @goal, today: @today())
 
-    if @goal.history and @goal.history.length > 1
-      Superfit.Chart.goalChart(@chart, @goal.history)
-    else
-      @chartContainer.replaceWith(Superfit.NO_CHART_DATA)
+    if @goal?
+      if @goal.history and @goal.history.length > 1
+        Superfit.Chart.goalChart(@chart, @goal.history)
+      else
+        @chartContainer.replaceWith(Superfit.NO_CHART_DATA)
 
   today: ->
     moment().startOf('day').toDate()
