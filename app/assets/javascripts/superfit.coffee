@@ -49,7 +49,8 @@ class Superfit extends Spine.Controller
     '.page#edit-profile-gym': 'editProfileGym'
     '.page#profile': 'profile'
 
-
+  events:
+    'pageAnimationStart .page': 'onPageTransition'
 
   constructor: ->
     super
@@ -80,6 +81,34 @@ class Superfit extends Spine.Controller
 
     _.defer -> $.makeItRetina('retinaBackgrounds': true);
     _.defer -> jQT.goTo('#get-started-step1', jQT.settings.defaultTransition) unless user
+
+    $(document).on 'deviceready', @loadAnalytics
+
+  loadAnalytics: =>
+    @gaPlugin = window.plugins?.gaPlugin
+
+    if gaPlugin?
+      @gaPlugin.init(@gaSuccess, @gaError, "UA-40739445-2", 10)
+
+  gaSuccess: =>
+    alert "Google Analytics initialized"
+    @gaPlugin.trackPage @trackPageSuccess, @trackPageError, "index.html"
+
+  gaError: (msg) =>
+    alert "Google Analytics failed to load: #{msg}"
+
+  onPageTransition: (e, data) =>
+    if data.direction == 'in'
+      pageId = $(e.target).attr('id')
+      @log "Tracking page: #{pageId}"
+      if @gaPlugin?
+        @gaPlugin.trackPage @trackPageSuccess, @trackPageError, pageId
+
+  trackPageSuccess: =>
+    @log "Track page success"
+
+  trackPageError: (msg) =>
+    @log "Track page error: #{msg}"
 
 window.Superfit = Superfit
 
