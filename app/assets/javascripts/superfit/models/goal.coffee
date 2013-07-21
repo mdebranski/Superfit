@@ -28,7 +28,13 @@ class Goal extends Spine.Model
     if @total() == 0
       100
     else if @last_entry_id
-      Math.floor(_.min [(@progress() / @total() * 100), 100])
+      percent = Math.floor(@progress() / @total() * 100)
+      if percent > 100
+        100
+      else if percent < 0
+        0
+      else
+        percent
     else
       0
 
