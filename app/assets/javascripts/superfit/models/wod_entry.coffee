@@ -27,7 +27,7 @@ class WodEntry extends Spine.Model
     _.select @all(), (entry) -> wod_id == entry.wod_id
 
   @history: (wod) ->
-    _.sortBy WodEntry.byWodId(wod.id), (entry) -> -1 * entry.created_date
+    _.sortBy WodEntry.byWodId(wod.id), (entry) -> -1 * entry.date
 
   wod: ->
     Wod.find(@wod_id)

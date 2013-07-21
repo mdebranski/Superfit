@@ -3,6 +3,10 @@ class Superfit.RecordDetail extends Spine.Controller
   events:
     'tap .filter-navigation a': 'navigate'
 
+  elements:
+    '.chart': 'chart'
+    '.chart-container': 'chartContainer'
+
   constructor: ->
     super
     Wod.bind 'recordDetail', @update
@@ -23,7 +27,17 @@ class Superfit.RecordDetail extends Spine.Controller
       if @wod.type == 'Strength'
         @pastEntries = _.filter @pastEntries, (entry) => _.contains(entry.reps, @repMax)
 
-      @render(wod: @wod, pastEntries: @pastEntries, repMax: @repMax)
+      @render(wod: @wod, pastEntries: @pastEntries, repMax: @repMax, showHistory: @pastEntries.length > 0)
+
+      history = _.map @pastEntries, (entry) -> [entry.date, entry.value()]
+
+      if @wod.method == 'pass_fail'
+        @chart.hide()
+      else if history and history.length > 1
+        Superfit.Chart.wodChart(@chart, history, @wod.scoring_method)
+      else
+        @chartContainer.replaceWith(Superfit.NO_CHART_DATA)
+
 
 
   navigate: (e) ->
