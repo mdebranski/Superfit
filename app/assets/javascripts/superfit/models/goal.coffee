@@ -96,7 +96,7 @@ class Goal extends Spine.Model
     throw "Can't check goal match unless entry is for this wod" unless entry.wod_id == @wod_id
     switch @wod().scoring_method
       when 'rounds', 'weight', 'max_reps' then true
-      when 'for_time' then entry.type == @type
+      when 'for_time' then entry.type.toLowerCase() == @type.toLowerCase()
       when 'weight_reps' then _.find entry.reps, (reps) => reps == @reps
 
   isComplete: ->
