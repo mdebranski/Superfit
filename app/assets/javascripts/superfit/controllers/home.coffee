@@ -2,6 +2,7 @@ class Superfit.Home extends Spine.Controller
 
   elements:
     '.chart': 'chart'
+    '.chart-container': 'chartContainer'
 
   events:
     'tap .prev-day': 'prevDay'
@@ -21,7 +22,11 @@ class Superfit.Home extends Spine.Controller
     entries = WodEntry.byDate(Superfit.currentDate)
     @goal = Goal.lastUpdated()
     super(currentDate: Superfit.currentDate, entries: entries, goal: @goal, today: @today())
-    Superfit.Chart.goalChart(@chart, @goal?.history)
+
+    if @goal.history and @goal.history.length > 1
+      Superfit.Chart.goalChart(@chart, @goal.history)
+    else
+      @chartContainer.replaceWith(Superfit.NO_CHART_DATA)
 
   today: ->
     moment().startOf('day').toDate()

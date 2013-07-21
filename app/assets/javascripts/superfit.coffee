@@ -29,6 +29,8 @@
 class Superfit extends Spine.Controller
   @extend Spine.Events
 
+  @NO_CHART_DATA = "<li class='no-data'>Not enough data to display chart</li>"
+
   elements:
     '.page#get-started-step3': 'start'
     '.page#home': 'home'

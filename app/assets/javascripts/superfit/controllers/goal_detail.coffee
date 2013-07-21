@@ -2,6 +2,7 @@ class Superfit.GoalDetail extends Spine.Controller
 
   elements:
     '.chart': 'chart'
+    '.chart-container': 'chartContainer'
 
   events:
     'tap .delete': 'delete'
@@ -25,7 +26,11 @@ class Superfit.GoalDetail extends Spine.Controller
 
     @render(wod: @wod, goal: @goal, pastEntries: @pastEntries, showHistory: true)
     Superfit.trigger 'timeago'
-    Superfit.Chart.goalChart(@chart, @goal.history)
+
+    if @goal.history and @goal.history.length > 1
+      Superfit.Chart.goalChart(@chart, @goal.history)
+    else
+      @chartContainer.replaceWith(Superfit.NO_CHART_DATA)
 
   delete: ->
     @goal.destroy()
