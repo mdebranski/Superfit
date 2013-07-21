@@ -7,6 +7,7 @@ class Superfit.BrowseWods extends Superfit.SearchWods
     '.wods-browse': 'wodsBrowse'
     '.no-matches': 'noMatches'
     '.page-header h1': 'header'
+    'input.search-text': 'searchEl'
 
   events:
     'keyup input.search-text': 'search'

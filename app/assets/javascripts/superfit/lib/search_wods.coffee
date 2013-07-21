@@ -1,5 +1,13 @@
 class Superfit.SearchWods extends Spine.Controller
 
+  constructor: ->
+    super
+
+    @el.bind "pageAnimationEnd", (e, data) =>
+      if data.direction == 'out'
+        @searchEl.val('')
+        @clearSearch()
+
   search: (e, type=null) ->
     value = $(e.target).val()
 
@@ -20,6 +28,9 @@ class Superfit.SearchWods extends Spine.Controller
         @noMatches.fadeIn()
 
     else
-      @wodsSearch.hide()
-      @noMatches.hide()
-      @wodsBrowse.fadeIn()
+      @clearSearch()
+
+  clearSearch: ->
+    @wodsSearch.hide()
+    @noMatches.hide()
+    @wodsBrowse.fadeIn()
