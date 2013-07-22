@@ -115,8 +115,7 @@
     input[type=radio].right + label  {@include border-radius($radiusright);}
 
     input[type=radio]:checked + label, input[type=checkbox]:checked + label{
-      background-color: $mountmain-meadow;
-      color:white;
+      background-color: #d3e9f9;
       outline: 0;
     }
 

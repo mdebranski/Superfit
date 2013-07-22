@@ -752,8 +752,16 @@ body {background:none}
   }
 
   .goal.home {
-
       border-top:1px solid #bfd2e1 !important;
+  }
+  li.no-data {
+    border-bottom:0px solid #bfd2e1 !important;
+    background: #f1f1f1;
+    padding:10px 18px;
+    text-align: center;
+    width:80%;
+    margin:27px auto !important;
+    @include border-radius($radius)
   }
 
   // OVERLAY

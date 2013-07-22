@@ -47,6 +47,7 @@ class Superfit.Chart extends Spine.Module
         minTickSize: 1
         ticks: 4
         labelWidth:15
+        align: 'center'
       series:
         color: 'rgba(78, 163, 227, 0.95)'
         lines:
@@ -54,12 +55,14 @@ class Superfit.Chart extends Spine.Module
           lineWidth: 1
           fill: true
           fillColor: 'rgba(78, 163, 227, 0.15)'
+          align: 'center'
         points:
           show: true
           borderWidth: 1
         shadowSize:0
       grid:
-        borderWidth:0
+        borderWidth:1
+        borderColor: 'rgba(0, 0, 0, 0.1)'
         clickable: true
         color:  'rgba(0, 0, 0, 0.2)'
         labelMargin:20

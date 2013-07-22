@@ -50,7 +50,7 @@
         %li.chart-container
           .chart
         %li.goal.home
-          %a{href: "#goal-detail", data-id: @goal.id}
+          %a.slideleft{href: "#goal-detail", data-id: @goal.id}
             .label
               %p.goal-label= @goal.name()
                 %br/
@@ -61,5 +61,5 @@
             %p.awesome.icon-chevron-right.arrow
       - else
         %li
-          %a.add-new{href: "#edit-goal"}
+          %a.add-new.slideleft{href: "#edit-goal"}
             %p.goalsnodata
