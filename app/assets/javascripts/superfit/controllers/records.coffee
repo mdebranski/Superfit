@@ -10,7 +10,7 @@ class Superfit.Records extends Spine.Controller
     super
     @render()
 
-    Wod.bind 'newRecord', => @render()
+    Wod.bind 'refresh newRecord', => @render()
     Wod.bind 'goToRecord', @goToRecord
     WodEntry.bind 'create update', (entry) => @checkIfNewRecord(entry)
     WodEntry.bind 'destroy', (entry) => @entryDestroyed(entry)

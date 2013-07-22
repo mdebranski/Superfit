@@ -115,6 +115,7 @@ $ ->
 
         wods_version.version = latest_version
         wods_version.save()
+        Wod.trigger('refresh')
         console.log "#{Wod.all().length} WODs updated to version #{latest_version}"
 
   new Superfit(el: $('body'))
