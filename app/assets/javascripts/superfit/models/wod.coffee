@@ -76,7 +76,7 @@ class Wod extends Spine.Model
           max_1 = entry.repMax(1)
           max_3 = entry.repMax(3)
           max_5 = entry.repMax(5)
-          (max_1 and (!@personal_record or max_1 > @personal_record?.max_1)) || (max_3 and (!@personal_record or max_3 > @personal_record?.max_3)) || (max_5 and (!@personal_record or max_5 > @personal_record?.max_5))
+          (max_1 and (!@personal_record?.max_1 or max_1 > @personal_record?.max_1)) || (max_3 and (!@personal_record?.max_3 or max_3 > @personal_record?.max_3)) || (max_5 and (!@personal_record?.max_5 or max_5 > @personal_record?.max_5))
     else
       true
 

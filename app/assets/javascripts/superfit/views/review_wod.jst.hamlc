@@ -14,8 +14,9 @@
       .review-score
         .score= @entry.scoreString()
           %span.score-level= @entry.type
-        %div.score-tags
-          %span.pr Personal Record
+        - if @personalRecord
+          %div.score-tags
+            %span.pr Personal Record
         %p.score-details= @entry.details
         - if @entry.photo
           %img.custom-wod-img{src: @entry.photo}
