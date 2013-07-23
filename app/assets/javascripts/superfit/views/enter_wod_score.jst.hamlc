@@ -63,6 +63,7 @@
                   .post-capture
                     %input.custom-wod-photo{name: "photo", type: "hidden", value: @entry?.photo}
                     %img.custom-wod-img{src: @entry?.photo}
+                .post-capture
                   %a.delete-photo{href: '#'} <i class="remove-set icon-remove-sign"></i> Delete Photo
 
               #text-entry

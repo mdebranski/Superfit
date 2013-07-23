@@ -2,6 +2,7 @@
   .orientation
     %form
       .main
+        %br
         %h1 A few Questions!
           %input{type: "hidden", name: "gym_id"}
 

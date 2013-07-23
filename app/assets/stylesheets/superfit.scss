@@ -904,7 +904,11 @@ body {background:none}
     }
     #photo-capture {
 
-      .post-capture {height: 480px; margin: 20px;}
+      .post-capture {
+        margin: 2px;
+        text-align: center;
+        .delete-photo {color:$tallpoppy;  margin:9px 0; font-size:11px;}
+      }
     }
     .icon-camera-alt {font-size: 54px; opacity: .75}
     .take-photo {
@@ -919,7 +923,7 @@ body {background:none}
        border:1px solid $mercury;
        border-top:0;
 
-      .custom-wod-img {width:280px}
+      .custom-wod-img {width:280px; height: 420px; overflow: hidden}
       .initial-capture {height: 90px;}
      }
   }
