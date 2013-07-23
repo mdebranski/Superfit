@@ -87,7 +87,7 @@ class Superfit extends Spine.Controller
   loadAnalytics: =>
     @gaPlugin = window.plugins?.gaPlugin
 
-    if gaPlugin?
+    if @gaPlugin?
       @gaPlugin.init(@gaSuccess, @gaError, "UA-40739445-2", 10)
 
   gaSuccess: =>
@@ -95,6 +95,7 @@ class Superfit extends Spine.Controller
     @gaPlugin.trackPage @trackPageSuccess, @trackPageError, "index.html"
 
   gaError: (msg) =>
+    @log "Google Analytics failed to load: #{msg}"
     alert "Google Analytics failed to load: #{msg}"
 
   onPageTransition: (e, data) =>
@@ -102,13 +103,16 @@ class Superfit extends Spine.Controller
       pageId = $(e.target).attr('id')
       @log "Tracking page: #{pageId}"
       if @gaPlugin?
+        alert("Tracking page: #{pageId}")
         @gaPlugin.trackPage @trackPageSuccess, @trackPageError, pageId
 
   trackPageSuccess: =>
     @log "Track page success"
+    alert "Page tracked successfully"
 
   trackPageError: (msg) =>
     @log "Track page error: #{msg}"
+    alert "Error tracking page: #{msg}"
 
 window.Superfit = Superfit
 
