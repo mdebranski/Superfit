@@ -28,10 +28,10 @@
           %option{value: 'female', selected: @user.gender == 'female'} Female
           %option{value: 'male', selected: @user.gender == 'male'} Male
       %li.radio
-        %p Newsletter Opt-In
+        %p Newsletter
         %select.profile-data{name: 'newsletter'}
-          %option{value: 'yes', selected: @user.newsletter == 'yes'} Yes
-          %option{value: 'no', selected: @user.newsletter == 'no'} No
+          %option{value: 'yes', selected: @user.newsletter == 'yes'} Yes,  I want the Newsletter.
+          %option{value: 'no', selected: @user.newsletter == 'no'} No Thanks
       -#%li
       -#  %a{href: "#edit-profile-gym"}
       -#    %p My Gym

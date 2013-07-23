@@ -16,6 +16,10 @@
       %a.dissolve{href: "#edit-profile"}
         %p.icon.me.sprite-sf
         Profile
+    %div
+      %a.dissolve{href: "#about"}
+        %p.icon.about.sprite-sf
+        About
 
 
 

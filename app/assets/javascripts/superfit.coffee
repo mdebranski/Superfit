@@ -48,6 +48,7 @@ class Superfit extends Spine.Controller
     '.page#edit-profile': 'editProfile'
     '.page#edit-profile-gym': 'editProfileGym'
     '.page#profile': 'profile'
+    '.page#about': 'about'
 
   events:
     'pageAnimationStart .page': 'onPageTransition'
@@ -75,6 +76,7 @@ class Superfit extends Spine.Controller
     new Superfit.EditProfile(el: @editProfile)
     new Superfit.EditProfileGym(el: @editProfileGym)
     new Superfit.Profile(el: @profile)
+    new Superfit.About(el: @about)
 
     $(@el).timeago()
     Superfit.bind 'timeago', => $(@el).timeago('refresh')

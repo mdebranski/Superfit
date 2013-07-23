@@ -1,0 +1,19 @@
+.page-header
+  .toolbar
+    .sprite-sf.pulldown
+      Navigation Pulldown
+    %h1 About
+
+
+
+.about
+  %h3 About Superfit
+
+  %p Superfit was designed to provide the everyday athlete with a better tool for tracking progress and workout activity.
+
+  %p
+    %a{href: "http://www.superfitapp.com", target: "_blank"} Learn more about Superfit.
+
+  %p  Not affiliated with CrossFit, Inc.
+
+

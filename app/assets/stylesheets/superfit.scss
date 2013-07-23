@@ -311,11 +311,11 @@ body {background:none}
 
   #navigation {
     position: absolute;
-    top: -170px;
+    top: -210px;
     overflow: hidden;
     z-index: 998;
     width: 100%;
-    @include transition(all 0.5s ease);
+    @include transition(all 0.6s ease);
     //background:transparent url(image_path('tile-ticks.png')) repeat 0 0;
     background: #1f1f1f;
     opacity: .95;
@@ -324,7 +324,7 @@ body {background:none}
     @include box-shadow (rgba(0, 0, 0, 0.70) 0 1px 6px);
   }
   #navigation.active {
-    @include translate3d(0, 205px, 0);
+    @include translate3d(0, 240px, 0);
   }
 
   .navigation {
@@ -700,6 +700,7 @@ body {background:none}
     &.goals {background-position: -27px -279px; height:32px  }
     &.records {background-position: -27px -317px;  height:32px }
     &.me {background-position: -27px -352px;  height:33px }
+    &.about {background-position: -27px -394px;  height:33px }
 
   }
 
@@ -755,6 +756,12 @@ body {background:none}
       border-top:1px solid #bfd2e1 !important;
     }
     .chart-container {border-bottom:0 !important}
+  }
+
+  // ABOUT
+  .about {
+    width:80%;
+    margin: auto;
   }
 
   // UNIVERSAL No Data
