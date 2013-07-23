@@ -87,37 +87,27 @@ class Superfit extends Spine.Controller
     document.addEventListener "deviceready", @loadAnalytics, false
 
   loadAnalytics: =>
-    alert "Device ready - loading analytics..."
-    @gaPlugin = window.plugins?.gaPlugin
-
-    if @gaPlugin?
-      alert "Initing GA Plugin"
+    if @gaPlugin = window.plugins?.gaPlugin
       @gaPlugin.init(@gaSuccess, @gaError, "UA-40739445-2", 10)
-    else
-      alert "NO GA PLUGIN FOUND"
 
   gaSuccess: =>
-    alert "Google Analytics initialized"
     @updateUserVariables()
     User.bind 'create update', @updateUserVariables
-
     @gaPlugin.trackPage @trackPageSuccess, @trackPageError, "index.html"
 
   gaError: (msg) =>
-    @log "Google Analytics failed to load: #{msg}"
-    alert "Google Analytics failed to load: #{msg}"
+    @log "Analytics failed to load: #{msg}"
+    alert "Analytics failed to load: #{msg}"
 
   onPageTransition: (e, data) =>
     if data.direction == 'in'
       pageId = $(e.target).attr('id')
       @log "Tracking page: #{pageId}"
       if @gaPlugin?
-        alert("Tracking page: #{pageId}")
         @gaPlugin.trackPage @trackPageSuccess, @trackPageError, pageId
 
   trackPageSuccess: =>
     @log "Track page success"
-    alert "Page tracked successfully"
 
   trackPageError: (msg) =>
     @log "Track page error: #{msg}"
@@ -125,7 +115,6 @@ class Superfit extends Spine.Controller
 
   updateUserVariables: =>
     if user = User.first()
-      alert "Setting user variables"
       @gaPlugin.setVariable(@setVariableSuccess, @setVariableError, 1, user.email)
       @gaPlugin.setVariable(@setVariableSuccess, @setVariableError, 2, user.newsletter)
       @gaPlugin.setVariable(@setVariableSuccess, @setVariableError, 3, user.gender)
