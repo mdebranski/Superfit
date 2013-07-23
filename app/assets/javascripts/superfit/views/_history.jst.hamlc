@@ -5,15 +5,16 @@
     %ul.history
       %li.chart-container
         .chart
-      - for history in @pastEntries
-        -#%li
-        -#  %a{href: "#review-wod", 'data-id': history.id}
-        -#    .label
-        -#      %p= moment(history.date).format('MMM D, YYYY')
-        -#      %p= history.scoreString()
-        %li
-          %a{href: "#", 'data-id': history.id}
-          .label
-            %p= moment(history.date).format('MMM D, YYYY')
-            %p= history.scoreString()
+      - if @pastEntries
+        - for history in @pastEntries
+          -#%li
+          -#  %a{href: "#review-wod", 'data-id': history.id}
+          -#    .label
+          -#      %p= moment(history.date).format('MMM D, YYYY')
+          -#      %p= history.scoreString()
+          %li
+            %a{href: "#", 'data-id': history.id}
+            .label
+              %p= moment(history.date).format('MMM D, YYYY')
+              %p= history.scoreString()
 
