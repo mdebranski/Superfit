@@ -35,13 +35,14 @@ class Superfit.ReviewWod extends Spine.Controller
 
     @completedGoal = null
 
-    history = @wod.history()
-    if @wod.method == 'pass_fail'
-      @chart.hide()
-    else if history and history.length > 1
-      Superfit.Chart.wodChart(@chart, history, @wod.scoring_method)
-    else
-      @chartContainer.replaceWith(Superfit.NO_CHART_DATA)
+    - if @wod
+      history = @wod.history()
+      if @wod.method == 'pass_fail'
+        @chart.hide()
+      else if history and history.length > 1
+        Superfit.Chart.wodChart(@chart, history, @wod.scoring_method)
+      else
+        @chartContainer.replaceWith(Superfit.NO_CHART_DATA)
 
   deleteWod: ->
     @entry.destroy()
