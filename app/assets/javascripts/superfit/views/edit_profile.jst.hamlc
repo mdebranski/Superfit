@@ -27,6 +27,11 @@
         %select.profile-data{name: 'gender'}
           %option{value: 'female', selected: @user.gender == 'female'} Female
           %option{value: 'male', selected: @user.gender == 'male'} Male
+      %li.radio
+        %p Newsletter Opt-In
+        %select.profile-data{name: 'newsletter'}
+          %option{value: 'yes', selected: @user.newsletter == 'yes'} Yes
+          %option{value: 'no', selected: @user.newsletter == 'no'} No
       -#%li
       -#  %a{href: "#edit-profile-gym"}
       -#    %p My Gym

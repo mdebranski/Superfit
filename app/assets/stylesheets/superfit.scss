@@ -721,7 +721,6 @@ body {background:none}
   .chart-container {
     width: 98%;
     height: 220px !important;
-    border-bottom: 0 !important;
     margin: 0 auto;
     margin-bottom: 10px !important;
     text-align: center;
@@ -751,9 +750,14 @@ body {background:none}
 
   }
 
-  .goal.home {
+  .goals-home {
+    .goal {
       border-top:1px solid #bfd2e1 !important;
+    }
+    .chart-container {border-bottom:0 !important}
   }
+
+  // UNIVERSAL No Data
   li.no-data {
     border-bottom:0px solid #bfd2e1 !important;
     background: #f1f1f1;
@@ -764,17 +768,10 @@ body {background:none}
     @include border-radius($radius)
   }
 
-  // OVERLAY
-
-  .overlay {
-    background: rgba(0, 0, 0, 0.5);
-
-    .main {background: white; width:80%; padding: 27px 10px}
-  }
 
   // CREATE GOAL
 
-  .goalstart {text-align: center; margin:9px auto; padding-top:18px; width:75%; font-size: 16px}
+  .goal-notify {text-align: center; margin:9px auto; padding-top:18px; width:75%; font-size: 16px}
 
   //PROFILE
 
@@ -823,10 +820,11 @@ body {background:none}
       .profile-data {float:left; width:60%}
       input[type=text], input[type=number], input[type=date], select{
         border: 0px solid #e7e7e7;
-        height: 50px;
+        height: 54px;
         font-family:$standardfont;
         padding-left:0;
       }
+      select{position: relative; top:1px}
       input[type=date]{ padding-left: 5%;width:95%; @include border-radius(0); padding-top:1px; font-size:14px;}
       &.radio {
         p { margin:0 }

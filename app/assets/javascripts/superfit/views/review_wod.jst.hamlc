@@ -3,11 +3,11 @@
     %div
       %a.awesome.icon-chevron-left.goback{href: '#'}
     %h1= @entry.wodName()
+
 - if @completedGoal
-  .overlay
-    .main
-      %h1 High Fives!
-      %p You completed #{@completedGoal.name()}!
+  %p.goal-notify
+    Goal Completed:  #{@completedGoal.name()}!
+
 .content-main
   .content-block
     .yellow-block

@@ -7,7 +7,8 @@ class User extends Spine.Model
              'gym' ,
              'zipcode',
              'birthdate',
-             'email'
+             'email',
+             'newsletter'
 
   @extend Spine.Model.Local
   @extend Spine.Events
