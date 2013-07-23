@@ -31,7 +31,7 @@ class Superfit.ReviewWod extends Spine.Controller
       if entry.type
         @pastEntries = @pastEntries.filter (pastEntry) -> entry.type == pastEntry.type
 
-    personalRecord = @wod.personal_record? and @entry.id == @wod.personal_record.entry_id
+    personalRecord = @wod?.personal_record? and @entry.id == @wod.personal_record.entry_id
     @render(wod: @wod, entry: @entry, pastEntries: @pastEntries, completedGoal: @completedGoal, showHistory: @wod != null, personalRecord: personalRecord)
 
     @completedGoal = null
