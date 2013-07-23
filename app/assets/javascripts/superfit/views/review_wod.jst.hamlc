@@ -17,7 +17,8 @@
         %div.score-tags
           %span.pr Personal Record
         %p.score-details= @entry.details
-
+        - if @entry.photo
+          %img.custom-wod-img{src: @entry.photo}
     %a.button.bottom.lighter.slideleft{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
     %a.button.bottom.fade{href: "#home"} Jump To Dashboard
 
