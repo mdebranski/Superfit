@@ -151,15 +151,16 @@ class Superfit.EditWod extends Spine.Controller
   submit: =>
     data = @form.serializeObject()
 
+    method = if @wod then @wod.scoring_method else data.method
     attributes =
        wod_id: @wod and @wod.id
        name: data.name
-       score: @toInt(data.score)
+       score: if method == 'pass_fail' then data.score else @toInt(data.score)
        min: @toInt(data.min)
        sec: @toInt(data.sec)
        reps: @ensureArray @toInt(data.reps)
        weight: @ensureArray @toInt(data.weight)
-       method: if @wod then @wod.scoring_method else data.method
+       method: method
        type: data.type
        details: data.details
        created_date: new Date().valueOf()
