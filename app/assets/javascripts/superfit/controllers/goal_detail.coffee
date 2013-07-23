@@ -24,7 +24,7 @@ class Superfit.GoalDetail extends Spine.Controller
     @goal = goal
     @pastEntries = @goal.entries()
 
-    @render(wod: @wod, goal: @goal, pastEntries: @pastEntries, showHistory: true)
+    @render(wod: @wod, goal: @goal, startEntry: @goal.start_entry(), pastEntries: @pastEntries, showHistory: true)
     Superfit.trigger 'timeago'
 
     if @goal.history and @goal.history.length > 1

@@ -4,6 +4,12 @@
       %a.awesome.icon-chevron-left.goback{href: "#"}
     %h1= @goal.name()
 
+%p.goal-notify
+  - if @startEntry
+    Your starting score is #{@startEntry.scoreString()}
+  - else
+    You don't currently have an entry for this goal in the app - your first entry will be your starting score and from there your goal will begin to measure progress.
+
 .scroll
   .content-main
     .content-block

@@ -81,7 +81,7 @@ class Goal extends Spine.Model
 
   newEntry: (entry, start=false) =>
     if @isMatch(entry)
-      if start
+      unless @start_entry_id
         @start_entry_id = entry.id
         @start_score = @calcScore(entry)
 
