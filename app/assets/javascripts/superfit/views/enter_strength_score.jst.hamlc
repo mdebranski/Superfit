@@ -3,14 +3,15 @@
     %div
       %a.awesome.icon-chevron-left.goback{href: "#add-wod"}
     %h1= @wod.name
-.content-main
-  .content-block
-    %form
-      %input{type: 'hidden', name: 'wod_id', value: @wod.id}
-      - if @entry
-        %input{type: 'hidden', name: 'entry_id', value: @entry.id}
-      .sets
-      %textarea{name: 'details', placeholder: "Enter Workout Notes", cols: "30", rows: "5"}
-        = @entry?.details
-      %a.button.lighter.bottom.add-set{href: "#"} Add Another Set
-      %input.button.bluer.bottom{type: 'submit'} Save Workout
+.scroll
+  .content-main
+    .content-block
+      %form
+        %input{type: 'hidden', name: 'wod_id', value: @wod.id}
+        - if @entry
+          %input{type: 'hidden', name: 'entry_id', value: @entry.id}
+        .sets
+        %textarea{name: 'details', placeholder: "Enter Workout Notes", cols: "30", rows: "5"}
+          = @entry?.details
+        %a.button.lighter.bottom.add-set{href: "#"} Add Another Set
+        %input.button.bluer.bottom{type: 'submit'} Save Workout

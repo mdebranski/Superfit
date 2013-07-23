@@ -7,14 +7,20 @@
 
 
 .about
-  %h3 About Superfit
+  %h3 About Superfit  (v1.1)
 
   %p Superfit was designed to provide the everyday athlete with a better tool for tracking progress and workout activity.
+
+  %p
+    %a{href: "mailto:support@superfitapp.com", target: "_blank"} Need Help? Email: support@superfitapp.com
 
   %p
     %a{href: "http://www.superfitapp.com", target: "_blank"} Learn more about Superfit.
 
 
-  %p  Not affiliated with CrossFit, Inc.
+
+  %p
+
+    Not affiliated with CrossFit, Inc.
 
 

@@ -4,39 +4,40 @@
       %a.awesome.icon-chevron-left.goback{href: '#'}
     %h1 #{@wod.name} Goal
 
-- unless @wod.type == 'Strength'
+.scroll
+  - unless @wod.type == 'Strength'
+    .content-main
+      .content-block
+        .yellow-block
+          .score= @wod.name
+          %p.score-details=
+            - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
+              != Utils.simpleFormat(@wod.workout_male)
+            - if @user.gender == 'female'
+              != Utils.simpleFormat(@wod.workout_female)
+          %hr
+          %p.score-notes
+            =@wod.scoringMethod()
+            %br
+            =@wod.scoring_notes
+
   .content-main
     .content-block
-      .yellow-block
-        .score= @wod.name
-        %p.score-details=
-          - if @user.gender == 'male' or (@user.gender == 'female' and !@wod.workout_female)
-            != Utils.simpleFormat(@wod.workout_male)
-          - if @user.gender == 'female'
-            != Utils.simpleFormat(@wod.workout_female)
-        %hr
-        %p.score-notes
-          =@wod.scoringMethod()
-          %br
-          =@wod.scoring_notes
-
-.content-main
-  .content-block
-    %form
-      - if @wod
-        %input{type: 'hidden', name: 'wod_id', value: @wod.id}
-      - if @goal
-        %input{type: 'hidden', name: 'goal_id', value: @goal.id}
-      .enter-score
-        %div.score-container
-          != JST['superfit/views/_score'](entry: @goal, repMax: @repMax)
-        - unless @wod.typeSlug() == 'strength'
-          .score-type
-            %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @goal then @goal?.type == 'rx' else 'checked'}
-              %label.radio{for: 'rx-type'} RX
-            %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @goal?.type == 'scaled'}
-              %label.radio{for: 'scaled-type'} Scaled
-      %input.button.bottom.bluer.fade{type: 'submit'} Save My Goal!
+      %form
+        - if @wod
+          %input{type: 'hidden', name: 'wod_id', value: @wod.id}
+        - if @goal
+          %input{type: 'hidden', name: 'goal_id', value: @goal.id}
+        .enter-score
+          %div.score-container
+            != JST['superfit/views/_score'](entry: @goal, repMax: @repMax)
+          - unless @wod.typeSlug() == 'strength'
+            .score-type
+              %input#rx-type{type: "radio", name: "type", value: "rx", checked: if @goal then @goal?.type == 'rx' else 'checked'}
+                %label.radio{for: 'rx-type'} RX
+              %input#scaled-type{type: "radio", name: "type", value: "scaled", checked: @goal?.type == 'scaled'}
+                %label.radio{for: 'scaled-type'} Scaled
+        %input.button.bottom.bluer.fade{type: 'submit'} Save My Goal!
 
 
 

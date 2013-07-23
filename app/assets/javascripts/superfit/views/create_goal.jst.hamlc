@@ -7,32 +7,33 @@
     - else
       %h1 Create Goal
 
-%p.goal-notify Start by selecting a Movement, Workout or Benchmark you want to measure.
+.scroll
+  %p.goal-notify Start by selecting a Movement, Workout or Benchmark you want to measure.
 
-.search-block
-  %form
-    %input.search-text{type: "text", name: "search-text", placeholder: "Search All"}
-.content-main
-  %h3.no-matches No WODs found for this search.
-  %ul.wods-search
+  .search-block
+    %form
+      %input.search-text{type: "text", name: "search-text", placeholder: "Search All"}
+  .content-main
+    %h3.no-matches No WODs found for this search.
+    %ul.wods-search
 
-  %ul.wods-browse
-    - unless @wods_type
-      %li{'data-type': 'benchmark'}
-        %a.browse{href: "#edit-goal"}
-          .label
-            .icon.sprite-sf.benchmark
-            %p Benchmark
-          %p.awesome.icon-chevron-right.arrow
-      %li{'data-type': 'strength'}
-        %a.browse{href: "#edit-goal"}
-          .label
-            .icon.sprite-sf.strength
-            %p Strength
-          %p.awesome.icon-chevron-right.arrow
-      %li{'data-type': 'other'}
-        %a.browse{href: "#edit-goal"}
-          .label
-            .icon.sprite-sf.other
-            %p Other
-          %p.awesome.icon-chevron-right.arrow
+    %ul.wods-browse
+      - unless @wods_type
+        %li{'data-type': 'benchmark'}
+          %a.browse{href: "#edit-goal"}
+            .label
+              .icon.sprite-sf.benchmark
+              %p Benchmark
+            %p.awesome.icon-chevron-right.arrow
+        %li{'data-type': 'strength'}
+          %a.browse{href: "#edit-goal"}
+            .label
+              .icon.sprite-sf.strength
+              %p Strength
+            %p.awesome.icon-chevron-right.arrow
+        %li{'data-type': 'other'}
+          %a.browse{href: "#edit-goal"}
+            .label
+              .icon.sprite-sf.other
+              %p Other
+            %p.awesome.icon-chevron-right.arrow

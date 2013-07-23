@@ -325,12 +325,12 @@ Kettlebell swings, 1.5 pood",For Time,50-40-30-20-10 (Reps Per Round),"U.S. Army
 68,Benchmark,Hero,Mr. Joshua,,"Run 400 meters
 30 Glute-ham sit-ups
 250 pound Deadlift, 15 reps",For Time,5 Rounds,"SO1 Joshua Thomas Harris, 36, drowned during combat operations, August 30th 2008 in Afghanistan. He is survived by his parents Dr. Sam and Evelyn Harris, his brother Ranchor and twin sister Kiki."
-69,Benchmark,Hero,Murphy,"""1 mile run
+69,Benchmark,Hero,Murph,"1 mile run
 100 pullups
 200 pushups
 300 squats
 1 mile run
-""","1 mile run
+","1 mile run
 100 pullups
 200 pushups
 300 squats
@@ -701,6 +701,7 @@ Box Jump 30",For Time,21-15-9 ,
 196,Other,,Turkish Get-Up,,,Max Reps,,
 197,Strength,,Clean - 2 Position ,,,Weight / Reps / Rounds,,
 198,Strength,,Hang Snatch,,,Weight / Reps / Rounds,,
-199,Other,Endurance,400m,400m,400m,For Time,,
-200,Other,Endurance,800m,800m,800m,For Time,,
-200,Other,Endurance,200m,200m,200m,For Time,,
+199,Other,Endurance,400m Run,400m,400m,For Time,,
+200,Other,Endurance,800m Run,800m,800m,For Time,,
+201,Other,Endurance,200m Run,200m,200m,For Time,,
+202,Strength,,Sled Push/Pull,,,Weight / Reps / Rounds,,

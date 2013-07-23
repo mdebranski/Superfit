@@ -4,28 +4,29 @@
       %a.awesome.icon-chevron-left.goback{href: '#'}
     %h1= @entry.wodName()
 
-- if @completedGoal
-  %p.goal-notify
-    Goal Completed:  #{@completedGoal.name()}!
+.scroll
+  - if @completedGoal
+    %p.goal-notify
+      Goal Completed:  #{@completedGoal.name()}!
 
-.content-main
-  .content-block
-    .yellow-block
-      .review-score
-        .score= @entry.scoreString()
-          %span.score-level= @entry.type
-        - if @personalRecord
-          %div.score-tags
-            %span.pr Personal Record
-        %p.score-details= @entry.details
-        - if @entry.photo
-          %img.custom-wod-img{src: @entry.photo}
-    %a.button.bottom.lighter.slideleft{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
-    %a.button.bottom.fade{href: "#home"} Jump To Dashboard
+  .content-main
+    .content-block
+      .yellow-block
+        .review-score
+          .score= @entry.scoreString()
+            %span.score-level= @entry.type
+          - if @personalRecord
+            %div.score-tags
+              %span.pr Personal Record
+          %p.score-details= @entry.details
+          - if @entry.photo
+            %img.custom-wod-img{src: @entry.photo}
+      %a.button.bottom.lighter.slideleft{"data-id": @entry.id, href: "#edit-wod"} Edit Workout
+      %a.button.bottom.fade{href: "#home"} Jump To Dashboard
 
-    %a.red.pop.delete{"data-id": @entry.id, href: "#home"} <i class="remove-set icon-remove-sign"></i> Delete This Workout
+      %a.red.pop.delete{"data-id": @entry.id, href: "#home"} <i class="remove-set icon-remove-sign"></i> Delete This Workout
 
-.footer
+  .footer
 
-- if @showHistory
-  != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
+  - if @showHistory
+    != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)

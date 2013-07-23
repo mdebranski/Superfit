@@ -1,10 +1,10 @@
 #get-started-step2.page
   .orientation
     .main
-      .step2
       %h1 Work = Progress
-      %p Goals and PRs are integral to measuring progress. Superfit maintains those in the background with the workouts you enter via the dashboard.
-
+      %p Goals and PRs are integral to measuring progress. Superfit maintains those in the background with the workouts you enter via the dashboard. Further, we provide visual tracking for a quick high level view of your progress.
+      %br
+      .step2
 
     .orientation-footer
       %a.slide.button.bottom{href: "#get-started-step3"}  Next : Set-Up is Simple

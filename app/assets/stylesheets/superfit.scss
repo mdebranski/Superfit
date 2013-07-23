@@ -479,8 +479,8 @@ body {background:none}
     text-align: center;
     font-size: 40px;
     color:$mineshaft;
-    font-weight: bold;
 
+    .goal-score {font-size:32px;}
 
     .score-level {
       font-size:12px;
@@ -627,7 +627,6 @@ body {background:none}
       input{width:30% !important; float:left; margin-right:10%}
       select{width:50% !important; float:left}
     }
-
 
 
   }
@@ -946,15 +945,14 @@ body {background:none}
 
 #flotTip {
   padding: 3px 5px;
-  background-color: #000;
+  background-color: $pictonblue-lt !important;
   z-index: 100;
-  color: #fff;
+  color:  #ffffff;
   box-shadow: 0 0 10px #555;
-  opacity: .7;
+  opacity: .9;
   filter: alpha(opacity=70);
-  border: 2px solid #fff;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
 

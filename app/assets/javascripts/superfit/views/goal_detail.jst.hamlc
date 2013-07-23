@@ -4,20 +4,25 @@
       %a.awesome.icon-chevron-left.goback{href: "#"}
     %h1= @goal.name()
 
-%p.goal-notify
-  - if @startEntry
-    Your starting score is #{@startEntry.scoreString()}
-  - else
-    You don't currently have an entry for this goal in the app - your first entry will be your starting score and from there your goal will begin to measure progress.
-
 .scroll
   .content-main
     .content-block
       .yellow-block
         .review-score
-          .score= "#{@goal.percentComplete()}% complete"
+          .score.goal-score= "#{@goal.percentComplete()}% complete"
             %span.score-level= @goal.type
             %p.score-details= @goal.scoreString(true)
+
+          - if @startEntry
+            %p.score-details
+              %br
+              Your goal starting score is #{@startEntry.scoreString()}
+          - else
+            %p.score-details
+              %br
+              You don't currently have an entry for this movement or workout in the app - your first entry will be your starting score and from there your goal will begin to measure progress.
+
+      %a.button.bottom.dissolve{href: "#home"} Jump to Dashboard
 
   - if @showHistory
     != JST['superfit/views/_history'](wod: @wod, pastEntries: @pastEntries)
@@ -57,7 +62,6 @@
                 %time.timeago{datetime: moment(@goal.last_update).format()}
 
   .footer
-    %a.button.bottom.dissolve{href: "#goals"} Return to Goals
     %a.button.bottom.red.pop.delete{href: "#goals", data-id: @goal.id} Delete Goal
 
 
