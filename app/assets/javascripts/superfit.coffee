@@ -96,6 +96,9 @@ class Superfit extends Spine.Controller
     alert "Google Analytics initialized"
     @gaPlugin.trackPage @trackPageSuccess, @trackPageError, "index.html"
 
+    @updateUserVariables()
+    User.bind 'create update', @updateUserVariables
+
   gaError: (msg) =>
     @log "Google Analytics failed to load: #{msg}"
     alert "Google Analytics failed to load: #{msg}"
@@ -115,6 +118,20 @@ class Superfit extends Spine.Controller
   trackPageError: (msg) =>
     @log "Track page error: #{msg}"
     alert "Error tracking page: #{msg}"
+
+  updateUserVariables: =>
+    if user = User.first()
+      alert "Setting user variables"
+      @gaPlugin.setVariable(@setVariableSuccess, @setVariableError, "Email", user.email, 1)
+      @gaPlugin.setVariable(@setVariableSuccess, @setVariableError, "Newsletter", user.newsletter, 2)
+      @gaPlugin.setVariable(@setVariableSuccess, @setVariableError, "Gym", user.gym, 3)
+      @gaPlugin.setVariable(@setVariableSuccess, @setVariableError, "Gender", user.gender, 4)
+
+  setVariableSuccess: =>
+    # Do nothing
+
+  setVariableError: (msg) =>
+    alert "Error setting variable: #{msg}"
 
 window.Superfit = Superfit
 
