@@ -61,9 +61,10 @@
                     %br
                     %span Take a Photo
                   .post-capture
-                    %a.delete-photo{href: '#'} Delete Photo
                     %input.custom-wod-photo{name: "photo", type: "hidden", value: @entry?.photo}
                     %img.custom-wod-img{src: @entry?.photo}
+                  %a.delete-photo{href: '#'} <i class="remove-set icon-remove-sign"></i> Delete Photo
+
               #text-entry
                 %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
 

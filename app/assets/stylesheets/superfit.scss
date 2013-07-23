@@ -904,12 +904,7 @@ body {background:none}
     }
     #photo-capture {
 
-      &.initial {
-        .post-capture {display:none}
-      }
-      &.post {
-        .initial-capture {display:none}
-      }
+      .post-capture {height: 480px; margin: 20px;}
     }
     .icon-camera-alt {font-size: 54px; opacity: .75}
     .take-photo {
@@ -918,7 +913,6 @@ body {background:none}
        background: $seashell;
        width: 100%;
        display: block;
-       height: 90px;
        text-align: center;
        padding-top:18px;
        @include border-radius($radiusbottom);
@@ -926,6 +920,7 @@ body {background:none}
        border-top:0;
 
       .custom-wod-img {width:280px}
+      .initial-capture {height: 90px;}
      }
   }
 
