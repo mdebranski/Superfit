@@ -4,6 +4,10 @@ class Superfit.EditWod extends Spine.Controller
     'form': 'form'
     '.sets': 'sets'
     '.customwod-tabs': 'tabs'
+    '.custom-wod-photo': 'customWodPhoto'
+    '.custom-wod-img': 'customWodImage'
+    '.initial-capture': 'initialCapture'
+    '.post-capture': 'postCapture'
 
   events:
     'tap .add-set': 'addSet'
@@ -26,24 +30,24 @@ class Superfit.EditWod extends Spine.Controller
 
   takePhoto: (e) ->
     return  unless window.device.platform
-    self = this
 
     # a little bit of nested-callback hell.  Sorry about this, I didn't see any flow-control libs.
-    captureSuccess = (filePath) ->
+    captureSuccess = (filePath) =>
 
       # get pointer to image
-      window.resolveLocalFileSystemURI filePath, ((file) ->
+      window.resolveLocalFileSystemURI filePath, ((file) =>
 
         # guarantee a unique filename
         filename = Date.now() + ".jpg"
 
         # get pointer to persistent storage
-        window.requestFileSystem LocalFileSystem.PERSISTENT, 0, ((fs) ->
+        window.requestFileSystem LocalFileSystem.PERSISTENT, 0, ((fs) =>
 
           # copy the image to persistent storage
-          file.copyTo fs.root, filename, ((newFile) ->
-            self.$(".custom-wod-photo").val newFile.fullPath
-            self.$(".custom-wod-img").attr "src", newFile.fullPath
+          file.copyTo fs.root, filename, ((newFile) =>
+            @customWodPhoto.val newFile.fullPath
+            @customWodImage.attr "src", newFile.fullPath
+            @updatePhoto(newFile.fullPath)
           ), captureError
         ), captureError
       ), captureError
@@ -102,17 +106,27 @@ class Superfit.EditWod extends Spine.Controller
 
       submitHandler: @submit
 
+  updatePhoto: (photo) ->
+    if photo
+      @initialCapture.hide()
+      @postCapture.show()
+    else
+      @postCapture.hide()
+      @initialCapture.show()
+
   updateNewWod: (wod) =>
     @wod = wod
     @templateName = if wod and wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
     @render(wod: @wod, user: User.first())
     @addSets() if @wod and @wod.type == 'Strength'
+    @updatePhoto(null)
 
   updateEditEntry: (entry) ->
     @wod = Wod.find(entry.wod_id) if entry.wod_id
     @templateName = if @wod and @wod.type == 'Strength' then 'enter_strength_score' else 'enter_wod_score'
     @render(wod: @wod, entry: entry, user: User.first())
     @addSets(entry) if @wod and @wod.type == 'Strength'
+    @updatePhoto(entry.photo)
 
   toInt: (numOrArray) ->
     return null unless numOrArray
