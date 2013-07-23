@@ -94,6 +94,7 @@ class Goal extends Spine.Model
         @trigger('complete')
         @complete_date = moment().valueOf()
 
+      @last_update = moment().valueOf()
       @save()
     else
       console.log "NOT A MATCH", entry
