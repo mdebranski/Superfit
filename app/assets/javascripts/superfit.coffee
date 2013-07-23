@@ -84,13 +84,17 @@ class Superfit extends Spine.Controller
     _.defer -> $.makeItRetina('retinaBackgrounds': true);
     _.defer -> jQT.goTo('#get-started-step1', jQT.settings.defaultTransition) unless user
 
-    $(document).on 'deviceready', @loadAnalytics
+    document.addEventListener "deviceready", @loadAnalytics, false
 
   loadAnalytics: =>
+    alert "Device ready - loading analytics..."
     @gaPlugin = window.plugins?.gaPlugin
 
     if @gaPlugin?
+      alert "Initing GA Plugin"
       @gaPlugin.init(@gaSuccess, @gaError, "UA-40739445-2", 10)
+    else
+      alert "NO GA PLUGIN FOUND"
 
   gaSuccess: =>
     alert "Google Analytics initialized"
