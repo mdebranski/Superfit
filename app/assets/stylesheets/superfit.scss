@@ -700,7 +700,7 @@ body {background:none}
     &.goals {background-position: -27px -279px; height:32px  }
     &.records {background-position: -27px -317px;  height:32px }
     &.me {background-position: -27px -352px;  height:33px }
-    &.about {background-position: -27px -394px;  height:33px }
+    &.aboutSf {background-position: -27px -394px;  height:33px }
 
   }
 
@@ -760,8 +760,11 @@ body {background:none}
 
   // ABOUT
   .about {
-    width:80%;
-    margin: auto;
+    width:90%;
+    margin: 27px auto;
+
+    h3,p {margin-bottom: 18px}
+    a {font-weight:bold}
   }
 
   // UNIVERSAL No Data
