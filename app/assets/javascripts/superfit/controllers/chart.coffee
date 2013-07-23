@@ -63,7 +63,10 @@ class Superfit.Chart extends Spine.Module
       grid:
         borderWidth:1
         borderColor: 'rgba(0, 0, 0, 0.1)'
-        clickable: true
+        hoverable: true
         color:  'rgba(0, 0, 0, 0.2)'
         labelMargin:20
+      tooltip: true
+      tooltipOpts:
+        content: "%y"
 

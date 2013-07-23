@@ -7,6 +7,7 @@
 #= require jquery.flot
 #= require jquery.flot.resize
 #= require jquery.flot.time
+#= require jquery.flot.tooltip.min
 #= require jquery.makeItRetina.min
 #= require jquery.validate.min
 #= require jquery.serialize-object
