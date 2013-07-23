@@ -18,6 +18,7 @@ class Superfit.EditWod extends Spine.Controller
     'tap .take-photo': 'takePhoto'
     'tap .warm-up': 'togglestyle'
     'tap .tab-nav .tab-btn': 'togglePhoto'
+    'tap .delete-photo': 'deletePhoto'
 
   constructor: ->
     super
@@ -105,6 +106,12 @@ class Superfit.EditWod extends Spine.Controller
         $(element).closest('.enter-score').removeClass('error').addClass('success');
 
       submitHandler: @submit
+
+  deletePhoto: (e) ->
+    e.preventDefault()
+    @customWodPhoto.val ''
+    @customWodImage.attr "src", ''
+    @updatePhoto('')
 
   updatePhoto: (photo) ->
     if photo
