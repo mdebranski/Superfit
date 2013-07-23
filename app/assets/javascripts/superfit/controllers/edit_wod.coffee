@@ -144,6 +144,7 @@ class Superfit.EditWod extends Spine.Controller
        created_date: new Date().valueOf()
        date: new Date(Superfit.currentDate).valueOf()
        warm_up: data.warm_up
+       photo: data.photo
 
 
     if data.entry_id

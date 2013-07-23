@@ -14,6 +14,7 @@ class WodEntry extends Spine.Model
              'created_date',
              'date',
              'warm_up',
+             'photo'
 
   @extend Spine.Model.Local
   @extend Spine.Events

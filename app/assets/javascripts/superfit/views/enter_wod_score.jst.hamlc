@@ -60,8 +60,8 @@
                     %span.icon-camera-alt
                     %br
                     %span Take a Photo
-                    %input.custom-wod-photo{name: "photo", type: "hidden"}
-                    %img.custom-wod-img
+                    %input.custom-wod-photo{name: "photo", type: "hidden", value: @entry?.photo}
+                    %img.custom-wod-img{src: @entry?.photo}
                   .post-capture
               #text-entry
                 %textarea{name: 'details', placeholder: "What did you do? Burpees? Thrusters? ", cols: "30", rows: "5"}
