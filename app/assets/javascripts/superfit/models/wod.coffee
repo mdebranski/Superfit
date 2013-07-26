@@ -101,13 +101,15 @@ class Wod extends Spine.Model
           record.max_3 = max_3 if max_3 and (!@personal_record?.max_3 or max_3 > @personal_record.max_3)
           record.max_5 = max_5 if max_5 and (!@personal_record?.max_5 or max_5 > @personal_record.max_5)
 
-      record = _.extend record, {entry_id: entry.id}
-      if @personal_record?
-        @personal_record = _.extend @personal_record, record
-      else
-        @personal_record = record
-      console.log "Record after", @personal_record
-      @save()
+      unless $.isEmptyObject(record)
+        record = _.extend record, {entry_id: entry.id}
+        if @personal_record?
+          @personal_record = _.extend @personal_record, record
+        else
+          @personal_record = record
+        console.log "Record after", @personal_record
+        @save()
+
     else
       @updateAttributes(personal_record: null)
 
