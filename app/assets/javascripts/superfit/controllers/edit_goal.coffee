@@ -25,23 +25,23 @@ class Superfit.EditGoal extends Superfit.SearchWods
 
     @el.bind "pageAnimationStart", (e, data) =>
       if data.direction == 'in'
-        @goal_id = null
-        @wod = null
-        @wods = null
-        @wods_type = null
-      if data.direction == 'in' and @goal_id = @el.data('referrer')?.data('id')
+        @clear()
         @render()
 
   newGoal: (wod) =>
+    @clear()
     if wod
       @wod = wod
       @render()
     else
-      @goal_id = null
-      @wod = null
-      @wods = null
-      @wods_type = null
       @render()
+
+  clear: =>
+    @log "CLEAR"
+    @goal_id = null
+    @wod = null
+    @wods = null
+    @wods_type = null
 
   browseWods: (e) ->
     @wods_type = $(e.target).closest('li').data('type')
@@ -56,6 +56,9 @@ class Superfit.EditGoal extends Superfit.SearchWods
   search: (e) -> super(e, @wods_type)
 
   render: ->
+    @log "GOAL ID: #{@goal_id}"
+    @log "GOAL ID: #{@wod}"
+    @log "GOAL ID: #{@wods}"
     if @goal_id
       @templateName = 'edit_goal'
       goal = Goal.find(@goal_id)
@@ -104,6 +107,8 @@ class Superfit.EditGoal extends Superfit.SearchWods
     data.reps = parseInt(data.reps)
     data.start_date = moment().valueOf()
     data.last_update = moment().valueOf()
+
+    @clear()
 
     if data.goal_id
       goal = Goal.find(data.goal_id)
