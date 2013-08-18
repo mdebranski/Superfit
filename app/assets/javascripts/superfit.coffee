@@ -104,21 +104,20 @@ class Superfit extends Spine.Controller
         savedState = SavedState.create(controller: active.className(), state: state)
         @log "Saved state: #{JSON.stringify(savedState)}"
     catch error
-      @log error
-      alert "Error pausing: #{error}"
+      @log "Error pausing: #{error}"
 
   onResume: =>
-    @log "Resuming..."
+    _.defer -> alert "Resuming..."
     try
       SavedState.fetch()
       if savedState = SavedState.first()
-        @log "Resuming for controller: '#{savedState.controller}'; State: #{JSON.stringify(savedState.state)}"
+        _.defer -> alert "Resuming for controller: '#{savedState.controller}'; State: #{JSON.stringify(savedState.state)}"
         controller = Superfit.controllers[savedState.controller]
         controller.resume(savedState.state) if controller.resume?
         jQT.goTo(controller.el)
     catch error
       @log error
-      alert "Error resuming: #{error}"
+      _.defer -> alert "Error resuming: #{error}"
 
   gaSuccess: =>
     @updateUserVariables()
