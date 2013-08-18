@@ -22,6 +22,8 @@ class Superfit.EditWod extends Spine.Controller
 
   constructor: ->
     super
+    @registerStateEvents()
+
     Wod.bind 'new', @updateNewWod
 
     @el.bind "pageAnimationStart", (e, data) =>

@@ -3,6 +3,13 @@ if Spine?
     className: ->
       @.__proto__.constructor.name
 
+    registerStateEvents: ->
+      Superfit.controllers[@className()] = @
+
+      @el.on "pageAnimationEnd", (e, data) =>
+        if data.direction == 'in'
+          Superfit.activeController = @
+
     defaultTemplateName: ->
       _.str.underscored @className()
 

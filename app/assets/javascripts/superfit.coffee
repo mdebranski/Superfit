@@ -31,6 +31,7 @@ class Superfit extends Spine.Controller
   @extend Spine.Events
 
   @NO_CHART_DATA = "<li class='no-data'>Not enough data to display chart</li>"
+  @controllers: {}
 
   elements:
     '.page#get-started-step3': 'start'
@@ -86,10 +87,37 @@ class Superfit extends Spine.Controller
     _.defer -> jQT.goTo('#get-started-step1', jQT.settings.defaultTransition) unless user
 
     document.addEventListener "deviceready", @loadAnalytics, false
+    document.addEventListener "pause", @onPause, false
+    document.addEventListener "resume", @onResume, false
 
   loadAnalytics: =>
     if @gaPlugin = window.plugins?.gaPlugin
       @gaPlugin.init(@gaSuccess, @gaError, "UA-40739445-2", 10)
+
+  onPause: =>
+    alert "Pausing..."
+    try
+      if active = Superfit.activeController
+        SavedState.destroyAll()
+        state = if active.state? then active.state() else {}
+        savedState = SavedState.create(controller: active.className(), state: state)
+        alert "Saved state: #{JSON.stringify(savedState)}"
+    catch error
+      @log error
+      alert "Error pausing: #{error}"
+
+  onResume: =>
+    alert "Resuming..."
+    try
+      SavedState.fetch()
+      if savedState = SavedState.first()
+        alert "Resuming for controller: '#{savedState.controller}'; State: #{JSON.stringify(savedState.state)}"
+        controller = Superfit.controllers[savedState.controller]
+        controller.resume(savedState.state) if controller.resume?
+        jQT.goTo(controller.el)
+    catch error
+      @log error
+      alert "Error resuming: #{error}"
 
   gaSuccess: =>
     @updateUserVariables()
@@ -98,10 +126,10 @@ class Superfit extends Spine.Controller
 
   gaError: (msg) =>
     @log "Analytics failed to load: #{msg}"
-    alert "Analytics failed to load: #{msg}"
 
   onPageTransition: (e, data) =>
     if data.direction == 'in'
+      Superfit.activeController = null
       pageId = $(e.target).attr('id')
       @log "Tracking page: #{pageId}"
       if @gaPlugin?
@@ -112,7 +140,6 @@ class Superfit extends Spine.Controller
 
   trackPageError: (msg) =>
     @log "Track page error: #{msg}"
-    alert "Error tracking page: #{msg}"
 
   updateUserVariables: =>
     if user = User.first()
@@ -125,7 +152,7 @@ class Superfit extends Spine.Controller
     # Do nothing
 
   setVariableError: (msg) =>
-    alert "Error setting variable: #{msg}"
+    @log "Error setting variable: #{msg}"
 
 window.Superfit = Superfit
 
@@ -164,7 +191,7 @@ $ ->
         Wod.trigger('refresh')
         console.log "#{Wod.all().length} WODs updated to version #{latest_version}"
 
-  new Superfit(el: $('body'))
+  window.superfit = new Superfit(el: $('body'))
 
   window.jQT = new $.jQTouch
     icon: 'jqtouch.png'

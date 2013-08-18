@@ -16,6 +16,7 @@ class Superfit.AddWod extends Superfit.SearchWods
 
   constructor: ->
     super
+    @registerStateEvents()
     @render()
 
   addCustomWod: -> Wod.trigger 'new', null

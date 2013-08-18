@@ -15,6 +15,7 @@ class Superfit.BrowseWods extends Superfit.SearchWods
 
   constructor: ->
     super
+    @registerStateEvents()
     Wod.bind 'browse', @updateWods
     @render()
 
@@ -27,5 +28,11 @@ class Superfit.BrowseWods extends Superfit.SearchWods
     for wod in wods
       item = new Superfit.WodItem(wod: wod, type: 'wod')
       @wodsBrowse.append item.render()
+
+  state: ->
+    {type: @type}
+
+  resume: (state) ->
+    @updateWods(state.type)
 
   search: (e) -> super(e, @type)
