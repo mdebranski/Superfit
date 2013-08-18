@@ -86,6 +86,7 @@ class Superfit extends Spine.Controller
     _.defer -> $.makeItRetina('retinaBackgrounds': true);
     _.defer -> jQT.goTo('#get-started-step1', jQT.settings.defaultTransition) unless user
 
+    @log "Registering listeners..."
     document.addEventListener "deviceready", @loadAnalytics, false
     document.addEventListener "pause", @onPause, false
     document.addEventListener "resume", @onResume, false
@@ -95,23 +96,23 @@ class Superfit extends Spine.Controller
       @gaPlugin.init(@gaSuccess, @gaError, "UA-40739445-2", 10)
 
   onPause: =>
-    alert "Pausing..."
+    @log "Pausing..."
     try
+      SavedState.destroyAll()
       if active = Superfit.activeController
-        SavedState.destroyAll()
         state = if active.state? then active.state() else {}
         savedState = SavedState.create(controller: active.className(), state: state)
-        alert "Saved state: #{JSON.stringify(savedState)}"
+        @log "Saved state: #{JSON.stringify(savedState)}"
     catch error
       @log error
       alert "Error pausing: #{error}"
 
   onResume: =>
-    alert "Resuming..."
+    @log "Resuming..."
     try
       SavedState.fetch()
       if savedState = SavedState.first()
-        alert "Resuming for controller: '#{savedState.controller}'; State: #{JSON.stringify(savedState.state)}"
+        @log "Resuming for controller: '#{savedState.controller}'; State: #{JSON.stringify(savedState.state)}"
         controller = Superfit.controllers[savedState.controller]
         controller.resume(savedState.state) if controller.resume?
         jQT.goTo(controller.el)
@@ -200,4 +201,3 @@ $ ->
     startupScreen: 'jqt_startup.png'
     statusBar: 'black-translucent'
     preloadImages: []
-
