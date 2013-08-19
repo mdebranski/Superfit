@@ -207,6 +207,9 @@ window.onResume = ->
   $('.toolbar').css('background-color': 'blue')
 
 addResume = ->
+  _.defer -> alert "DEVICEREADY"
   document.addEventListener "resume", window.onResume, false
 
-document.addEventListener 'deviceready', addResume, false
+window.onLoad = ->
+  _.defer -> alert "ONLOAD"
+  document.addEventListener 'deviceready', addResume, false
