@@ -200,3 +200,13 @@ $ ->
     startupScreen: 'jqt_startup.png'
     statusBar: 'black-translucent'
     preloadImages: []
+
+
+window.onResume = ->
+  _.defer -> alert "RESUMED"
+  $('.toolbar').css('background-color': 'blue')
+
+addResume = ->
+  document.addEventListener "resume", window.onResume, false
+
+document.addEventListener 'deviceready', addResume, false
